@@ -36,14 +36,25 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "DeFlock",
-        "url": "https://deflock.org",
-        "sameAs": [
-          "https://github.com/FoggedLens/deflock",
-          "https://blog.deflock.org/",
-          "https://apps.apple.com/us/app/deflock-me/id6752760780",
-          "https://play.google.com/store/apps/details?id=me.deflock.deflockapp&hl=en_US&pli=1"
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://panopti.ca/#organization",
+            "name": "panopti.ca",
+            "url": "https://panopti.ca",
+            "logo": "https://panopti.ca/panoptica-light.svg",
+            "description": "Open-source project mapping automatic licence plate readers (ALPRs) across Canada.",
+            "sameAs": ["https://github.com/resistanceisliberty/panopti.ca-portal"]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://panopti.ca/#website",
+            "name": "panopti.ca",
+            "url": "https://panopti.ca",
+            "description": "Crowdsourced map of ALPR / licence plate reader surveillance cameras across Canada.",
+            "publisher": { "@id": "https://panopti.ca/#organization" },
+            "inLanguage": "en-CA"
+          }
         ]
       }
     </script>

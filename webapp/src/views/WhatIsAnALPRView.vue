@@ -76,11 +76,66 @@
 </template>
 
 <script setup lang="ts">
+import { useHead } from '@unhead/vue';
 import DefaultLayout from '@/layouts/DefaultLayout.vue';
 import Hero from '@/components/layout/Hero.vue';
 import Dangers from '@/components/Dangers.vue';
 import FAQ from '@/components/FAQ.vue';
 import SimilarProjects from '@/components/SimilarProjects.vue';
+
+// FAQPage structured data — eligible for rich results in Google search.
+// Mirrors the questions in components/FAQ.vue (answers summarized as plain text).
+const faqs: { q: string; a: string }[] = [
+  {
+    q: 'Are ALPRs a necessary tool for police?',
+    a: 'No. Police have long had ways to obtain location information about suspects, generally requiring reasonable grounds and judicial authorization. ALPRs instead collect location data on everyone, all the time, and that data is often searched with little or no oversight. In Canada, Section 8 of the Charter protects against unreasonable search and seizure.',
+  },
+  {
+    q: 'Why should I care if I have nothing to hide?',
+    a: "You don't get to decide what looks suspicious tomorrow. Licence plate cameras record your movements regardless of intent — a trip to a protest, place of worship, or union meeting can flag you. ALPRs are also not always accurate, and people have been pulled over at gunpoint or detained because a camera misread a plate.",
+  },
+  {
+    q: 'Do these cameras only record vehicles involved in crimes?',
+    a: 'No. ALPRs record all vehicles that pass, not just those involved in crimes. They capture licence plates, identifying features, locations, dates, and times of every vehicle, regardless of whether the driver is suspected of wrongdoing — and that data can be shared with other agencies and third parties.',
+  },
+  {
+    q: 'Do police need a warrant to search these cameras?',
+    a: 'This is a serious and unsettled question in Canada. ALPRs collect data on everyone, not just suspects, and that data can often be searched with little judicial oversight. Mass, suspicionless tracking of Canadians’ movements raises significant concerns under Section 8 of the Charter. Data is also frequently shared across agencies, and in some cases across the border with U.S. law enforcement.',
+  },
+  {
+    q: 'What oversight is there for these systems?',
+    a: 'Often little to none. Some police services have policies governing ALPR use, but these are frequently weak and poorly enforced, and many agencies have no policy at all. Vendors like Flock offer a "transparency portal," but they let customers choose what to include or exclude, and the portals often underreport how many agencies actually have access.',
+  },
+  {
+    q: "Do Flock's transparency portals give a full picture of who has access to the data?",
+    a: 'No. Flock now operates in Canada, but its U.S. record is telling: its transparency portals are notoriously incomplete. Boulder, Colorado’s portal listed around 90 agencies, but a public records request revealed over 6,000 agencies actually had access.',
+  },
+  {
+    q: 'Can Flock be trusted to keep our data safe?',
+    a: "Flock's record raises serious doubts. In November 2025 a researcher found Flock logins for sale on Russian hacking forums, as Flock didn't require multi-factor authentication. Flock has also misrepresented who can access its systems. The same company is now signing up Canadian agencies.",
+  },
+  {
+    q: 'How can I get these cameras out of my city or town?',
+    a: 'Communities can push back. Raise concerns publicly, build a group of advocates, and petition your municipal council or police services board not to approve or renew ALPR contracts. Public attention, deputations, and freedom-of-information requests have led agencies elsewhere to cancel or decline ALPR programs.',
+  },
+];
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqs.map((f) => ({
+          '@type': 'Question',
+          name: f.q,
+          acceptedAnswer: { '@type': 'Answer', text: f.a },
+        })),
+      }),
+    },
+  ],
+});
 </script>
 
 <style scoped>
