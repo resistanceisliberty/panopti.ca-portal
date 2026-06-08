@@ -16,5 +16,15 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     port: 5173,
-  }
-})
+  },
+  // Used only by `vite-ssg build` (the `build:ssg` script). The default
+  // `build` uses plain CSR; flip to SSG once the build env runs Node >= 22.12.
+  ssgOptions: {
+    includedRoutes() {
+      return [
+        '/', '/about', '/what-is-an-alpr', '/report/id', '/council',
+        '/foia', '/identify', '/contact', '/privacy', '/terms', '/qr',
+      ]
+    },
+  },
+} as Parameters<typeof defineConfig>[0])

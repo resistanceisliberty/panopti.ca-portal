@@ -27,32 +27,15 @@ const vuetify = createVuetify({
   },
 })
 
-// vite-ssg sets up the router + head (@unhead/vue) for us.
+// ViteSSG sets up the router + head (@unhead/vue). This same entry mounts the
+// app on the client whether built with `vite build` (CSR) or `vite-ssg build`
+// (static prerender). Which static routes get prerendered is configured via
+// ssgOptions.includedRoutes in vite.config.ts.
 export const createApp = ViteSSG(
   App,
   { routes, scrollBehavior },
   ({ app }) => {
     app.use(createPinia())
     app.use(vuetify)
-  },
-  {
-    // Static routes to prerender; excludes the dynamic catch-all and the
-    // /report redirect (which has no page of its own).
-    includedRoutes() {
-      return [
-        '/',
-        '/about',
-        '/what-is-an-alpr',
-        '/report/id',
-        '/council',
-        '/foia',
-        '/identify',
-        '/contact',
-        '/press',
-        '/privacy',
-        '/terms',
-        '/qr',
-      ]
-    },
   },
 )

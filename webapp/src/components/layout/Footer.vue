@@ -78,11 +78,10 @@ const internalLinks = [
   { title: 'About', to: '/about', icon: 'mdi-information', alt: 'About' },
   { title: 'Privacy Policy', to: '/privacy', icon: 'mdi-shield-lock', alt: 'Privacy Policy' },
   { title: 'Terms of Service', to: '/terms', icon: 'mdi-file-document', alt: 'Terms of Service' },
-  { title: 'Press', to: '/press', icon: 'mdi-newspaper', alt: 'Press' },
 ];
 
 const externalLinks = [
-  { title: 'GitHub', href: 'https://github.com/resistanceisliberty/panopti.ca-portal', icon: 'mdi-github', alt: 'GitHub Logo' },
+  { title: 'GitHub', href: 'https://github.com/resistanceisliberty/panopti.ca', icon: 'mdi-github', alt: 'GitHub Logo' },
   { title: 'Contact', to: '/contact', icon: 'mdi-email', alt: 'Contact' },
 ]
 </script>

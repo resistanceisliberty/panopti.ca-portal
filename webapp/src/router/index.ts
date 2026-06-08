@@ -91,15 +91,6 @@ export const routes: RouteRecordRaw[] = [
     },
   },
   {
-    path: '/press',
-    name: 'press',
-    component: () => import('../views/Press.vue'),
-    meta: {
-      title: 'Media & Press | panopti.ca',
-      description: 'Media information about panopti.ca, the open-source project mapping ALPR surveillance cameras across Canada.',
-    },
-  },
-  {
     path: '/privacy',
     name: 'privacy',
     component: () => import('../views/PrivacyPolicy.vue'),
