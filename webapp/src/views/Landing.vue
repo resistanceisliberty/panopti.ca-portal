@@ -12,7 +12,7 @@
 
             <ALPRCounter class="my-6" />
 
-            <v-btn size="large" color="rgb(18, 151, 195)" large href="https://panopti.ca">
+            <v-btn size="large" color="rgb(18, 151, 195)" large href="https://maps.panopti.ca">
               Launch the Map
               <v-icon end>mdi-map</v-icon>
             </v-btn>
@@ -115,7 +115,7 @@
   <!-- Map Section -->
   <v-container fluid class="map-section py-10 text-center">
     <h2 class="display-2 mb-4">Explore ALPR Locations Near You</h2>
-    <v-btn color="white" large href="https://panopti.ca">
+    <v-btn color="white" large href="https://maps.panopti.ca">
       Launch the Map
       <v-icon end>mdi-map</v-icon>
     </v-btn>

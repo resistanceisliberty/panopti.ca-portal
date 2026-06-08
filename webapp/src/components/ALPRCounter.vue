@@ -22,7 +22,7 @@ const props = defineProps({
 
 // Live count of Canadian ALPRs, pulled from the map's own dataset (refreshed
 // nightly). Falls back to a sane default if the fetch fails.
-const COUNT_URL = 'https://panopti.ca/cameras-ca.json';
+const COUNT_URL = 'https://maps.panopti.ca/cameras-ca.json';
 const FALLBACK_COUNT = 156;
 
 const counterEl: Ref<HTMLElement|null> = ref(null);

@@ -24,7 +24,7 @@
 
     <h2>Embedding our Map</h2>
     <p>
-      You are welcome to embed our map on your website. Just <a href="https://panopti.ca" target="_blank">open the map</a>, use the share button, and copy the embed code.
+      You are welcome to embed our map on your website. Just <a href="https://maps.panopti.ca" target="_blank">open the map</a>, use the share button, and copy the embed code.
     </p>
 
     <h2>Contact</h2>
