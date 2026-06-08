@@ -1,58 +1,29 @@
 <template>
   <DefaultLayout>
     <v-container class="narrow-text">
-      <h2>About Us</h2>
+      <h2>About panopti.ca</h2>
       <p>
-        Welcome to panopti.ca, a resource for understanding and tracking the growing presence of Automated Licence Plate Readers (ALPRs) in communities across Canada.
+        panopti.ca is an open-source project that maps the spread of automatic licence plate readers (ALPRs) across Canada. Its purpose is to make a quiet form of mass surveillance visible — to show where these cameras stand, who runs them, and just how widely they have been deployed.
       </p>
-  
-      <h2>Our Mission</h2>
-      <p>
-        Our mission is simple: to shine a light on the widespread use of ALPR technology, raise awareness about the threats it poses to personal privacy and civil liberties, and empower the public to take action. ALPRs are increasingly being deployed by law enforcement and private companies without the public's full understanding or consent, and they collect vast amounts of data on our movements, often without any real oversight.
-      </p>
-  
-      <h2>Why This Matters</h2>
-      <p>
-        Privacy is a fundamental right, and the growing use of ALPRs threatens to erode it. Every day, ALPRs capture and store details about the movements of millions of innocent people, creating a massive database that can be used for anything from routine surveillance to potentially more nefarious purposes. This constant monitoring can deter people from exercising their freedoms, like attending protests or engaging in other forms of free expression, which should concern all of us.
-      </p>
-  
-      <h2>What We Do</h2>
-      <div class="ml-4">
-        <h3>Educate</h3>
-        <p>
-          We provide easy-to-understand information about what ALPRs are, how they work, and why you should care.
-        </p>
-  
-        <h3>Report &amp; Track</h3>
-        <p>
-          Through our platform, you can report locations where you spot ALPRs, and view an interactive map showing where these surveillance devices are deployed.
-        </p>
-  
-        <h3>Advocate for Change</h3>
-        <p>
-          We encourage communities to stand up against the unchecked spread of these surveillance systems. Together, we can push for greater accountability, stronger privacy protections, and a rollback of invasive surveillance practices.
-        </p>
-      </div>
-  
-      <h2>Get Involved</h2>
-      <p>
-        Want to help us in our mission? Here are a few ways you can get involved:
-      </p>
-      <div class="ml-4">
-        <h3>Report ALPRs</h3>
-        <p>
-          If you spot an ALPR in your community, <router-link to="/report">let us know</router-link>! Your reports help us build a more comprehensive picture of where these devices are being used.
-        </p>
-  
-        <h3>Spread the Word</h3>
-        <p>
-          Share our site with your friends, family, and social networks to help raise awareness about the dangers of ALPRs.
-        </p>
-      </div>
 
-      <h2>Open &amp; Community-Driven</h2>
+      <h2>What an ALPR does</h2>
       <p>
-        panopti.ca is open source and builds on the work of <a href="https://deflock.org" target="_blank" rel="noopener noreferrer">DeFlock</a>. Every camera location lives on <a href="https://www.openstreetmap.org" target="_blank" rel="noopener noreferrer">OpenStreetMap</a>, so the data is public and anyone can verify it, contribute to it, or build on it.
+        An ALPR is an AI-powered camera that photographs and logs <b>every passing vehicle</b> — its plate, its location, and the moment it drove by — whether or not the driver is suspected of anything. Sold by vendors such as <a href="https://www.genetec.com/" target="_blank" rel="noopener noreferrer">Genetec</a> and <a href="https://consumerrights.wiki/w/Flock_Safety" target="_blank" rel="noopener noreferrer">Flock Safety</a>, these cameras are spreading rapidly through Canadian cities and towns, often with little public debate or oversight.
+      </p>
+
+      <h2>Why mapping them matters</h2>
+      <p>
+        Surveillance that nobody can see is hard to question. Plotting each known camera on a public map turns scattered, easily-overlooked deployments into something concrete — something residents, journalists, and elected officials can examine, discuss, and challenge. A map also makes the scale of the problem legible in a way that a single camera on a pole never could.
+      </p>
+
+      <h2>Built on open data</h2>
+      <p>
+        Every camera location lives on <a href="https://www.openstreetmap.org" target="_blank" rel="noopener noreferrer">OpenStreetMap</a>, the same open dataset that powers maps around the world. Nothing sits in a private database: the information is public, verifiable, and free for anyone to inspect, correct, or reuse. The project builds on the open-source work of <a href="https://deflock.org" target="_blank" rel="noopener noreferrer">DeFlock</a>, which pioneered crowdsourced ALPR mapping in the United States.
+      </p>
+
+      <h2>How to contribute</h2>
+      <p>
+        The map grows through the people who use it. Spotting a camera and <router-link to="/report">adding it to OpenStreetMap</router-link> puts it on the map for everyone, and sharing the site helps more people understand how ALPR surveillance works and where it is taking hold. Guidance on <router-link to="/what-is-an-alpr">how these cameras work</router-link> and how to identify and report them is available throughout the site — no special expertise required.
       </p>
     </v-container>
   </DefaultLayout>
@@ -61,4 +32,3 @@
 <script setup lang="ts">
 import DefaultLayout from '@/layouts/DefaultLayout.vue';
 </script>
-
