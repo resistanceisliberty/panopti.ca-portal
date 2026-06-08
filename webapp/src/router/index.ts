@@ -24,14 +24,6 @@ const router = createRouter({
       }
     },
     {
-      path: '/legacy-map',
-      name: 'map',
-      component: () => import('../views/Map.vue'),
-      meta: {
-        title: 'ALPR Map (Legacy) | panopti.ca'
-      }
-    },
-    {
       path: '/about',
       name: 'about',
       component: () => import('../views/AboutView.vue'),
@@ -135,19 +127,13 @@ const router = createRouter({
   ]
 })
 
-// backward compatibility with old url scheme
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, _from, next) => {
   if (to.meta.title) {
     useHead({
       title: to.meta.title
     })
   }
-
-  if (to.path === '/' && to.hash) {
-    next({ path: '/legacy-map', hash: to.hash })
-  } else {
-    next()
-  }
+  next()
 })
 
 export default router
