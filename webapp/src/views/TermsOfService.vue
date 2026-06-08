@@ -68,7 +68,7 @@
       All content provided by panopti.ca, including design, text, and logos, is the intellectual property of panopti.ca unless otherwise noted. Users may not copy, distribute, or modify this content without prior written permission.
     </p>
     <p>
-      panopti.ca's source code is licensed under the MIT License. For details, please refer to the <a target="_blank" href="https://github.com/resistanceisliberty/alpr-map-canada-portal">LICENSE file</a>.
+      panopti.ca's source code is licensed under the MIT License. For details, please refer to the <a target="_blank" href="https://github.com/resistanceisliberty/panopti.ca-portal">LICENSE file</a>.
     </p>
 
     <h2>6. Termination of Use</h2>

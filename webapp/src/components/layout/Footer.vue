@@ -82,7 +82,7 @@ const internalLinks = [
 ];
 
 const externalLinks = [
-  { title: 'GitHub', href: 'https://github.com/resistanceisliberty/alpr-map-canada-portal', icon: 'mdi-github', alt: 'GitHub Logo' },
+  { title: 'GitHub', href: 'https://github.com/resistanceisliberty/panopti.ca-portal', icon: 'mdi-github', alt: 'GitHub Logo' },
   { title: 'Contact', to: '/contact', icon: 'mdi-email', alt: 'Contact' },
 ]
 </script>

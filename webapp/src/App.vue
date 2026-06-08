@@ -47,7 +47,7 @@ const contributeItems = [
 
 const metaItems = [
   { title: 'Contact', icon: 'mdi-email-outline', to: '/contact' },
-  { title: 'GitHub', icon: 'mdi-github', href: 'https://github.com/resistanceisliberty/alpr-map-canada-portal'},
+  { title: 'GitHub', icon: 'mdi-github', href: 'https://github.com/resistanceisliberty/panopti.ca-portal'},
 ];
 const drawer = ref(false)
 
