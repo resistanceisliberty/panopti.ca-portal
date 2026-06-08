@@ -138,7 +138,7 @@
             src="/wikimedia-instructions/license.png"
           />
           <p>
-            Make sure you publish the image under a <strong>CCO Waiver</strong> license.
+            Make sure you publish the image under a <strong>CC0 Waiver</strong> licence.
           </p>
 
           <v-img
@@ -180,7 +180,7 @@
             title="How Long Will It Take?"
           >
             <p>
-              We pull data from OpenStreetMap <i>hourly</i>, so it may take up to an hour for your changes to appear on this site. Rest assured that your changes will be reflected here soon. As we continue to scale, we hope to reduce this delay.
+              We refresh data from OpenStreetMap <i>nightly</i>, so it may take up to a day for your changes to appear on this site. Rest assured that your changes will be reflected here soon.
             </p>
           </v-alert>
         </v-stepper-vertical-item>

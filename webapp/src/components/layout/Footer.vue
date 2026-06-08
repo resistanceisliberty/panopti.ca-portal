@@ -57,7 +57,7 @@
           sm="6"
         >
           <div class="copyright" :class="isDark ? 'text-grey-lighten-5' : 'text-black'">
-            <p>&copy; {{ currentYear }} DeFlock. All Rights Reserved</p>
+            <p>&copy; {{ currentYear }} panopti.ca &middot; open source, built on <a href="https://deflock.org" target="_blank" style="color: unset; font-weight: normal;">DeFlock</a></p>
             <p>Map data © <a href="https://www.openstreetmap.org/copyright" target="_blank" style="color: unset; font-weight: normal;">OpenStreetMap contributors</a></p>
             <p class="mt-4">v1.1.0</p>
           </div>

@@ -16,7 +16,7 @@
         color="primary"
         class="mb-6"
       >
-        <v-tab value="alprs">License Plate Readers</v-tab>
+        <v-tab value="alprs">Licence Plate Readers</v-tab>
         <v-tab value="other">Other Devices</v-tab>
       </v-tabs>
     </v-container>
@@ -136,12 +136,11 @@
                         size="large"
                         :disabled="!hasOsmTags(vendor.osmTags)"
                         @click="onAddToApp(vendor.shortName, vendor.osmTags, true, true, null)"
-                        prepend-icon="mdi-application-import"
+                        prepend-icon="mdi-map-marker-plus"
                       >
-                        Import to App
+                        Report to OSM
                       </v-btn>
                     </div>
-                    <div class="text-center text-caption mt-1">Requires app v2.7.1+</div>
                   </div>
                 </v-card-text>
               </v-card>
@@ -225,12 +224,11 @@
                             size="large"
                             :disabled="!hasOsmTags(device.osmTags)"
                             @click="onAddToApp(device.name, device.osmTags, false, device.requiresDirection, device.fov ?? null)"
-                            prepend-icon="mdi-application-import"
+                            prepend-icon="mdi-map-marker-plus"
                           >
-                            Import to App
+                            Report to OSM
                           </v-btn>
                         </div>
-                        <div class="text-center text-caption text-grey-darken-1 mt-1">Requires app v2.7.1+</div>
                       </div>
                     </v-card-text>
                   </v-card>
@@ -274,7 +272,6 @@ import DFCode from '@/components/DFCode.vue';
 import { ref, computed, onMounted } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import { useVendorStore } from '@/stores/vendorStore';
-import { createDeflockProfileUrl } from '@/services/deflockAppUrls';
 import { lprBaseTags } from '@/constants';
 import type { LprVendor, OtherSurveillanceDevice } from '@/types';
 
@@ -335,26 +332,15 @@ onMounted(async () => {
   ]);
 });
 
-async function onAddToApp(
-  name: string, 
-  osmTags: Record<string, string>, 
-  isAlpr: boolean, 
-  requiresDirection: boolean,
-  fov: number | null
+function onAddToApp(
+  _name?: string,
+  _osmTags?: Record<string, string>,
+  _isAlpr?: boolean,
+  _requiresDirection?: boolean,
+  _fov?: number | null,
 ) {
-  const tags = isAlpr ? { ...lprBaseTags, ...osmTags } : osmTags;
-  const url = createDeflockProfileUrl(name, tags, { requiresDirection, fov });
-  const ua = typeof navigator !== 'undefined' && navigator.userAgent ? navigator.userAgent : '';
-  const isMobile = /iphone|ipod|ipad|android|blackberry|bb|playbook|windows phone|iemobile|opera mini|mobile/i.test(ua);
-  if (isMobile) {
-    try {
-      window.location.href = url;
-    } catch (e) {
-      window.open(url, '_blank');
-    }
-  } else {
-    router.push('/report');
-  }
+  // No separate Canadian app yet — send users to the OSM report guide.
+  router.push('/report');
 }
 </script>
 

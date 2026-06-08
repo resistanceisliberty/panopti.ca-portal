@@ -3,7 +3,7 @@
     <v-container class="narrow-text">
       <h2>About Us</h2>
       <p>
-        Welcome to DeFlock, your go-to resource for understanding and addressing the growing presence of Automated License Plate Readers (ALPRs) in our communities.
+        Welcome to panopti.ca, a resource for understanding and tracking the growing presence of Automated Licence Plate Readers (ALPRs) in communities across Canada.
       </p>
   
       <h2>Our Mission</h2>
@@ -49,6 +49,11 @@
           Share our site with your friends, family, and social networks to help raise awareness about the dangers of ALPRs.
         </p>
       </div>
+
+      <h2>Open &amp; Community-Driven</h2>
+      <p>
+        panopti.ca is open source and builds on the work of <a href="https://deflock.org" target="_blank" rel="noopener noreferrer">DeFlock</a>. Every camera location lives on <a href="https://www.openstreetmap.org" target="_blank" rel="noopener noreferrer">OpenStreetMap</a>, so the data is public and anyone can verify it, contribute to it, or build on it.
+      </p>
     </v-container>
   </DefaultLayout>
 </template>
