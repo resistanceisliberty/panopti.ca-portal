@@ -198,7 +198,7 @@ import OSMTagSelector from '@/components/OSMTagSelector.vue';
 import { VStepperVerticalItem, VStepperVertical } from 'vuetify/labs/components';
 import { useVendorStore } from '@/stores/vendorStore';
 
-const step = ref(parseInt(localStorage.getItem('currentStep') || '1'));
+const step = ref(parseInt((typeof localStorage !== 'undefined' && localStorage.getItem('currentStep')) || '1'));
 
 onMounted(() => {
   step.value = parseInt(localStorage.getItem('currentStep') || '1');

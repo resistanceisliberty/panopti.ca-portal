@@ -1,15 +1,30 @@
 <script setup lang="ts">
-import { RouterView, useRouter } from 'vue-router'
+import { RouterView, useRouter, useRoute } from 'vue-router'
 import { computed, ref, watch, onMounted } from 'vue'
+import { useHead } from '@unhead/vue'
 import { useTheme } from 'vuetify';
 import DiscordWarningDialog from '@/components/DiscordWarningDialog.vue';
 import { useDiscordIntercept } from '@/composables/useDiscordIntercept';
+import { SITE_ORIGIN, DEFAULT_DESCRIPTION } from '@/router';
 
 const theme = useTheme();
 const router = useRouter();
+const route = useRoute();
 const isDark = computed(() => theme.name.value === 'dark');
-const isInIframe = computed(() => window.self !== window.top);
+const isInIframe = computed(() => typeof window !== 'undefined' && window.self !== window.top);
 const { showDialog, discordUrl, interceptDiscordLinks } = useDiscordIntercept();
+
+// Per-page SEO head — reactive to the current route's meta (set in router).
+useHead({
+  title: () => (route.meta.title as string) || 'panopti.ca',
+  meta: [
+    { name: 'description', content: () => (route.meta.description as string) || DEFAULT_DESCRIPTION },
+    { property: 'og:title', content: () => (route.meta.title as string) || 'panopti.ca' },
+    { property: 'og:description', content: () => (route.meta.description as string) || DEFAULT_DESCRIPTION },
+    { property: 'og:url', content: () => SITE_ORIGIN + route.path },
+  ],
+  link: [{ rel: 'canonical', href: () => SITE_ORIGIN + route.path }],
+});
 
 function toggleTheme() {
   const newTheme = theme.global.name.value === 'dark' ? 'light' : 'dark';
