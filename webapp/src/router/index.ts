@@ -20,7 +20,7 @@ const router = createRouter({
       name: 'home',
       component: Landing,
       meta: {
-        title: 'Find Nearby ALPRs | DeFlock'
+        title: 'Find Nearby ALPRs in Canada | panopti.ca'
       }
     },
     {
@@ -28,15 +28,7 @@ const router = createRouter({
       name: 'map',
       component: () => import('../views/Map.vue'),
       meta: {
-        title: 'ALPR Map (Legacy) | DeFlock'
-      }
-    },
-    {
-      path: '/groups',
-      name: 'groups',
-      component: () => import('../views/Groups.vue'),
-      meta: {
-        title: 'Local Groups | DeFlock'
+        title: 'ALPR Map (Legacy) | panopti.ca'
       }
     },
     {
@@ -44,7 +36,7 @@ const router = createRouter({
       name: 'about',
       component: () => import('../views/AboutView.vue'),
       meta: {
-        title: 'About | DeFlock'
+        title: 'About | panopti.ca'
       }
     },
     {
@@ -52,23 +44,20 @@ const router = createRouter({
       name: 'what-is-an-alpr',
       component: () => import('../views/WhatIsAnALPRView.vue'),
       meta: {
-        title: 'Learn | DeFlock'
+        title: 'Learn | panopti.ca'
       }
     },
     {
       path: '/report',
       name: 'report',
-      component: () => import('../views/ReportChoose.vue'),
-      meta: {
-        title: 'Submit Cameras | DeFlock'
-      }
+      redirect: '/report/id',
     },
     {
       path: '/report/id',
       name: 'reportID',
       component: () => import('../views/ReportID.vue'),
       meta: {
-        title: 'Submit Cameras | DeFlock'
+        title: 'Submit Cameras | panopti.ca'
       }
     },
     {
@@ -76,23 +65,7 @@ const router = createRouter({
       name: 'council',
       component: () => import('../views/CouncilView.vue'),
       meta: {
-        title: 'Council | DeFlock'
-      }
-    },
-    {
-      path: '/app',
-      name: 'app',
-      component: () => import('../views/DeflockApp.vue'),
-      meta: {
-        title: 'App | DeFlock'
-      }
-    },
-    {
-      path: '/app/docs',
-      name: 'app-docs',
-      component: () => import('../views/DeflockAppDocs.vue'),
-      meta: {
-        title: 'App User Guide | DeFlock'
+        title: 'City Council | panopti.ca'
       }
     },
     {
@@ -100,7 +73,7 @@ const router = createRouter({
       name: 'contact',
       component: () => import('../views/ContactView.vue'),
       meta: {
-        title: 'Contact | DeFlock'
+        title: 'Contact | panopti.ca'
       }
     },
     {
@@ -108,7 +81,7 @@ const router = createRouter({
       name: 'terms',
       component: () => import('../views/TermsOfService.vue'),
       meta: {
-        title: 'Terms of Service | DeFlock'
+        title: 'Terms of Service | panopti.ca'
       }
     },
     {
@@ -116,7 +89,7 @@ const router = createRouter({
       name: 'privacy',
       component: () => import('../views/PrivacyPolicy.vue'),
       meta: {
-        title: 'Privacy Policy | DeFlock'
+        title: 'Privacy Policy | panopti.ca'
       }
     },
     {
@@ -124,15 +97,7 @@ const router = createRouter({
       name: 'qr-landing',
       component: () => import('../views/Landing.vue'),
       meta: {
-        title: 'You Found an ALPR | DeFlock'
-      }
-    },
-    {
-      path: '/donate',
-      name: 'donate',
-      component: () => import('../views/Donate.vue'),
-      meta: {
-        title: 'Support Us | DeFlock'
+        title: 'You Found an ALPR | panopti.ca'
       }
     },
     {
@@ -140,7 +105,7 @@ const router = createRouter({
       name: 'foia',
       component: () => import('../views/FOIA.vue'),
       meta: {
-        title: 'How to Request Public Records | DeFlock'
+        title: 'How to Request Public Records | panopti.ca'
       }
     },
     {
@@ -148,7 +113,7 @@ const router = createRouter({
       name: 'identify',
       component: () => import('../views/Identify.vue'),
       meta: {
-        title: 'Identify LPRs | DeFlock'
+        title: 'Identify ALPRs | panopti.ca'
       }
     },
     {
@@ -156,31 +121,7 @@ const router = createRouter({
       name: 'press',
       component: () => import('../views/Press.vue'),
       meta: {
-        title: 'Press | DeFlock'
-      }
-    },
-    {
-      path: '/store',
-      name: 'store',
-      component: () => import('../views/Store.vue'),
-      meta: {
-        title: 'Store | DeFlock'
-      }
-    },
-    {
-      path: '/blog',
-      name: 'blog',
-      component: () => import('../views/Blog.vue'),
-      meta: {
-        title: 'News | DeFlock'
-      }
-    },
-    {
-      path: '/blog/:id',
-      name: 'blog-post',
-      component: () => import('../views/BlogPost.vue'),
-      meta: {
-        title: 'Blog Post | DeFlock'
+        title: 'Press | panopti.ca'
       }
     },
     {
@@ -188,7 +129,7 @@ const router = createRouter({
       name: 'not-found',
       component: () => import('../views/404.vue'),
       meta: {
-        title: 'Not Found | DeFlock'
+        title: 'Not Found | panopti.ca'
       }
     }
   ]
@@ -201,7 +142,7 @@ router.beforeEach((to, from, next) => {
       title: to.meta.title
     })
   }
-  
+
   if (to.path === '/' && to.hash) {
     next({ path: '/legacy-map', hash: to.hash })
   } else {

@@ -35,24 +35,19 @@ onMounted(() => {
 
 const items = [
   { title: 'Home', icon: 'mdi-home', to: '/' },
-  { title: 'Map', icon: 'mdi-map', href: 'https://maps.deflock.org' },
+  { title: 'Map', icon: 'mdi-map', href: 'https://panopti.ca' },
   { title: 'Learn', icon: 'mdi-school', to: '/what-is-an-alpr' },
-  { title: 'News', icon: 'mdi-newspaper', href: 'https://footnote4a.org/', target: '_blank' },
 ]
 
 const contributeItems = [
   { title: 'Submit Cameras', icon: 'mdi-map-marker-plus', to: '/report' },
-  { title: 'Hang Signs', icon: 'mdi-sign-direction', to: '/store' },
   { title: 'Public Records', icon: 'mdi-file-document', to: '/foia' },
   { title: 'City Council', icon: 'mdi-account-voice', to: '/council' },
 ]
 
 const metaItems = [
-  { title: 'Discord', customIcon: '/icon-discord.svg', customIconDark: '/icon-discord-white.svg', customIconGrey: '/icon-discord-grey.svg', href: 'https://discord.gg/aV7v4R3sKT'},
-  { title: 'Local Groups', icon: 'mdi-account-group', to: '/groups' },
   { title: 'Contact', icon: 'mdi-email-outline', to: '/contact' },
-  { title: 'GitHub', icon: 'mdi-github', href: 'https://github.com/frillweeman/deflock'},
-  { title: 'Support Us', icon: 'mdi-cash-multiple', to: '/donate'},
+  { title: 'GitHub', icon: 'mdi-github', href: 'https://github.com/resistanceisliberty/alpr-map-canada-portal'},
 ];
 const drawer = ref(false)
 
@@ -86,8 +81,7 @@ watch(() => theme.global.name.value, (newTheme) => {
         <!-- Logo -->
         <v-toolbar-title style="flex: unset;">
           <div style="display: flex; align-items: center; cursor: pointer;" @click="router.push('/')">
-            <v-img height="36" width="36" alt="DeFlock Icon" src="/favicons/apple-icon-144x144.png" />
-            <v-img style="margin-left: 8px;" height="36" width="130" alt="DeFlock Logo" src="/deflock-logo.svg" />
+            <v-img height="34" width="148" alt="panopti.ca" :src="isDark ? '/panoptica-dark.svg' : '/panoptica-light.svg'" />
           </div>
         </v-toolbar-title>
 

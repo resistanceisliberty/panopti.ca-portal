@@ -4,7 +4,7 @@
       <v-row align-items="center" justify="center">
 
         <v-col cols="12" class="mt-4">
-          <v-img height="30" contain src="/deflock-logo-grey.svg" />
+          <v-img height="30" contain src="/panoptica-light.svg" />
         </v-col>
         
         <!-- Internal Links -->
@@ -82,9 +82,7 @@ const internalLinks = [
 ];
 
 const externalLinks = [
-  { title: 'Discord', href: 'https://discord.gg/aV7v4R3sKT', customIcon: '/icon-discord.svg', customIconDark: '/icon-discord-white.svg', alt: 'Discord Logo' },
-  { title: 'Support Us', to: '/donate', icon: 'mdi-cash-multiple', alt: 'Support Us' },
-  { title: 'GitHub', href: 'https://github.com/FoggedLens/deflock', icon: 'mdi-github', alt: 'GitHub Logo' },
+  { title: 'GitHub', href: 'https://github.com/resistanceisliberty/alpr-map-canada-portal', icon: 'mdi-github', alt: 'GitHub Logo' },
   { title: 'Contact', to: '/contact', icon: 'mdi-email', alt: 'Contact' },
 ]
 </script>

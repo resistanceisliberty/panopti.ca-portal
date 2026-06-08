@@ -353,7 +353,7 @@ async function onAddToApp(
       window.open(url, '_blank');
     }
   } else {
-    router.push('/app');
+    router.push('/report');
   }
 }
 </script>
