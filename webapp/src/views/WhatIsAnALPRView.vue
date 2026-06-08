@@ -28,13 +28,13 @@
     </div>
 
     <p>
-      Automated License Plate Readers (ALPRs or LPRs) are AI-powered cameras that capture and analyze images of <b>all passing vehicles</b>, storing details like your car's <b>location, date, and time</b>. They also capture your car's <b>make, model, color</b>, and <b>identifying features</b> such as dents, roof racks, and bumper stickers, often turning these into <b>searchable data points</b>.
+      Automated Licence Plate Readers (ALPRs or LPRs) are AI-powered cameras that capture and analyze images of <b>all passing vehicles</b>, storing details like your car's <b>location, date, and time</b>. They also capture your car's <b>make, model, colour</b>, and <b>identifying features</b> such as dents, roof racks, and bumper stickers, often turning these into <b>searchable data points</b>.
     </p>
     <p>
-      These cameras collect data on millions of vehicles <b>regardless of whether the driver is suspected of a crime</b>. These systems are marketed as indispensable tools to fight crime, but they ignore the powerful tools police already have to track criminals, such as cell phone location data, <b>creating a loophole that doesn't require a warrant</b>.
+      These cameras collect data on millions of vehicles <b>regardless of whether the driver is suspected of a crime</b>. They are marketed as indispensable tools to fight crime, but they record <b>everyone's movements</b> with little judicial oversight — building a database of law-abiding people's travels.
     </p>
 
-    <p>For a detailed explanation of how ALPRs are a threat to privacy, see this <a href="https://www.aclu.org/issues/privacy-technology/you-are-being-tracked" target="_blank">ACLU article</a> as well as this <a href="https://sls.eff.org/technologies/automated-license-plate-readers-alprs" target="_blank">EFF article</a> on ALPRs.</p>
+    <p>For more on how ALPRs threaten privacy, see resources from Canadian groups like the <a href="https://ccla.org/" target="_blank">Canadian Civil Liberties Association</a> and <a href="https://openmedia.org/" target="_blank">OpenMedia</a>, along with the <a href="https://sls.eff.org/technologies/automated-license-plate-readers-alprs" target="_blank">EFF</a> and <a href="https://www.aclu.org/issues/privacy-technology/you-are-being-tracked" target="_blank">ACLU</a>.</p>
 
     <v-divider class="my-12" />
 
@@ -54,6 +54,11 @@
     <h2>Why Should You Be Concerned</h2>
     <p class="mb-8 text-center">
       ALPRs invade your privacy and violate your civil liberties. Here's how:
+    </p>
+    <p class="mb-8 text-center text-medium-emphasis" style="font-style: italic;">
+      Many of the documented cases below come from the United States, where ALPR
+      surveillance is most entrenched — but the same vendors and systems (Flock,
+      Genetec, Motorola) are now expanding across Canada.
     </p>
 
     <Dangers />

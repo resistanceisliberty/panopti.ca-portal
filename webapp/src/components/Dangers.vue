@@ -23,7 +23,7 @@
           Our findings indicate that, when small numbers of LPR patrols are used in crime hot spots in the way we have tested them here, they do not seem to generate either a general or offense-specific deterrent effect.
         </quoted-source>
 
-        <quoted-source source-url="https://www.independent.org/publications/article.asp?id=13893" attribution-text="Automated License Plate Readers: A Study in Failure">
+        <quoted-source source-url="https://www.independent.org/publications/article.asp?id=13893" attribution-text="Automated Licence Plate Readers: A Study in Failure">
           There is not even a moderate degree of correlation between ALPRs and stolen vehicle recoveries, let alone any apparent casualty
         </quoted-source>
       </v-expansion-panel-text>
@@ -40,10 +40,10 @@
 
         <ul>
           <li>
-            In November 2025, <a target="_blank" href="https://www.404media.co/flock-logins-exposed-in-malware-infections-senator-asks-ftc-to-investigate-the-company/">a security researcher found Flock logins for sale on Russian hacking forums</a>, since Flock negligently doesn't require multifactor authentication, an alleged violation of federal law and industry standard security practices.
+            In November 2025, <a target="_blank" href="https://www.404media.co/flock-logins-exposed-in-malware-infections-senator-asks-ftc-to-investigate-the-company/">a security researcher found Flock logins for sale on Russian hacking forums</a>, since Flock negligently doesn't require multi-factor authentication, an alleged violation of industry-standard security practices.
           </li>
           <li>
-            In January 2025, Motorola Solutions' ALPR system was <a href="https://www.404media.co/researcher-turns-insecure-license-plate-cameras-into-open-source-surveillance-tool/" target="_blank">found to have a critical security flaw</a> that allowed anyone to access live data from their cameras. Data includes <b>license plate numbers, make, model, color, and timestamps</b>. A <b>live feed</b> of both cameras (color and infrared) was also available to stream using a web browser.
+            In January 2025, Motorola Solutions' ALPR system was <a href="https://www.404media.co/researcher-turns-insecure-license-plate-cameras-into-open-source-surveillance-tool/" target="_blank">found to have a critical security flaw</a> that allowed anyone to access live data from their cameras. Data includes <b>licence plate numbers, make, model, colour, and timestamps</b>. A <b>live feed</b> of both cameras (color and infrared) was also available to stream using a web browser.
           </li>
           <li>
             In July 2025, <a target="_blank" href="https://nexanet.ai/blog/misconfigured-demo-exposed-flock-safetys-83000-camera-nationwide-tracking-system">Flock Safety exposed a misconfigured demo site</a> that included (1) their internal search interface and some source code, some of which reveals how they calculate confidence scores for vehicle tracking and (2) a live ArcGIS admin API key, which included access to over 50 private data layers.
@@ -61,10 +61,10 @@
           See <a href="https://en.wikipedia.org/wiki/Dragnet_(policing)" target="_blank">Dragnet (Policing)</a> on Wikipedia.
         </i></p>
         <p>
-          A study of ALPRs in Piedmont, CA, found that <b>less than 0.3%</b> of ALPR hits might translate into a useful investigative lead. Most license plates recorded were not on a hot list, yet police still logged information on people's movements throughout the day.
+          A study of ALPRs in Piedmont, CA, found that <b>less than 0.3%</b> of ALPR hits might translate into a useful investigative lead. Most licence plates recorded were not on a hot list, yet police still logged information on people's movements throughout the day.
         </p>
         <p>
-          Flock Safety provides Transparency Portals to their police customers, which allow the public to see the data collected by ALPRs. From these portals, we can see that the vast majority of license plates scanned are not on a hot list (vehicles suspected of being involved in crimes). For example:
+          Flock Safety provides Transparency Portals to their police customers, which allow the public to see the data collected by ALPRs. From these portals, we can see that the vast majority of licence plates scanned are not on a hot list (vehicles suspected of being involved in crimes). For example:
         </p>
 
         <ul>
@@ -96,7 +96,7 @@
             <a href="https://www.kwch.com/2022/10/31/kechi-police-lieutenant-arrested-using-police-technology-stalk-wife/" target="_blank">A police officer used Flock Safety ALPRs to stalk his estranged wife in Kechi, KS</a>
           </li>
           <li>
-            <a href="https://apnews.com/general-news-699236946e3140659fff8a2362e16f43" target="_blank">A police officer accepted a bribe to run a woman's license plate in Georgia</a>
+            <a href="https://apnews.com/general-news-699236946e3140659fff8a2362e16f43" target="_blank">A police officer accepted a bribe to run a woman's licence plate in Georgia</a>
           </li>
           <li>
             <a href="https://apnews.com/general-news-699236946e3140659fff8a2362e16f43" target="_blank">A police officer used ALPRs to stalk his ex-girlfriend in Ohio</a>
@@ -121,16 +121,16 @@
         </p>
         <ul>
           <li>
-            <a href="https://www.aclu.org/blog/privacy-technology/location-tracking/san-francisco-woman-pulled-out-car-gunpoint-because" target="_blank">San Francisco Woman Pulled Out of Car at Gunpoint Because of License Plate Reader Error</a>
+            <a href="https://www.aclu.org/blog/privacy-technology/location-tracking/san-francisco-woman-pulled-out-car-gunpoint-because" target="_blank">San Francisco Woman Pulled Out of Car at Gunpoint Because of Licence Plate Reader Error</a>
           </li>
           <li>
-            <a href="https://gizmodo.com/cops-terrorize-black-family-but-blame-license-plate-rea-1844602731" target="_blank">Cops Terrorize Black Family but Blame License Plate Reader for Misidentifying 'Stolen' Vehicle</a>
+            <a href="https://gizmodo.com/cops-terrorize-black-family-but-blame-license-plate-rea-1844602731" target="_blank">Cops Terrorize Black Family but Blame Licence Plate Reader for Misidentifying 'Stolen' Vehicle</a>
           </li>
           <li>
             <a href="https://www.techdirt.com/2019/02/20/deputies-sued-after-false-alpr-hit-leads-to-guns-out-traffic-stop-california-privacy-activist/" target="_blank">Deputies Sued After False ALPR Hit Leads To Guns-Out Traffic Stop Of California Privacy Activist</a>
           </li>
           <li>
-            <a href="https://www.ktvu.com/news/privacy-advocate-sues-coco-sheriffs-deputies-after-license-plate-readers-target-his-car-stolen" target="_blank">Privacy advocate sues CoCo sheriff's deputies after license plate readers target his car stolen</a>
+            <a href="https://www.ktvu.com/news/privacy-advocate-sues-coco-sheriffs-deputies-after-license-plate-readers-target-his-car-stolen" target="_blank">Privacy advocate sues CoCo sheriff's deputies after licence plate readers target his car stolen</a>
           </li>
           <li>
             <a target="_blank" href="https://denverite.com/2025/10/27/bow-mar-flock-cameras-accusation/">A Denver woman had to prove her innocence</a> after incompetent detectives relied on Flock cameras to pin a $25 package theft on her <b>(video)</b>.
@@ -148,7 +148,7 @@
           ALPRs are more likely to surveil communities with a higher density of Black and brown people, reinforcing systemic racism in policing.
         </p>
         <p>
-          The Electronic Frontier Foundation <a href="https://www.eff.org/deeplinks/2015/01/what-we-learned-oakland-raw-alpr-data" target="_blank">reviewed the use of ALPRs by the Oakland Police Department</a> and found that ALPR cameras were more likely to scan license plates in communities with a higher density of Black and brown people than in communities with a higher density of white people.
+          The Electronic Frontier Foundation <a href="https://www.eff.org/deeplinks/2015/01/what-we-learned-oakland-raw-alpr-data" target="_blank">reviewed the use of ALPRs by the Oakland Police Department</a> and found that ALPR cameras were more likely to scan licence plates in communities with a higher density of Black and brown people than in communities with a higher density of white people.
         </p>
 
         <p class="mt-4"><a href="https://www.ap.org/ap-in-the-news/2012/with-cameras-informants-nypd-eyed-mosques" target="_blank">A report by The Associated Press</a> shows that after 9/11, the NYPD used ALPRs to monitor Muslims visiting mosques.</p>
@@ -162,11 +162,11 @@
 
     <v-expansion-panel>
       <v-expansion-panel-title class="font-weight-bold">
-        ALPRs Put Undocumented People at Risk
+        ALPRs Enable Cross-Border Tracking
       </v-expansion-panel-title>
       <v-expansion-panel-text>
         <p>
-          Police agencies frequently share ALPR data with ICE, putting undocumented people at risk, even in states where this is legally prohibited:
+          ALPR data doesn't stay local. In the U.S., the same Flock network now expanding into Canada has been tapped by federal immigration agencies (ICE), often even where local policy prohibits it. As Canadian agencies adopt these systems, the risk that Canadians' movement data is shared across the border with U.S. agencies is a serious concern:
         </p>
         <ul>
           <li>
@@ -175,7 +175,7 @@
             </a>
           </li>
           <li>
-            <a href="https://www.latimes.com/business/technology/story/2020-12-21/pasadena-long-beach-police-ice-automated-license-plate-reader-data" target="_blank">Police in Pasadena, Long Beach pledged not to send license plate data to ICE. They shared it anyway.</a>
+            <a href="https://www.latimes.com/business/technology/story/2020-12-21/pasadena-long-beach-police-ice-automated-license-plate-reader-data" target="_blank">Police in Pasadena, Long Beach pledged not to send licence plate data to ICE. They shared it anyway.</a>
           </li>
           <li>
             <a href="https://www.aclu-il.org/en/press-releases/ice-targeting-immigrants-based-automatic-license-plate-reader-alpr-data-supplied" target="_blank">Documents Reveal ICE Using Driver Location Data From Local Police for Deportations</a>

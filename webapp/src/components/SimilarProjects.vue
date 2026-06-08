@@ -101,8 +101,14 @@ interface SimilarProject {
 
 const similarProjects: SimilarProject[] = [
   {
+    name: "DeFlock",
+    description: "The original project mapping ALPRs on OpenStreetMap. panopti.ca is built on DeFlock's open-source work, focused on Canada.",
+    url: "https://deflock.org",
+    imageUrl: ""
+  },
+  {
     name: "Have I Been Flocked?",
-    description: "See if your license plate has been searched in Flock's system, as well as concerning trends in Flock usage.",
+    description: "See if your licence plate has been searched in Flock's system, as well as concerning trends in Flock usage.",
     url: "https://haveibeenflocked.com",
     imageUrl: "/similar-projects/hibf.webp"
   },
@@ -113,40 +119,10 @@ const similarProjects: SimilarProject[] = [
     imageUrl: "/similar-projects/flockhopper.webp"
   },
   {
-    name: "Upcoming Meetings",
-    description: "Find upcoming public meetings related to ALPR deployments.",
-    url: "https://alpr.watch/",
-    imageUrl: "/similar-projects/alprdotwatch.webp"
-  },
-  {
-    name: "Eyes On Flock",
-    description: "Dashboard for tracking Flock usage patterns, including total cameras & top search reasons.",
-    url: "https://eyesonflock.com",
-    imageUrl: "/similar-projects/eof.webp"
-  },
-  {
-    name: "Suspected Locations",
-    description: "Map of locations where ALPRs may be, based on 811 locate requests, FOIA, and other sources.",
-    url: "https://alprwatch.org/flock/suspected-locations/",
-    imageUrl: "/similar-projects/flockutil.webp"
-  },
-  {
-    name: "Recent Submissions",
-    description: "Explore recently added Flock cameras in the US.",
-    url: "https://alprwatch.org/flock/map",
-    imageUrl: "/similar-projects/alprwatch.webp"
-  },
-  {
     name: "Atlas of Surveillance",
-    description: "EFF's comprehensive database of surveillance technologies used by law enforcement.",
+    description: "The EFF's comprehensive database of surveillance technologies used by law enforcement across North America.",
     url: "https://atlasofsurveillance.org/atlas",
     imageUrl: "/similar-projects/eff-atlas.webp"
-  },
-  {
-    name: "Plate Privacy",
-    description: "The Institute for Justice's site analyzing ALPR usage patterns in the US.",
-    url: "https://plateprivacy.com",
-    imageUrl: "/similar-projects/plate-privacy.webp"
   }
 ]
 </script>
