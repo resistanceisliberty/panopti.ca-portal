@@ -16,7 +16,7 @@
 
     <h2>About the Project</h2>
     <p>
-      ALPRs are spreading rapidly across Canada, sold by vendors such as <a target="_blank" href="https://en.wikipedia.org/wiki/Genetec">Genetec</a> (a Montréal-based company) and <a target="_blank" href="https://en.wikipedia.org/wiki/Flock_Safety">Flock Safety</a> (a U.S. vendor now expanding here). These cameras record the movements of everyone who passes, regardless of whether they're suspected of any wrongdoing.
+      ALPRs are spreading rapidly across Canada, sold by vendors such as <a target="_blank" href="https://www.genetec.com/">Genetec</a> (a Montréal-based company) and <a target="_blank" href="https://en.wikipedia.org/wiki/Flock_Safety">Flock Safety</a> (a U.S. vendor now expanding here). These cameras record the movements of everyone who passes, regardless of whether they're suspected of any wrongdoing.
     </p>
     <p>
       panopti.ca surfaces where these cameras are by mapping them on <a target="_blank" href="https://www.openstreetmap.org">OpenStreetMap</a>, so the data is public and anyone can verify or contribute to it. The project builds on <a target="_blank" href="https://deflock.org">DeFlock</a>, the open-source effort that pioneered crowdsourced ALPR mapping.

@@ -100,7 +100,7 @@
     <div class="flock-resources-section my-8">
       <h2 class="mb-4">Who makes these cameras?</h2>
       <p class="px-6 text-left">
-        In Canada, the most commonly mapped ALPR systems come from <a target="_blank" href="https://en.wikipedia.org/wiki/Genetec">Genetec</a>, a Montréal-based company, alongside <a target="_blank" href="https://consumerrights.wiki/w/Flock_Safety">Flock Safety</a> — a major U.S. vendor now expanding into Canada. Captured vehicle data is uploaded to the vendor's cloud system, where participating agencies can <b>search and share information across jurisdictions</b>.
+        In Canada, the most commonly mapped ALPR systems come from <a target="_blank" href="https://www.genetec.com/">Genetec</a>, a Montréal-based company, alongside <a target="_blank" href="https://consumerrights.wiki/w/Flock_Safety">Flock Safety</a> — a major U.S. vendor now expanding into Canada. Captured vehicle data is uploaded to the vendor's cloud system, where participating agencies can <b>search and share information across jurisdictions</b>.
       </p>
 
       <p class="text-left px-6">These are <b>not the only ALPR vendors</b>, and others follow similar practices. See this list of <router-link to="/identify">common ALPR vendors</router-link>.</p>
