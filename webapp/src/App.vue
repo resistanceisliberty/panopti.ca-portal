@@ -66,6 +66,13 @@ watch(() => theme.global.name.value, (newTheme) => {
 <template>
   <v-app>
     <template v-if="!isInIframe">
+      <v-system-bar class="deflock-credit-bar px-3 text-center" color="grey-darken-4">
+        <span class="deflock-credit-text">
+          Built on
+          <a href="https://deflock.org/" target="_blank" rel="noopener noreferrer">DeFlock</a>, the original ALPR-mapping project — for United States ALPR data, visit
+          <a href="https://deflock.org/" target="_blank" rel="noopener noreferrer">deflock.org</a>.
+        </span>
+      </v-system-bar>
       <v-app-bar
         flat
         prominent
@@ -262,5 +269,25 @@ watch(() => theme.global.name.value, (newTheme) => {
 .custom-icon {
   display: inline-block;
   margin-right: 5px;
+}
+
+.deflock-credit-bar {
+  height: auto !important;
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.deflock-credit-text {
+  white-space: normal;
+  line-height: 1.35;
+  font-size: 0.78rem;
+  padding: 5px 0;
+  color: rgba(255, 255, 255, 0.82);
+}
+.deflock-credit-text a {
+  color: #5bb8e0;
+  font-weight: 700;
+  text-decoration: underline;
 }
 </style>
