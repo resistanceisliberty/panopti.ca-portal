@@ -1,9 +1,25 @@
 <template>
   <div class="dashboard-bg rounded-xl pa-6 pa-sm-4 mx-4 mx-sm-2 text-white">
-    <div class="d-flex flex-column align-center text-center">
-      <v-icon :size="isMobile ? 24 : 32" color="white" class="mb-2">mdi-camera-outline</v-icon>
-      <div ref="counterEl" class="font-weight-bold mb-2" :class="isMobile ? 'text-h3' : 'text-h2'">0</div>
-      <div class="text-body-1">ALPRs mapped in Canada</div>
+    <div class="d-flex flex-column flex-sm-row align-center justify-center text-center">
+      <!-- ALPRs -->
+      <div class="counter-cell d-flex flex-column align-center">
+        <v-icon :size="isMobile ? 24 : 32" color="white" class="mb-2">mdi-camera-outline</v-icon>
+        <div ref="alprEl" class="font-weight-bold mb-2" :class="isMobile ? 'text-h3' : 'text-h2'">0</div>
+        <div class="text-body-1">ALPRs mapped in Canada</div>
+      </div>
+
+      <v-divider
+        :vertical="!isMobile"
+        color="white"
+        class="counter-divider border-opacity-25 mx-sm-4 my-3 my-sm-0"
+      />
+
+      <!-- Government CCTV -->
+      <div class="counter-cell d-flex flex-column align-center">
+        <v-icon :size="isMobile ? 24 : 32" color="white" class="mb-2">mdi-cctv</v-icon>
+        <div ref="cctvEl" class="font-weight-bold mb-2" :class="isMobile ? 'text-h3' : 'text-h2'">0</div>
+        <div class="text-body-1">Government CCTV mapped in Canada</div>
+      </div>
     </div>
   </div>
 </template>
@@ -20,12 +36,15 @@ const props = defineProps({
   }
 });
 
-// Live count of Canadian ALPRs, pulled from the map's own dataset (refreshed
-// nightly). Falls back to a sane default if the fetch fails.
+// Live counts pulled from the map's own dataset (refreshed nightly). Government
+// CCTV is tagged with brand "Government CCTV"; everything else is an ALPR.
 const COUNT_URL = 'https://maps.panopti.ca/cameras-ca.json';
-const FALLBACK_COUNT = 156;
+const CCTV_BRAND = 'Government CCTV';
+const FALLBACK_ALPR = 156;
+const FALLBACK_CCTV = 778;
 
-const counterEl: Ref<HTMLElement|null> = ref(null);
+const alprEl: Ref<HTMLElement|null> = ref(null);
+const cctvEl: Ref<HTMLElement|null> = ref(null);
 const countupOptions = {
   useEasing: true,
   useGrouping: true,
@@ -37,22 +56,27 @@ let timeOfMount: number | undefined = undefined;
 
 onMounted(async () => {
   timeOfMount = new Date().getTime();
-  let count = FALLBACK_COUNT;
+  let alpr = FALLBACK_ALPR;
+  let cctv = FALLBACK_CCTV;
   try {
     const res = await fetch(COUNT_URL, { cache: 'default' });
     if (res.ok) {
       const data = await res.json();
-      if (Array.isArray(data) && data.length > 0) count = data.length;
+      if (Array.isArray(data) && data.length > 0) {
+        cctv = data.filter((c) => c && c.brand === CCTV_BRAND).length;
+        alpr = data.length - cctv;
+      }
     }
   } catch {
-    // keep fallback
+    // keep fallbacks
   }
-  startCountUp(count);
+  startCountUp(alprEl.value, alpr);
+  startCountUp(cctvEl.value, cctv);
 });
 
-function startCountUp(value: number) {
-  if (!counterEl.value) return;
-  const counter = new CountUp(counterEl.value, value, countupOptions);
+function startCountUp(el: HTMLElement | null, value: number) {
+  if (!el) return;
+  const counter = new CountUp(el, value, countupOptions);
   const elapsed = timeOfMount ? new Date().getTime() - timeOfMount : props.delayMs;
   const wait = Math.max(0, props.delayMs - elapsed);
   setTimeout(() => counter.start(), wait);
@@ -62,5 +86,12 @@ function startCountUp(value: number) {
 <style scoped>
 .dashboard-bg {
   background: rgba(0, 0, 0, 0.6);
+}
+.counter-cell {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.counter-divider {
+  align-self: stretch;
 }
 </style>
