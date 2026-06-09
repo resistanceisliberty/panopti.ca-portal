@@ -20,7 +20,7 @@
     <div class="d-flex justify-center mb-2">
       <v-btn-toggle v-model="deviceType" mandatory color="rgb(18, 151, 195)" variant="outlined" divided rounded>
         <v-btn value="alpr" prepend-icon="mdi-car"><span>ALPR</span></v-btn>
-        <v-btn value="cctv" prepend-icon="mdi-cctv"><span>Government CCTV</span></v-btn>
+        <v-btn value="cctv" prepend-icon="mdi-cctv"><span>Government CCTVs</span></v-btn>
       </v-btn-toggle>
     </div>
 
@@ -93,7 +93,7 @@
               <DFCode :osm-tags="cctvOperatorTags" :highlight-values-for-keys="['operator']" :show-copy-button="false" />
 
               <v-alert variant="tonal" type="info" class="mt-6 text-body-2">
-                <code>operator:type=government</code> is the key tag — it's what places the camera in panopti.ca's <strong>Government CCTV</strong> layer. Set <code>operator</code> to the city or agency that runs it. Optionally add <code>surveillance:zone=traffic</code> for traffic cameras, or <code>camera:mount</code> and <code>camera:direction</code> if you know them.
+                <code>operator:type=government</code> is the key tag — it's what places the camera in panopti.ca's <strong>Government CCTVs</strong> layer. Set <code>operator</code> to the city or agency that runs it. Optionally add <code>surveillance:zone=traffic</code> for traffic cameras, or <code>camera:mount</code> and <code>camera:direction</code> if you know them.
               </v-alert>
             </div>
           </template>

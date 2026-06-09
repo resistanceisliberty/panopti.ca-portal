@@ -18,7 +18,7 @@
       <div class="counter-cell d-flex flex-column align-center">
         <v-icon :size="isMobile ? 24 : 32" color="white" class="mb-2">mdi-cctv</v-icon>
         <div ref="cctvEl" class="font-weight-bold mb-2" :class="isMobile ? 'text-h3' : 'text-h2'">0</div>
-        <div class="text-body-1">Government CCTV mapped in Canada</div>
+        <div class="text-body-1">Government CCTVs mapped in Canada</div>
       </div>
     </div>
   </div>
@@ -37,9 +37,9 @@ const props = defineProps({
 });
 
 // Live counts pulled from the map's own dataset (refreshed nightly). Government
-// CCTV is tagged with brand "Government CCTV"; everything else is an ALPR.
+// CCTV is tagged with brand "Government CCTVs"; everything else is an ALPR.
 const COUNT_URL = 'https://maps.panopti.ca/cameras-ca.json';
-const CCTV_BRAND = 'Government CCTV';
+const CCTV_BRAND = 'Government CCTVs';
 const FALLBACK_ALPR = 156;
 const FALLBACK_CCTV = 778;
 

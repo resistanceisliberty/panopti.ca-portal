@@ -84,7 +84,7 @@ watch(() => theme.global.name.value, (newTheme) => {
       <v-system-bar class="deflock-credit-bar px-3 text-center" color="grey-darken-4">
         <span class="deflock-credit-text">
           Built on
-          <a href="https://deflock.org/" target="_blank" rel="noopener noreferrer">DeFlock</a>, the original ALPR-mapping project — for United States ALPR data, visit
+          <a href="https://github.com/FoggedLens/deflock" target="_blank" rel="noopener noreferrer">DeFlock</a>, the original ALPR-mapping project — for United States ALPR data, visit
           <a href="https://deflock.org/" target="_blank" rel="noopener noreferrer">deflock.org</a>.
         </span>
       </v-system-bar>
