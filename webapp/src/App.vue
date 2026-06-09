@@ -52,6 +52,7 @@ const items = [
   { title: 'Home', icon: 'mdi-home', to: '/' },
   { title: 'Map', icon: 'mdi-map', href: 'https://maps.panopti.ca' },
   { title: 'Learn', icon: 'mdi-school', to: '/what-is-an-alpr' },
+  { title: 'Report', icon: 'mdi-map-marker-plus', to: '/report/id' },
 ]
 
 const contributeItems = [
