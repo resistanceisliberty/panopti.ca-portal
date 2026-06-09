@@ -6,7 +6,7 @@
       </v-expansion-panel-title>
       <v-expansion-panel-text>
         <p>
-          No. Police have long had ways to obtain location information about suspects. Those methods generally require reasonable grounds and judicial authorization, which provide oversight and accountability. In Canada, <b>Section 8 of the Charter of Rights and Freedoms</b> protects against unreasonable search and seizure. ALPRs flip this around: they collect location data on <b>all of us</b>, all the time, and that data is often searched with little or no oversight.
+          No. Police have long had ways to obtain location information about suspects. Those methods generally require reasonable grounds and judicial authorization, which provide oversight and accountability. In Canada, <b>Section 8 of the Charter of Rights and Freedoms</b> protects against unreasonable search and seizure. ALPRs flip this around: they collect location data on <b>everyone</b>, all the time, and that data is often searched with little or no oversight.
         </p>
       </v-expansion-panel-text>
     </v-expansion-panel>
@@ -93,7 +93,7 @@
 
     <v-expansion-panel>
       <v-expansion-panel-title class="font-weight-bold">
-        Can Flock be trusted to keep our data safe?
+        Can Flock be trusted to keep this data safe?
       </v-expansion-panel-title>
       <v-expansion-panel-text>
         <p>
@@ -117,7 +117,7 @@
           Communities can push back. Raise concerns publicly, build a group of advocates, and petition your municipal council not to approve or renew ALPR contracts. Public attention, deputations, and records requests have led agencies elsewhere to cancel or decline ALPR programs.
         </p>
         <p>
-          For more, see our <router-link to="/council">city council page</router-link>.
+          For more, see the <router-link to="/council">city council page</router-link>.
         </p>
       </v-expansion-panel-text>
     </v-expansion-panel>

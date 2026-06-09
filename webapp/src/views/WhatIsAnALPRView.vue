@@ -111,7 +111,7 @@ const faqs: { q: string; a: string }[] = [
     a: 'No. Flock now operates in Canada, but its U.S. record is telling: its transparency portals are notoriously incomplete. Boulder, Colorado’s portal listed around 90 agencies, but a public records request revealed over 6,000 agencies actually had access.',
   },
   {
-    q: 'Can Flock be trusted to keep our data safe?',
+    q: 'Can Flock be trusted to keep this data safe?',
     a: "Flock's record raises serious doubts. In November 2025 a researcher found Flock logins for sale on Russian hacking forums, as Flock didn't require multi-factor authentication. Flock has also misrepresented who can access its systems. The same company is now signing up Canadian agencies.",
   },
   {

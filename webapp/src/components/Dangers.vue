@@ -64,7 +64,7 @@
           A study of ALPRs in Piedmont, CA, found that <b>less than 0.3%</b> of ALPR hits might translate into a useful investigative lead. Most licence plates recorded were not on a hot list, yet police still logged information on people's movements throughout the day.
         </p>
         <p>
-          Flock Safety provides Transparency Portals to their police customers, which allow the public to see the data collected by ALPRs. From these portals, we can see that the vast majority of licence plates scanned are not on a hot list (vehicles suspected of being involved in crimes). For example:
+          Flock Safety provides Transparency Portals to their police customers, which allow the public to see the data collected by ALPRs. These portals reveal that the vast majority of licence plates scanned are not on a hot list (vehicles suspected of being involved in crimes). For example:
         </p>
 
         <ul>
