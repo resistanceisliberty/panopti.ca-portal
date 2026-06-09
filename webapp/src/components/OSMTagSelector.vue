@@ -71,6 +71,19 @@ const vendorTagKeys = computed(() =>
 );
 
 onMounted(async () => {
+  // Dahua isn't in the upstream CMS — add it locally (a Canada-relevant ALPR
+  // vendor). osmTags merge on top of lprBaseTags, so only the manufacturer keys
+  // are needed here.
+  const dahuaVendor: LprVendor = {
+    id: -2,
+    fullName: 'Dahua Technology',
+    shortName: 'Dahua Technology',
+    osmTags: {
+      'manufacturer': 'Dahua Technology',
+      'manufacturer:wikidata': 'Q18111506',
+    },
+    urls: [{ url: 'https://dahuasecuritysolutions.co.uk/wp-content/uploads/2023/08/ITC413-Series_s.png' }],
+  }
   const genericLprVendor: LprVendor = {
     id: -1,
     fullName: 'Generic',
@@ -79,7 +92,8 @@ onMounted(async () => {
     urls: [],
   }
   await vendorStore.loadAllVendors();
-  lprVendors.value = [...vendorStore.lprVendors, genericLprVendor];
+  const cmsVendors = vendorStore.lprVendors.filter((v) => v.fullName !== 'Dahua Technology');
+  lprVendors.value = [...cmsVendors, dahuaVendor, genericLprVendor];
 
   selectedLprVendor.value = lprVendors.value[0] ?? null;
 });
