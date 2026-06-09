@@ -27,7 +27,7 @@ export default defineConfig({
     includedRoutes() {
       return [
         '/', '/about', '/what-is-an-alpr', '/report/id', '/council',
-        '/foia', '/identify', '/contact', '/privacy', '/terms', '/qr',
+        '/foi', '/identify', '/contact', '/privacy', '/terms', '/qr',
       ]
     },
   },

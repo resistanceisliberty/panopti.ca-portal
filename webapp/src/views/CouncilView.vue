@@ -215,7 +215,7 @@
             anything allowing <b>cross-border (U.S.) access</b>. These documents often make the strongest case.
           </p>
 
-          <v-btn color="primary" variant="elevated" to="/foia" prepend-icon="mdi-file-document">
+          <v-btn color="primary" variant="elevated" to="/foi" prepend-icon="mdi-file-document">
             How to Request Public Records
           </v-btn>
         </v-card>

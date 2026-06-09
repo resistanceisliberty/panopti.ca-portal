@@ -64,13 +64,18 @@ export const routes: RouteRecordRaw[] = [
     },
   },
   {
-    path: '/foia',
-    name: 'foia',
+    path: '/foi',
+    name: 'foi',
     component: () => import('../views/FOIA.vue'),
     meta: {
       title: 'Request ALPR Records: Freedom of Information in Canada | panopti.ca',
       description: 'How to file freedom-of-information (ATIP / provincial FOI) requests for ALPR contracts, data-sharing policies, and records from Canadian police.',
     },
+  },
+  {
+    // Old path — keep redirecting so existing /foia links don't break.
+    path: '/foia',
+    redirect: '/foi',
   },
   {
     path: '/identify',
