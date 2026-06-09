@@ -28,10 +28,10 @@
     </div>
 
     <p>
-      Automated Licence Plate Readers (ALPRs or LPRs) are AI-powered cameras that capture and analyze images of <b>all passing vehicles</b>, storing details like your car's <b>location, date, and time</b>. They also capture your car's <b>make, model, colour</b>, and <b>identifying features</b> such as dents, roof racks, and bumper stickers, often turning these into <b>searchable data points</b>.
+      An automatic licence plate reader (ALPR, sometimes LPR) is an AI-driven camera that captures an image of <b>every vehicle that drives by</b> and stores what it sees — the plate number, the place, and the precise time. Many models also note a car's <b>make, model, and colour</b>, and even identifying marks such as dents, roof racks, or bumper stickers, converting each one into <b>searchable data</b>.
     </p>
     <p>
-      These cameras collect data on millions of vehicles <b>regardless of whether the driver is suspected of a crime</b>. They are marketed as indispensable tools to fight crime, but they record <b>everyone's movements</b> with little judicial oversight — building a database of law-abiding people's travels.
+      These cameras log millions of vehicles <b>regardless of whether anyone is under suspicion</b>. Sold as indispensable tools against crime, they instead record the <b>everyday movements of law-abiding people</b>, with little judicial oversight over how the data is kept or searched.
     </p>
 
     <p>For more on how ALPRs threaten privacy, see resources from Canadian groups like the <a href="https://ccla.org/" target="_blank">Canadian Civil Liberties Association</a> and <a href="https://openmedia.org/" target="_blank">OpenMedia</a>, along with the <a href="https://sls.eff.org/technologies/automated-license-plate-readers-alprs" target="_blank">EFF</a> and <a href="https://www.aclu.org/issues/privacy-technology/you-are-being-tracked" target="_blank">ACLU</a>.</p>
@@ -53,7 +53,7 @@
 
     <h2>Why Should You Be Concerned</h2>
     <p class="mb-8 text-center">
-      ALPRs invade your privacy and violate your civil liberties. Here's how:
+      ALPRs erode privacy and chip away at civil liberties. Here's how:
     </p>
     <p class="mb-8 text-center text-medium-emphasis" style="font-style: italic;">
       Many of the documented cases below come from the United States, where ALPR

@@ -27,10 +27,10 @@
     <h2 class="mb-6">What are ALPRs</h2>
 
     <p class="text-left px-6">
-      Automated Licence Plate Readers (ALPRs or LPRs) are AI-powered cameras that capture and analyze images of <b>all passing vehicles</b>, storing details like your car's <b>location, date, and time</b>. They also capture your car's <b>make, model, colour</b>, and <b>identifying features</b> such as dents, roof racks, and bumper stickers, often turning these into <b>searchable data points</b>.
+      An automatic licence plate reader (ALPR or LPR) is an AI-powered camera that photographs <b>every vehicle that passes</b> and logs the details — the plate, the location, and the exact time. Many also capture a car's <b>make, model, and colour</b>, plus <b>distinguishing features</b> like dents, roof racks, or bumper stickers, turning each vehicle into a set of <b>searchable data points</b>.
     </p>
     <p class="text-left px-6">
-      These cameras collect data on millions of vehicles <b>regardless of whether the driver is suspected of a crime</b>. They are marketed as indispensable tools to fight crime, but they ignore the powerful tools police already have, and <b>create a record of everyone's movements</b> — not just those under investigation.
+      Every plate gets recorded, <b>whether or not the driver is suspected of anything</b>. Marketed as essential crime-fighting tools, these cameras instead build a running log of where ordinary people go — <b>not just those under investigation</b>.
     </p>
 
     <div class="alpr-demo-container my-8">
