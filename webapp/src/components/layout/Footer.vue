@@ -4,7 +4,7 @@
       <v-row align-items="center" justify="center">
 
         <v-col cols="12" class="mt-4">
-          <v-img height="30" contain src="/panoptica-light.svg" />
+          <v-img height="30" contain :src="isDark ? '/panoptica-dark.svg' : '/panoptica-light.svg'" />
         </v-col>
         
         <!-- Internal Links -->
