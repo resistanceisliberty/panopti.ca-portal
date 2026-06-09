@@ -5,7 +5,7 @@
       <v-container class="text-center py-8">
         <v-row justify="center">
           <v-col cols="12" md="8">
-            <h1 class="display-1 px-4 mb-4">Welcome to panopti.ca</h1>
+            <h1 class="hero-title px-4 mb-4">panopti.ca</h1>
             <h2 class="text-h5 px-4 mb-6">
               An open-source project mapping automatic licence plate readers (ALPRs) across Canada.
             </h2>
@@ -179,6 +179,14 @@
 .hero-background h1,
 .hero-background h2 {
   color: white;
+}
+
+.hero-title {
+  font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(3rem, 9vw, 5rem);
+  letter-spacing: -0.02em;
+  line-height: 1.02;
 }
 
 .bigger {
