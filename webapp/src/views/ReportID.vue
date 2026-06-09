@@ -13,6 +13,17 @@
       Editing the Map
     </h1>
 
+    <p class="text-center text-medium-emphasis mb-5">
+      Cameras are added through OpenStreetMap, the free and open map of the world. Pick what you're adding below — the steps are the same; only the tags in step&nbsp;3 differ.
+    </p>
+
+    <div class="d-flex justify-center mb-2">
+      <v-btn-toggle v-model="deviceType" mandatory color="rgb(18, 151, 195)" variant="outlined" divided rounded>
+        <v-btn value="alpr" prepend-icon="mdi-car"><span>ALPR</span></v-btn>
+        <v-btn value="cctv" prepend-icon="mdi-cctv"><span>Government CCTV</span></v-btn>
+      </v-btn-toggle>
+    </div>
+
     <v-stepper-vertical color="rgb(18, 151, 195)" v-model="step" flat non-linear class="my-8" edit-icon="mdi-home">
       <template v-slot:default="{ step }: { step: any }">
         <v-stepper-vertical-item
@@ -30,24 +41,24 @@
         <v-stepper-vertical-item
           class="transparent"
           :complete="step > 2"
-          title="Find the ALPR's Location"
+          title="Find the Camera's Location"
           value="2"
           editable
         >
           <p>
-            <a href="https://www.openstreetmap.org" target="_blank">Launch OpenStreetMap</a> and search for the location of the ALPR. You can use the search bar at the top of the page to find the location.
+            <a href="https://www.openstreetmap.org" target="_blank">Launch OpenStreetMap</a> and search for the location of the camera. You can use the search bar at the top of the page to find the location.
           </p>
         </v-stepper-vertical-item>
 
         <v-stepper-vertical-item
           class="transparent"
           :complete="step > 3"
-          title="Add the ALPR to OpenStreetMap"
+          title="Add the Camera to OpenStreetMap"
           value="3"
           editable
         >
           <p>
-            Once you've found the location of the ALPR, click the <strong>Edit</strong> button in the top left corner of the page. This will open the OpenStreetMap editor, where you can add the ALPR to the map.
+            Once you've found the location of the camera, click the <strong>Edit</strong> button in the top left corner of the page. This will open the OpenStreetMap editor, where you can add the ALPR to the map.
           </p>
           <v-img max-width="450" src="/edit-map.png" class="my-8" />
 
@@ -62,12 +73,30 @@
           </v-alert>
 
           <p class="mb-8">
-            To add the ALPR, click the <strong>Point</strong> button at the top center of the editor, then click on the location of the ALPR on the map. In the popup that appears, paste one of the following sets of tags based on the brand of the ALPR:
+            To add the camera, click the <strong>Point</strong> button at the top center of the editor, then click on its location on the map. In the popup that appears, paste the tags below.
           </p>
 
-          <v-divider class="my-4"><span class="serif text-grey-darken-2">Choose a Manufacturer</span></v-divider>
+          <!-- ALPR: pick a manufacturer for brand-specific tags -->
+          <template v-if="deviceType === 'alpr'">
+            <v-divider class="my-4"><span class="serif text-grey-darken-2">Choose a Manufacturer</span></v-divider>
+            <OSMTagSelector />
+          </template>
 
-          <OSMTagSelector />
+          <!-- Government CCTV: fixed government tag set -->
+          <template v-else>
+            <v-divider class="my-4"><span class="serif text-grey-darken-2">Government CCTV Tags</span></v-divider>
+            <div class="mx-auto" style="max-width: 460px;">
+              <h3 class="text-center serif mb-2">Tags to Copy</h3>
+              <DFCode :osm-tags="cctvBaseTags" :highlight-values-for-keys="['surveillance:type', 'operator:type']" />
+
+              <h5 class="text-center mt-4 serif">and name the operator</h5>
+              <DFCode :osm-tags="cctvOperatorTags" :highlight-values-for-keys="['operator']" :show-copy-button="false" />
+
+              <v-alert variant="tonal" type="info" class="mt-6 text-body-2">
+                <code>operator:type=government</code> is the key tag — it's what places the camera in panopti.ca's <strong>Government CCTV</strong> layer. Set <code>operator</code> to the city or agency that runs it. Optionally add <code>surveillance:zone=traffic</code> for traffic cameras, or <code>camera:mount</code> and <code>camera:direction</code> if you know them.
+              </v-alert>
+            </div>
+          </template>
 
           <v-divider class="mb-4 mt-8" />
 
@@ -90,7 +119,7 @@
             src="/adjust-angle.png"
           />
           <p>
-            If you know the direction that the ALPR is facing, you can use the up and down arrows to set the direction it faces.
+            If you know the direction that the camera is facing, you can use the up and down arrows to set the direction it faces.
           </p>
 
           <v-img
@@ -147,7 +176,7 @@
             src="/wikimedia-instructions/title.png"
           />
           <p>
-            Give your image a descriptive title and caption so that other users understand what it is. For example, you could title the image <code>ALPR (city name) (intersection)</code>. Make sure the date is accurate. Optionally, you may add the image to a category or add a capture location if you wish.
+            Give your image a descriptive title and caption so that other users understand what it is. For example, you could title the image <code>Camera (city name) (intersection)</code>. Make sure the date is accurate. Optionally, you may add the image to a category or add a capture location if you wish.
             <br><br>
             After you're doing filling everything out, click <strong>publish files</strong> at the bottom of the page.
           </p>
@@ -171,7 +200,7 @@
           editable
         >
           <p>
-            Once you've added the ALPR to the map, click the <strong>Save</strong> button in the top right corner of the editor. You'll be asked to provide a brief description of your changes. Once you've submitted your changes, the ALPR will be added to OpenStreetMap.
+            Once you've added the camera to the map, click the <strong>Save</strong> button in the top right corner of the editor. You'll be asked to provide a brief description of your changes. Once you've submitted your changes, the camera will be added to OpenStreetMap.
           </p>
           <v-alert
             variant="tonal"
@@ -195,8 +224,23 @@ import DefaultLayout from '@/layouts/DefaultLayout.vue';
 import Hero from '@/components/layout/Hero.vue';
 import { ref, onMounted, watch } from 'vue';
 import OSMTagSelector from '@/components/OSMTagSelector.vue';
+import DFCode from '@/components/DFCode.vue';
 import { VStepperVerticalItem, VStepperVertical } from 'vuetify/labs/components';
 import { useVendorStore } from '@/stores/vendorStore';
+
+// Which device the instructions target: ALPR (default) or government CCTV.
+const deviceType = ref<'alpr' | 'cctv'>('alpr');
+
+// Core OSM tags for a government CCTV camera. operator:type=government is what
+// lands it in panopti.ca's "Government CCTV" layer.
+const cctvBaseTags: Record<string, string> = {
+  'man_made': 'surveillance',
+  'surveillance:type': 'camera',
+  'operator:type': 'government',
+};
+const cctvOperatorTags: Record<string, string> = {
+  'operator': '[City or agency, e.g. City of Toronto]',
+};
 
 const step = ref(parseInt((typeof localStorage !== 'undefined' && localStorage.getItem('currentStep')) || '1'));
 
