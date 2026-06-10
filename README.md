@@ -13,6 +13,8 @@
 
 This repository is for the **content portal** for the panopti.ca project. It links to the **[map portal](https://maps.panopti.ca/)** where ALPRs and government CCTVs deployed across Canada are mapped out, explains how the technology works and why it matters, and gives people the tools to push back — public-records (ATIP/FOI) guidance, police-services-board context, and OpenStreetMap reporting instructions. All camera locations come from open data on OpenStreetMap.
 
+**Looking for the map repository?** You can find that by clicking **[here](https://github.com/resistanceisliberty/panopti.ca)**!
+
 ---
 
 ## Built on DeFlock
