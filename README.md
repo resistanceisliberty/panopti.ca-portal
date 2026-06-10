@@ -6,9 +6,7 @@
 
 ![panopti.ca portal](./webapp/public/panopti-portal.webp)
 
-panopti.ca documents where ALPRs and government CCTV are deployed across Canada, explains how the technology works and why it matters, and gives people the tools to push back — public-records (ATIP/FOI) guidance, police-services-board context, and OpenStreetMap reporting instructions. All camera locations come from open data on OpenStreetMap.
-
-This repository is the **content portal** (panopti.ca). The interactive map lives in a separate repository and is served at **[maps.panopti.ca](https://maps.panopti.ca)**.
+This repository is for the **content portal** for the panopti.ca project. It links to the **[map portal](https://maps.panopti.ca/)** where ALPRs and government CCTVs deployed across Canada are mapped out, explains how the technology works and why it matters, and gives people the tools to push back — public-records (ATIP/FOI) guidance, police-services-board context, and OpenStreetMap reporting instructions. All camera locations come from open data on OpenStreetMap.
 
 ---
 
@@ -19,15 +17,12 @@ panopti.ca is a fork of [**DeFlock**](https://deflock.org) (`FoggedLens/deflock`
 What this fork changes:
 
 - **Canadian focus.** Every page is rewritten for Canada — federal **ATIP** and provincial **FOI** processes (RCMP, MFIPPA/FIPPA, BC OIPC, Québec CAI), **police services boards**, *Charter* s. 8 privacy framing, and the vendors common here (Genetec, Flock's Canadian expansion).
-- **Canadian data.** Counts and the linked map cover Canada only, sourced live from OpenStreetMap via the Overpass API (~166 ALPRs and ~778 government CCTVs at the time of writing).
-- **No backend.** DeFlock's server-side stack (a Fastify API plus AWS / Directus / Zammad infrastructure) has been removed. panopti.ca is a fully static, pre-rendered SPA on Cloudflare Pages. Contact is plain email; the live counter reads the map's published data file directly.
-- **Rebrand.** New identity (panopti.ca — "panopticon" + `.ca`), wordmark, and eye favicon.
-
-The interactive map (the other repo) is itself a fork of [**FlockHopper**](https://github.com/flockhopperdev/FlockHopper), the same engine DeFlock's map is based on.
+- **Canadian data.** Counts and the linked map cover Canada only, sourced live from OpenStreetMap via the Overpass API.
+- **No backend.** DeFlock's server-side stack (a Fastify API plus AWS / Directus / Zammad infrastructure) has been removed. panopti.ca is a fully static, pre-rendered SPA on Cloudflare Pages. The live counter reads the map's published data file directly.
 
 ---
 
-## What it does
+## What happens here?
 
 - **Map** — links to the live interactive map at [maps.panopti.ca](https://maps.panopti.ca) (ALPR + government CCTV locations across Canada, on a self-hosted basemap).
 - **Learn** — what ALPRs are, how they track ordinary people, and the privacy and *Charter* concerns specific to Canada.
