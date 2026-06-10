@@ -7,7 +7,9 @@
 /*
   # Clickjacking: the portal is never framed. frame-ancestors covers modern
   # browsers; X-Frame-Options covers older ones.
-  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://maps.panopti.ca https://cms.deflock.me; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; manifest-src 'self'; upgrade-insecure-requests
+  # Note: static.cloudflareinsights.com + cloudflareinsights.com are Cloudflare
+  # Web Analytics (beacon.min.js), auto-injected by Pages when analytics is on.
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://maps.panopti.ca https://cms.deflock.me https://cloudflareinsights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; manifest-src 'self'; upgrade-insecure-requests
   X-Frame-Options: DENY
 
   # Prevent MIME type sniffing
