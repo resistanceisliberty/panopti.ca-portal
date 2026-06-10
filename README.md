@@ -1,8 +1,5 @@
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="branding/panoptica-dark.svg">
-    <img src="branding/panoptica-light.svg" alt="panopti.ca" width="360">
-  </picture>
+![panopti.ca branding](https://i.ibb.co/8g4XnbSz/og-panoptica.png)
 </p>
 
 **A Canadian map and resource hub for automatic licence plate readers (ALPRs) and government surveillance cameras.**
