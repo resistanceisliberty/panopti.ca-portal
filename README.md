@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://i.ibb.co/gZmCChD3/panoptica-dark.jpg">
-    <img src="https://i.ibb.co/99LWTyY6/panoptica-light.jpg" alt="panopti.ca" width="360">
+    <source media="(prefers-color-scheme: dark)" srcset="branding/panoptica-dark.svg">
+    <img src="branding/panoptica-light.svg" alt="panopti.ca" width="360">
   </picture>
 </p>
 
