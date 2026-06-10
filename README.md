@@ -1,76 +1,87 @@
-# DeFlock
+# panopti.ca
 
-Crowdsourced tool for locating and reporting ALPRs. [View Live Site](https://deflock.org).
+**A Canadian map and resource hub for automatic licence plate readers (ALPRs) and government surveillance cameras.**
 
-![DeFlock Screenshot](./webapp/public/map-interface-nationwide.webp)
+[View the live site →](https://panopti.ca)
 
-## Purpose
+![panopti.ca portal](./webapp/public/panopti-portal.webp)
 
-I created this project after noticing the mass deployment of ALPRs in cities, towns, and even rural areas in the recent years. It's a massive threat to privacy, and this projects helps shed a light on this issue as ALPRs continue to be deployed to thousands of cities across the US and possibly beyond.
+panopti.ca documents where ALPRs and government CCTV are deployed across Canada, explains how the technology works and why it matters, and gives people the tools to push back — public-records (ATIP/FOI) guidance, police-services-board context, and OpenStreetMap reporting instructions. All camera locations come from open data on OpenStreetMap.
 
-## What it Does
+This repository is the **content portal** (panopti.ca). The interactive map lives in a separate repository and is served at **[maps.panopti.ca](https://maps.panopti.ca)**.
 
-### View ALPRs on a Map
-Uses OpenStreetMap data to populate a map with crowdsourced locations of ALPRs, along with their type and direction they face.
+---
 
-The map has become a separate repository, [deflockhopper_maps](https://github.com/FoggedLens/deflockhopper_maps).
+## Built on DeFlock
 
+panopti.ca is a fork of [**DeFlock**](https://deflock.org) (`FoggedLens/deflock`), the original crowdsourced ALPR-mapping project, adapted and localized for Canada. We owe the data model, the tagging conventions, and much of the educational groundwork to DeFlock, and the site credits it prominently — U.S. visitors are pointed to deflock.org for American data.
 
-### Report ALPRs
-Provides instructions for using the [DeFlock App](https://deflock.org/app) or OpenStreetMap's [iD web editor](https://www.openstreetmap.org/edit) to report ALPRs using a standardized tagging system.
+What this fork changes:
 
-### Identify ALPRs
-A constantly-growing repository of ALPR makes, models, and tagging instructions for OpenStreetMap, along with images for identifying them.
+- **Canadian focus.** Every page is rewritten for Canada — federal **ATIP** and provincial **FOI** processes (RCMP, MFIPPA/FIPPA, BC OIPC, Québec CAI), **police services boards**, *Charter* s. 8 privacy framing, and the vendors common here (Genetec, Flock's Canadian expansion).
+- **Canadian data.** Counts and the linked map cover Canada only, sourced live from OpenStreetMap via the Overpass API (~166 ALPRs and ~778 government CCTVs at the time of writing).
+- **No backend.** DeFlock's server-side stack (a Fastify API plus AWS / Directus / Zammad infrastructure) has been removed. panopti.ca is a fully static, pre-rendered SPA on Cloudflare Pages. Contact is plain email; the live counter reads the map's published data file directly.
+- **Rebrand.** New identity (panopti.ca — "panopticon" + `.ca`), wordmark, and eye favicon.
 
-## Tech Stack
+The interactive map (the other repo) is itself a fork of [**FlockHopper**](https://github.com/flockhopperdev/FlockHopper), the same engine DeFlock's map is based on.
 
-### Backend
-* TypeScript
-* Fastify API server
-* Cloudflare R2 for ALPR points and vector tiles
-* OpenTelemetry
+---
 
-### Cloud
-* AWS Lambda (for [region segmenting \[deprecated\]](serverless/alpr_clusters) and [counts](serverless/alpr_counts))
-* AWS S3 - phasing out for R2
-* AWS ECR
-* Cloudflare as DNS + Proxy
-* Directus CDN
-* Zammad helpdesk
+## What it does
 
-### Frontend
-* Vue3
-* Vuetify
-* MapLibre GL
-* Vue Leaflet \[deprecated\] - phasing out for MapLibre GL
+- **Map** — links to the live interactive map at [maps.panopti.ca](https://maps.panopti.ca) (ALPR + government CCTV locations across Canada, on a self-hosted basemap).
+- **Learn** — what ALPRs are, how they track ordinary people, and the privacy and *Charter* concerns specific to Canada.
+- **Report** — how to add a camera to OpenStreetMap using the standardized `surveillance:type=ALPR` tagging, via the OSM iD editor.
+- **Identify** — a growing reference of ALPR makes/models with photos and the correct OSM tags (tag presets fetched from DeFlock's CMS).
+- **Public Records & City Council** — how to file ATIP/FOI requests and engage municipal councils and police services boards about ALPR programs.
+- **Contact** — reach the project at `contact@panopti.ca`.
 
-### Services
-* OpenStreetMap - Overpass API, Basic Map Tiles \[deprecated\]
-* Nominatim - Geocoding
+---
+
+## Tech stack
+
+- **Vue 3** + **TypeScript**, **Vuetify** component library
+- **Vite** with **vite-ssg** — every route is pre-rendered to static HTML at build time (good SEO, fast first paint), then hydrates into an SPA
+- **Pinia** (state) and **Vue Router**
+- **@unhead/vue** for per-route titles / meta / JSON-LD
+- **countup.js** for the live ALPR/CCTV counters
+- Hosted on **Cloudflare Pages**; security headers + a scoped Content-Security-Policy ship via [`webapp/public/_headers`](webapp/public/_headers)
+
+### Data & external dependencies
+
+- **Camera data** — published by the map repo's nightly OpenStreetMap/Overpass pipeline as `cameras-ca.json`; the landing-page counter fetches it live from `maps.panopti.ca`.
+- **OSM tag presets** — the Report/Identify pages fetch vendor tagging presets from DeFlock's hosted CMS (`cms.deflock.me`). This is the only third-party runtime dependency.
+
+---
 
 ## Development
 
-### Requirements
-* [bun](https://bun.sh/)
+Requires [**bun**](https://bun.sh/).
 
-### Running Frontend
+```bash
+cd webapp
+bun install
+bun run dev        # dev server with HMR
+bun run build      # vite-ssg production build → webapp/dist
+bun run preview    # preview the production build
+```
 
-1. `cd webapp`
-2. `bun i`
-3. `bun dev`
+> Cloudflare Pages builds with **Node 20** (`npm run build`, output directory `dist`, root directory `webapp`). The pre-render step runs the SSR bundle under Node, so building with Node (not just bun) locally is the closest match to the deploy.
 
-### Running Backend
-
-1. `cd api`
-2. `bun i`
-3. `bun dev`
+---
 
 ## Contributing
 
-We welcome contributions from anyone. Here's how you can help:
+Issues and pull requests are welcome — fixes, Canadian content/sources, and identification references especially.
 
-### How to Contribute
+1. Fork the repository
+2. Make your changes
+3. Open a pull request against `main`
 
-1. Fork the Repository
-2. Make Your Changes
-3. Open a Pull Request against This Repo
+---
+
+## Credits & licence
+
+- Built on [**DeFlock**](https://deflock.org) — the original ALPR-mapping project. Please support it.
+- Camera location data © **OpenStreetMap** contributors, available under the [Open Database License (ODbL)](https://www.openstreetmap.org/copyright).
+- Code inherits DeFlock's upstream licence; see the source history for details.
