@@ -34,7 +34,7 @@
       These cameras log millions of vehicles <b>regardless of whether anyone is under suspicion</b>. Sold as indispensable tools against crime, they instead record the <b>everyday movements of law-abiding people</b>, with little judicial oversight over how the data is kept or searched.
     </p>
 
-    <p>For more on how ALPRs threaten privacy, see resources from Canadian groups like the <a href="https://ccla.org/" target="_blank">Canadian Civil Liberties Association</a> and <a href="https://openmedia.org/" target="_blank">OpenMedia</a>, along with the <a href="https://sls.eff.org/technologies/automated-license-plate-readers-alprs" target="_blank">EFF</a> and <a href="https://www.aclu.org/issues/privacy-technology/you-are-being-tracked" target="_blank">ACLU</a>.</p>
+    <p>For more on how ALPRs threaten privacy, see resources from Canadian groups like the <a href="https://ccla.org/" target="_blank" rel="noopener noreferrer">Canadian Civil Liberties Association</a> and <a href="https://openmedia.org/" target="_blank" rel="noopener noreferrer">OpenMedia</a>, along with the <a href="https://sls.eff.org/technologies/automated-license-plate-readers-alprs" target="_blank" rel="noopener noreferrer">EFF</a> and <a href="https://www.aclu.org/issues/privacy-technology/you-are-being-tracked" target="_blank" rel="noopener noreferrer">ACLU</a>.</p>
 
     <v-divider class="my-12" />
 

@@ -276,7 +276,10 @@ import { lprBaseTags } from '@/constants';
 import type { LprVendor, OtherSurveillanceDevice } from '@/types';
 
 function openImageInNewTab(url: string) {
-  window.open(url, '_blank');
+  // Validate before opening: the URL comes from the remote CMS, and noopener
+  // prevents the opened tab from reaching back via window.opener.
+  if (!/^https:\/\//i.test(url)) return;
+  window.open(url, '_blank', 'noopener,noreferrer');
 }
 
 const router = useRouter();

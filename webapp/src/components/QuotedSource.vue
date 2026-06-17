@@ -3,7 +3,7 @@
     <slot name="default"></slot>
   </blockquote>
   <p style="font-size: 0.9rem;">
-    <a :href="sourceUrl" target="_blank">-{{ attributionText }}</a>
+    <a :href="sourceUrl" target="_blank" rel="noopener noreferrer">-{{ attributionText }}</a>
   </p>
 </template>
 

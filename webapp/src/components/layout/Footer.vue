@@ -57,8 +57,8 @@
           sm="6"
         >
           <div class="copyright" :class="isDark ? 'text-grey-lighten-5' : 'text-black'">
-            <p>&copy; {{ currentYear }} panopti.ca &middot; open source, built on <a href="https://deflock.org" target="_blank" style="color: unset; font-weight: normal;">DeFlock</a></p>
-            <p>Map data © <a href="https://www.openstreetmap.org/copyright" target="_blank" style="color: unset; font-weight: normal;">OpenStreetMap contributors</a></p>
+            <p>&copy; {{ currentYear }} panopti.ca &middot; open source, built on <a href="https://deflock.org" target="_blank" rel="noopener noreferrer" style="color: unset; font-weight: normal;">DeFlock</a></p>
+            <p>Map data © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer" style="color: unset; font-weight: normal;">OpenStreetMap contributors</a></p>
             <p class="mt-4">v1.1.0</p>
           </div>
         </v-col>
@@ -80,7 +80,17 @@ const internalLinks = [
   { title: 'Terms of Service', to: '/terms', icon: 'mdi-file-document', alt: 'Terms of Service' },
 ];
 
-const externalLinks = [
+interface FooterLink {
+  title: string
+  icon: string
+  alt: string
+  href?: string
+  to?: string
+  customIcon?: string
+  customIconDark?: string
+}
+
+const externalLinks: FooterLink[] = [
   { title: 'GitHub', href: 'https://github.com/resistanceisliberty/panopti.ca', icon: 'mdi-github', alt: 'GitHub Logo' },
   { title: 'Contact', to: '/contact', icon: 'mdi-email', alt: 'Contact' },
 ]

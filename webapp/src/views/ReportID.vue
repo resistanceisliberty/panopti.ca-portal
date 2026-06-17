@@ -34,7 +34,7 @@
           editable
         >
           <p>
-            <a href="https://www.openstreetmap.org/user/new" target="_blank">Sign up for an OpenStreetMap account</a> in order to submit changes.
+            <a href="https://www.openstreetmap.org/user/new" target="_blank" rel="noopener noreferrer">Sign up for an OpenStreetMap account</a> in order to submit changes.
           </p>
         </v-stepper-vertical-item>
 
@@ -46,7 +46,7 @@
           editable
         >
           <p>
-            <a href="https://www.openstreetmap.org" target="_blank">Launch OpenStreetMap</a> and search for the location of the camera. You can use the search bar at the top of the page to find the location.
+            <a href="https://www.openstreetmap.org" target="_blank" rel="noopener noreferrer">Launch OpenStreetMap</a> and search for the location of the camera. You can use the search bar at the top of the page to find the location.
           </p>
         </v-stepper-vertical-item>
 
@@ -140,7 +140,7 @@
           editable
         >
           <p>
-            Optionally, you can add an image to your submission as well. If you choose to do this, <a target="_blank" href="https://auth.wikimedia.org/commonswiki/wiki/Special:CreateAccount">you will need to sign up for a wikimedia commons account.</a>
+            Optionally, you can add an image to your submission as well. If you choose to do this, <a target="_blank" rel="noopener noreferrer" href="https://auth.wikimedia.org/commonswiki/wiki/Special:CreateAccount">you will need to sign up for a wikimedia commons account.</a>
           </p>
 
           <v-img
@@ -149,7 +149,7 @@
             src="/wikimedia-instructions/informational.png"
           />
           <p>
-            Open the <a target="_blank" href="https://commons.wikimedia.org/wiki/Special:UploadWizard">Upload Wizard</a> after logging into your account. Make sure to read the graphic and confirm you understand the rules about what can be uploaded to wikimedia commons.
+            Open the <a target="_blank" rel="noopener noreferrer" href="https://commons.wikimedia.org/wiki/Special:UploadWizard">Upload Wizard</a> after logging into your account. Make sure to read the graphic and confirm you understand the rules about what can be uploaded to wikimedia commons.
           </p>
 
           <v-img
@@ -247,9 +247,9 @@ const step = ref(parseInt((typeof localStorage !== 'undefined' && localStorage.g
 onMounted(() => {
   step.value = parseInt(localStorage.getItem('currentStep') || '1');
   
-  // Cache vendors for tag selector component
+  // Pre-warm the vendor cache for the tag selector (it also loads on its own).
   const vendorStore = useVendorStore();
-  vendorStore.loadAllVendors();
+  void vendorStore.loadAllVendors().catch(() => {});
 });
 
 watch(step, (newStep) => {

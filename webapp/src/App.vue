@@ -33,7 +33,7 @@ function toggleTheme() {
 }
 
 function handleDiscordProceed(url: string) {
-  window.open(url, '_blank');
+  window.open(url, '_blank', 'noopener,noreferrer');
 }
 
 onMounted(() => {
@@ -48,19 +48,30 @@ onMounted(() => {
   interceptDiscordLinks();
 });
 
-const items = [
+interface NavItem {
+  title: string
+  icon: string
+  to?: string
+  href?: string
+  target?: string
+  customIcon?: string
+  customIconDark?: string
+  customIconGrey?: string
+}
+
+const items: NavItem[] = [
   { title: 'Home', icon: 'mdi-home', to: '/' },
   { title: 'Map', icon: 'mdi-map', href: 'https://maps.panopti.ca' },
   { title: 'Learn', icon: 'mdi-school', to: '/what-is-an-alpr' },
 ]
 
-const contributeItems = [
+const contributeItems: NavItem[] = [
   { title: 'Submit Cameras', icon: 'mdi-map-marker-plus', to: '/report' },
   { title: 'Public Records', icon: 'mdi-file-document', to: '/foi' },
   { title: 'City Council', icon: 'mdi-account-voice', to: '/council' },
 ]
 
-const metaItems = [
+const metaItems: NavItem[] = [
   { title: 'Contact', icon: 'mdi-email-outline', to: '/contact' },
   { title: 'GitHub', icon: 'mdi-github', href: 'https://github.com/resistanceisliberty/panopti.ca'},
 ];

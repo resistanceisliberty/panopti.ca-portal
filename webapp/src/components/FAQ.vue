@@ -86,7 +86,7 @@
           Flock now operates in Canada, but its track record in the United States—where it has operated longest—is telling. Flock's transparency portals are <i>notoriously incomplete</i> and often <i>misleading</i>. They let law-enforcement agencies cherry-pick what is included or excluded, leading to significant underreporting of who actually has access to the data.
         </p>
         <p>
-          Take Boulder, Colorado for example. Their <a href="https://transparency.flocksafety.com/boulder-co-pd" target="_blank">transparency portal</a> listed around 90 agencies with access to their ALPR data. However, <a href="https://www.muckrock.com/foi/boulder-172/boulder-alpr-audits-187797/" target="_blank">a public records request</a> revealed that <b>over 6,000 agencies</b> actually had access. This discrepancy highlights the lack of transparency and accountability in Flock's reporting.
+          Take Boulder, Colorado for example. Their <a href="https://transparency.flocksafety.com/boulder-co-pd" target="_blank" rel="noopener noreferrer">transparency portal</a> listed around 90 agencies with access to their ALPR data. However, <a href="https://www.muckrock.com/foi/boulder-172/boulder-alpr-audits-187797/" target="_blank" rel="noopener noreferrer">a public records request</a> revealed that <b>over 6,000 agencies</b> actually had access. This discrepancy highlights the lack of transparency and accountability in Flock's reporting.
         </p>
       </v-expansion-panel-text>
     </v-expansion-panel>
@@ -97,10 +97,10 @@
       </v-expansion-panel-title>
       <v-expansion-panel-text>
         <p>
-          Flock's record raises serious doubts. In November 2025, <a target="_blank" href="https://www.404media.co/flock-logins-exposed-in-malware-infections-senator-asks-ftc-to-investigate-the-company/">a security researcher found Flock logins for sale on Russian hacking forums</a>, since Flock negligently didn't require multi-factor authentication.
+          Flock's record raises serious doubts. In November 2025, <a target="_blank" rel="noopener noreferrer" href="https://www.404media.co/flock-logins-exposed-in-malware-infections-senator-asks-ftc-to-investigate-the-company/">a security researcher found Flock logins for sale on Russian hacking forums</a>, since Flock negligently didn't require multi-factor authentication.
         </p>
         <p>
-          Flock has also been caught misrepresenting the facts. Its CEO told Denver's 9News that Flock had <a href="https://youtu.be/aMfO7D-f7U0?si=23FNwA91zVTwxb02&t=898" target="_blank">no federal contracts</a>—yet weeks later, <a href="https://www.9news.com/article/news/local/flock-federal-immigration-agents-access-tracking-data/73-a8aee742-56d4-4a57-b5bb-0373286dfef8" target="_blank">9News found</a> that U.S. Border Patrol did have access to search Flock's systems. Records requests later showed "U.S. Border Patrol" searching thousands of agencies' data across the national network.
+          Flock has also been caught misrepresenting the facts. Its CEO told Denver's 9News that Flock had <a href="https://youtu.be/aMfO7D-f7U0?si=23FNwA91zVTwxb02&t=898" target="_blank" rel="noopener noreferrer">no federal contracts</a>—yet weeks later, <a href="https://www.9news.com/article/news/local/flock-federal-immigration-agents-access-tracking-data/73-a8aee742-56d4-4a57-b5bb-0373286dfef8" target="_blank" rel="noopener noreferrer">9News found</a> that U.S. Border Patrol did have access to search Flock's systems. Records requests later showed "U.S. Border Patrol" searching thousands of agencies' data across the national network.
         </p>
         <p>
           The same company is now signing up Canadian agencies—so these questions matter here too.
@@ -125,7 +125,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, watch } from 'vue';
+import { ref, onMounted, onUnmounted, watch } from 'vue';
 
 const props = defineProps({
   showAll: {
@@ -158,6 +158,10 @@ function updatePanelFromHash() {
 onMounted(() => {
   updatePanelFromHash();
   window.addEventListener('hashchange', updatePanelFromHash);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('hashchange', updatePanelFromHash);
 });
 
 watch(() => props.showAll, (val) => {

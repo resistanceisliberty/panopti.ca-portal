@@ -62,7 +62,7 @@
           rounded="lg"
           hover
           href="https://consumerrights.wiki/w/Common_Questions,_Arguments,_%26_Responses_when_discussing_Flock_Surveillance"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >
           <div class="d-flex align-center justify-space-between">
             <div class="d-flex align-center">
