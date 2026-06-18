@@ -18,6 +18,23 @@ const DAHUA_VENDOR: LprVendor = {
   },
 };
 
+// Raytheon / RTX built the 407 ETR tolling and ALPR camera systems; not in the
+// upstream DeFlock CMS. Logo and example photo are self-hosted under public/.
+const RAYTHEON_VENDOR: LprVendor = {
+  id: -3,
+  shortName: 'Raytheon',
+  fullName: 'RTX Corporation',
+  logoUrl: '/raytheon-logo.jpg',
+  urls: [{ url: '/raytheon-407etr-gantry.jpg' }],
+  osmTags: {
+    'manufacturer': 'RTX Corporation',
+    'manufacturer:wikidata': 'Q89368734',
+  },
+};
+
+// Canada-relevant vendors missing from the upstream CMS, merged on top of it.
+const LOCAL_VENDORS: LprVendor[] = [DAHUA_VENDOR, RAYTHEON_VENDOR];
+
 export const useVendorStore = defineStore('vendorStore', () => {
   const lprVendors = ref<LprVendor[]>([]);
   const otherDevices = ref<OtherSurveillanceDevice[]>([]);
@@ -25,7 +42,7 @@ export const useVendorStore = defineStore('vendorStore', () => {
   async function loadAllVendors(): Promise<void> {
     if (lprVendors.value.length > 0) return;
     const cms = await cmsService.getLprVendors();
-    const extras = cms.some((v) => v.fullName === DAHUA_VENDOR.fullName) ? [] : [DAHUA_VENDOR];
+    const extras = LOCAL_VENDORS.filter((lv) => !cms.some((v) => v.fullName === lv.fullName));
     lprVendors.value = [...cms, ...extras];
   }
 
