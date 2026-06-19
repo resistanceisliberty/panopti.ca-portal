@@ -104,7 +104,7 @@ const similarProjects: SimilarProject[] = [
     name: "DeFlock",
     description: "The original project mapping ALPRs on OpenStreetMap. panopti.ca is built on DeFlock's open-source work, focused on Canada.",
     url: "https://deflock.org",
-    imageUrl: ""
+    imageUrl: "/similar-projects/deflock.webp"
   },
   {
     name: "Have I Been Flocked?",
