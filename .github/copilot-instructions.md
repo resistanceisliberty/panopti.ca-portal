@@ -1,6 +1,6 @@
 # Copilot Instructions
 
-This monorepo contains multiple subprojects. Below are the specific instructions for each.
+Instructions for the panopti.ca web portal.
 
 ## Web Application
 /webapp
@@ -31,18 +31,3 @@ This is a TypeScript + Vue 3 + Vuetify application.
 - Do not generate placeholder logic
 - If something is unknown, leave a TODO comment
 - Prefer simple, readable solutions over clever ones
-
-## Backend Service
-/shotgun
-
-This is being deprecated. No new features should be added. Backend functionality should be migrated to serverless functions where possible.
-
-## Terraform
-/terraform
-
-This contains Terraform code for infrastructure management.
-
-## Serverless Functions
-/serverless
-
-This contains serverless functions to support the web application.
