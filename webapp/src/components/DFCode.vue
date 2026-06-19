@@ -44,8 +44,6 @@ const props = withDefaults(defineProps<{
   highlightValuesForKeys: () => []
 });
 
-const highlightValuesForKeys = computed(() => props.highlightValuesForKeys ?? []);
-
 const codeContent = ref<HTMLElement | null>(null);
 const snackbarOpen = ref(false);
 

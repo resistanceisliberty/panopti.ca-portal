@@ -59,15 +59,6 @@ a:not([class]):hover {
   text-underline-offset: 2px;
 }
 
-.leaflet-popup-content-wrapper, .leaflet-popup-tip, .leaflet-bar a {
-  background: var(--df-background-color) !important;
-}
-
-.marker-cluster span {
-  /* changing to dark mode should not affect the map yet */
-  color: #000000 !important;
-}
-
 /* Content elements use serif for better readability */
 p, li, blockquote, .content {
   font-family: "PT Serif", Georgia, "Times New Roman", serif;

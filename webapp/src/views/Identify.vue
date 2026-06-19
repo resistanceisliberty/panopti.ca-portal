@@ -348,10 +348,6 @@ function onAddToApp(
 </script>
 
 <style scoped>
-.featured-card {
-  margin-bottom: 2rem;
-}
-
 .vendor-card {
   transition: transform 0.2s ease-in-out;
 }
@@ -367,13 +363,6 @@ function onAddToApp(
 
 .cursor-pointer {
   cursor: pointer;
-}
-
-.overlay-badge {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  z-index: 1;
 }
 
 h1, h2, h3 {

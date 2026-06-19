@@ -200,11 +200,6 @@ const similarProjects: SimilarProject[] = [
   -webkit-box-orient: vertical;
 }
 
-.cta-card {
-  border-radius: 16px !important;
-  background: linear-gradient(135deg, rgba(var(--v-theme-primary), 0.1) 0%, rgba(var(--v-theme-secondary), 0.05) 100%);
-}
-
 /* Responsive grid adjustments */
 @media (max-width: 960px) {
   .project-card:hover {
@@ -230,9 +225,5 @@ const similarProjects: SimilarProject[] = [
 /* Dark mode adjustments */
 .v-theme--dark .project-overlay {
   background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
-}
-
-.v-theme--dark .cta-card {
-  background: linear-gradient(135deg, rgba(var(--v-theme-primary), 0.15) 0%, rgba(var(--v-theme-secondary), 0.08) 100%);
 }
 </style>

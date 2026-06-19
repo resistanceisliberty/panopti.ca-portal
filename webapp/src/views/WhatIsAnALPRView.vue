@@ -143,41 +143,6 @@ h1, h2 {
   text-align: center;
 }
 
-.scrim {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.image-close-btn {
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: white;
-  z-index: 100;
-}
-
-.scrim-text {
-  text-transform: uppercase;
-}
-
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.25s;
-}
-
-.fade-enter, .fade-leave-to {
-  opacity: 0;
-}
-
 iframe[src*=youtube] {
   display: block;
   margin: 0 auto;

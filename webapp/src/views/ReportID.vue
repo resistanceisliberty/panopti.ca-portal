@@ -231,8 +231,7 @@ import { useVendorStore } from '@/stores/vendorStore';
 // Which device the instructions target: ALPR (default) or government CCTV.
 const deviceType = ref<'alpr' | 'cctv'>('alpr');
 
-// Core OSM tags for a government CCTV camera. operator:type=government is what
-// lands it in panopti.ca's "Government CCTV" layer.
+// Government CCTV; operator:type=government puts it in the "Government CCTV" layer.
 const cctvBaseTags: Record<string, string> = {
   'man_made': 'surveillance',
   'surveillance:type': 'camera',
