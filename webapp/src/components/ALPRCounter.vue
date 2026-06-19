@@ -40,7 +40,7 @@ const props = defineProps({
 // CCTV is tagged with brand "Government CCTVs"; everything else is an ALPR.
 const COUNT_URL = 'https://maps.panopti.ca/cameras-ca.json';
 const CCTV_BRAND = 'Government CCTVs';
-const FALLBACK_ALPR = 223;
+const FALLBACK_ALPR = 340;
 const FALLBACK_CCTV = 797;
 
 const alprEl: Ref<HTMLElement|null> = ref(null);
