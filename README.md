@@ -19,11 +19,10 @@ This repository is for the **content portal** for the panopti.ca project. It lin
 
 ## Built on DeFlock
 
-panopti.ca is a fork of [**DeFlock**](https://deflock.org) (`FoggedLens/deflock`), the original crowdsourced ALPR-mapping project, adapted and localized for Canada. We owe the data model, the tagging conventions, and much of the educational groundwork to DeFlock, and the site credits it prominently — U.S. visitors are pointed to deflock.org for American data.
-
+panopti.ca is a fork of [**DeFlock**](https://deflock.org) (`FoggedLens/deflock`), the original crowdsourced ALPR-mapping project, adapted and localized for Canada.
 What this fork changes:
 
-- **Canadian focus.** Every page is rewritten for Canada — federal **ATIP** and provincial **FOI** processes (RCMP, MFIPPA/FIPPA, BC OIPC, Québec CAI), **police services boards**, *Charter* s. 8 privacy framing, and the vendors common here (Genetec, Flock's Canadian expansion).
+- **Canadian focus.** Federal **ATIP** and provincial **FOI** processes (RCMP, MFIPPA/FIPPA, BC OIPC, Québec CAI), **police services boards**, *Charter* s. 8 privacy framing, and the vendors common here (Genetec, Flock's Canadian expansion).
 - **Canadian data.** Counts and the linked map cover Canada only, sourced live from OpenStreetMap via the Overpass API.
 - **No backend.** DeFlock's server-side stack (a Fastify API plus AWS / Directus / Zammad infrastructure) has been removed. panopti.ca is a fully static, pre-rendered SPA on Cloudflare Pages. The live counter reads the map's published data file directly.
 
