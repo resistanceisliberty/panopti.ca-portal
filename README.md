@@ -51,7 +51,7 @@ What this fork changes:
 
 ### Data & external dependencies
 
-- **Camera data** — published by the map repo's nightly OpenStreetMap/Overpass pipeline as `cameras-ca.json`; the landing-page counter fetches it live from `maps.panopti.ca`.
+- **Camera data** — published by the map repo's OpenStreetMap/Overpass pipeline (refreshed several times a day) as `cameras-ca.json`; the landing-page counter fetches it live from `maps.panopti.ca`.
 - **OSM tag presets** — the Report/Identify pages fetch vendor tagging presets from DeFlock's hosted CMS (`cms.deflock.me`). This is the only third-party runtime dependency.
 
 ---

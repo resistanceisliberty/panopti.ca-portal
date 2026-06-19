@@ -209,7 +209,7 @@
             title="How Long Will It Take?"
           >
             <p>
-              We refresh data from OpenStreetMap <i>nightly</i>, so it may take up to a day for your changes to appear on this site. Rest assured that your changes will be reflected here soon.
+              We refresh data from OpenStreetMap <i>several times a day</i>, so it may take up to a day for your changes to appear on this site. Rest assured that your changes will be reflected here soon.
             </p>
           </v-alert>
         </v-stepper-vertical-item>

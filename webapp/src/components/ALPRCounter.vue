@@ -36,7 +36,7 @@ const props = defineProps({
   }
 });
 
-// Live counts pulled from the map's own dataset (refreshed nightly). Government
+// Live counts pulled from the map's own dataset (refreshed several times a day). Government
 // CCTV is tagged with brand "Government CCTVs"; everything else is an ALPR.
 const COUNT_URL = 'https://maps.panopti.ca/cameras-ca.json';
 const CCTV_BRAND = 'Government CCTVs';
