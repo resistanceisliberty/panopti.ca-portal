@@ -17,6 +17,15 @@
       Cameras are added through OpenStreetMap, the free and open map of the world. Pick what you're adding below — the steps are the same; only the tags in step&nbsp;3 differ.
     </p>
 
+    <v-alert variant="tonal" color="rgb(18, 151, 195)" class="mb-6" border="start">
+      <div class="d-flex flex-column flex-sm-row align-center justify-space-between ga-3">
+        <span>Prefer a guided tool? Sign in with OSM and add or edit cameras right on the map.</span>
+        <v-btn href="https://maps.panopti.ca/?add=1" target="_blank" rel="noopener" color="rgb(18, 151, 195)" variant="flat">
+          Open the map tool
+        </v-btn>
+      </div>
+    </v-alert>
+
     <div class="d-flex justify-center mb-2">
       <v-btn-toggle v-model="deviceType" mandatory color="rgb(18, 151, 195)" variant="outlined" divided rounded>
         <v-btn value="alpr" prepend-icon="mdi-car"><span>ALPR</span></v-btn>
