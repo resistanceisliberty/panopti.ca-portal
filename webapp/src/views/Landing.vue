@@ -131,7 +131,7 @@
 }
 
 .map-section {
-  background: url('/map-canada.webp') no-repeat center center;
+  background: url('/map-gta-heatmap.webp') no-repeat center center;
   background-size: cover;
   color: white;
   padding: 100px 0;
