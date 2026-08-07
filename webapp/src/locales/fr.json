@@ -127,6 +127,7 @@
     "crossborder_li3": "Des documents révèlent qu'ICE utilise les données de localisation des conducteurs provenant de la police locale pour des expulsions",
     "crossborder_li4": "Un nouveau rapport conclut que le partage de données avec les agences fédérales de l'immigration pourrait enfreindre une loi de l'État de Washington"
   },
+  "counter": { "alpr": "ALPR cartographiés au Canada", "cctv": "Vidéosurveillance gouvernementale cartographiée au Canada" },
   "similar": {
     "heading": "Projets similaires",
     "subtitle": "Découvrez d'autres initiatives qui œuvrent à protéger la vie privée et à recenser les infrastructures de surveillance",

@@ -127,6 +127,7 @@
     "crossborder_li3": "Documents Reveal ICE Using Driver Location Data From Local Police for Deportations",
     "crossborder_li4": "New report finds data sharing with federal immigration agencies might violate Washington law"
   },
+  "counter": { "alpr": "ALPRs mapped in Canada", "cctv": "Government CCTVs mapped in Canada" },
   "similar": {
     "heading": "Similar Projects",
     "subtitle": "Explore other initiatives working to protect privacy and track surveillance infrastructure",
