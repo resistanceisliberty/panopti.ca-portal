@@ -5,7 +5,7 @@
       <div class="counter-cell d-flex flex-column align-center">
         <v-icon :size="isMobile ? 24 : 32" color="white" class="mb-2">mdi-camera-outline</v-icon>
         <div ref="alprEl" class="font-weight-bold mb-2" :class="isMobile ? 'text-h3' : 'text-h2'">0</div>
-        <div class="text-body-1">{{ t('counter.alpr') }}</div>
+        <div class="text-body-1">ALPRs mapped in Canada</div>
       </div>
 
       <v-divider
@@ -18,7 +18,7 @@
       <div class="counter-cell d-flex flex-column align-center">
         <v-icon :size="isMobile ? 24 : 32" color="white" class="mb-2">mdi-cctv</v-icon>
         <div ref="cctvEl" class="font-weight-bold mb-2" :class="isMobile ? 'text-h3' : 'text-h2'">0</div>
-        <div class="text-body-1">{{ t('counter.cctv') }}</div>
+        <div class="text-body-1">Government CCTVs mapped in Canada</div>
       </div>
     </div>
   </div>
@@ -27,10 +27,7 @@
 <script setup lang="ts">
 import { onMounted, ref, type Ref } from 'vue';
 import { useDisplay } from 'vuetify'
-import { useI18n } from 'vue-i18n';
 import { CountUp } from 'countup.js';
-
-const { t } = useI18n();
 
 const props = defineProps({
   delayMs: {

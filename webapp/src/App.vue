@@ -2,52 +2,28 @@
 import { RouterView, useRouter, useRoute } from 'vue-router'
 import { computed, ref, watch, onMounted } from 'vue'
 import { useHead } from '@unhead/vue'
-import { useI18n } from 'vue-i18n'
 import { useTheme } from 'vuetify';
 import DiscordWarningDialog from '@/components/DiscordWarningDialog.vue';
 import { useDiscordIntercept } from '@/composables/useDiscordIntercept';
-import { useLocalePath } from '@/composables/useLocalePath';
-import { SITE_ORIGIN } from '@/router';
+import { SITE_ORIGIN, DEFAULT_DESCRIPTION } from '@/router';
 
 const theme = useTheme();
 const router = useRouter();
 const route = useRoute();
-const { t, locale } = useI18n();
-const { localePath, switchLocalePath } = useLocalePath();
 const isDark = computed(() => theme.name.value === 'dark');
 const isInIframe = computed(() => typeof window !== 'undefined' && window.self !== window.top);
 const { showDialog, discordUrl, interceptDiscordLinks } = useDiscordIntercept();
 
-// Per-page SEO head — reactive to the current route's meta (metaKey/locale set in router)
-// and to the active i18n locale, so title/description/hreflang track both.
-const metaKey = computed(() => (route.meta.metaKey as string) || 'home');
-const title = computed(() => t(`meta.${metaKey.value}.title`));
-const description = computed(() => t(`meta.${metaKey.value}.description`));
-// The current path with any /fr prefix stripped — the English/base path.
-const basePath = computed(() => {
-  const p = route.path;
-  if (p === '/fr' || p === '/fr/') return '/';
-  return p.startsWith('/fr/') ? p.slice(3) : p;
-});
-const enUrl = computed(() => SITE_ORIGIN + basePath.value);
-const frUrl = computed(() => SITE_ORIGIN + (basePath.value === '/' ? '/fr' : `/fr${basePath.value}`));
-
+// Per-page SEO head — reactive to the current route's meta (set in router).
 useHead({
-  htmlAttrs: { lang: () => (locale.value === 'fr' ? 'fr-CA' : 'en-CA') },
-  title: () => title.value,
+  title: () => (route.meta.title as string) || 'panopti.ca',
   meta: [
-    { name: 'description', content: () => description.value },
-    { property: 'og:title', content: () => title.value },
-    { property: 'og:description', content: () => description.value },
+    { name: 'description', content: () => (route.meta.description as string) || DEFAULT_DESCRIPTION },
+    { property: 'og:title', content: () => (route.meta.title as string) || 'panopti.ca' },
+    { property: 'og:description', content: () => (route.meta.description as string) || DEFAULT_DESCRIPTION },
     { property: 'og:url', content: () => SITE_ORIGIN + route.path },
-    { property: 'og:locale', content: () => (locale.value === 'fr' ? 'fr_CA' : 'en_CA') },
   ],
-  link: [
-    { rel: 'canonical', href: () => SITE_ORIGIN + route.path },
-    { rel: 'alternate', hreflang: 'en', href: () => enUrl.value },
-    { rel: 'alternate', hreflang: 'fr', href: () => frUrl.value },
-    { rel: 'alternate', hreflang: 'x-default', href: () => enUrl.value },
-  ],
+  link: [{ rel: 'canonical', href: () => SITE_ORIGIN + route.path }],
 });
 
 function toggleTheme() {
@@ -73,7 +49,7 @@ onMounted(() => {
 });
 
 interface NavItem {
-  titleKey: string
+  title: string
   icon: string
   to?: string
   href?: string
@@ -84,28 +60,22 @@ interface NavItem {
 }
 
 const items: NavItem[] = [
-  { titleKey: 'nav.home', icon: 'mdi-home', to: '/' },
-  { titleKey: 'nav.map', icon: 'mdi-map', href: 'https://maps.panopti.ca' },
-  { titleKey: 'nav.learn', icon: 'mdi-school', to: '/what-is-an-alpr' },
+  { title: 'Home', icon: 'mdi-home', to: '/' },
+  { title: 'Map', icon: 'mdi-map', href: 'https://maps.panopti.ca' },
+  { title: 'Learn', icon: 'mdi-school', to: '/what-is-an-alpr' },
 ]
 
 const contributeItems: NavItem[] = [
-  { titleKey: 'nav.submit', icon: 'mdi-map-marker-plus', to: '/report' },
-  { titleKey: 'nav.records', icon: 'mdi-file-document', to: '/foi' },
-  { titleKey: 'nav.council', icon: 'mdi-account-voice', to: '/council' },
+  { title: 'Submit Cameras', icon: 'mdi-map-marker-plus', to: '/report' },
+  { title: 'Public Records', icon: 'mdi-file-document', to: '/foi' },
+  { title: 'City Council', icon: 'mdi-account-voice', to: '/council' },
 ]
 
 const metaItems: NavItem[] = [
-  { titleKey: 'nav.contact', icon: 'mdi-email-outline', to: '/contact' },
-  { titleKey: 'nav.github', icon: 'mdi-github', href: 'https://github.com/resistanceisliberty/panopti.ca'},
+  { title: 'Contact', icon: 'mdi-email-outline', to: '/contact' },
+  { title: 'GitHub', icon: 'mdi-github', href: 'https://github.com/resistanceisliberty/panopti.ca'},
 ];
 const drawer = ref(false)
-
-// ponytail: localStorage 'lang' is stored for forward-compat/parity with the map app;
-// the portal's source of truth is the URL, so it is not read back for redirects.
-function persistLangPreference() {
-  localStorage.setItem('lang', switchLocalePath().startsWith('/fr') ? 'fr' : 'en');
-}
 
 watch(() => theme.global.name.value, (newTheme) => {
   const root = document.documentElement;
@@ -124,8 +94,8 @@ watch(() => theme.global.name.value, (newTheme) => {
     <template v-if="!isInIframe">
       <v-system-bar class="credit-bar px-3 text-center" color="grey-darken-4">
         <span class="credit-text">
-          {{ t('credit.built_on') }}
-          <a href="https://github.com/FoggedLens/deflock" target="_blank" rel="noopener noreferrer">{{ t('credit.deflock') }}</a>{{ t('credit.tail') }}
+          Built on
+          <a href="https://github.com/FoggedLens/deflock" target="_blank" rel="noopener noreferrer">DeFlock</a>, the original ALPR-mapping project — for United States ALPR data, visit
           <a href="https://deflock.org/" target="_blank" rel="noopener noreferrer">deflock.org</a>.
         </span>
       </v-system-bar>
@@ -134,16 +104,16 @@ watch(() => theme.global.name.value, (newTheme) => {
         prominent
       >
         <!-- Mobile hamburger menu -->
-        <v-app-bar-nav-icon
-          variant="text"
+        <v-app-bar-nav-icon 
+          variant="text" 
           @click.stop="drawer = !drawer"
           class="d-md-none"
-          :aria-label="t('a11y.toggle_drawer')"
+          aria-label="Toggle Navigation Drawer"
         ></v-app-bar-nav-icon>
 
         <!-- Logo -->
         <v-toolbar-title style="flex: unset;">
-          <div style="display: flex; align-items: center; cursor: pointer;" @click="router.push(localePath('/'))">
+          <div style="display: flex; align-items: center; cursor: pointer;" @click="router.push('/')">
             <v-img height="34" width="148" alt="panopti.ca" :src="isDark ? '/panoptica-dark.svg' : '/panoptica-light.svg'" />
           </div>
         </v-toolbar-title>
@@ -154,15 +124,15 @@ watch(() => theme.global.name.value, (newTheme) => {
           <div class="d-flex align-center">
             <v-btn
               v-for="item in items.slice(1)"
-              :key="item.titleKey"
-              :to="item.to && localePath(item.to)"
+              :key="item.title"
+              :to="item.to"
               :href="item.href"
               :target="item.target"
               variant="text"
               class="mx-1"
               :prepend-icon="item.icon"
             >
-              {{ t(item.titleKey) }}
+              {{ item.title }}
             </v-btn>
           </div>
 
@@ -178,20 +148,20 @@ watch(() => theme.global.name.value, (newTheme) => {
                   append-icon="mdi-chevron-down"
                   class="mx-1"
                 >
-                  {{ t('nav.contribute') }}
+                  Contribute
                 </v-btn>
               </template>
               <v-list>
                 <v-list-item
                   v-for="item in contributeItems"
-                  :key="item.titleKey"
-                  :to="item.to && localePath(item.to)"
+                  :key="item.title"
+                  :to="item.to"
                   link
                 >
                   <template v-slot:prepend>
                     <v-icon>{{ item.icon }}</v-icon>
                   </template>
-                  <v-list-item-title>{{ t(item.titleKey) }}</v-list-item-title>
+                  <v-list-item-title>{{ item.title }}</v-list-item-title>
                 </v-list-item>
               </v-list>
             </v-menu>
@@ -205,30 +175,30 @@ watch(() => theme.global.name.value, (newTheme) => {
                   append-icon="mdi-chevron-down"
                   class="mx-1"
                 >
-                  {{ t('nav.involved') }}
+                  Get Involved
                 </v-btn>
               </template>
               <v-list>
                 <v-list-item
                   v-for="item in metaItems"
-                  :key="item.titleKey"
-                  :to="item.to && localePath(item.to)"
+                  :key="item.title"
+                  :to="item.to"
                   :href="item.href"
                   :target="item.href ? '_blank' : undefined"
                   link
                 >
                   <template v-slot:prepend>
                     <v-icon v-if="item.icon">{{ item.icon }}</v-icon>
-                    <v-img
+                    <v-img 
                       v-else-if="item.customIcon"
                       class="mr-8"
-                      contain
-                      width="24"
-                      height="24"
-                      :src="isDark ? item.customIconDark : item.customIconGrey"
+                      contain 
+                      width="24" 
+                      height="24" 
+                      :src="isDark ? item.customIconDark : item.customIconGrey" 
                     />
                   </template>
-                  <v-list-item-title>{{ t(item.titleKey) }}</v-list-item-title>
+                  <v-list-item-title>{{ item.title }}</v-list-item-title>
                 </v-list-item>
               </v-list>
             </v-menu>
@@ -237,13 +207,7 @@ watch(() => theme.global.name.value, (newTheme) => {
 
         <v-spacer class="d-md-none" />
 
-        <v-btn variant="text" class="lang-toggle" :to="switchLocalePath()"
-               :aria-label="locale === 'en' ? t('lang.switch_to_fr') : t('lang.switch_to_en')"
-               @click="persistLangPreference">
-          {{ locale === 'en' ? t('lang.fr') : t('lang.en') }}
-        </v-btn>
-
-        <v-btn icon @click="toggleTheme" :aria-label="t('a11y.toggle_theme')">
+        <v-btn icon @click="toggleTheme" aria-label="Toggle Theme">
           <v-icon>mdi-theme-light-dark</v-icon>
         </v-btn>
       </v-app-bar>
@@ -253,56 +217,48 @@ watch(() => theme.global.name.value, (newTheme) => {
         v-model="drawer"
         temporary
         class="d-md-none"
-        :aria-label="t('a11y.drawer')"
+        aria-label="Navigation Drawer"
       >
-        <div class="px-4 py-2">
-          <v-btn variant="text" class="lang-toggle" :to="switchLocalePath()"
-                 :aria-label="locale === 'en' ? t('lang.switch_to_fr') : t('lang.switch_to_en')"
-                 @click="persistLangPreference">
-            {{ locale === 'en' ? t('lang.fr') : t('lang.en') }}
-          </v-btn>
-        </div>
-
-        <v-list nav :aria-label="t('a11y.main_nav')">
+        <v-list nav aria-label="Main Navigation">
           <v-list-item
             v-for="item in items"
-            :key="item.titleKey"
+            :key="item.title"
             link
-            :to="item.to && localePath(item.to)"
+            :to="item.to"
             :href="item.href"
             :target="item.target"
             role="option"
           >
             <v-icon start>{{ item.icon }}</v-icon>
-            {{ t(item.titleKey) }}
+            {{ item.title }}
           </v-list-item>
         </v-list>
 
         <v-divider class="my-2" aria-hidden="true" role="presentation" />
 
-        <v-list-subheader class="px-4">{{ t('nav.contribute') }}</v-list-subheader>
-        <v-list nav :aria-label="t('a11y.contribute_links')">
+        <v-list-subheader class="px-4">Contribute</v-list-subheader>
+        <v-list nav aria-label="Contribute Links">
           <v-list-item
             v-for="item in contributeItems"
-            :key="item.titleKey"
+            :key="item.title"
             link
-            :to="item.to && localePath(item.to)"
+            :to="item.to"
             role="option"
           >
             <v-icon v-if="item.icon" start>{{ item.icon }}</v-icon>
-            <span style="vertical-align: middle;">{{ t(item.titleKey) }}</span>
+            <span style="vertical-align: middle;">{{ item.title }}</span>
           </v-list-item>
         </v-list>
-
+          
         <v-divider class="my-2" aria-hidden="true" role="presentation" />
-
-        <v-list-subheader class="px-4">{{ t('nav.involved') }}</v-list-subheader>
-        <v-list nav :aria-label="t('a11y.meta_links')">
+          
+        <v-list-subheader class="px-4">Get Involved</v-list-subheader>
+        <v-list nav aria-label="Meta Links">
           <v-list-item
             v-for="item in metaItems"
-            :key="item.titleKey"
+            :key="item.title"
             link
-            :to="item.to && localePath(item.to)"
+            :to="item.to"
             :href="item.href"
             :target="item.href ? '_blank' : undefined"
             role="option"
@@ -317,7 +273,7 @@ watch(() => theme.global.name.value, (newTheme) => {
               :src="isDark ? item.customIconDark : item.customIcon"
               style="vertical-align: middle;"
             />
-            <span style="vertical-align: middle;">{{ t(item.titleKey) }}</span>
+            <span style="vertical-align: middle;">{{ item.title }}</span>
           </v-list-item>
         </v-list>
       </v-navigation-drawer>

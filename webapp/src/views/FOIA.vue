@@ -3,151 +3,93 @@
   <template #header>
     <Hero
       image-url="/documents.jpg"
-      :title="t('foi.hero_title')"
-      :description="t('foi.hero_description')"
+      title="How to Request Public Records"
+      description="Use Canada's access-to-information laws to find out where ALPRs are and how they're used."
     />
   </template>
 
   <v-container class="narrow-text">
-    <h2>{{ t('foi.why_heading') }}</h2>
-    <i18n-t keypath="foi.why_p1" tag="p" scope="global">
-      <template #stat><b>{{ t('foi.why_p1_stat') }}</b></template>
-      <template #ref><sup>[1]</sup></template>
-    </i18n-t>
-    <p>{{ t('foi.why_p2') }}</p>
+    <h2>Why File an Access Request?</h2>
+    <p>
+      ALPRs are being installed across Canada with very little public transparency. A 2023 national survey found that <b>57% of responding police services use ALPR</b>, and most had no written procedure governing it.<sup>[1]</sup> Access-to-information (FOI) requests let you find out where the cameras are, how long data is kept, who it's shared with, and what your local police agreed to when they signed up.
+    </p>
+    <p>
+      Filing a request is something any resident can do, and the documents you get back help build a complete, public picture of these surveillance networks.
+    </p>
 
     <v-divider class="my-8" />
 
-    <h2>{{ t('foi.law_heading') }}</h2>
-    <i18n-t keypath="foi.law_intro" tag="p" scope="global">
-      <template #who><b>{{ t('foi.law_intro_who') }}</b></template>
-    </i18n-t>
+    <h2>Which Law Applies?</h2>
+    <p>
+      It depends on <b>who runs the cameras</b>. Canada's access regime is layered:
+    </p>
     <ul>
-      <i18n-t keypath="foi.law_municipal" tag="li" scope="global" class="mb-2">
-        <template #label><b>{{ t('foi.law_municipal_label') }}</b></template>
-        <template #foilaw><b>{{ t('foi.law_municipal_foilaw') }}</b></template>
-        <template #board><b>{{ t('foi.law_municipal_board') }}</b></template>
-      </i18n-t>
-      <i18n-t keypath="foi.law_provincial" tag="li" scope="global" class="mb-2">
-        <template #label><b>{{ t('foi.law_provincial_label') }}</b></template>
-        <template #prov><b>{{ t('foi.law_provincial_prov') }}</b></template>
-      </i18n-t>
-      <i18n-t keypath="foi.law_federal" tag="li" scope="global" class="mb-2">
-        <template #label><b>{{ t('foi.law_federal_label') }}</b></template>
-        <template #act><b>{{ t('foi.law_federal_act') }}</b></template>
-        <template #fee><b>{{ t('foi.law_federal_fee') }}</b></template>
-        <template #timeline><b>{{ t('foi.law_federal_timeline') }}</b></template>
-        <template #ref><sup>[2]</sup></template>
-      </i18n-t>
+      <li class="mb-2"><b>Municipal police</b> (most ALPRs) — your province's <b>municipal/provincial FOI law</b>. In Ontario, the request goes to the <b>police services board</b> under MFIPPA (administered by the service's access &amp; privacy unit).</li>
+      <li class="mb-2"><b>Provincial police</b> (e.g., the OPP, SQ) — the <b>provincial</b> FOI law (e.g., Ontario's FIPPA).</li>
+      <li class="mb-2"><b>RCMP / federal bodies</b> — the federal <b>Access to Information Act</b> (ATIP): a <b>$5 fee</b>, filed via the ATIP Online portal, by email, or by mail, with a <b>30-day</b> standard to respond.<sup>[2]</sup></li>
     </ul>
 
-    <h3>{{ t('foi.commissioners_heading') }}</h3>
-    <p>{{ t('foi.commissioners_intro') }}</p>
+    <h3>FOI laws &amp; commissioners by province</h3>
+    <p>Each province and territory has its own access law and an independent privacy commissioner who handles appeals. The most common ones for ALPR records:</p>
     <ul>
-      <i18n-t keypath="foi.commissioners_on" tag="li" scope="global" class="mb-2">
-        <template #label><b>{{ t('foi.commissioners_on_label') }}</b></template>
-        <template #link><a href="https://www.ipc.on.ca" target="_blank" rel="noopener noreferrer">{{ t('foi.commissioners_on_link') }}</a></template>
-      </i18n-t>
-      <i18n-t keypath="foi.commissioners_bc" tag="li" scope="global" class="mb-2">
-        <template #label><b>{{ t('foi.commissioners_bc_label') }}</b></template>
-        <template #link><a href="https://www.oipc.bc.ca" target="_blank" rel="noopener noreferrer">{{ t('foi.commissioners_bc_link') }}</a></template>
-      </i18n-t>
-      <i18n-t keypath="foi.commissioners_qc" tag="li" scope="global" class="mb-2">
-        <template #label><b>{{ t('foi.commissioners_qc_label') }}</b></template>
-        <template #act><i>{{ t('foi.commissioners_qc_act') }}</i></template>
-        <template #link><a href="https://www.cai.gouv.qc.ca/english" target="_blank" rel="noopener noreferrer">{{ t('foi.commissioners_qc_link') }}</a></template>
-      </i18n-t>
-      <i18n-t keypath="foi.commissioners_other" tag="li" scope="global" class="mb-2">
-        <template #label><b>{{ t('foi.commissioners_other_label') }}</b></template>
-        <template #search><i>{{ t('foi.commissioners_other_search') }}</i></template>
-      </i18n-t>
+      <li class="mb-2"><b>Ontario</b> — MFIPPA (municipal police) / FIPPA (OPP), overseen by the <a href="https://www.ipc.on.ca" target="_blank" rel="noopener noreferrer">Information and Privacy Commissioner of Ontario</a>.</li>
+      <li class="mb-2"><b>British Columbia</b> — FIPPA, overseen by the <a href="https://www.oipc.bc.ca" target="_blank" rel="noopener noreferrer">OIPC BC</a> (public bodies have ~30 business days to respond).</li>
+      <li class="mb-2"><b>Quebec</b> — the <i>Act respecting access to documents held by public bodies</i>, overseen by the <a href="https://www.cai.gouv.qc.ca/english" target="_blank" rel="noopener noreferrer">Commission d'accès à l'information</a>.</li>
+      <li class="mb-2"><b>Every other province &amp; territory</b> (AB, SK, MB, NS, NB, NL, PE + territories) has its own FOI statute and commissioner — search "<i>[your province] freedom of information request</i>" to find the portal.</li>
     </ul>
 
     <v-divider class="my-8" />
 
-    <h2>{{ t('foi.request_heading') }}</h2>
-    <i18n-t keypath="foi.request_intro" tag="p" scope="global">
-      <template #ref><sup>[3]</sup></template>
-    </i18n-t>
+    <h2>What to Request</h2>
+    <p>
+      Ontario's privacy commissioner says police using ALPR should make much of this public already,<sup>[3]</sup> so these records exist and can be requested:
+    </p>
     <ul>
-      <i18n-t keypath="foi.request_li1" tag="li" scope="global">
-        <template #records><b>{{ t('foi.request_li1_records') }}</b></template>
-      </i18n-t>
-      <i18n-t keypath="foi.request_li2" tag="li" scope="global">
-        <template #pia><b>{{ t('foi.request_li2_pia') }}</b></template>
-      </i18n-t>
-      <i18n-t keypath="foi.request_li3" tag="li" scope="global">
-        <template #retention><b>{{ t('foi.request_li3_retention') }}</b></template>
-        <template #sharing><b>{{ t('foi.request_li3_sharing') }}</b></template>
-        <template #crossborder><b>{{ t('foi.request_li3_crossborder') }}</b></template>
-      </i18n-t>
-      <i18n-t keypath="foi.request_li4" tag="li" scope="global">
-        <template #policy><b>{{ t('foi.request_li4_policy') }}</b></template>
-        <template #boardpolicy><b>{{ t('foi.request_li4_boardpolicy') }}</b></template>
-      </i18n-t>
-      <i18n-t keypath="foi.request_li5" tag="li" scope="global">
-        <template #desc><b>{{ t('foi.request_li5_desc') }}</b></template>
-        <template #fixed><b>{{ t('foi.request_li5_fixed') }}</b></template>
-      </i18n-t>
-      <i18n-t keypath="foi.request_li6" tag="li" scope="global">
-        <template #report><b>{{ t('foi.request_li6_report') }}</b></template>
-      </i18n-t>
+      <li>The <b>contract and procurement records</b> with the vendor (Flock Safety, Genetec, Motorola, etc.)</li>
+      <li>The <b>Privacy Impact Assessment (PIA)</b> for the ALPR program</li>
+      <li><b>Data retention periods</b> and any <b>data-sharing agreements</b> — including anything allowing <b>cross-border (U.S.) access</b></li>
+      <li>The police service's <b>ALPR policy/procedure</b> and the <b>board's policy</b></li>
+      <li>A <b>program description</b>: the number and type of camera vehicles and any <b>fixed camera locations</b></li>
+      <li>Public-consultation records and the most recent <b>annual ALPR report to the police board</b></li>
     </ul>
 
     <v-alert class="mt-8" type="info" variant="tonal">
-      <i18n-t keypath="foi.tip" tag="span" scope="global">
-        <template #tiplabel><b>{{ t('foi.tip_label') }}</b></template>
-        <template #board><b>{{ t('foi.tip_board') }}</b></template>
-      </i18n-t>
+      <b>Tip:</b> Address municipal-police requests to the <b>police services board</b> (the legal "institution"), even though the police service's access &amp; privacy unit will process them. If you're unsure where records live, you can send the same request to more than one body.
     </v-alert>
 
     <v-divider class="my-8" />
 
-    <h2>{{ t('foi.basics_heading') }}</h2>
+    <h2>Access Request Basics</h2>
 
-    <h3>{{ t('foi.who_heading') }}</h3>
-    <i18n-t keypath="foi.who_p" tag="p" scope="global">
-      <template #anyone><b>{{ t('foi.who_anyone') }}</b></template>
-    </i18n-t>
+    <h3>Who can file?</h3>
+    <p>
+      In most provinces, <b>anyone</b> can file — you generally don't need to be a resident, a lawyer, or explain why you want the records.
+    </p>
 
-    <h3>{{ t('foi.cost_heading') }}</h3>
-    <i18n-t keypath="foi.cost_p" tag="p" scope="global">
-      <template #fee><b>{{ t('foi.cost_fee') }}</b></template>
-    </i18n-t>
+    <h3>What does it cost?</h3>
+    <p>
+      Federal ATIP requests have a <b>$5</b> application fee. Provincial/municipal fees vary (some have a small application fee, some none), and agencies may charge for search or copying time on large requests. You can ask for a fee estimate or a fee waiver.
+    </p>
 
-    <h3>{{ t('foi.refused_heading') }}</h3>
-    <i18n-t keypath="foi.refused_p" tag="p" scope="global">
-      <template #appeal><b>{{ t('foi.refused_appeal') }}</b></template>
-      <template #nonhit><b>{{ t('foi.refused_nonhit') }}</b></template>
-      <template #ref><sup>[4]</sup></template>
-    </i18n-t>
+    <h3>What if my request is refused?</h3>
+    <p>
+      Agencies can withhold some records (e.g., for law-enforcement or third-party reasons), but you can <b>appeal or complain to your privacy commissioner</b>. Commissioners have sided with the public before: in 2012 the BC commissioner found that retaining and sharing <b>non-hit</b> ALPR data served no law-enforcement purpose and wasn't authorized under FIPPA.<sup>[4]</sup>
+    </p>
 
-    <h3>{{ t('foi.found_heading') }}</h3>
-    <i18n-t keypath="foi.found_p" tag="p" scope="global">
-      <template #link><router-link :to="localePath('/report')">{{ t('foi.found_link') }}</router-link></template>
-    </i18n-t>
+    <h3>Found camera locations?</h3>
+    <p>
+      If your records reveal where cameras are, <router-link to="/report">add them to the map</router-link> so everyone benefits.
+    </p>
 
     <v-divider class="my-8" />
 
     <footer class="serif text-grey-darken-2 mt-4">
       <small>
-        <sup>[1]</sup>
-        <i18n-t keypath="foi.fn1" tag="span" scope="global">
-          <template #journal><i>{{ t('foi.fn1_journal') }}</i></template>
-        </i18n-t>
-        <sup>[2]</sup>
-        <i18n-t keypath="foi.fn2" tag="span" scope="global">
-          <template #link><a href="https://rcmp.ca/en/corporate-information/access-information-and-privacy/making-request-under-access-information-act" target="_blank" rel="noopener noreferrer">{{ t('foi.fn2_link') }}</a></template>
-        </i18n-t>
-        <sup>[3]</sup>
-        <i18n-t keypath="foi.fn3" tag="span" scope="global">
-          <template #link><a href="https://www.ipc.on.ca/en/resources-and-decisions/guidance-use-automated-licence-plate-recognition-systems-police-services" target="_blank" rel="noopener noreferrer">{{ t('foi.fn3_link') }}</a></template>
-        </i18n-t>
-        <sup>[4]</sup>
-        <i18n-t keypath="foi.fn4" tag="span" scope="global">
-          <template #link><a href="https://www.oipc.bc.ca/documents/investigation-reports/1410" target="_blank" rel="noopener noreferrer">{{ t('foi.fn4_link') }}</a></template>
-        </i18n-t>
-        {{ t('foi.disclaimer') }}
+        <sup>[1]</sup> Pelletier, <i>Canadian Public Policy</i> (2024) — survey of Canadian police services.
+        <sup>[2]</sup> <a href="https://rcmp.ca/en/corporate-information/access-information-and-privacy/making-request-under-access-information-act" target="_blank" rel="noopener noreferrer">RCMP — Making an ATIP request</a>.
+        <sup>[3]</sup> <a href="https://www.ipc.on.ca/en/resources-and-decisions/guidance-use-automated-licence-plate-recognition-systems-police-services" target="_blank" rel="noopener noreferrer">IPC Ontario — Guidance on the use of ALPR by police (2024)</a>.
+        <sup>[4]</sup> <a href="https://www.oipc.bc.ca/documents/investigation-reports/1410" target="_blank" rel="noopener noreferrer">OIPC BC — Investigation Report F12-04 (2012)</a>.
+        This page is general information, not legal advice; details vary by province.
       </small>
     </footer>
   </v-container>
@@ -155,11 +97,6 @@
 </template>
 
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n';
-import { useLocalePath } from '@/composables/useLocalePath';
 import Hero from '@/components/layout/Hero.vue';
 import DefaultLayout from '@/layouts/DefaultLayout.vue';
-
-const { t } = useI18n();
-const { localePath } = useLocalePath();
 </script>

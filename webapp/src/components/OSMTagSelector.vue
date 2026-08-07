@@ -8,7 +8,7 @@
           :items="lprVendors"
           item-title="shortName"
           return-object
-          :label="t('report.choose_manufacturer')"
+          label="Choose a Manufacturer"
           variant="outlined"
           flat
           hide-details
@@ -18,7 +18,7 @@
           cover
           v-if="selectedLprVendor?.urls?.length"
           :src="selectedLprVendor.urls[0]?.url"
-          :alt="t('report.lpr_alt', { name: selectedLprVendor.shortName })"
+          :alt="selectedLprVendor.shortName + ' LPR'"
           max-width="100%"
           class="my-4"
         />
@@ -27,18 +27,18 @@
             <v-icon size="96" color="grey lighten-1" aria-hidden="true">mdi-image-off</v-icon>
           </div>
         </v-responsive>
-        <v-btn :to="localePath('/identify')" color="#1297C3" variant="tonal" size="small"><v-icon start>mdi-image-multiple</v-icon> {{ t('report.see_all_photos') }}</v-btn>
+        <v-btn to="/identify" color="#1297C3" variant="tonal" size="small"><v-icon start>mdi-image-multiple</v-icon> See All Photos</v-btn>
       </v-col>
-
+    
       <v-col cols="12" sm="6">
-        <h3 class="text-center serif">{{ t('report.tags_to_copy') }}</h3>
+        <h3 class="text-center serif">Tags to Copy</h3>
         <DFCode :osm-tags="mergedTags" :highlight-values-for-keys="vendorTagKeys" />
 
-        <h5 class="text-center mt-4 serif">{{ t('report.operator_known') }}</h5>
+        <h5 class="text-center mt-4 serif">and if operator is known</h5>
         <DFCode :osm-tags="operatorTags" :highlight-values-for-keys="['operator', 'operator:wikidata']" :show-copy-button="false" />
         <div class="text-caption text-center mt-1">
           <a href="https://www.wikidata.org/wiki/Wikidata:Main_Page" target="_blank" rel="noopener" class="text-decoration-none text-grey-darken-1">
-            {{ t('report.wikidata_link') }} <v-icon size="x-small">mdi-open-in-new</v-icon>
+            What is WikiData? <v-icon size="x-small">mdi-open-in-new</v-icon>
           </a>
         </div>
       </v-col>
@@ -48,14 +48,9 @@
 <script setup lang="ts">
 import DFCode from '@/components/DFCode.vue';
 import { ref, type Ref, onMounted, computed } from 'vue';
-import { useI18n } from 'vue-i18n';
-import { useLocalePath } from '@/composables/useLocalePath';
 import { type LprVendor } from '@/types';
 import { lprBaseTags } from '@/constants';
 import { useVendorStore } from '@/stores/vendorStore';
-
-const { t } = useI18n();
-const { localePath } = useLocalePath();
 
 const lprVendors = ref<LprVendor[]>([]);
 const selectedLprVendor: Ref<LprVendor | null> = ref(null);

@@ -14,7 +14,7 @@
       <slot v-else></slot>
     </code>
     <v-snackbar color="var(--df-blue-dark)" v-model="snackbarOpen" :timeout="3000">
-      <span class="text-white">{{ t('report.copied_to_clipboard') }}</span>
+      <span class="text-white">Copied to clipboard!</span>
       <template v-slot:actions>
         <v-btn
           color="white"
@@ -31,9 +31,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import { useTheme } from 'vuetify';
-import { useI18n } from 'vue-i18n';
 
-const { t } = useI18n();
 const theme = useTheme();
 const isDark = computed(() => theme.name.value === 'dark');
 

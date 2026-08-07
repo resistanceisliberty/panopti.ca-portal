@@ -1,9 +1,9 @@
 <template>
 <DefaultLayout>
   <template #header>
-    <Hero
-      :title="t('identify.hero_title')"
-      :description="t('identify.hero_desc')"
+    <Hero 
+      title="How to Identify Surveillance Equipment"
+      description="Learn to identify LPRs and other devices"
       gradient="linear-gradient(135deg, rgb(var(--v-theme-primary)) 0%, rgb(var(--v-theme-secondary)) 100%)"
     />
   </template>
@@ -16,8 +16,8 @@
         color="primary"
         class="mb-6"
       >
-        <v-tab value="alprs">{{ t('identify.tab_alprs') }}</v-tab>
-        <v-tab value="other">{{ t('identify.tab_other') }}</v-tab>
+        <v-tab value="alprs">Licence Plate Readers</v-tab>
+        <v-tab value="other">Other Devices</v-tab>
       </v-tabs>
     </v-container>
 
@@ -28,34 +28,28 @@
           <v-expansion-panels>
             <v-expansion-panel elevation="2">
               <v-expansion-panel-title class="text-h5 font-weight-bold">
-                {{ t('identify.common_features_title') }}
+                Common Features
               </v-expansion-panel-title>
               <v-expansion-panel-text>
                 <v-list lines="two">
                   <v-list-item prepend-icon="mdi-eye">
-                    <v-list-item-title class="text-h6">{{ t('identify.feature1_title') }}</v-list-item-title>
+                    <v-list-item-title class="text-h6">Rear-Facing Cameras</v-list-item-title>
                     <v-list-item-subtitle>
-                      <i18n-t keypath="identify.feature1_body" tag="span" scope="global">
-                        <template #rear><b>{{ t('identify.feature1_body_rear') }}</b></template>
-                      </i18n-t>
+                      LPRs almost always face the <b>rear of vehicles</b>.
                     </v-list-item-subtitle>
                   </v-list-item>
 
                   <v-list-item prepend-icon="mdi-lightbulb-on">
-                    <v-list-item-title class="text-h6">{{ t('identify.feature2_title') }}</v-list-item-title>
+                    <v-list-item-title class="text-h6">Infrared Lights</v-list-item-title>
                     <v-list-item-subtitle>
-                      <i18n-t keypath="identify.feature2_body" tag="span" scope="global">
-                        <template #glow><b>{{ t('identify.feature2_body_glow') }}</b></template>
-                      </i18n-t>
+                      Look for infrared lights that emit a <b>faint red glow</b> at night.
                     </v-list-item-subtitle>
                   </v-list-item>
 
                   <v-list-item prepend-icon="mdi-solar-panel">
-                    <v-list-item-title class="text-h6">{{ t('identify.feature3_title') }}</v-list-item-title>
+                    <v-list-item-title class="text-h6">Solar Panels</v-list-item-title>
                     <v-list-item-subtitle>
-                      <i18n-t keypath="identify.feature3_body" tag="span" scope="global">
-                        <template #solar><b>{{ t('identify.feature3_body_solar') }}</b></template>
-                      </i18n-t>
+                      Many LPRs are powered by nearby <b>solar panels</b>.
                     </v-list-item-subtitle>
                   </v-list-item>
                 </v-list>
@@ -65,9 +59,9 @@
         </v-container>
 
         <v-container class="mb-12">
-          <h2 class="text-h4 text-center mt-3">{{ t('identify.vendors_heading') }}</h2>
+          <h2 class="text-h4 text-center mt-3">Common LPR Vendors</h2>
           <p class="text-center text-medium-emphasis mb-8">
-            {{ t('identify.vendors_subheading') }}
+            Most LPRs are easy to recognize.
           </p>
 
           <!-- Skeleton Loader -->
@@ -95,7 +89,7 @@
             <v-col cols="12" md="6" v-for="vendor in vendorStore.lprVendors" :key="vendor.id" class="mb-4">
               <v-card class="vendor-card h-100 d-flex flex-column justify-space-between" elevation="2">
                 <v-card-title class="text-center" style="background-color: #f5f5f5;">
-                  <v-img v-if="vendor.logoUrl" contain :src="vendor.logoUrl" :alt="t('identify.vendor_logo_alt', { vendor: vendor.shortName })" style="height: 48px;" />
+                  <v-img v-if="vendor.logoUrl" contain :src="vendor.logoUrl" :alt="`${vendor.shortName} Logo`" style="height: 48px;" />
                   <div
                     style="height: 48px; display: flex; align-items: center; justify-content: center;"
                     class="font-weight-bold text-black"
@@ -111,10 +105,9 @@
                   <v-row>
                     <v-col v-for="{ url: imageUrl } in vendor.urls" :key="imageUrl" cols="6">
                       <v-card class="image-card" elevation="1" @click="openImageInNewTab(imageUrl)">
-                        <v-img
-                          :src="imageUrl"
-                          :alt="t('identify.vendor_photo_alt', { vendor: vendor.shortName })"
-                          :aspect-ratio="4/3"
+                        <v-img 
+                          :src="imageUrl" 
+                          :aspect-ratio="4/3" 
                           cover
                           class="cursor-pointer"
                         >
@@ -122,22 +115,22 @@
                       </v-card>
                     </v-col>
                   </v-row>
-
+                  
                   <v-divider class="my-4" />
-
+                  
                   <div class="mt-4">
-                    <h4 class="text-center mb-2">{{ t('identify.osm_tags_heading') }}</h4>
-                    <DFCode
+                    <h4 class="text-center mb-2">OSM Tags</h4>
+                    <DFCode 
                       v-if="hasOsmTags(vendor.osmTags)"
-                      :osm-tags="getMergedTags(vendor)"
+                      :osm-tags="getMergedTags(vendor)" 
                       :highlight-values-for-keys="getVendorTagKeys(vendor)"
                     />
                     <div v-else class="text-center pa-4 text-medium-emphasis">
-                      {{ t('identify.coming_soon') }}
+                      Coming soon
                     </div>
                     <div class="text-center mt-3">
-                      <v-btn
-                        color="var(--df-blue)"
+                      <v-btn 
+                        color="var(--df-blue)" 
                         class="text-white mt-3"
                         variant="elevated"
                         size="large"
@@ -145,7 +138,7 @@
                         @click="onAddToApp(vendor.shortName, vendor.osmTags, true, true, null)"
                         prepend-icon="mdi-map-marker-plus"
                       >
-                        {{ t('identify.report_to_osm_btn') }}
+                        Report to OSM
                       </v-btn>
                     </div>
                   </div>
@@ -201,10 +194,9 @@
                       <v-row>
                         <v-col v-for="{ url: imageUrl } in device.urls" :key="imageUrl" cols="6">
                           <v-card class="image-card" elevation="1" @click="openImageInNewTab(imageUrl)">
-                            <v-img
-                              :src="imageUrl"
-                              :alt="t('identify.other_device_photo_alt', { device: device.name })"
-                              :aspect-ratio="4/3"
+                            <v-img 
+                              :src="imageUrl" 
+                              :aspect-ratio="4/3" 
                               cover
                               class="cursor-pointer"
                             >
@@ -212,21 +204,21 @@
                           </v-card>
                         </v-col>
                       </v-row>
-
+                      
                       <v-divider class="my-4" />
-
+                      
                       <div class="mt-4">
-                        <h4 class="text-center mb-2">{{ t('identify.osm_tags_heading') }}</h4>
-                        <DFCode
+                        <h4 class="text-center mb-2">OSM Tags</h4>
+                        <DFCode 
                           v-if="hasOsmTags(device.osmTags)"
-                          :osm-tags="device.osmTags"
+                          :osm-tags="device.osmTags" 
                         />
                         <div v-else class="text-center pa-4 text-medium-emphasis">
-                          {{ t('identify.coming_soon') }}
+                          Coming soon
                         </div>
                         <div class="text-center mt-3">
-                          <v-btn
-                            color="var(--df-blue)"
+                          <v-btn 
+                            color="var(--df-blue)" 
                             class="text-white mt-3"
                             variant="elevated"
                             size="large"
@@ -234,7 +226,7 @@
                             @click="onAddToApp(device.name, device.osmTags, false, device.requiresDirection, device.fov ?? null)"
                             prepend-icon="mdi-map-marker-plus"
                           >
-                            {{ t('identify.report_to_osm_btn') }}
+                            Report to OSM
                           </v-btn>
                         </div>
                       </div>
@@ -244,7 +236,7 @@
               </v-row>
             </div>
             <div class="text-center text-body-1">
-              {{ t('identify.no_device_note') }}
+              Don't see a device you know about? We're always adding more, so check back later!
             </div>
           </div>
         </v-container>
@@ -254,17 +246,17 @@
     <!-- Action Section -->
     <v-container class="text-center mb-12">
       <v-card class="action-card pa-8" elevation="0" color="transparent">
-        <v-card-title class="text-h4 mb-4">{{ t('identify.found_heading') }}</v-card-title>
+        <v-card-title class="text-h4 mb-4">Found one?</v-card-title>
         <v-card-text>
-          <v-btn
-            size="x-large"
-            color="var(--df-blue)"
-            :to="localePath('/report')"
+          <v-btn 
+            size="x-large" 
+            color="var(--df-blue)" 
+            to="/report"
             prepend-icon="mdi-map-marker-plus"
             variant="elevated"
             class="text-white"
           >
-            {{ t('identify.add_to_map_btn') }}
+            Add to Map
           </v-btn>
         </v-card-text>
       </v-card>
@@ -279,14 +271,9 @@ import Hero from '@/components/layout/Hero.vue';
 import DFCode from '@/components/DFCode.vue';
 import { ref, computed, onMounted } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
-import { useI18n } from 'vue-i18n';
-import { useLocalePath } from '@/composables/useLocalePath';
 import { useVendorStore } from '@/stores/vendorStore';
 import { lprBaseTags } from '@/constants';
 import type { LprVendor, OtherSurveillanceDevice } from '@/types';
-
-const { t } = useI18n();
-const { localePath } = useLocalePath();
 
 function openImageInNewTab(url: string) {
   // Validate before opening: the URL comes from the remote CMS, and noopener
@@ -356,7 +343,7 @@ function onAddToApp(
   _fov?: number | null,
 ) {
   // No separate Canadian app yet — send users to the OSM report guide.
-  router.push(localePath('/report'));
+  router.push('/report');
 }
 </script>
 

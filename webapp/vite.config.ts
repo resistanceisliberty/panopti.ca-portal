@@ -2,7 +2,6 @@ import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import { PRERENDER_PATHS } from './src/router/paths.mjs'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -26,7 +25,10 @@ export default defineConfig({
   },
   ssgOptions: {
     includedRoutes() {
-      return PRERENDER_PATHS
+      return [
+        '/', '/about', '/what-is-an-alpr', '/report/id', '/council',
+        '/foi', '/identify', '/contact', '/privacy', '/terms', '/qr',
+      ]
     },
   },
 } as Parameters<typeof defineConfig>[0])

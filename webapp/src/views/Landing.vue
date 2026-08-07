@@ -5,15 +5,15 @@
       <v-container class="text-center py-8">
         <v-row justify="center">
           <v-col cols="12" md="8">
-            <h1 class="hero-title px-4 mb-4">{{ t('home.hero_title') }}</h1>
+            <h1 class="hero-title px-4 mb-4">panopti.ca</h1>
             <h2 class="text-h5 px-4 mb-6">
-              {{ t('home.hero_desc') }}
+              An open-source project mapping automatic licence plate readers (ALPRs) across Canada.
             </h2>
 
             <ALPRCounter class="my-6" />
 
             <v-btn size="large" color="rgb(18, 151, 195)" large href="https://maps.panopti.ca">
-              {{ t('home.launch_map') }}
+              Launch the Map
               <v-icon end>mdi-map</v-icon>
             </v-btn>
           </v-col>
@@ -24,18 +24,14 @@
 
   <!-- Dangers Section -->
   <v-container class="pb-10 text-center">
-    <h2 class="mb-6">{{ t('home.what_are_alprs_heading') }}</h2>
+    <h2 class="mb-6">What are ALPRs</h2>
 
-    <i18n-t keypath="home.body1" tag="p" scope="global" class="text-left px-6">
-      <template #vehicle><b>{{ t('home.body1_vehicle') }}</b></template>
-      <template #details><b>{{ t('home.body1_details') }}</b></template>
-      <template #features><b>{{ t('home.body1_features') }}</b></template>
-      <template #datapoints><b>{{ t('home.body1_datapoints') }}</b></template>
-    </i18n-t>
-    <i18n-t keypath="home.body2" tag="p" scope="global" class="text-left px-6">
-      <template #suspected><b>{{ t('home.body2_suspected') }}</b></template>
-      <template #investigation><b>{{ t('home.body2_investigation') }}</b></template>
-    </i18n-t>
+    <p class="text-left px-6">
+      An automatic licence plate reader (ALPR or LPR) is an AI-powered camera that photographs <b>every vehicle that passes</b> and logs the details — the plate, the location, and the exact time. Many also capture a car's <b>make, model, and colour</b>, plus <b>distinguishing features</b> like dents, roof racks, or bumper stickers, turning each vehicle into a set of <b>searchable data points</b>.
+    </p>
+    <p class="text-left px-6">
+      Every plate gets recorded, <b>whether or not the driver is suspected of anything</b>. Marketed as essential crime-fighting tools, these cameras instead build a running log of where ordinary people go — <b>not just those under investigation</b>.
+    </p>
 
     <div class="alpr-demo-container my-8">
       <v-img
@@ -45,27 +41,23 @@
         style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"
       />
       <p class="text-caption text-center mt-3 px-4" style="opacity: 0.8; font-style: italic;">
-        {{ t('home.demo_caption') }}
+        Example of an annotated licence plate reader photo showing captured vehicle details
       </p>
     </div>
 
     <v-divider class="my-8" />
 
-    <h2 class="display-2 mb-4">{{ t('home.dangers_heading') }}</h2>
+    <h2 class="display-2 mb-4">The Dangers of ALPRs</h2>
 
     <v-row class="align-center mt-4">
       <v-col cols="12" md="4" class="text-center">
         <v-card>
           <v-card-title class="headline">
             <v-icon x-large class="mr-2">mdi-shield-alert</v-icon>
-            {{ t('home.privacy_title') }}
+            Privacy Violations
           </v-card-title>
           <v-card-text>
-            <i18n-t keypath="home.privacy_body" tag="span" scope="global">
-              <template #track><b>{{ t('home.privacy_track') }}</b></template>
-              <template #store><b>{{ t('home.privacy_store') }}</b></template>
-              <template #history><b>{{ t('home.privacy_history') }}</b></template>
-            </i18n-t>
+            ALPRs <b>track your movements</b> and <b>store your data</b> for long periods of time, creating a detailed record of <b>your location history.</b>
           </v-card-text>
         </v-card>
       </v-col>
@@ -73,10 +65,10 @@
         <v-card>
           <v-card-title class="headline">
             <v-icon x-large class="mr-2">mdi-robber</v-icon>
-            {{ t('home.misuse_title') }}
+            Risk of Misuse
           </v-card-title>
           <v-card-text>
-            {{ t('home.misuse_body') }}
+            Mass surveillance data has repeatedly been misused — for profiling, tracking individuals, and access by officers for personal reasons, often with little oversight.
           </v-card-text>
         </v-card>
       </v-col>
@@ -84,46 +76,37 @@
         <v-card>
           <v-card-title class="headline">
             <v-icon x-large class="mr-2">mdi-handcuffs</v-icon>
-            {{ t('home.benefits_title') }}
+            Limited Benefits
           </v-card-title>
           <v-card-text>
-            <i18n-t keypath="home.benefits_body" tag="span" scope="global">
-              <template #evidence><b>{{ t('home.benefits_evidence') }}</b></template>
-            </i18n-t>
+            There's <b>little independent evidence</b> that blanket ALPR surveillance meaningfully prevents crime, despite vendors' marketing claims.
           </v-card-text>
         </v-card>
       </v-col>
     </v-row>
 
-    <i18n-t keypath="home.risk_body" tag="p" scope="global" class="px-6 mt-8">
-      <template #warrant><b>{{ t('home.risk_warrant') }}</b></template>
-      <template #confined><b>{{ t('home.risk_confined') }}</b></template>
-      <template #crossborder><b>{{ t('home.risk_crossborder') }}</b></template>
-    </i18n-t>
+    <p class="px-6 mt-8">
+      ALPRs are a serious risk to your privacy and civil liberties. These systems <b>continuously record your movements without a warrant</b>, probable cause, or even reasonable suspicion. Your driving history is <b>rarely confined</b> to the town or city where the cameras are installed — it is often shared with many other agencies, and in some cases <b>across the border with U.S. law enforcement</b>. Once the data leaves your community, you have little control over how it's used.
+    </p>
 
-    <v-btn class="my-4" color="rgb(18, 151, 195)" large :to="localePath('/what-is-an-alpr')">
+    <v-btn class="my-4" color="rgb(18, 151, 195)" large to="/what-is-an-alpr">
       <v-icon start>mdi-book-open-page-variant</v-icon>
-      {{ t('home.learn_about_alprs_btn') }}
+      Learn about ALPRs
     </v-btn>
 
     <v-divider class="my-8" />
 
     <!-- Who makes these cameras -->
     <div class="flock-resources-section my-8">
-      <h2 class="mb-4">{{ t('home.vendors_heading') }}</h2>
-      <i18n-t keypath="home.vendors_body" tag="p" scope="global" class="px-6 text-left">
-        <template #genetec><a target="_blank" rel="noopener noreferrer" href="https://www.genetec.com/">Genetec</a></template>
-        <template #flock><a target="_blank" rel="noopener noreferrer" href="https://consumerrights.wiki/w/Flock_Safety">Flock Safety</a></template>
-        <template #share><b>{{ t('home.vendors_share') }}</b></template>
-      </i18n-t>
+      <h2 class="mb-4">Who makes these cameras?</h2>
+      <p class="px-6 text-left">
+        In Canada, the most commonly mapped ALPR systems come from <a target="_blank" rel="noopener noreferrer" href="https://www.genetec.com/">Genetec</a>, a Montréal-based company, alongside <a target="_blank" rel="noopener noreferrer" href="https://consumerrights.wiki/w/Flock_Safety">Flock Safety</a> — a major U.S. vendor now expanding into Canada. Captured vehicle data is uploaded to the vendor's cloud system, where participating agencies can <b>search and share information across jurisdictions</b>.
+      </p>
 
-      <i18n-t keypath="home.vendors_other" tag="p" scope="global" class="text-left px-6">
-        <template #notonly><b>{{ t('home.vendors_notonly') }}</b></template>
-        <template #link><router-link :to="localePath('/identify')">{{ t('home.vendors_link_text') }}</router-link></template>
-      </i18n-t>
+      <p class="text-left px-6">These are <b>not the only ALPR vendors</b>, and others follow similar practices. See this list of <router-link to="/identify">common ALPR vendors</router-link>.</p>
 
-      <v-btn class="mt-4" variant="outlined" color="rgb(18, 151, 195)" :to="localePath('/what-is-an-alpr') + '#similar'">
-        {{ t('home.learn_more_btn') }}
+      <v-btn class="mt-4" variant="outlined" color="rgb(18, 151, 195)" to="/what-is-an-alpr#similar">
+        Learn more
         <v-icon end>mdi-arrow-right</v-icon>
       </v-btn>
     </div>
@@ -131,9 +114,9 @@
 
   <!-- Map Section -->
   <v-container fluid class="map-section py-10 text-center">
-    <h2 class="display-2 mb-4">{{ t('home.explore_map_heading') }}</h2>
+    <h2 class="display-2 mb-4">Explore ALPR Locations Near You</h2>
     <v-btn color="white" large href="https://maps.panopti.ca">
-      {{ t('home.launch_map') }}
+      Launch the Map
       <v-icon end>mdi-map</v-icon>
     </v-btn>
   </v-container>
@@ -239,9 +222,4 @@
 <script setup lang="ts">
 import ALPRCounter from '@/components/ALPRCounter.vue';
 import DefaultLayout from '@/layouts/DefaultLayout.vue';
-import { useI18n } from 'vue-i18n';
-import { useLocalePath } from '@/composables/useLocalePath';
-
-const { t } = useI18n();
-const { localePath } = useLocalePath();
 </script>

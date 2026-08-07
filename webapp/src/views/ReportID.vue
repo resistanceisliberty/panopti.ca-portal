@@ -3,33 +3,33 @@
   <template #header>
     <Hero
       imageUrl="/id.webp"
-      :title="t('report.hero_title')"
-      :description="t('report.hero_desc')"
+      title="Submit Cameras" 
+      description="Add or edit ALPRs using OSM's powerful web-based editor."
     />
   </template>
 
   <v-container>
     <h1 class="text-center">
-      {{ t('report.heading') }}
+      Editing the Map
     </h1>
 
     <p class="text-center text-medium-emphasis mb-5">
-      {{ t('report.intro') }}
+      Cameras are added through OpenStreetMap, the free and open map of the world. Pick what you're adding below — the steps are the same; only the tags in step&nbsp;3 differ.
     </p>
 
     <v-alert variant="tonal" color="rgb(18, 151, 195)" class="mb-6" border="start">
       <div class="d-flex flex-column flex-sm-row align-center justify-space-between ga-3">
-        <span>{{ t('report.guided_alert_text') }}</span>
+        <span>Prefer a guided tool? Sign in with OSM and add or edit cameras right on the map.</span>
         <v-btn href="https://maps.panopti.ca/?add=1" target="_blank" rel="noopener" color="rgb(18, 151, 195)" variant="flat">
-          {{ t('report.guided_alert_btn') }}
+          Open the map tool
         </v-btn>
       </div>
     </v-alert>
 
     <div class="d-flex justify-center mb-2">
       <v-btn-toggle v-model="deviceType" mandatory color="rgb(18, 151, 195)" variant="outlined" divided rounded>
-        <v-btn value="alpr" prepend-icon="mdi-car"><span>{{ t('report.toggle_alpr') }}</span></v-btn>
-        <v-btn value="cctv" prepend-icon="mdi-cctv"><span>{{ t('report.toggle_cctv') }}</span></v-btn>
+        <v-btn value="alpr" prepend-icon="mdi-car"><span>ALPR</span></v-btn>
+        <v-btn value="cctv" prepend-icon="mdi-cctv"><span>Government CCTVs</span></v-btn>
       </v-btn-toggle>
     </div>
 
@@ -38,37 +38,37 @@
         <v-stepper-vertical-item
           class="transparent"
           :complete="step > 1"
-          :title="t('report.step1_title')"
+          title="Create an OpenStreetMap Account"
           value="1"
           editable
         >
-          <i18n-t keypath="report.step1_body" tag="p" scope="global">
-            <template #signup><a href="https://www.openstreetmap.org/user/new" target="_blank" rel="noopener noreferrer">{{ t('report.step1_body_signup') }}</a></template>
-          </i18n-t>
+          <p>
+            <a href="https://www.openstreetmap.org/user/new" target="_blank" rel="noopener noreferrer">Sign up for an OpenStreetMap account</a> in order to submit changes.
+          </p>
         </v-stepper-vertical-item>
 
         <v-stepper-vertical-item
           class="transparent"
           :complete="step > 2"
-          :title="t('report.step2_title')"
+          title="Find the Camera's Location"
           value="2"
           editable
         >
-          <i18n-t keypath="report.step2_body" tag="p" scope="global">
-            <template #launch><a href="https://www.openstreetmap.org" target="_blank" rel="noopener noreferrer">{{ t('report.step2_body_launch') }}</a></template>
-          </i18n-t>
+          <p>
+            <a href="https://www.openstreetmap.org" target="_blank" rel="noopener noreferrer">Launch OpenStreetMap</a> and search for the location of the camera. You can use the search bar at the top of the page to find the location.
+          </p>
         </v-stepper-vertical-item>
 
         <v-stepper-vertical-item
           class="transparent"
           :complete="step > 3"
-          :title="t('report.step3_title')"
+          title="Add the Camera to OpenStreetMap"
           value="3"
           editable
         >
-          <i18n-t keypath="report.step3_intro" tag="p" scope="global">
-            <template #edit><strong>{{ t('report.step3_intro_edit') }}</strong></template>
-          </i18n-t>
+          <p>
+            Once you've found the location of the camera, click the <strong>Edit</strong> button in the top left corner of the page. This will open the OpenStreetMap editor, where you can add the ALPR to the map.
+          </p>
           <v-img max-width="450" src="/edit-map.png" class="my-8" />
 
           <v-alert
@@ -76,56 +76,49 @@
             type="warning"
             class="mt-16 mb-6"
           >
-            <i18n-t keypath="report.step3_warning" tag="p" scope="global">
-              <template #standalone><strong>{{ t('report.step3_warning_standalone') }}</strong></template>
-            </i18n-t>
+            <p>
+              Add cameras as <strong>standalone points only</strong>! Do not connect them to roads, buildings, or other objects. Place the point exactly where the camera is physically located, but keep it as an independent point on the map.
+            </p>
           </v-alert>
 
-          <i18n-t keypath="report.step3_add_point" tag="p" scope="global" class="mb-8">
-            <template #point><strong>{{ t('report.step3_add_point_btn') }}</strong></template>
-          </i18n-t>
+          <p class="mb-8">
+            To add the camera, click the <strong>Point</strong> button at the top center of the editor, then click on its location on the map. In the popup that appears, paste the tags below.
+          </p>
 
           <!-- ALPR: pick a manufacturer for brand-specific tags -->
           <template v-if="deviceType === 'alpr'">
-            <v-divider class="my-4"><span class="serif text-grey-darken-2">{{ t('report.choose_manufacturer') }}</span></v-divider>
+            <v-divider class="my-4"><span class="serif text-grey-darken-2">Choose a Manufacturer</span></v-divider>
             <OSMTagSelector />
           </template>
 
           <!-- Government CCTV: fixed government tag set -->
           <template v-else>
-            <v-divider class="my-4"><span class="serif text-grey-darken-2">{{ t('report.cctv_tags_divider') }}</span></v-divider>
+            <v-divider class="my-4"><span class="serif text-grey-darken-2">Government CCTV Tags</span></v-divider>
             <div class="mx-auto" style="max-width: 460px;">
-              <h3 class="text-center serif mb-2">{{ t('report.tags_to_copy') }}</h3>
+              <h3 class="text-center serif mb-2">Tags to Copy</h3>
               <DFCode :osm-tags="cctvBaseTags" :highlight-values-for-keys="['surveillance:type', 'operator:type']" />
 
-              <h5 class="text-center mt-4 serif">{{ t('report.name_operator') }}</h5>
+              <h5 class="text-center mt-4 serif">and name the operator</h5>
               <DFCode :osm-tags="cctvOperatorTags" :highlight-values-for-keys="['operator']" :show-copy-button="false" />
 
               <v-alert variant="tonal" type="info" class="mt-6 text-body-2">
-                <i18n-t keypath="report.operator_alert" tag="span" scope="global">
-                  <template #tag1><code>operator:type=government</code></template>
-                  <template #layer><strong>{{ t('report.toggle_cctv') }}</strong></template>
-                  <template #operator><code>operator</code></template>
-                  <template #zone><code>surveillance:zone=traffic</code></template>
-                  <template #mount><code>camera:mount</code></template>
-                  <template #direction><code>camera:direction</code></template>
-                </i18n-t>
+                <code>operator:type=government</code> is the key tag — it's what places the camera in panopti.ca's <strong>Government CCTVs</strong> layer. Set <code>operator</code> to the city or agency that runs it. Optionally add <code>surveillance:zone=traffic</code> for traffic cameras, or <code>camera:mount</code> and <code>camera:direction</code> if you know them.
               </v-alert>
             </div>
           </template>
 
           <v-divider class="mb-4 mt-8" />
 
-          <i18n-t keypath="report.step3_paste" tag="p" scope="global" class="mt-8">
-            <template #tags><strong>{{ t('report.step3_paste_field') }}</strong></template>
-          </i18n-t>
+          <p class="mt-8">
+            After copying the tags, paste them into the <strong>Tags</strong> field in the popup.
+          </p>
           <v-img max-width="450" class="my-8" src="/paste-tags.png" />
         </v-stepper-vertical-item>
 
         <v-stepper-vertical-item
           class="transparent"
           :complete="step > 4"
-          :title="t('report.step4_title')"
+          title="Adjust the Direction"
           value="4"
           editable
         >
@@ -135,7 +128,7 @@
             src="/adjust-angle.png"
           />
           <p>
-            {{ t('report.step4_body1') }}
+            If you know the direction that the camera is facing, you can use the up and down arrows to set the direction it faces.
           </p>
 
           <v-img
@@ -143,48 +136,48 @@
             class="my-8"
             src="/multi-directional-marker.png"
           />
-          <i18n-t keypath="report.step4_body2" tag="p" scope="global">
-            <template #semicolon><code>;</code></template>
-          </i18n-t>
+          <p>
+              To report two cameras that are on the same pole, separate directions with a semi-colon (<code>;</code>).
+          </p>
         </v-stepper-vertical-item>
 
         <v-stepper-vertical-item
           class="transparent"
           :complete="step > 5"
-          :title="t('report.step5_title')"
+          title="Add an Image (optional)"
           value="5"
           editable
         >
-          <i18n-t keypath="report.step5_intro" tag="p" scope="global">
-            <template #signup><a target="_blank" rel="noopener noreferrer" href="https://auth.wikimedia.org/commonswiki/wiki/Special:CreateAccount">{{ t('report.step5_intro_signup') }}</a></template>
-          </i18n-t>
+          <p>
+            Optionally, you can add an image to your submission as well. If you choose to do this, <a target="_blank" rel="noopener noreferrer" href="https://auth.wikimedia.org/commonswiki/wiki/Special:CreateAccount">you will need to sign up for a wikimedia commons account.</a>
+          </p>
 
           <v-img
             max-width="450"
             class="my-8"
             src="/wikimedia-instructions/informational.png"
           />
-          <i18n-t keypath="report.step5_wizard" tag="p" scope="global">
-            <template #wizard><a target="_blank" rel="noopener noreferrer" href="https://commons.wikimedia.org/wiki/Special:UploadWizard">{{ t('report.step5_wizard_link') }}</a></template>
-          </i18n-t>
+          <p>
+            Open the <a target="_blank" rel="noopener noreferrer" href="https://commons.wikimedia.org/wiki/Special:UploadWizard">Upload Wizard</a> after logging into your account. Make sure to read the graphic and confirm you understand the rules about what can be uploaded to wikimedia commons.
+          </p>
 
           <v-img
             max-width="450"
             class="my-8"
             src="/wikimedia-instructions/upload_continue.png"
           />
-          <i18n-t keypath="report.step5_upload" tag="p" scope="global">
-            <template #continue><strong>{{ t('report.step5_upload_btn') }}</strong></template>
-          </i18n-t>
+          <p>
+            Upload your image of the ALPR and click <strong>Continue</strong>.
+          </p>
 
           <v-img
             max-width="450"
             class="my-8"
             src="/wikimedia-instructions/license.png"
           />
-          <i18n-t keypath="report.step5_license" tag="p" scope="global">
-            <template #cc0><strong>{{ t('report.step5_license_cc0') }}</strong></template>
-          </i18n-t>
+          <p>
+            Make sure you publish the image under a <strong>CC0 Waiver</strong> licence.
+          </p>
 
           <v-img
             max-width="450"
@@ -192,13 +185,9 @@
             src="/wikimedia-instructions/title.png"
           />
           <p>
-            <i18n-t keypath="report.step5_title_caption" tag="span" scope="global">
-              <template #example><code>{{ t('report.step5_title_caption_example') }}</code></template>
-            </i18n-t>
+            Give your image a descriptive title and caption so that other users understand what it is. For example, you could title the image <code>Camera (city name) (intersection)</code>. Make sure the date is accurate. Optionally, you may add the image to a category or add a capture location if you wish.
             <br><br>
-            <i18n-t keypath="report.step5_publish" tag="span" scope="global">
-              <template #publish><strong>{{ t('report.step5_publish_btn') }}</strong></template>
-            </i18n-t>
+            After you're doing filling everything out, click <strong>publish files</strong> at the bottom of the page.
           </p>
 
           <v-img
@@ -206,33 +195,31 @@
             class="my-8"
             src="/wikimedia-instructions/copy_paste_title.png"
           />
-          <i18n-t keypath="report.step5_link_image" tag="p" scope="global">
-            <template #file><code>File:</code></template>
-            <template #jpg><code>.jpg</code></template>
-            <template #tagname><code>wikimedia_commons</code></template>
-          </i18n-t>
+          <p>
+            Finally, link your image on the point you created in OSM. Copy the title of your published image, including <code>File:</code> and <code>.jpg</code>. Create a new tag called <code>wikimedia_commons</code> and paste your title as the value.
+          </p>
 
         </v-stepper-vertical-item>
 
         <v-stepper-vertical-item
           class="transparent"
           :complete="step > 6"
-          :title="t('report.step6_title')"
+          title="Submit Your Changes"
           value="6"
           editable
         >
-          <i18n-t keypath="report.step6_body" tag="p" scope="global">
-            <template #save><strong>{{ t('report.step6_body_save') }}</strong></template>
-          </i18n-t>
+          <p>
+            Once you've added the camera to the map, click the <strong>Save</strong> button in the top right corner of the editor. You'll be asked to provide a brief description of your changes. Once you've submitted your changes, the camera will be added to OpenStreetMap.
+          </p>
           <v-alert
             variant="tonal"
             type="info"
             class="my-6"
-            :title="t('report.time_alert_title')"
+            title="How Long Will It Take?"
           >
-            <i18n-t keypath="report.time_alert_body" tag="p" scope="global">
-              <template #often><i>{{ t('report.time_alert_often') }}</i></template>
-            </i18n-t>
+            <p>
+              We refresh data from OpenStreetMap <i>several times a day</i>, so it may take up to a day for your changes to appear on this site. Rest assured that your changes will be reflected here soon.
+            </p>
           </v-alert>
         </v-stepper-vertical-item>
       </template>
@@ -245,13 +232,10 @@
 import DefaultLayout from '@/layouts/DefaultLayout.vue';
 import Hero from '@/components/layout/Hero.vue';
 import { ref, onMounted, watch } from 'vue';
-import { useI18n } from 'vue-i18n';
 import OSMTagSelector from '@/components/OSMTagSelector.vue';
 import DFCode from '@/components/DFCode.vue';
 import { VStepperVerticalItem, VStepperVertical } from 'vuetify/labs/components';
 import { useVendorStore } from '@/stores/vendorStore';
-
-const { t } = useI18n();
 
 // Which device the instructions target: ALPR (default) or government CCTV.
 const deviceType = ref<'alpr' | 'cctv'>('alpr');
