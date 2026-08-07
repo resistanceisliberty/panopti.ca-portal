@@ -11,7 +11,7 @@
     "build-only": "vite-ssg build",
     "type-check": "vue-tsc --build --force",
     "build:ssg": "vite-ssg build",
-    "test": "node --test src/locales/*.test.mjs"
+    "test": "node --test src/locales/*.test.mjs src/router/*.test.mjs"
   },
   "dependencies": {
     "@unhead/vue": "^1.11.14",
