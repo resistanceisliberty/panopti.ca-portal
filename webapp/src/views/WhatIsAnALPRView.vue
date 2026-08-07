@@ -2,7 +2,7 @@
 <DefaultLayout>
   <template #header>
     <Hero
-      title="What are ALPRs?"
+      :title="t('learn.hero_title')"
       image-url="/flock-camera.jpeg"
       :opacity="0.5"
     />
@@ -23,49 +23,55 @@
       />
 
       <p class="text-caption text-center mt-3 px-4" style="opacity: 0.8; font-style: italic;">
-        Video explanation of modern LPRs by Christophe
+        {{ t('learn.video_caption') }}
       </p>
     </div>
 
-    <p>
-      An automatic licence plate reader (ALPR, sometimes LPR) is an AI-driven camera that captures an image of <b>every vehicle that drives by</b> and stores what it sees — the plate number, the place, and the precise time. Many models also note a car's <b>make, model, and colour</b>, and even identifying marks such as dents, roof racks, or bumper stickers, converting each one into <b>searchable data</b>.
-    </p>
-    <p>
-      These cameras log millions of vehicles <b>regardless of whether anyone is under suspicion</b>. Sold as indispensable tools against crime, they instead record the <b>everyday movements of law-abiding people</b>, with little judicial oversight over how the data is kept or searched.
-    </p>
+    <i18n-t keypath="learn.p1" tag="p" scope="global">
+      <template #everyvehicle><b>{{ t('learn.p1_everyvehicle') }}</b></template>
+      <template #makemodelcolour><b>{{ t('learn.p1_makemodelcolour') }}</b></template>
+      <template #searchabledata><b>{{ t('learn.p1_searchabledata') }}</b></template>
+    </i18n-t>
+    <i18n-t keypath="learn.p2" tag="p" scope="global">
+      <template #nosuspicion><b>{{ t('learn.p2_nosuspicion') }}</b></template>
+      <template #everyday><b>{{ t('learn.p2_everyday') }}</b></template>
+    </i18n-t>
 
-    <p>For more on how ALPRs threaten privacy, see resources from Canadian groups like the <a href="https://ccla.org/" target="_blank" rel="noopener noreferrer">Canadian Civil Liberties Association</a> and <a href="https://openmedia.org/" target="_blank" rel="noopener noreferrer">OpenMedia</a>, along with the <a href="https://sls.eff.org/technologies/automated-license-plate-readers-alprs" target="_blank" rel="noopener noreferrer">EFF</a> and <a href="https://www.aclu.org/issues/privacy-technology/you-are-being-tracked" target="_blank" rel="noopener noreferrer">ACLU</a>.</p>
+    <i18n-t keypath="learn.p3" tag="p" scope="global">
+      <template #ccla><a href="https://ccla.org/" target="_blank" rel="noopener noreferrer">{{ t('learn.p3_ccla') }}</a></template>
+      <template #openmedia><a href="https://openmedia.org/" target="_blank" rel="noopener noreferrer">{{ t('learn.p3_openmedia') }}</a></template>
+      <template #eff><a href="https://sls.eff.org/technologies/automated-license-plate-readers-alprs" target="_blank" rel="noopener noreferrer">{{ t('learn.p3_eff') }}</a></template>
+      <template #aclu><a href="https://www.aclu.org/issues/privacy-technology/you-are-being-tracked" target="_blank" rel="noopener noreferrer">{{ t('learn.p3_aclu') }}</a></template>
+    </i18n-t>
 
     <v-divider class="my-12" />
 
     <h2 class="mb-8">
       <v-icon class="mr-2" color="primary">mdi-camera-outline</v-icon>
-      What do they look like?
+      {{ t('learn.look_heading') }}
     </h2>
     <div class="mb-16 text-center">
-      <v-btn size="large" color="primary" to="/identify">
+      <v-btn size="large" color="primary" :to="localePath('/identify')">
         <v-icon left class="mr-2">mdi-image-search</v-icon>
-        View ALPR Images
+        {{ t('learn.view_images_btn') }}
       </v-btn>
     </div>
 
     <v-divider class="my-12" />
 
-    <h2>Why Should You Be Concerned</h2>
+    <h2>{{ t('learn.concern_heading') }}</h2>
     <p class="mb-8 text-center">
-      ALPRs erode privacy and chip away at civil liberties. Here's how:
+      {{ t('learn.concern_intro') }}
     </p>
     <p class="mb-8 text-center text-medium-emphasis" style="font-style: italic;">
-      Many of the documented cases below come from the United States, where ALPR
-      surveillance is most entrenched — but the same vendors and systems (Flock,
-      Genetec, Motorola) are now expanding across Canada.
+      {{ t('learn.us_note') }}
     </p>
 
     <Dangers />
 
     <v-divider class="my-12" />
 
-    <h2 class="mb-8">Frequently Asked Questions</h2>
+    <h2 class="mb-8">{{ t('learn.faq_heading') }}</h2>
     <FAQ />
     
     <v-divider class="my-12" />
@@ -77,13 +83,20 @@
 
 <script setup lang="ts">
 import { useHead } from '@unhead/vue';
+import { useI18n } from 'vue-i18n';
+import { useLocalePath } from '@/composables/useLocalePath';
 import DefaultLayout from '@/layouts/DefaultLayout.vue';
 import Hero from '@/components/layout/Hero.vue';
 import Dangers from '@/components/Dangers.vue';
 import FAQ from '@/components/FAQ.vue';
 import SimilarProjects from '@/components/SimilarProjects.vue';
 
+const { t } = useI18n();
+const { localePath } = useLocalePath();
+
 // FAQPage structured data — eligible for rich results in Google search.
+// Kept in English for both locales (see task-6 report): the JSON-LD uses a
+// separate summarized answer set, not the visible faq.* keys.
 // Mirrors the questions in components/FAQ.vue (answers summarized as plain text).
 const faqs: { q: string; a: string }[] = [
   {
