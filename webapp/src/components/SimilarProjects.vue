@@ -2,9 +2,9 @@
   <v-container class="similar-projects py-12">
     <v-row justify="center" class="mb-8">
       <v-col cols="12" md="8">
-        <h2 class="text-center text-h4 font-weight-bold mb-4">Similar Projects</h2>
+        <h2 class="text-center text-h4 font-weight-bold mb-4">{{ t('similar.heading') }}</h2>
         <p class="text-center text-body-1 text-medium-emphasis">
-          Explore other initiatives working to protect privacy and track surveillance infrastructure
+          {{ t('similar.subtitle') }}
         </p>
       </v-col>
     </v-row>
@@ -65,7 +65,7 @@
           
           <v-card-text class="flex-grow-1 pa-4 pt-2">
             <p class="text-body-2 text-medium-emphasis mb-0">
-              {{ project.description }}
+              {{ t(project.descriptionKey) }}
             </p>
           </v-card-text>
 
@@ -82,7 +82,7 @@
               block
               @click.stop
             >
-              Visit Site
+              {{ t('similar.visit') }}
             </v-btn>
           </v-card-actions>
         </v-card>
@@ -92,9 +92,13 @@
 </template>
 
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+
 interface SimilarProject {
   name: string;
-  description: string;
+  descriptionKey: string;
   url: string;
   imageUrl: string;
 }
@@ -102,25 +106,25 @@ interface SimilarProject {
 const similarProjects: SimilarProject[] = [
   {
     name: "DeFlock",
-    description: "The original project mapping ALPRs on OpenStreetMap. panopti.ca is built on DeFlock's open-source work, focused on Canada.",
+    descriptionKey: "similar.deflock_desc",
     url: "https://deflock.org",
     imageUrl: "/similar-projects/deflock.webp"
   },
   {
     name: "Have I Been Flocked?",
-    description: "See if your licence plate has been searched in Flock's system, as well as concerning trends in Flock usage.",
+    descriptionKey: "similar.hibf_desc",
     url: "https://haveibeenflocked.com",
     imageUrl: "/similar-projects/hibf.webp"
   },
   {
     name: "FlockHopper",
-    description: "Get directions that avoid ALPR cameras, and see how many are normally on your route.",
+    descriptionKey: "similar.flockhopper_desc",
     url: "https://dontgetflocked.com",
     imageUrl: "/similar-projects/flockhopper.webp"
   },
   {
     name: "Atlas of Surveillance",
-    description: "The EFF's comprehensive database of surveillance technologies used by law enforcement across North America.",
+    descriptionKey: "similar.atlas_desc",
     url: "https://atlasofsurveillance.org/atlas",
     imageUrl: "/similar-projects/eff-atlas.webp"
   }

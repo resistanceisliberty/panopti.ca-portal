@@ -5,23 +5,28 @@
         <div class="discord-warning-content">
           <v-icon color="warning" size="28" class="mb-2">mdi-alert</v-icon>
           <p class="mb-3 text-body-1">
-            <strong>You're about to join Discord</strong>
+            <strong>{{ t('discord.heading') }}</strong>
           </p>
           <v-alert color="warning" variant="outlined" class="mb-4">
-            <b>Law enforcement</b> and <b>Flock employees</b> actively monitor the Discord server. Please act accordingly.
+            <i18n-t keypath="discord.alert" tag="span" scope="global">
+              <template #enforcement><b>{{ t('discord.alert_enforcement') }}</b></template>
+              <template #employees><b>{{ t('discord.alert_employees') }}</b></template>
+            </i18n-t>
           </v-alert>
           <p class="text-caption text-medium-emphasis mb-2">
-            If you understand the risks and wish to continue, click <strong>Proceed</strong> below.
+            <i18n-t keypath="discord.notice" tag="span" scope="global">
+              <template #proceed><strong>{{ t('discord.notice_proceed') }}</strong></template>
+            </i18n-t>
           </p>
         </div>
       </v-card-text>
       <v-card-actions class="justify-end pt-0">
         <v-btn color="primary" @click="proceed" class="mr-2" rounded>
           <v-icon start>mdi-arrow-right</v-icon>
-          Proceed
+          {{ t('discord.proceed_button') }}
         </v-btn>
         <v-btn variant="text" @click="cancel" rounded>
-          Cancel
+          {{ t('discord.cancel_button') }}
         </v-btn>
       </v-card-actions>
     </v-card>
@@ -29,6 +34,10 @@
 </template>
 
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+
 const props = defineProps<{ modelValue: boolean; discordUrl: string }>();
 const emit = defineEmits(['update:modelValue', 'proceed']);
 

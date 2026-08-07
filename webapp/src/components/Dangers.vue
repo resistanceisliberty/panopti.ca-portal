@@ -2,77 +2,82 @@
   <v-expansion-panels multiple :model-value :readonly="showAll">
     <v-expansion-panel>
       <v-expansion-panel-title class="font-weight-bold">
-        ALPRs Do Not Reduce Crime
+        {{ t('dangers.crime_title') }}
       </v-expansion-panel-title>
       <v-expansion-panel-text>
         <p>
-          There&apos;s no independent research proving that ALPRs can reduce crime. Headlines and supporting studies claiming otherwise are often produced by the companies selling ALPRs and the police agencies buying them.
+          {{ t('dangers.crime_p1') }}
         </p>
 
-        <p>
-          For example, Flock Safety claims that <a href="https://www.flocksafety.com/articles/10-of-reported-crime-in-the-u-s-is-solved-using-flock-technology" target="_blank" rel="noopener noreferrer">10% of Reported Crime in the U.S. Is Solved Using Flock Technology.</a> The study that Flock cites was conducted by two Flock employees and “given legitimacy with the &apos;oversight&apos; of two academic researchers whose names are also on the paper” according to <a href="https://www.404media.co/researcher-who-oversaw-flock-surveillance-study-now-has-concerns-about-it/" target="_blank" rel="noopener noreferrer">a report by 404 Media</a>. Flock Safety is using the veneer of an academic study as part of its sales pitch.
-        </p>
+        <i18n-t keypath="dangers.crime_p2" tag="p" scope="global">
+          <template #flockclaim><a href="https://www.flocksafety.com/articles/10-of-reported-crime-in-the-u-s-is-solved-using-flock-technology" target="_blank" rel="noopener noreferrer">{{ t('dangers.crime_p2_flockclaim') }}</a></template>
+          <template #report404><a href="https://www.404media.co/researcher-who-oversaw-flock-surveillance-study-now-has-concerns-about-it/" target="_blank" rel="noopener noreferrer">{{ t('dangers.crime_p2_report404') }}</a></template>
+        </i18n-t>
 
         <v-divider class="my-6" />
 
         <p>
-          What research does exist regarding the ability of ALPRs to reduce crime is inconclusive at best:
+          {{ t('dangers.crime_p3') }}
         </p>
 
-        <quoted-source source-url="https://link.springer.com/article/10.1007/s11292-011-9133-9" attribution-text="Journal of Experimental Criminology">
-          Our findings indicate that, when small numbers of LPR patrols are used in crime hot spots in the way we have tested them here, they do not seem to generate either a general or offense-specific deterrent effect.
+        <quoted-source source-url="https://link.springer.com/article/10.1007/s11292-011-9133-9" :attribution-text="t('dangers.crime_quote1_attr')">
+          {{ t('dangers.crime_quote1') }}
         </quoted-source>
 
-        <quoted-source source-url="https://www.independent.org/publications/article.asp?id=13893" attribution-text="Automated Licence Plate Readers: A Study in Failure">
-          There is not even a moderate degree of correlation between ALPRs and stolen vehicle recoveries, let alone any apparent casualty
+        <quoted-source source-url="https://www.independent.org/publications/article.asp?id=13893" :attribution-text="t('dangers.crime_quote2_attr')">
+          {{ t('dangers.crime_quote2') }}
         </quoted-source>
       </v-expansion-panel-text>
     </v-expansion-panel>
 
     <v-expansion-panel>
       <v-expansion-panel-title class="font-weight-bold">
-        ALPRs Are a Major Security Risk
+        {{ t('dangers.security_title') }}
       </v-expansion-panel-title>
       <v-expansion-panel-text>
         <p>
-          Companies that make ALPRs have a history of poor security practices, which can lead to data breaches and unauthorized access to sensitive information. For example:
+          {{ t('dangers.security_p1') }}
         </p>
 
         <ul>
-          <li>
-            In November 2025, <a target="_blank" rel="noopener noreferrer" href="https://www.404media.co/flock-logins-exposed-in-malware-infections-senator-asks-ftc-to-investigate-the-company/">a security researcher found Flock logins for sale on Russian hacking forums</a>, since Flock negligently doesn't require multi-factor authentication, an alleged violation of industry-standard security practices.
-          </li>
-          <li>
-            In January 2025, Motorola Solutions' ALPR system was <a href="https://www.404media.co/researcher-turns-insecure-license-plate-cameras-into-open-source-surveillance-tool/" target="_blank" rel="noopener noreferrer">found to have a critical security flaw</a> that allowed anyone to access live data from their cameras. Data includes <b>licence plate numbers, make, model, colour, and timestamps</b>. A <b>live feed</b> of both cameras (color and infrared) was also available to stream using a web browser.
-          </li>
-          <li>
-            In July 2025, <a target="_blank" rel="noopener noreferrer" href="https://nexanet.ai/blog/misconfigured-demo-exposed-flock-safetys-83000-camera-nationwide-tracking-system">Flock Safety exposed a misconfigured demo site</a> that included (1) their internal search interface and some source code, some of which reveals how they calculate confidence scores for vehicle tracking and (2) a live ArcGIS admin API key, which included access to over 50 private data layers.
-          </li>
+          <i18n-t keypath="dangers.security_li1" tag="li" scope="global">
+            <template #link><a target="_blank" rel="noopener noreferrer" href="https://www.404media.co/flock-logins-exposed-in-malware-infections-senator-asks-ftc-to-investigate-the-company/">{{ t('dangers.security_li1_link') }}</a></template>
+          </i18n-t>
+          <i18n-t keypath="dangers.security_li2" tag="li" scope="global">
+            <template #link><a href="https://www.404media.co/researcher-turns-insecure-license-plate-cameras-into-open-source-surveillance-tool/" target="_blank" rel="noopener noreferrer">{{ t('dangers.security_li2_link') }}</a></template>
+            <template #data><b>{{ t('dangers.security_li2_data') }}</b></template>
+            <template #livefeed><b>{{ t('dangers.security_li2_livefeed') }}</b></template>
+          </i18n-t>
+          <i18n-t keypath="dangers.security_li3" tag="li" scope="global">
+            <template #link><a target="_blank" rel="noopener noreferrer" href="https://nexanet.ai/blog/misconfigured-demo-exposed-flock-safetys-83000-camera-nationwide-tracking-system">{{ t('dangers.security_li3_link') }}</a></template>
+          </i18n-t>
         </ul>
       </v-expansion-panel-text>
     </v-expansion-panel>
 
     <v-expansion-panel>
       <v-expansion-panel-title class="font-weight-bold">
-        ALPRs Are Dragnet Surveillance
+        {{ t('dangers.dragnet_title') }}
       </v-expansion-panel-title>
       <v-expansion-panel-text>
         <p><i>
-          See <a href="https://en.wikipedia.org/wiki/Dragnet_(policing)" target="_blank" rel="noopener noreferrer">Dragnet (Policing)</a> on Wikipedia.
+          <i18n-t keypath="dangers.dragnet_see" tag="span" scope="global">
+            <template #link><a href="https://en.wikipedia.org/wiki/Dragnet_(policing)" target="_blank" rel="noopener noreferrer">{{ t('dangers.dragnet_see_link') }}</a></template>
+          </i18n-t>
         </i></p>
+        <i18n-t keypath="dangers.dragnet_p2" tag="p" scope="global">
+          <template #percent><b>{{ t('dangers.dragnet_p2_percent') }}</b></template>
+        </i18n-t>
         <p>
-          A study of ALPRs in Piedmont, CA, found that <b>less than 0.3%</b> of ALPR hits might translate into a useful investigative lead. Most licence plates recorded were not on a hot list, yet police still logged information on people's movements throughout the day.
-        </p>
-        <p>
-          Flock Safety provides Transparency Portals to their police customers, which allow the public to see the data collected by ALPRs. These portals reveal that the vast majority of licence plates scanned are not on a hot list (vehicles suspected of being involved in crimes). For example:
+          {{ t('dangers.dragnet_p3') }}
         </p>
 
         <ul>
           <li>
-            <a href="https://transparency.flocksafety.com/oak-park-il-pd" target="_blank" rel="noopener noreferrer">Oak Park, IL Transparency Portal</a>
+            <a href="https://transparency.flocksafety.com/oak-park-il-pd" target="_blank" rel="noopener noreferrer">{{ t('dangers.dragnet_oakpark') }}</a>
           </li>
           <li>
-            <a href="https://transparency.flocksafety.com/vallejo-ca-pd" target="_blank" rel="noopener noreferrer">Vallejo, CA Transparency Portal</a>
+            <a href="https://transparency.flocksafety.com/vallejo-ca-pd" target="_blank" rel="noopener noreferrer">{{ t('dangers.dragnet_vallejo') }}</a>
           </li>
         </ul>
       </v-expansion-panel-text>
@@ -80,32 +85,32 @@
 
     <v-expansion-panel>
       <v-expansion-panel-title class="font-weight-bold">
-        ALPRs Are Abused
+        {{ t('dangers.abuse_title') }}
       </v-expansion-panel-title>
       <v-expansion-panel-text>
         <p>
-          There are many documented cases where police have knowingly used ALPRs to commit crimes and put people in danger. These examples illustrate that it can be difficult to put meaningful restrictions in place that prevent ALPRs from being used for nefarious purposes. It's often only after harm is done that an officer is caught and punished, if at all.
+          {{ t('dangers.abuse_p1') }}
         </p>
         <ul>
           <li>
             <a href="https://www.404media.co/a-texas-cop-searched-license-plate-cameras-nationwide-for-a-woman-who-got-an-abortion/" target="_blank" rel="noopener noreferrer">
-              Texas police used Flock ALPRs to track a woman who had an abortion across state lines
+              {{ t('dangers.abuse_li1') }}
             </a>
           </li>
           <li>
-            <a href="https://www.kwch.com/2022/10/31/kechi-police-lieutenant-arrested-using-police-technology-stalk-wife/" target="_blank" rel="noopener noreferrer">A police officer used Flock Safety ALPRs to stalk his estranged wife in Kechi, KS</a>
+            <a href="https://www.kwch.com/2022/10/31/kechi-police-lieutenant-arrested-using-police-technology-stalk-wife/" target="_blank" rel="noopener noreferrer">{{ t('dangers.abuse_li2') }}</a>
           </li>
           <li>
-            <a href="https://apnews.com/general-news-699236946e3140659fff8a2362e16f43" target="_blank" rel="noopener noreferrer">A police officer accepted a bribe to run a woman's licence plate in Georgia</a>
+            <a href="https://apnews.com/general-news-699236946e3140659fff8a2362e16f43" target="_blank" rel="noopener noreferrer">{{ t('dangers.abuse_li3') }}</a>
           </li>
           <li>
-            <a href="https://apnews.com/general-news-699236946e3140659fff8a2362e16f43" target="_blank" rel="noopener noreferrer">A police officer used ALPRs to stalk his ex-girlfriend in Ohio</a>
+            <a href="https://apnews.com/general-news-699236946e3140659fff8a2362e16f43" target="_blank" rel="noopener noreferrer">{{ t('dangers.abuse_li4') }}</a>
           </li>
           <li>
-            <a href="https://information.auditor.ca.gov/pdfs/reports/2019-118.pdf" target="_blank" rel="noopener noreferrer">California agencies keeping data longer than necessary and sharing it with unauthorized agencies</a>
+            <a href="https://information.auditor.ca.gov/pdfs/reports/2019-118.pdf" target="_blank" rel="noopener noreferrer">{{ t('dangers.abuse_li5') }}</a>
           </li>
           <li>
-            <a href="https://inewsource.org/2022/01/06/police-share-license-plate-data/" target="_blank" rel="noopener noreferrer">Police in San Diego County breaking the law sharing drivers' data</a>
+            <a href="https://inewsource.org/2022/01/06/police-share-license-plate-data/" target="_blank" rel="noopener noreferrer">{{ t('dangers.abuse_li6') }}</a>
           </li>
         </ul>
       </v-expansion-panel-text>
@@ -113,75 +118,78 @@
 
     <v-expansion-panel>
       <v-expansion-panel-title class="font-weight-bold">
-        ALPR Usage Leads to Dangerous Police Encounters
+        {{ t('dangers.encounters_title') }}
       </v-expansion-panel-title>
       <v-expansion-panel-text>
         <p>
-          The negligent use of ALPRs has led to dangerous police encounters, including pulling guns on innocent drivers. Here are just a few examples:
+          {{ t('dangers.encounters_p1') }}
         </p>
         <ul>
           <li>
-            <a href="https://www.aclu.org/blog/privacy-technology/location-tracking/san-francisco-woman-pulled-out-car-gunpoint-because" target="_blank" rel="noopener noreferrer">San Francisco Woman Pulled Out of Car at Gunpoint Because of Licence Plate Reader Error</a>
+            <a href="https://www.aclu.org/blog/privacy-technology/location-tracking/san-francisco-woman-pulled-out-car-gunpoint-because" target="_blank" rel="noopener noreferrer">{{ t('dangers.encounters_li1') }}</a>
           </li>
           <li>
-            <a href="https://gizmodo.com/cops-terrorize-black-family-but-blame-license-plate-rea-1844602731" target="_blank" rel="noopener noreferrer">Cops Terrorize Black Family but Blame Licence Plate Reader for Misidentifying 'Stolen' Vehicle</a>
+            <a href="https://gizmodo.com/cops-terrorize-black-family-but-blame-license-plate-rea-1844602731" target="_blank" rel="noopener noreferrer">{{ t('dangers.encounters_li2') }}</a>
           </li>
           <li>
-            <a href="https://www.techdirt.com/2019/02/20/deputies-sued-after-false-alpr-hit-leads-to-guns-out-traffic-stop-california-privacy-activist/" target="_blank" rel="noopener noreferrer">Deputies Sued After False ALPR Hit Leads To Guns-Out Traffic Stop Of California Privacy Activist</a>
+            <a href="https://www.techdirt.com/2019/02/20/deputies-sued-after-false-alpr-hit-leads-to-guns-out-traffic-stop-california-privacy-activist/" target="_blank" rel="noopener noreferrer">{{ t('dangers.encounters_li3') }}</a>
           </li>
           <li>
-            <a href="https://www.ktvu.com/news/privacy-advocate-sues-coco-sheriffs-deputies-after-license-plate-readers-target-his-car-stolen" target="_blank" rel="noopener noreferrer">Privacy advocate sues CoCo sheriff's deputies after licence plate readers target his car stolen</a>
+            <a href="https://www.ktvu.com/news/privacy-advocate-sues-coco-sheriffs-deputies-after-license-plate-readers-target-his-car-stolen" target="_blank" rel="noopener noreferrer">{{ t('dangers.encounters_li4') }}</a>
           </li>
-          <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://denverite.com/2025/10/27/bow-mar-flock-cameras-accusation/">A Denver woman had to prove her innocence</a> after incompetent detectives relied on Flock cameras to pin a $25 package theft on her <b>(video)</b>.
-          </li>
+          <i18n-t keypath="dangers.encounters_li5" tag="li" scope="global">
+            <template #link><a target="_blank" rel="noopener noreferrer" href="https://denverite.com/2025/10/27/bow-mar-flock-cameras-accusation/">{{ t('dangers.encounters_li5_link') }}</a></template>
+            <template #video><b>{{ t('dangers.encounters_li5_video') }}</b></template>
+          </i18n-t>
         </ul>
       </v-expansion-panel-text>
     </v-expansion-panel>
 
     <v-expansion-panel>
       <v-expansion-panel-title class="font-weight-bold">
-        ALPRs Result in Racist Policing
+        {{ t('dangers.racist_title') }}
       </v-expansion-panel-title>
       <v-expansion-panel-text>
         <p>
-          ALPRs are more likely to surveil communities with a higher density of Black and brown people, reinforcing systemic racism in policing.
+          {{ t('dangers.racist_p1') }}
         </p>
-        <p>
-          The Electronic Frontier Foundation <a href="https://www.eff.org/deeplinks/2015/01/what-we-learned-oakland-raw-alpr-data" target="_blank" rel="noopener noreferrer">reviewed the use of ALPRs by the Oakland Police Department</a> and found that ALPR cameras were more likely to scan licence plates in communities with a higher density of Black and brown people than in communities with a higher density of white people.
-        </p>
+        <i18n-t keypath="dangers.racist_p2" tag="p" scope="global">
+          <template #link><a href="https://www.eff.org/deeplinks/2015/01/what-we-learned-oakland-raw-alpr-data" target="_blank" rel="noopener noreferrer">{{ t('dangers.racist_p2_link') }}</a></template>
+        </i18n-t>
 
-        <p class="mt-4"><a href="https://www.ap.org/ap-in-the-news/2012/with-cameras-informants-nypd-eyed-mosques" target="_blank" rel="noopener noreferrer">A report by The Associated Press</a> shows that after 9/11, the NYPD used ALPRs to monitor Muslims visiting mosques.</p>
-        
-        <p>A study of Flock Safety’s impact in Oak Park, IL found:</p>          
-        <quoted-source source-url="https://www.freedomtothriveop.com/blog/zine-analyzes-flock-alpr-cameras-in-oak-park-il" attribution-text="Freedom to Thrive Oak Park">
-          In the first 10 months of their use, 84% of the drivers stopped by Oak Park police because of Flock were Black.
+        <i18n-t keypath="dangers.racist_p3" tag="p" scope="global" class="mt-4">
+          <template #link><a href="https://www.ap.org/ap-in-the-news/2012/with-cameras-informants-nypd-eyed-mosques" target="_blank" rel="noopener noreferrer">{{ t('dangers.racist_p3_link') }}</a></template>
+        </i18n-t>
+
+        <p>{{ t('dangers.racist_p4') }}</p>
+        <quoted-source source-url="https://www.freedomtothriveop.com/blog/zine-analyzes-flock-alpr-cameras-in-oak-park-il" :attribution-text="t('dangers.racist_quote_attr')">
+          {{ t('dangers.racist_quote') }}
         </quoted-source>
       </v-expansion-panel-text>
     </v-expansion-panel>
 
     <v-expansion-panel>
       <v-expansion-panel-title class="font-weight-bold">
-        ALPRs Enable Cross-Border Tracking
+        {{ t('dangers.crossborder_title') }}
       </v-expansion-panel-title>
       <v-expansion-panel-text>
         <p>
-          ALPR data doesn't stay local. In the U.S., the same Flock network now expanding into Canada has been tapped by federal immigration agencies (ICE), often even where local policy prohibits it. As Canadian agencies adopt these systems, the risk that Canadians' movement data is shared across the border with U.S. agencies is a serious concern:
+          {{ t('dangers.crossborder_p1') }}
         </p>
         <ul>
           <li>
             <a href="https://www.404media.co/ice-taps-into-nationwide-ai-enabled-camera-network-data-shows/" target="_blank" rel="noopener noreferrer">
-              ICE Taps Into Flock's Nationwide Camera Network, Data Shows
+              {{ t('dangers.crossborder_li1') }}
             </a>
           </li>
           <li>
-            <a href="https://www.latimes.com/business/technology/story/2020-12-21/pasadena-long-beach-police-ice-automated-license-plate-reader-data" target="_blank" rel="noopener noreferrer">Police in Pasadena, Long Beach pledged not to send licence plate data to ICE. They shared it anyway.</a>
+            <a href="https://www.latimes.com/business/technology/story/2020-12-21/pasadena-long-beach-police-ice-automated-license-plate-reader-data" target="_blank" rel="noopener noreferrer">{{ t('dangers.crossborder_li2') }}</a>
           </li>
           <li>
-            <a href="https://www.aclu-il.org/en/press-releases/ice-targeting-immigrants-based-automatic-license-plate-reader-alpr-data-supplied" target="_blank" rel="noopener noreferrer">Documents Reveal ICE Using Driver Location Data From Local Police for Deportations</a>
+            <a href="https://www.aclu-il.org/en/press-releases/ice-targeting-immigrants-based-automatic-license-plate-reader-alpr-data-supplied" target="_blank" rel="noopener noreferrer">{{ t('dangers.crossborder_li3') }}</a>
           </li>
           <li>
-            <a href="https://www.nwpb.org/2022/12/22/new-report-finds-data-sharing-with-federal-immigration-agencies-might-violate-washington-law/" target="_blank" rel="noopener noreferrer">New report finds data sharing with federal immigration agencies might violate Washington law</a>
+            <a href="https://www.nwpb.org/2022/12/22/new-report-finds-data-sharing-with-federal-immigration-agencies-might-violate-washington-law/" target="_blank" rel="noopener noreferrer">{{ t('dangers.crossborder_li4') }}</a>
           </li>
 
         </ul>
@@ -193,6 +201,9 @@
 <script setup lang="ts">
 import QuotedSource from '@/components/QuotedSource.vue';
 import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const props = defineProps({
   showAll: {

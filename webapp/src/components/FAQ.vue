@@ -2,123 +2,131 @@
   <v-expansion-panels multiple :model-value :readonly="showAll">
     <v-expansion-panel>
       <v-expansion-panel-title class="font-weight-bold">
-        Are ALPRs a necessary tool for police?
+        {{ t('faq.necessary_q') }}
       </v-expansion-panel-title>
       <v-expansion-panel-text>
+        <i18n-t keypath="faq.necessary_a" tag="p" scope="global">
+          <template #section8><b>{{ t('faq.necessary_a_section8') }}</b></template>
+          <template #everyone><b>{{ t('faq.necessary_a_everyone') }}</b></template>
+        </i18n-t>
+      </v-expansion-panel-text>
+    </v-expansion-panel>
+
+    <v-expansion-panel>
+      <v-expansion-panel-title class="font-weight-bold">
+        {{ t('faq.nothingtohide_q') }}
+      </v-expansion-panel-title>
+      <v-expansion-panel-text>
+        <h3 class="mb-2">{{ t('faq.nothingtohide_h1') }}</h3>
+        <p class="pl-6">
+          {{ t('faq.nothingtohide_p1') }}
+        </p>
+        <i18n-t keypath="faq.nothingtohide_p2" tag="p" scope="global" class="pl-6">
+          <template #until><b>{{ t('faq.nothingtohide_p2_until') }}</b></template>
+        </i18n-t>
+
+        <h3 class="mb-2 mt-8">{{ t('faq.nothingtohide_h2') }}</h3>
+        <p class="pl-6">
+          {{ t('faq.nothingtohide_p3') }}
+        </p>
+        <p class="pl-6">
+          {{ t('faq.nothingtohide_p4') }}
+        </p>
+
+      </v-expansion-panel-text>
+    </v-expansion-panel>
+
+    <v-expansion-panel>
+      <v-expansion-panel-title class="font-weight-bold">
+        {{ t('faq.onlycrimes_q') }}
+      </v-expansion-panel-title>
+      <v-expansion-panel-text>
+        <i18n-t keypath="faq.onlycrimes_p1" tag="p" scope="global">
+          <template #allvehicles><b>{{ t('faq.onlycrimes_p1_allvehicles') }}</b></template>
+        </i18n-t>
         <p>
-          No. Police have long had ways to obtain location information about suspects. Those methods generally require reasonable grounds and judicial authorization, which provide oversight and accountability. In Canada, <b>Section 8 of the Charter of Rights and Freedoms</b> protects against unreasonable search and seizure. ALPRs flip this around: they collect location data on <b>everyone</b>, all the time, and that data is often searched with little or no oversight.
+          {{ t('faq.onlycrimes_p2') }}
         </p>
       </v-expansion-panel-text>
     </v-expansion-panel>
 
     <v-expansion-panel>
       <v-expansion-panel-title class="font-weight-bold">
-        Why should I care if I have nothing to hide?
+        {{ t('faq.warrant_q') }}
       </v-expansion-panel-title>
       <v-expansion-panel-text>
-        <h3 class="mb-2">1. You don't get to decide what looks suspicious tomorrow.</h3>
-        <p class="pl-6">
-          Just because you're not doing anything wrong today doesn't mean you won't be watched tomorrow. Licence plate cameras like Flock don't know your intentions—only your movements. A trip to a protest, a place of worship, a union meeting, a friend's house in a “high-crime” area, or even a misread plate can flag you as “suspicious.”
-        </p>
-        <p class="pl-6">
-          History shows that when governments or third parties gain unchecked surveillance powers, those powers are eventually turned on people who weren't doing anything wrong—<b>until someone decided they were</b>. Tools built for one purpose are routinely repurposed for another.
-        </p>
-
-        <h3 class="mb-2 mt-8">2. Mistakes happen, and you're the one who pays for them.</h3>
-        <p class="pl-6">
-          Automated Licence Plate Readers (ALPRs) are not always accurate. People have been pulled over at gunpoint, arrested, or detained because a camera misread a plate or flagged the wrong car.
-        </p>
-        <p class="pl-6">
-          If you “have nothing to hide,” you also have nothing to correct the record with when a machine error points the finger at you.
-        </p>
-
+        <i18n-t keypath="faq.warrant_p1" tag="p" scope="global">
+          <template #everyone><b>{{ t('faq.warrant_p1_everyone') }}</b></template>
+          <template #oversight><b>{{ t('faq.warrant_p1_oversight') }}</b></template>
+          <template #section8><b>{{ t('faq.warrant_p1_section8') }}</b></template>
+        </i18n-t>
+        <i18n-t keypath="faq.warrant_p2" tag="p" scope="global">
+          <template #crossborder><b>{{ t('faq.warrant_p2_crossborder') }}</b></template>
+        </i18n-t>
       </v-expansion-panel-text>
     </v-expansion-panel>
 
     <v-expansion-panel>
       <v-expansion-panel-title class="font-weight-bold">
-        Do these cameras only record vehicles involved in crimes?
+        {{ t('faq.oversight_q') }}
       </v-expansion-panel-title>
       <v-expansion-panel-text>
-        <p>
-          <b>No, ALPRs record all vehicles that pass by</b>, not just those involved in crimes. They capture licence plates, unique identifying features, locations, dates, and times of every vehicle, regardless of whether the driver is suspected of wrongdoing. This means that even if you're not doing anything wrong, your movements are still being tracked and stored, often for long periods of time.
-        </p>
-        <p>
-          The data collected by ALPRs can also be shared with other agencies and third parties, further extending the reach of this surveillance. Most people have no idea their movements are being monitored and recorded.
-        </p>
-      </v-expansion-panel-text>
-    </v-expansion-panel>
-
-    <v-expansion-panel>
-      <v-expansion-panel-title class="font-weight-bold">
-        Do police need a warrant to search these cameras?
-      </v-expansion-panel-title>
-      <v-expansion-panel-text>
-        <p>
-          This is a serious and unsettled question in Canada. ALPRs collect data on <b>everyone</b>—not just suspects—and that data can often be searched with <b>little to no judicial oversight</b>. Mass, suspicionless tracking of Canadians' movements raises significant concerns under <b>Section 8 of the Charter</b>, which protects against unreasonable search and seizure.
-        </p>
-        <p>
-          Data is also frequently shared across agencies—and, in some cases, <b>across the border with U.S. law enforcement</b>—extending the reach of this surveillance far beyond the community where the cameras were installed.
-        </p>
-      </v-expansion-panel-text>
-    </v-expansion-panel>
-
-    <v-expansion-panel>
-      <v-expansion-panel-title class="font-weight-bold">
-        What oversight is there for these systems?
-      </v-expansion-panel-title>
-      <v-expansion-panel-text>
-        <p>
-          <b>There is often little to no meaningful oversight.</b> Some police services have policies governing ALPR use, but these are frequently weak and poorly enforced, and many agencies have no policy at all. There is rarely any requirement for transparency or accountability in how these systems are used.
-        </p>
-        <p>
-          Vendors like Flock offer a <b>transparency portal</b> for their law-enforcement customers, but they let customers choose what to include or exclude, and the portals often <b>lack meaningful data</b>—for example, underreporting how many agencies actually have access.
-        </p>
+        <i18n-t keypath="faq.oversight_p1" tag="p" scope="global">
+          <template #lead><b>{{ t('faq.oversight_p1_lead') }}</b></template>
+        </i18n-t>
+        <i18n-t keypath="faq.oversight_p2" tag="p" scope="global">
+          <template #portal><b>{{ t('faq.oversight_p2_portal') }}</b></template>
+          <template #lackdata><b>{{ t('faq.oversight_p2_lackdata') }}</b></template>
+        </i18n-t>
       </v-expansion-panel-text>
     </v-expansion-panel>
 
     <v-expansion-panel id="faq-transparency">
       <v-expansion-panel-title class="font-weight-bold">
-        Do Flock's transparency portals give a full picture of who has access to the data?
+        {{ t('faq.transparency_q') }}
       </v-expansion-panel-title>
       <v-expansion-panel-text>
+        <i18n-t keypath="faq.transparency_p1" tag="p" scope="global">
+          <template #incomplete><i>{{ t('faq.transparency_p1_incomplete') }}</i></template>
+          <template #misleading><i>{{ t('faq.transparency_p1_misleading') }}</i></template>
+        </i18n-t>
+        <i18n-t keypath="faq.transparency_p2" tag="p" scope="global">
+          <template #portal><a href="https://transparency.flocksafety.com/boulder-co-pd" target="_blank" rel="noopener noreferrer">{{ t('faq.transparency_p2_portal') }}</a></template>
+          <template #request><a href="https://www.muckrock.com/foi/boulder-172/boulder-alpr-audits-187797/" target="_blank" rel="noopener noreferrer">{{ t('faq.transparency_p2_request') }}</a></template>
+          <template #count><b>{{ t('faq.transparency_p2_count') }}</b></template>
+        </i18n-t>
+      </v-expansion-panel-text>
+    </v-expansion-panel>
+
+    <v-expansion-panel>
+      <v-expansion-panel-title class="font-weight-bold">
+        {{ t('faq.trust_q') }}
+      </v-expansion-panel-title>
+      <v-expansion-panel-text>
+        <i18n-t keypath="faq.trust_p1" tag="p" scope="global">
+          <template #link><a target="_blank" rel="noopener noreferrer" href="https://www.404media.co/flock-logins-exposed-in-malware-infections-senator-asks-ftc-to-investigate-the-company/">{{ t('faq.trust_p1_link') }}</a></template>
+        </i18n-t>
+        <i18n-t keypath="faq.trust_p2" tag="p" scope="global">
+          <template #nocontracts><a href="https://youtu.be/aMfO7D-f7U0?si=23FNwA91zVTwxb02&t=898" target="_blank" rel="noopener noreferrer">{{ t('faq.trust_p2_nocontracts') }}</a></template>
+          <template #found><a href="https://www.9news.com/article/news/local/flock-federal-immigration-agents-access-tracking-data/73-a8aee742-56d4-4a57-b5bb-0373286dfef8" target="_blank" rel="noopener noreferrer">{{ t('faq.trust_p2_found') }}</a></template>
+        </i18n-t>
         <p>
-          Flock now operates in Canada, but its track record in the United States—where it has operated longest—is telling. Flock's transparency portals are <i>notoriously incomplete</i> and often <i>misleading</i>. They let law-enforcement agencies cherry-pick what is included or excluded, leading to significant underreporting of who actually has access to the data.
-        </p>
-        <p>
-          Take Boulder, Colorado for example. Their <a href="https://transparency.flocksafety.com/boulder-co-pd" target="_blank" rel="noopener noreferrer">transparency portal</a> listed around 90 agencies with access to their ALPR data. However, <a href="https://www.muckrock.com/foi/boulder-172/boulder-alpr-audits-187797/" target="_blank" rel="noopener noreferrer">a public records request</a> revealed that <b>over 6,000 agencies</b> actually had access. This discrepancy highlights the lack of transparency and accountability in Flock's reporting.
+          {{ t('faq.trust_p3') }}
         </p>
       </v-expansion-panel-text>
     </v-expansion-panel>
 
     <v-expansion-panel>
       <v-expansion-panel-title class="font-weight-bold">
-        Can Flock be trusted to keep this data safe?
+        {{ t('faq.remove_q') }}
       </v-expansion-panel-title>
       <v-expansion-panel-text>
         <p>
-          Flock's record raises serious doubts. In November 2025, <a target="_blank" rel="noopener noreferrer" href="https://www.404media.co/flock-logins-exposed-in-malware-infections-senator-asks-ftc-to-investigate-the-company/">a security researcher found Flock logins for sale on Russian hacking forums</a>, since Flock negligently didn't require multi-factor authentication.
+          {{ t('faq.remove_p1') }}
         </p>
-        <p>
-          Flock has also been caught misrepresenting the facts. Its CEO told Denver's 9News that Flock had <a href="https://youtu.be/aMfO7D-f7U0?si=23FNwA91zVTwxb02&t=898" target="_blank" rel="noopener noreferrer">no federal contracts</a>—yet weeks later, <a href="https://www.9news.com/article/news/local/flock-federal-immigration-agents-access-tracking-data/73-a8aee742-56d4-4a57-b5bb-0373286dfef8" target="_blank" rel="noopener noreferrer">9News found</a> that U.S. Border Patrol did have access to search Flock's systems. Records requests later showed "U.S. Border Patrol" searching thousands of agencies' data across the national network.
-        </p>
-        <p>
-          The same company is now signing up Canadian agencies—so these questions matter here too.
-        </p>
-      </v-expansion-panel-text>
-    </v-expansion-panel>
-
-    <v-expansion-panel>
-      <v-expansion-panel-title class="font-weight-bold">
-        How can I get these cameras out of my city or town?
-      </v-expansion-panel-title>
-      <v-expansion-panel-text>
-        <p>
-          Communities can push back. Raise concerns publicly, build a group of advocates, and petition your municipal council not to approve or renew ALPR contracts. Public attention, deputations, and records requests have led agencies elsewhere to cancel or decline ALPR programs.
-        </p>
-        <p>
-          For more, see the <router-link to="/council">city council page</router-link>.
-        </p>
+        <i18n-t keypath="faq.remove_p2" tag="p" scope="global">
+          <template #link><router-link :to="localePath('/council')">{{ t('faq.remove_p2_link') }}</router-link></template>
+        </i18n-t>
       </v-expansion-panel-text>
     </v-expansion-panel>
   </v-expansion-panels>
@@ -126,6 +134,11 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, watch } from 'vue';
+import { useI18n } from 'vue-i18n';
+import { useLocalePath } from '@/composables/useLocalePath';
+
+const { t } = useI18n();
+const { localePath } = useLocalePath();
 
 const props = defineProps({
   showAll: {

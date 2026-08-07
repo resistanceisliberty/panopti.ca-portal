@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "build-only": "vite-ssg build",
     "type-check": "vue-tsc --build --force",
-    "build:ssg": "vite-ssg build"
+    "build:ssg": "vite-ssg build",
+    "test": "node --test src/locales/*.test.mjs src/router/*.test.mjs"
   },
   "dependencies": {
     "@unhead/vue": "^1.11.14",
@@ -18,10 +19,12 @@
     "countup.js": "^2.8.0",
     "pinia": "^2.3.0",
     "vue": "^3.4.29",
+    "vue-i18n": "^9.14.5",
     "vue-router": "^4.3.3",
     "vuetify": "^3.7.2"
   },
   "devDependencies": {
+    "@intlify/unplugin-vue-i18n": "^4.0.0",
     "@mdi/font": "^7.4.47",
     "@tsconfig/node20": "^20.1.4",
     "@types/node": "^20.14.5",
