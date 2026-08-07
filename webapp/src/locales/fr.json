@@ -128,6 +128,20 @@
     "crossborder_li4": "Un nouveau rapport conclut que le partage de données avec les agences fédérales de l'immigration pourrait enfreindre une loi de l'État de Washington"
   },
   "counter": { "alpr": "ALPR cartographiés au Canada", "cctv": "Vidéosurveillance gouvernementale cartographiée au Canada" },
+  "about": {
+    "heading1": "À propos de panopti.ca",
+    "p1": "panopti.ca est un projet à code ouvert qui cartographie la propagation des lecteurs automatiques de plaques d'immatriculation (ALPR) partout au Canada. Son objectif est de rendre visible une forme silencieuse de surveillance de masse — de montrer où se trouvent ces caméras, qui les exploite et à quel point elles se sont répandues.",
+    "heading2": "Que font les ALPR",
+    "p2": "Un ALPR est une caméra alimentée par l'IA qui photographie et enregistre {vehicle} — sa plaque, son emplacement et le moment précis — que le conducteur soit soupçonné de quelque chose ou non. Vendues par des fournisseurs comme {genetec} et {flock}, ces caméras se répandent rapidement dans les villes et les villages du Canada, souvent avec peu de débat public ou de contrôle.",
+    "p2_vehicle": "chaque véhicule qui passe",
+    "heading3": "Pourquoi cartographier les ALPR est important",
+    "p3": "La surveillance dont personne n'est au courant est difficile à remettre en question. Placer chaque caméra connue sur une carte publique transforme des déploiements dispersés et faciles à ignorer en quelque chose de concret — quelque chose que les résidants, les journalistes et les élus peuvent examiner, discuter et contester. Une carte rend également l'envergure du problème légitime d'une manière qu'une seule caméra sur un poteau ne pourrait jamais le faire.",
+    "heading4": "Basé sur des données ouvertes",
+    "p4": "Chaque emplacement de caméra se trouve sur {osm}, l'ensemble de données ouvertes qui alimente les cartes du monde entier. Rien ne figure dans une base de données privée : l'information est publique, vérifiable et libre d'accès pour quiconque souhaite l'inspecter, la corriger ou la réutiliser. Le projet s'appuie sur le travail à code ouvert de {deflock}, qui a pioneered la cartographie participative des ALPR aux États-Unis.",
+    "heading5": "Comment contribuer",
+    "p5": "La carte grandit grâce aux gens qui l'utilisent. Repérer une caméra et {adding} la place sur la carte pour tous, et partager le site aide plus de gens à comprendre comment fonctionne la surveillance par ALPR et où elle s'implante. Des conseils sur {learn} et sur la façon de les identifier et de les signaler sont disponibles partout sur le site — aucune expertise spéciale requise.",
+    "p5_adding": "l'ajouter à OpenStreetMap"
+  },
   "similar": {
     "heading": "Projets similaires",
     "subtitle": "Découvrez d'autres initiatives qui œuvrent à protéger la vie privée et à recenser les infrastructures de surveillance",

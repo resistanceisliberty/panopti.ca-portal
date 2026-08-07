@@ -128,6 +128,20 @@
     "crossborder_li4": "New report finds data sharing with federal immigration agencies might violate Washington law"
   },
   "counter": { "alpr": "ALPRs mapped in Canada", "cctv": "Government CCTVs mapped in Canada" },
+  "about": {
+    "heading1": "About panopti.ca",
+    "p1": "panopti.ca is an open-source project that maps the spread of automatic licence plate readers (ALPRs) across Canada. Its purpose is to make a quiet form of mass surveillance visible — to show where these cameras stand, who runs them, and just how widely they have been deployed.",
+    "heading2": "What an ALPR does",
+    "p2": "An ALPR is an AI-powered camera that photographs and logs {vehicle} — its plate, its location, and the moment it drove by — whether or not the driver is suspected of anything. Sold by vendors such as {genetec} and {flock}, these cameras are spreading rapidly through Canadian cities and towns, often with little public debate or oversight.",
+    "p2_vehicle": "every passing vehicle",
+    "heading3": "Why mapping them matters",
+    "p3": "Surveillance that nobody can see is hard to question. Plotting each known camera on a public map turns scattered, easily-overlooked deployments into something concrete — something residents, journalists, and elected officials can examine, discuss, and challenge. A map also makes the scale of the problem legible in a way that a single camera on a pole never could.",
+    "heading4": "Built on open data",
+    "p4": "Every camera location lives on {osm}, the same open dataset that powers maps around the world. Nothing sits in a private database: the information is public, verifiable, and free for anyone to inspect, correct, or reuse. The project builds on the open-source work of {deflock}, which pioneered crowdsourced ALPR mapping in the United States.",
+    "heading5": "How to contribute",
+    "p5": "The map grows through the people who use it. Spotting a camera and {adding} puts it on the map for everyone, and sharing the site helps more people understand how ALPR surveillance works and where it is taking hold. Guidance on {learn} and how to identify and report them is available throughout the site — no special expertise required.",
+    "p5_adding": "adding it to OpenStreetMap"
+  },
   "similar": {
     "heading": "Similar Projects",
     "subtitle": "Explore other initiatives working to protect privacy and track surveillance infrastructure",
