@@ -1,0 +1,7 @@
+{
+  "nav": { "home": "Accueil", "map": "Carte", "learn": "Comprendre", "contribute": "Contribuer", "submit": "Signaler une caméra", "records": "Documents publics", "council": "Conseil municipal", "involved": "S'impliquer", "contact": "Contact", "github": "GitHub" },
+  "credit": { "built_on": "Basé sur", "deflock": "DeFlock", "tail": ", le projet original de cartographie des ALPR — pour les données américaines, visitez" },
+  "footer": { "info": "Infos", "involved": "S'impliquer", "open_source": "code ouvert, basé sur" },
+  "lang": { "switch_to_fr": "Passer au français", "switch_to_en": "Switch to English", "fr": "FR", "en": "EN" },
+  "meta": {}
+}

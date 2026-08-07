@@ -1,0 +1,7 @@
+{
+  "nav": { "home": "Home", "map": "Map", "learn": "Learn", "contribute": "Contribute", "submit": "Submit Cameras", "records": "Public Records", "council": "City Council", "involved": "Get Involved", "contact": "Contact", "github": "GitHub" },
+  "credit": { "built_on": "Built on", "deflock": "DeFlock", "tail": ", the original ALPR-mapping project — for United States ALPR data, visit" },
+  "footer": { "info": "Info", "involved": "Get Involved", "open_source": "open source, built on" },
+  "lang": { "switch_to_fr": "Passer au français", "switch_to_en": "Switch to English", "fr": "FR", "en": "EN" },
+  "meta": {}
+}
