@@ -140,7 +140,8 @@
     "p4": "Every camera location lives on {osm}, the same open dataset that powers maps around the world. Nothing sits in a private database: the information is public, verifiable, and free for anyone to inspect, correct, or reuse. The project builds on the open-source work of {deflock}, which pioneered crowdsourced ALPR mapping in the United States.",
     "heading5": "How to contribute",
     "p5": "The map grows through the people who use it. Spotting a camera and {adding} puts it on the map for everyone, and sharing the site helps more people understand how ALPR surveillance works and where it is taking hold. Guidance on {learn} and how to identify and report them is available throughout the site — no special expertise required.",
-    "p5_adding": "adding it to OpenStreetMap"
+    "p5_adding": "adding it to OpenStreetMap",
+    "p5_learn": "how these cameras work"
   },
   "similar": {
     "heading": "Similar Projects",

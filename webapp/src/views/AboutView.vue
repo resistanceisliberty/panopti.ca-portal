@@ -27,7 +27,7 @@
       <h2>{{ t('about.heading5') }}</h2>
       <i18n-t keypath="about.p5" tag="p" scope="global">
         <template #adding><router-link :to="localePath('/report')">{{ t('about.p5_adding') }}</router-link></template>
-        <template #learn><router-link :to="localePath('/what-is-an-alpr')">{{ t('learn.hero_title') }}</router-link></template>
+        <template #learn><router-link :to="localePath('/what-is-an-alpr')">{{ t('about.p5_learn') }}</router-link></template>
       </i18n-t>
     </v-container>
   </DefaultLayout>
