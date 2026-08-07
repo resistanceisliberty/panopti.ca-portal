@@ -2,28 +2,50 @@
 import { RouterView, useRouter, useRoute } from 'vue-router'
 import { computed, ref, watch, onMounted } from 'vue'
 import { useHead } from '@unhead/vue'
+import { useI18n } from 'vue-i18n'
 import { useTheme } from 'vuetify';
 import DiscordWarningDialog from '@/components/DiscordWarningDialog.vue';
 import { useDiscordIntercept } from '@/composables/useDiscordIntercept';
-import { SITE_ORIGIN, DEFAULT_DESCRIPTION } from '@/router';
+import { SITE_ORIGIN } from '@/router';
 
 const theme = useTheme();
 const router = useRouter();
 const route = useRoute();
+const { t, locale } = useI18n();
 const isDark = computed(() => theme.name.value === 'dark');
 const isInIframe = computed(() => typeof window !== 'undefined' && window.self !== window.top);
 const { showDialog, discordUrl, interceptDiscordLinks } = useDiscordIntercept();
 
-// Per-page SEO head — reactive to the current route's meta (set in router).
+// Per-page SEO head — reactive to the current route's meta (metaKey/locale set in router)
+// and to the active i18n locale, so title/description/hreflang track both.
+const metaKey = computed(() => (route.meta.metaKey as string) || 'home');
+const title = computed(() => t(`meta.${metaKey.value}.title`));
+const description = computed(() => t(`meta.${metaKey.value}.description`));
+// The current path with any /fr prefix stripped — the English/base path.
+const basePath = computed(() => {
+  const p = route.path;
+  if (p === '/fr' || p === '/fr/') return '/';
+  return p.startsWith('/fr/') ? p.slice(3) : p;
+});
+const enUrl = computed(() => SITE_ORIGIN + basePath.value);
+const frUrl = computed(() => SITE_ORIGIN + (basePath.value === '/' ? '/fr' : `/fr${basePath.value}`));
+
 useHead({
-  title: () => (route.meta.title as string) || 'panopti.ca',
+  htmlAttrs: { lang: () => (locale.value === 'fr' ? 'fr-CA' : 'en-CA') },
+  title: () => title.value,
   meta: [
-    { name: 'description', content: () => (route.meta.description as string) || DEFAULT_DESCRIPTION },
-    { property: 'og:title', content: () => (route.meta.title as string) || 'panopti.ca' },
-    { property: 'og:description', content: () => (route.meta.description as string) || DEFAULT_DESCRIPTION },
+    { name: 'description', content: () => description.value },
+    { property: 'og:title', content: () => title.value },
+    { property: 'og:description', content: () => description.value },
     { property: 'og:url', content: () => SITE_ORIGIN + route.path },
+    { property: 'og:locale', content: () => (locale.value === 'fr' ? 'fr_CA' : 'en_CA') },
   ],
-  link: [{ rel: 'canonical', href: () => SITE_ORIGIN + route.path }],
+  link: [
+    { rel: 'canonical', href: () => SITE_ORIGIN + route.path },
+    { rel: 'alternate', hreflang: 'en', href: () => enUrl.value },
+    { rel: 'alternate', hreflang: 'fr', href: () => frUrl.value },
+    { rel: 'alternate', hreflang: 'x-default', href: () => enUrl.value },
+  ],
 });
 
 function toggleTheme() {

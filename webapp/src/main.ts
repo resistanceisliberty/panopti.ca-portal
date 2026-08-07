@@ -4,6 +4,7 @@ import { ViteSSG } from 'vite-ssg'
 import { createPinia } from 'pinia'
 import App from './App.vue'
 import { routes, scrollBehavior } from './router'
+import { createI18nInstance } from './i18n'
 
 import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
@@ -34,8 +35,13 @@ const vuetify = createVuetify({
 export const createApp = ViteSSG(
   App,
   { routes, scrollBehavior },
-  ({ app }) => {
+  ({ app, router }) => {
+    const i18n = createI18nInstance()
     app.use(createPinia())
     app.use(vuetify)
+    app.use(i18n)
+    router.beforeEach((to) => {
+      i18n.global.locale.value = (to.meta.locale as 'en' | 'fr') || 'en'
+    })
   },
 )

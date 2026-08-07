@@ -3,5 +3,18 @@
   "credit": { "built_on": "Basé sur", "deflock": "DeFlock", "tail": ", le projet original de cartographie des ALPR — pour les données américaines, visitez" },
   "footer": { "info": "Infos", "involved": "S'impliquer", "open_source": "code ouvert, basé sur" },
   "lang": { "switch_to_fr": "Passer au français", "switch_to_en": "Switch to English", "fr": "FR", "en": "EN" },
-  "meta": {}
+  "meta": {
+    "home": { "title": "panopti.ca — Cartographier les caméras ALPR et lecteurs de plaques au Canada", "description": "Découvrez où sont déployés les lecteurs automatiques de plaques d'immatriculation (ALPR) et les caméras de surveillance de type Flock au Canada. Une carte à code ouvert et collaborative bâtie sur OpenStreetMap." },
+    "about": { "title": "À propos de panopti.ca — Cartographier la surveillance ALPR au Canada", "description": "panopti.ca est un projet à code ouvert qui cartographie les lecteurs automatiques de plaques d'immatriculation (ALPR) au Canada, bâti sur OpenStreetMap et le travail de DeFlock." },
+    "learn": { "title": "Que sont les ALPR? La surveillance par lecteurs de plaques au Canada {'|'} panopti.ca", "description": "Découvrez ce que sont les lecteurs automatiques de plaques d'immatriculation (ALPR), comment les caméras Flock et Genetec suivent vos déplacements, et pourquoi elles menacent la vie privée au Canada." },
+    "report": { "title": "Comment ajouter une caméra ALPR à la carte (OpenStreetMap) {'|'} panopti.ca", "description": "Vous avez repéré un lecteur de plaques d'immatriculation? Instructions étape par étape pour ajouter des caméras ALPR à OpenStreetMap afin qu'elles apparaissent sur la carte panopti.ca du Canada." },
+    "council": { "title": "ALPR, conseils municipaux et commissions de services policiers au Canada {'|'} panopti.ca", "description": "Comment la surveillance ALPR est approuvée dans les municipalités canadiennes et par les commissions de services policiers — et comment les résidents peuvent la remettre en question ou y mettre fin." },
+    "foi": { "title": "Demander des documents ALPR : l'accès à l'information au Canada {'|'} panopti.ca", "description": "Comment déposer une demande d'accès à l'information (AIPRP fédérale ou provinciale) pour obtenir les contrats ALPR, les politiques de partage de données et les documents des services de police canadiens." },
+    "identify": { "title": "Identifier les caméras ALPR : Flock, Genetec et Motorola {'|'} panopti.ca", "description": "Un guide visuel pour identifier les lecteurs automatiques de plaques d'immatriculation et autres dispositifs de surveillance de fournisseurs comme Flock Safety, Genetec et Motorola." },
+    "contact": { "title": "Contacter panopti.ca", "description": "Communiquez avec panopti.ca — questions, corrections ou demandes des médias au sujet de la cartographie de la surveillance ALPR au Canada." },
+    "privacy": { "title": "Politique de confidentialité {'|'} panopti.ca", "description": "La politique de confidentialité de panopti.ca. Nous ne recueillons aucun renseignement personnel, n'utilisons aucun témoin (cookie) et ne suivons pas les visiteurs." },
+    "terms": { "title": "Conditions d'utilisation {'|'} panopti.ca", "description": "Conditions d'utilisation de panopti.ca, la carte canadienne à code ouvert de la surveillance ALPR." },
+    "qr": { "title": "Vous avez trouvé un ALPR — panopti.ca", "description": "Vous avez trouvé un lecteur automatique de plaques d'immatriculation. Découvrez ce que c'est et ajoutez-le à la carte panopti.ca de la surveillance ALPR au Canada." },
+    "notfound": { "title": "Page introuvable {'|'} panopti.ca", "description": "La page que vous recherchez est introuvable." }
+  }
 }
