@@ -17,10 +17,10 @@
               link
               :to="link.to && localePath(link.to)"
               slim
-              :aria-label="t(link.altKey)"
+              :aria-label="t(link.altKey ?? '')"
             >
                 <v-list-item-title class="d-flex align-center">
-                <v-icon class="custom-icon" start :icon="link.icon" :alt="t(link.altKey)" />
+                <v-icon class="custom-icon" start :icon="link.icon" :alt="t(link.altKey ?? '')" />
                 {{ t(link.titleKey) }}
                 </v-list-item-title>
             </v-list-item>
@@ -43,7 +43,7 @@
             >
               <v-list-item-title class="d-flex align-center justify-start">
                 <v-icon start v-if="link.icon" class="custom-icon" :icon="link.icon"></v-icon>
-                <img v-else-if="link.customIcon" class="mr-2 custom-icon" width="24" height="24" :src="isDark ? link.customIconDark : link.customIcon" :alt="t(link.altKey)" />
+                <img v-else-if="link.customIcon" class="mr-2 custom-icon" width="24" height="24" :src="isDark ? link.customIconDark : link.customIcon" :alt="t(link.altKey ?? '')" />
                 {{ t(link.titleKey) }}
               </v-list-item-title>
             </v-list-item>
@@ -81,7 +81,7 @@ const { localePath } = useLocalePath();
 interface FooterLink {
   titleKey: string
   icon: string
-  altKey: string
+  altKey?: string
   href?: string
   to?: string
   customIcon?: string
@@ -95,7 +95,7 @@ const internalLinks: FooterLink[] = [
 ];
 
 const externalLinks: FooterLink[] = [
-  { titleKey: 'nav.github', href: 'https://github.com/resistanceisliberty/panopti.ca', icon: 'mdi-github', altKey: 'footer.github_alt' },
+  { titleKey: 'nav.github', href: 'https://github.com/resistanceisliberty/panopti.ca', icon: 'mdi-github' },
   { titleKey: 'nav.contact', to: '/contact', icon: 'mdi-email', altKey: 'nav.contact' },
 ]
 </script>

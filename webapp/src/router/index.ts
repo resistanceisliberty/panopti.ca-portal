@@ -2,8 +2,6 @@ import type { RouteRecordRaw, RouterScrollBehavior } from 'vue-router'
 import Landing from '../views/Landing.vue'
 
 export const SITE_ORIGIN = 'https://panopti.ca'
-export const DEFAULT_DESCRIPTION =
-  'See where automatic licence plate readers (ALPRs) and Flock-style surveillance cameras are deployed across Canada. An open-source, crowdsourced map built on OpenStreetMap.'
 
 export const scrollBehavior: RouterScrollBehavior = (to) => {
   if (to.hash && !to.hash.startsWith('#map')) {
@@ -35,7 +33,7 @@ function localeRecords(locale: 'en' | 'fr'): RouteRecordRaw[] {
     name: locale === 'fr' ? `${b.name}-fr` : b.name,
     component: b.component,
     meta: { metaKey: b.metaKey, locale },
-  }))
+  })) as RouteRecordRaw[]
 }
 
 export const routes: RouteRecordRaw[] = [
