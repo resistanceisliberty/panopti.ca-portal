@@ -499,6 +499,22 @@
     "contact_intro": "If you have any questions or concerns regarding these Terms of Service, please contact us at:",
     "contact_email": "Email: {email}"
   },
+  "notfound": {
+    "title": "Page Not Found",
+    "image_alt": "Illustration of someone searching for a license plate that can't be found",
+    "caption": "... just like the license plate this guy is searching for.",
+    "home_link": "Home"
+  },
+  "discord": {
+    "heading": "You're about to join Discord",
+    "alert": "{enforcement} and {employees} actively monitor the Discord server. Please act accordingly.",
+    "alert_enforcement": "Law enforcement",
+    "alert_employees": "Flock employees",
+    "notice": "If you understand the risks and wish to continue, click {proceed} below.",
+    "notice_proceed": "Proceed",
+    "proceed_button": "Proceed",
+    "cancel_button": "Cancel"
+  },
   "meta": {
     "home": { "title": "panopti.ca — Map ALPR & Licence Plate Reader Cameras in Canada", "description": "See where automatic licence plate readers (ALPRs) and Flock-style surveillance cameras are deployed across Canada. An open-source, crowdsourced map built on OpenStreetMap." },
     "about": { "title": "About panopti.ca — Mapping ALPR Surveillance in Canada", "description": "panopti.ca is an open-source project mapping automatic licence plate readers (ALPRs) across Canada, built on OpenStreetMap and the work of DeFlock." },

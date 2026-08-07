@@ -499,6 +499,22 @@
     "contact_intro": "Si vous avez des questions ou des préoccupations au sujet des présentes conditions d'utilisation, veuillez communiquer avec nous à :",
     "contact_email": "Courriel : {email}"
   },
+  "notfound": {
+    "title": "Page introuvable",
+    "image_alt": "Illustration d'une personne qui cherche une plaque d'immatriculation introuvable",
+    "caption": "... tout comme la plaque d'immatriculation que ce gars recherche.",
+    "home_link": "Accueil"
+  },
+  "discord": {
+    "heading": "Vous êtes sur le point de rejoindre Discord",
+    "alert": "{enforcement} et {employees} surveillent activement le serveur Discord. Veuillez agir en conséquence.",
+    "alert_enforcement": "Les forces de l'ordre",
+    "alert_employees": "les employés de Flock",
+    "notice": "Si vous comprenez les risques et souhaitez continuer, cliquez sur {proceed} ci-dessous.",
+    "notice_proceed": "Continuer",
+    "proceed_button": "Continuer",
+    "cancel_button": "Annuler"
+  },
   "meta": {
     "home": { "title": "panopti.ca — Cartographier les caméras ALPR et lecteurs de plaques au Canada", "description": "Découvrez où sont déployés les lecteurs automatiques de plaques d'immatriculation (ALPR) et les caméras de surveillance de type Flock au Canada. Une carte à code ouvert et collaborative bâtie sur OpenStreetMap." },
     "about": { "title": "À propos de panopti.ca — Cartographier la surveillance ALPR au Canada", "description": "panopti.ca est un projet à code ouvert qui cartographie les lecteurs automatiques de plaques d'immatriculation (ALPR) au Canada, bâti sur OpenStreetMap et le travail de DeFlock." },
