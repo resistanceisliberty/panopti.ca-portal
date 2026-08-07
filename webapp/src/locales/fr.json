@@ -436,6 +436,14 @@
     "found_heading": "Vous en avez trouvé un?",
     "add_to_map_btn": "Ajouter à la carte"
   },
+  "contact": {
+    "heading": "Nous joindre",
+    "subheading": "Nous aimerions avoir de vos nouvelles.",
+    "email_heading": "Écrivez-nous",
+    "email_intro": "Des questions, des corrections, des demandes des médias, ou vous voulez donner un coup de main? Écrivez-nous à :",
+    "alert": "Vous avez repéré une caméra? Vous n'avez pas besoin de nous écrire — vous pouvez {link} directement dans OpenStreetMap.",
+    "alert_link": "l'ajouter vous-même à la carte"
+  },
   "meta": {
     "home": { "title": "panopti.ca — Cartographier les caméras ALPR et lecteurs de plaques au Canada", "description": "Découvrez où sont déployés les lecteurs automatiques de plaques d'immatriculation (ALPR) et les caméras de surveillance de type Flock au Canada. Une carte à code ouvert et collaborative bâtie sur OpenStreetMap." },
     "about": { "title": "À propos de panopti.ca — Cartographier la surveillance ALPR au Canada", "description": "panopti.ca est un projet à code ouvert qui cartographie les lecteurs automatiques de plaques d'immatriculation (ALPR) au Canada, bâti sur OpenStreetMap et le travail de DeFlock." },

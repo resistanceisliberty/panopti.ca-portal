@@ -436,6 +436,14 @@
     "found_heading": "Found one?",
     "add_to_map_btn": "Add to Map"
   },
+  "contact": {
+    "heading": "Contact Us",
+    "subheading": "We'd love to hear from you.",
+    "email_heading": "Email us",
+    "email_intro": "Questions, corrections, media enquiries, or want to help out? Reach us at:",
+    "alert": "Spotted a camera? You don't need to email us — you can {link} directly through OpenStreetMap.",
+    "alert_link": "add it to the map yourself"
+  },
   "meta": {
     "home": { "title": "panopti.ca — Map ALPR & Licence Plate Reader Cameras in Canada", "description": "See where automatic licence plate readers (ALPRs) and Flock-style surveillance cameras are deployed across Canada. An open-source, crowdsourced map built on OpenStreetMap." },
     "about": { "title": "About panopti.ca — Mapping ALPR Surveillance in Canada", "description": "panopti.ca is an open-source project mapping automatic licence plate readers (ALPRs) across Canada, built on OpenStreetMap and the work of DeFlock." },
