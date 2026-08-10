@@ -232,8 +232,11 @@
             <v-btn :to="localePath('/contact')" size="large" color="primary" class="mr-4 mb-4" prepend-icon="mdi-email">
               {{ t('council.cta_contact_btn') }}
             </v-btn>
-            <v-btn :to="localePath('/report')" size="large" variant="outlined" color="primary" class="mb-4" prepend-icon="mdi-map-marker-plus">
+            <v-btn :to="localePath('/report')" size="large" variant="outlined" color="primary" class="mr-4 mb-4" prepend-icon="mdi-map-marker-plus">
               {{ t('council.cta_report_btn') }}
+            </v-btn>
+            <v-btn :to="localePath('/candidates')" size="large" variant="outlined" color="primary" class="mb-4" prepend-icon="mdi-vote">
+              {{ t('council.cta_candidates') }}
             </v-btn>
           </div>
         </v-card>

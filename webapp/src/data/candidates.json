@@ -1,0 +1,177 @@
+{
+  "lastUpdated": "2026-08-09",
+  "municipalities": [
+    {
+      "id": "london-on",
+      "name": { "en": "London", "fr": "London" },
+      "province": "ON",
+      "alprStatus": "considering",
+      "statusNote": {
+        "en": "London Police Service operates mobile ALPR cameras on roughly 50 patrol cruisers, and its 2024 annual report flags further ALPR-equipped in-car cameras rolling out in late 2026 and early 2027. panopti.ca found no evidence of a fixed/stationary ALPR camera network installed in London, nor of London City Council or the Police Services Board actively considering one.",
+        "fr": "Le Service de police de London exploite des caméras ALPR mobiles sur une cinquantaine de véhicules de patrouille, et son rapport annuel 2024 signale le déploiement d'autres caméras embarquées ALPR prévu pour la fin de 2026 et le début de 2027. panopti.ca n'a trouvé aucune preuve d'un réseau de caméras ALPR fixes installé à London, ni d'une étude active de la part du conseil municipal ou de la Commission des services policiers à ce sujet."
+      },
+      "coords": [-81.2497, 42.9849],
+      "election": {
+        "date": "2026-10-26",
+        "body": { "en": "City Council & Mayor", "fr": "Conseil municipal et mairie" }
+      },
+      "statusEvidence": [
+        {
+          "type": "citation",
+          "date": "2026-08-09",
+          "title": { "en": "London Police Service — Automatic Licence Plate Recognition System", "fr": "Service de police de London — Système de reconnaissance automatique des plaques d'immatriculation" },
+          "url": "https://www.londonpolice.ca/crime-prevention/traffic-and-road-safety/automatic-licence-plate-recognition-system/"
+        },
+        {
+          "type": "citation",
+          "date": "2026-08-09",
+          "title": { "en": "London Police Service 2024 Annual Report — Modernizing Policing", "fr": "Rapport annuel 2024 du Service de police de London — Moderniser les services policiers" },
+          "url": "https://www.lpsannualreport.ca/wellness/modernizing-policing"
+        }
+      ]
+    },
+    {
+      "id": "montreal-qc",
+      "name": { "en": "Montreal", "fr": "Montréal" },
+      "province": "QC",
+      "alprStatus": "considering",
+      "statusNote": {
+        "en": "The SPVM has used mobile ALPR readers (the SRPI system) on about 30 patrol vehicles since 2011 to flag unlicensed, suspended or uninsured drivers. Montreal city council's public security commission began formally studying the SPVM's use of licence-plate-reading technology in 2020, and the city's Youth Council raised data-collection concerns in a 2021 advisory. panopti.ca found no evidence of a fixed/stationary ALPR camera network installed in Montreal.",
+        "fr": "Le SPVM utilise des lecteurs ALPR mobiles (le système SRPI) sur environ 30 véhicules de patrouille depuis 2011 pour repérer les conducteurs non détenteurs de permis, sous sanction ou non assurés. La commission de la sécurité publique du conseil municipal de Montréal a commencé à étudier formellement l'utilisation de cette technologie par le SPVM en 2020, et le Conseil jeunesse de Montréal a soulevé des préoccupations sur la collecte de données dans un avis de 2021. panopti.ca n'a trouvé aucune preuve d'un réseau de caméras ALPR fixes installé à Montréal."
+      },
+      "coords": [-73.5674, 45.5019],
+      "election": null,
+      "statusEvidence": [
+        {
+          "type": "citation",
+          "date": "2026-08-09",
+          "title": { "en": "SPVM — Presentation of the Licence Plate Recognition System (SRPI)", "fr": "SPVM — Présentation du Système de reconnaissance des plaques d'immatriculation (SRPI)" },
+          "url": "https://spvm.qc.ca/fr/Fiches/Details/Presentation-du-Systeme-de-reconnaissance-des-plaques-dimmatriculation-SRPI"
+        },
+        {
+          "type": "citation",
+          "date": "2025-12-08",
+          "title": { "en": "Pivot Quebec — AI at the SPVM: intrusive technology serving unlimited police surveillance", "fr": "Pivot — IA au SPVM : la technologie intrusive au service d'une surveillance policière illimitée" },
+          "url": "https://pivot.quebec/2025/12/08/ia-au-spvm-la-technologie-intrusive-au-service-dune-surveillance-policiere-illimitee/"
+        }
+      ]
+    },
+    {
+      "id": "sault-ste-marie-on",
+      "name": { "en": "Sault Ste. Marie", "fr": "Sault Ste. Marie" },
+      "province": "ON",
+      "alprStatus": "installed",
+      "statusNote": {
+        "en": "Sault Ste. Marie Police Service activated stationary ALPR cameras at the city's east and north entrances — Trunk Road and Great Northern Road — on June 13, 2022. Police Chief Hugh Stevenson told SooToday the system's cost would be offset by provincial grants, and Ontario's Information and Privacy Commissioner said it wasn't aware of any other Ontario community with a similar perimeter-camera setup.",
+        "fr": "Le Service de police de Sault Ste. Marie a activé des caméras ALPR fixes aux entrées est et nord de la ville — chemin Trunk et chemin Great Northern — le 13 juin 2022. Le chef de police Hugh Stevenson a déclaré à SooToday que le coût du système serait compensé par des subventions provinciales, et le commissaire à l'information et à la protection de la vie privée de l'Ontario a indiqué ne connaître aucune autre communauté ontarienne dotée d'un dispositif de caméras périmétriques semblable."
+      },
+      "coords": [-84.3477, 46.5136],
+      "election": {
+        "date": "2026-10-26",
+        "body": { "en": "City Council & Mayor", "fr": "Conseil municipal et mairie" }
+      },
+      "statusEvidence": [
+        {
+          "type": "citation",
+          "date": "2022-06-13",
+          "title": { "en": "Sault Ste. Marie Police Service — Stationary Automated Licence Plate Readers Now Active", "fr": "Service de police de Sault Ste. Marie — Les lecteurs fixes de plaques d'immatriculation sont maintenant actifs" },
+          "url": "https://saultpolice.ca/stationary-automated-licence-plate-readers-now-active/"
+        },
+        {
+          "type": "citation",
+          "date": "2026-08-09",
+          "title": { "en": "Sault Ste. Marie Police Service — Automatic Licence Plate Recognition", "fr": "Service de police de Sault Ste. Marie — Reconnaissance automatique des plaques d'immatriculation" },
+          "url": "https://saultpolice.ca/what-we-do/use-of-technology/automatic-licence-plate-recognition/"
+        },
+        {
+          "type": "citation",
+          "date": "2022-06-22",
+          "title": { "en": "SooToday — New system checking every plate entering Sault unique in Ontario", "fr": "SooToday — Un nouveau système qui contrôle chaque plaque entrant à Sault Ste. Marie, une première en Ontario" },
+          "url": "https://www.sootoday.com/local-news/new-system-checking-every-plate-entering-sault-unique-in-ontario-5497939"
+        }
+      ]
+    },
+    {
+      "id": "sudbury-on",
+      "name": { "en": "Greater Sudbury", "fr": "Grand Sudbury" },
+      "province": "ON",
+      "alprStatus": "installed",
+      "statusNote": {
+        "en": "Greater Sudbury Police Service has installed stationary ALPR cameras at 16 strategic intersections across the city, funded through the Ontario CCTV grant program, in addition to ALPR readers mounted in patrol cruisers.",
+        "fr": "Le Service de police du Grand Sudbury a installé des caméras ALPR fixes à 16 intersections stratégiques de la ville, financées par le programme provincial de subvention pour la vidéosurveillance (CCTV), en plus des lecteurs ALPR montés dans les véhicules de patrouille."
+      },
+      "coords": [-80.9930, 46.4917],
+      "election": {
+        "date": "2026-10-26",
+        "body": { "en": "City Council & Mayor", "fr": "Conseil municipal et mairie" }
+      },
+      "statusEvidence": [
+        {
+          "type": "citation",
+          "date": "2025-08-27",
+          "title": { "en": "Greater Sudbury Police Service — Stationary Automated Licence Plate Readers", "fr": "Service de police du Grand Sudbury — Lecteurs fixes de plaques d'immatriculation" },
+          "url": "https://www.gsps.ca/news/posts/stationary-automated-licence-plate-readers/"
+        },
+        {
+          "type": "citation",
+          "date": "2025-08-27",
+          "title": { "en": "CTV News Northern Ontario — Licence plate readers operating in more than a dozen sites across Greater Sudbury", "fr": "CTV News Northern Ontario — Des lecteurs de plaques fonctionnent dans plus d'une douzaine de sites du Grand Sudbury" },
+          "url": "https://www.ctvnews.ca/northern-ontario/article/licence-plate-readers-operating-in-more-than-a-dozen-sites-across-greater-sudbury/"
+        }
+      ]
+    },
+    {
+      "id": "surrey-bc",
+      "name": { "en": "Surrey", "fr": "Surrey" },
+      "province": "BC",
+      "alprStatus": "installed",
+      "statusNote": {
+        "en": "Surrey Police Service's Public Safety Camera program uses both mobile and fixed camera systems, and the service says some of these cameras are equipped with ALPR technology to identify and locate stolen vehicles.",
+        "fr": "Le programme de caméras de sécurité publique du Service de police de Surrey utilise des systèmes de caméras à la fois mobiles et fixes, et le service indique que certaines de ces caméras sont dotées de la technologie ALPR pour repérer et localiser les véhicules volés."
+      },
+      "coords": [-122.8490, 49.1913],
+      "election": {
+        "date": "2026-10-17",
+        "body": { "en": "City Council & Mayor", "fr": "Conseil municipal et mairie" }
+      },
+      "statusEvidence": [
+        {
+          "type": "citation",
+          "date": "2026-08-09",
+          "title": { "en": "Surrey Police Service — Public Safety Cameras", "fr": "Service de police de Surrey — Caméras de sécurité publique" },
+          "url": "https://www.surreypolice.ca/public-safety-cameras"
+        }
+      ]
+    },
+    {
+      "id": "kitchener-on",
+      "name": { "en": "Kitchener", "fr": "Kitchener" },
+      "province": "ON",
+      "alprStatus": "installed",
+      "statusNote": {
+        "en": "Waterloo Regional Police Service — which polices Kitchener along with Cambridge, Waterloo and area townships — launched fixed CCTV cameras equipped with ALPR technology, going live in Waterloo on June 23, 2026, with Kitchener intersections (including Fairway Road at Wilson Avenue and at Highway 8) following.",
+        "fr": "Le Service de police régional de Waterloo — qui dessert Kitchener ainsi que Cambridge, Waterloo et les cantons environnants — a lancé des caméras de vidéosurveillance fixes dotées de la technologie ALPR, entrées en service à Waterloo le 23 juin 2026, avec des intersections de Kitchener (dont Fairway Road à Wilson Avenue et à la route 8) à suivre."
+      },
+      "coords": [-80.4925, 43.4516],
+      "election": {
+        "date": "2026-10-26",
+        "body": { "en": "City Council & Mayor", "fr": "Conseil municipal et mairie" }
+      },
+      "statusEvidence": [
+        {
+          "type": "citation",
+          "date": "2026-08-09",
+          "title": { "en": "Waterloo Regional Police Service — Closed Circuit TV Equipped with Automated Licence Plate Reader Technology", "fr": "Service de police régional de Waterloo — Vidéosurveillance dotée de la technologie de reconnaissance automatique des plaques d'immatriculation" },
+          "url": "https://wrps.ca/programs-and-initiatives/closed-circuit-tv-equipped-automated-licence-plate-reader-technology"
+        },
+        {
+          "type": "citation",
+          "date": "2026-06-23",
+          "title": { "en": "Waterloo Regional Police Service — Proud to Launch the Expanded Use of CCTV and ALPR Technology", "fr": "Service de police régional de Waterloo — Fier de lancer l'utilisation élargie de la vidéosurveillance et de la technologie ALPR" },
+          "url": "https://wrps.ca/news/waterloo-regional-police-service-proud-launch-expanded-use-cctv-and-alpr-technology"
+        }
+      ]
+    }
+  ],
+  "people": []
+}

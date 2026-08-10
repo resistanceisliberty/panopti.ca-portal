@@ -7,5 +7,7 @@ test('prerender list covers both locales', () => {
   assert.ok(PRERENDER_PATHS.includes('/fr/about'))
   assert.ok(PRERENDER_PATHS.includes('/'))
   assert.ok(PRERENDER_PATHS.includes('/fr'))
-  assert.equal(PRERENDER_PATHS.length, 22)
+  assert.ok(PRERENDER_PATHS.includes('/candidates/london-on'))
+  assert.ok(PRERENDER_PATHS.includes('/fr/candidates/london-on'))
+  assert.equal(PRERENDER_PATHS.length, 36)
 })

@@ -14,9 +14,14 @@ export function useDiscordIntercept() {
       } else {
         link = target.closest('a');
       }
-      if (link && link.href && (link.href.includes('discord.gg') || link.href.includes('discord.com'))) {
+      if (!link) return;
+      // .href is a plain string on HTML anchors, but an SVGAnimatedString
+      // object (no .includes) on SVG <a> elements like the candidates map
+      // dots — closest('a') can return either. Normalize before reading it.
+      const href = typeof link.href === 'string' ? link.href : link.getAttribute('href') ?? '';
+      if (href && (href.includes('discord.gg') || href.includes('discord.com'))) {
         e.preventDefault();
-        discordUrl.value = link.href;
+        discordUrl.value = href;
         showDialog.value = true;
       }
     }, true);

@@ -93,6 +93,7 @@ const contributeItems: NavItem[] = [
   { titleKey: 'nav.submit', icon: 'mdi-map-marker-plus', to: '/report' },
   { titleKey: 'nav.records', icon: 'mdi-file-document', to: '/foi' },
   { titleKey: 'nav.council', icon: 'mdi-account-voice', to: '/council' },
+  { titleKey: 'nav.candidates', icon: 'mdi-vote', to: '/candidates' },
 ]
 
 const metaItems: NavItem[] = [

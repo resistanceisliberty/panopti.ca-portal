@@ -90,6 +90,7 @@ interface FooterLink {
 
 const internalLinks: FooterLink[] = [
   { titleKey: 'footer.about', to: '/about', icon: 'mdi-information', altKey: 'footer.about' },
+  { titleKey: 'nav.candidates', to: '/candidates', icon: 'mdi-vote', altKey: 'nav.candidates' },
   { titleKey: 'footer.privacy', to: '/privacy', icon: 'mdi-shield-lock', altKey: 'footer.privacy' },
   { titleKey: 'footer.terms', to: '/terms', icon: 'mdi-file-document', altKey: 'footer.terms' },
 ];
