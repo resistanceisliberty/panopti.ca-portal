@@ -8,7 +8,7 @@ const SLUG = /^[a-z0-9-]+$/
 const DATE = /^\d{4}-\d{2}-\d{2}$/
 const STANCES = ['opposes', 'supports', 'no_position']
 const EVIDENCE_TYPES = ['citation', 'questionnaire', 'outreach']
-const ALPR_STATUSES = ['installed', 'considering']
+const ALPR_STATUSES = ['installed', 'considering', 'mobile_only', 'none']
 
 function assertLz(obj, path) {
   assert.equal(typeof obj?.en, 'string', `${path}.en missing`)

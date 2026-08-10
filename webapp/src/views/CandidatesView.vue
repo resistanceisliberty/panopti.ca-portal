@@ -26,13 +26,9 @@
         <v-card class="pa-6" elevation="3" rounded="lg">
           <CanadaMap />
           <div class="d-flex flex-wrap justify-center mt-4">
-            <div class="d-flex align-center mr-6 mb-2">
-              <span class="legend-dot legend-dot--installed mr-2" />
-              <span class="text-body-2">{{ t('candidates.status.installed') }}</span>
-            </div>
-            <div class="d-flex align-center mb-2">
-              <span class="legend-dot legend-dot--considering mr-2" />
-              <span class="text-body-2">{{ t('candidates.status.considering') }}</span>
+            <div v-for="s in ALPR_STATUSES" :key="s" class="d-flex align-center mr-6 mb-2">
+              <span class="legend-dot mr-2" :style="{ background: STATUS_COLORS[s] }" />
+              <span class="text-body-2">{{ t(`candidates.status.${s}`) }}</span>
             </div>
           </div>
         </v-card>
@@ -50,7 +46,7 @@
                   <h3 class="text-h6 font-weight-bold mb-0">{{ lz(m.name, locale) }}</h3>
                   <p class="text-body-2 text-medium-emphasis mb-0">{{ m.province }}</p>
                 </div>
-                <v-chip :color="m.alprStatus === 'installed' ? 'red' : 'primary'" size="small" variant="tonal">
+                <v-chip :color="STATUS_COLORS[m.alprStatus]" size="small" variant="tonal">
                   {{ t(`candidates.status.${m.alprStatus}`) }}
                 </v-chip>
               </div>
@@ -185,6 +181,13 @@ import { getMunicipalities, stanceTally, lz, lastUpdated } from '@/data/candidat
 const { t, locale } = useI18n();
 const { localePath } = useLocalePath();
 const municipalities = getMunicipalities();
+const ALPR_STATUSES = ['installed', 'considering', 'mobile_only', 'none'] as const;
+const STATUS_COLORS: Record<string, string> = {
+  installed: '#c62828',
+  considering: '#1297C3',
+  mobile_only: '#ef6c00',
+  none: '#2e7d32',
+};
 </script>
 
 <style scoped>
@@ -205,13 +208,5 @@ const municipalities = getMunicipalities();
   width: 12px;
   height: 12px;
   border-radius: 50%;
-}
-
-.legend-dot--installed {
-  background: #c62828;
-}
-
-.legend-dot--considering {
-  background: var(--df-blue);
 }
 </style>

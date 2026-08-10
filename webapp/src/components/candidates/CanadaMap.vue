@@ -3,7 +3,7 @@
     <path :d="canadaPath" fill="#e8eef1" stroke="#b9c6cc" stroke-width="1" />
     <a v-for="m in municipalities" :key="m.id" :href="localePath(`/candidates/${m.id}`)">
       <circle :cx="project(m.coords[0], m.coords[1])[0]" :cy="project(m.coords[0], m.coords[1])[1]"
-              r="9" :fill="m.alprStatus === 'installed' ? '#c62828' : 'var(--df-blue)'"
+              r="9" :fill="STATUS_COLORS[m.alprStatus]"
               stroke="#fff" stroke-width="2" class="muni-dot" />
       <title>{{ lz(m.name, locale) }} — {{ t(`candidates.status.${m.alprStatus}`) }}</title>
     </a>
@@ -18,6 +18,12 @@ import canadaPath from './canada-path.txt?raw'
 const { t, locale } = useI18n()
 const { localePath } = useLocalePath()
 const municipalities = getMunicipalities()
+const STATUS_COLORS: Record<string, string> = {
+  installed: '#c62828',
+  considering: '#1297C3',
+  mobile_only: '#ef6c00',
+  none: '#2e7d32',
+}
 </script>
 
 <style scoped>

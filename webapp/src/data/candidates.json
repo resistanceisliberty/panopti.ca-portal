@@ -5,7 +5,7 @@
       "id": "london-on",
       "name": { "en": "London", "fr": "London" },
       "province": "ON",
-      "alprStatus": "considering",
+      "alprStatus": "mobile_only",
       "statusNote": {
         "en": "London Police Service operates mobile ALPR cameras on roughly 50 patrol cruisers, and its 2024 annual report flags further ALPR-equipped in-car cameras rolling out in late 2026 and early 2027. panopti.ca found no evidence of a fixed/stationary ALPR camera network installed in London, nor of London City Council or the Police Services Board actively considering one.",
         "fr": "Le Service de police de London exploite des caméras ALPR mobiles sur une cinquantaine de véhicules de patrouille, et son rapport annuel 2024 signale le déploiement d'autres caméras embarquées ALPR prévu pour la fin de 2026 et le début de 2027. panopti.ca n'a trouvé aucune preuve d'un réseau de caméras ALPR fixes installé à London, ni d'une étude active de la part du conseil municipal ou de la Commission des services policiers à ce sujet."
@@ -34,7 +34,7 @@
       "id": "montreal-qc",
       "name": { "en": "Montreal", "fr": "Montréal" },
       "province": "QC",
-      "alprStatus": "considering",
+      "alprStatus": "mobile_only",
       "statusNote": {
         "en": "The SPVM has used mobile ALPR readers (the SRPI system) on about 30 patrol vehicles since 2011 to flag unlicensed, suspended or uninsured drivers. Montreal city council's public security commission began formally studying the SPVM's use of licence-plate-reading technology in 2020, and the city's Youth Council raised data-collection concerns in a 2021 advisory. panopti.ca found no evidence of a fixed/stationary ALPR camera network installed in Montreal.",
         "fr": "Le SPVM utilise des lecteurs ALPR mobiles (le système SRPI) sur environ 30 véhicules de patrouille depuis 2011 pour repérer les conducteurs non détenteurs de permis, sous sanction ou non assurés. La commission de la sécurité publique du conseil municipal de Montréal a commencé à étudier formellement l'utilisation de cette technologie par le SPVM en 2020, et le Conseil jeunesse de Montréal a soulevé des préoccupations sur la collecte de données dans un avis de 2021. panopti.ca n'a trouvé aucune preuve d'un réseau de caméras ALPR fixes installé à Montréal."

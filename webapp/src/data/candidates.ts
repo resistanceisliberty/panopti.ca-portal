@@ -8,7 +8,7 @@ const raw = JSON.parse(rawText)
 
 export interface Lz { en: string; fr: string }
 export interface Evidence { type: 'citation' | 'questionnaire' | 'outreach'; date: string; title: Lz; url?: string | null; note?: Lz | null }
-export interface Municipality { id: string; name: Lz; province: string; alprStatus: 'installed' | 'considering'; statusNote: Lz; coords: [number, number]; election: { date: string; body: Lz } | null; statusEvidence: Evidence[] }
+export interface Municipality { id: string; name: Lz; province: string; alprStatus: 'installed' | 'considering' | 'mobile_only' | 'none'; statusNote: Lz; coords: [number, number]; election: { date: string; body: Lz } | null; statusEvidence: Evidence[] }
 export interface Role { type: 'incumbent' | 'candidate'; office: Lz; election?: string }
 export interface Person { id: string; name: string; municipality: string; roles: Role[]; stance: 'opposes' | 'supports' | 'no_position'; summary: Lz; evidence: Evidence[]; links?: { website?: string; contact?: string } }
 

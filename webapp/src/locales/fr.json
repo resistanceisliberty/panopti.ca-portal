@@ -541,7 +541,7 @@
     "intro_body": "À l'approche des élections municipales, panopti.ca suit ce que les candidats et les conseils en poste déclarent au sujet de la surveillance par ALPR — dans leurs propres mots, appuyés par des citations, des réponses à un questionnaire et des démarches directes. Sélectionnez une municipalité ci-dessous pour consulter le dossier complet.",
     "last_updated": "Dernière mise à jour : {date}",
     "map_aria": "Carte du Canada montrant les municipalités suivies pour les positions des candidats sur les ALPR",
-    "status": { "installed": "ALPR fixes installés", "considering": "ALPR fixes à l'étude" },
+    "status": { "installed": "ALPR fixes installés", "considering": "ALPR fixes à l'étude", "mobile_only": "ALPR mobiles déployés", "none": "Aucun ALPR déployé" },
     "election_on": "Élection : {date}",
     "no_election": "Aucune élection générale à venir",
     "tally": "{o} s'opposent · {s} favorables · {n} sans position déclarée",
