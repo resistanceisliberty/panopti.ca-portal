@@ -34,14 +34,21 @@
       "id": "montreal-qc",
       "name": { "en": "Montreal", "fr": "Montréal" },
       "province": "QC",
-      "alprStatus": "mobile_only",
+      "alprStatus": "considering",
       "statusNote": {
-        "en": "The SPVM has used mobile ALPR readers (the SRPI system) on about 30 patrol vehicles since 2011 to flag unlicensed, suspended or uninsured drivers. Montreal city council's public security commission began formally studying the SPVM's use of licence-plate-reading technology in 2020, and the city's Youth Council raised data-collection concerns in a 2021 advisory. panopti.ca found no evidence of a fixed/stationary ALPR camera network installed in Montreal.",
-        "fr": "Le SPVM utilise des lecteurs ALPR mobiles (le système SRPI) sur environ 30 véhicules de patrouille depuis 2011 pour repérer les conducteurs non détenteurs de permis, sous sanction ou non assurés. La commission de la sécurité publique du conseil municipal de Montréal a commencé à étudier formellement l'utilisation de cette technologie par le SPVM en 2020, et le Conseil jeunesse de Montréal a soulevé des préoccupations sur la collecte de données dans un avis de 2021. panopti.ca n'a trouvé aucune preuve d'un réseau de caméras ALPR fixes installé à Montréal."
+        "en": "The SPVM purchased four Genetec Cloudrunner fixed-ALPR camera units with a one-year subscription in October 2025 ($17,134, dossier 1742638) — a below-threshold purchase with no public tender or council process; deployment locations are unconfirmed. Separately, the SPVM has operated a mobile ALPR system (SRPI) on roughly 30 patrol vehicles for over a decade. Montreal city council's public security commission began formally studying the SPVM's use of licence-plate-reading technology in 2020, and the city's Youth Council raised data-collection concerns in a 2021 advisory.",
+        "fr": "Le SPVM a acheté quatre caméras ALPR fixes Genetec Cloudrunner avec un abonnement d'un an en octobre 2025 (17 134 $, dossier 1742638) — un achat sous les seuils d'appel d'offres, sans processus public; les emplacements de déploiement ne sont pas confirmés. Par ailleurs, le SPVM exploite un système ALPR mobile (SRPI) sur une trentaine de véhicules de patrouille depuis plus d'une décennie. La commission de la sécurité publique du conseil municipal de Montréal a commencé à étudier formellement l'utilisation de cette technologie par le SPVM en 2020, et le Conseil jeunesse de Montréal a soulevé des préoccupations sur la collecte de données dans un avis de 2021."
       },
       "coords": [-73.5674, 45.5019],
       "election": null,
       "statusEvidence": [
+        {
+          "type": "citation",
+          "date": "2025-10-15",
+          "title": { "en": "Ville de Montréal open data — Contrats octroyés par les fonctionnaires: dossier 1742638, 'Fourniture et souscription pendant 1 an de 4 unités Cloudrunner de Genetec' (SPVM, $17,134, supplier Infynia.com inc.)", "fr": "Données ouvertes de la Ville de Montréal — Contrats octroyés par les fonctionnaires : dossier 1742638, « Fourniture et souscription pendant 1 an de 4 unités Cloudrunner de Genetec » (SPVM, 17 134 $, fournisseur Infynia.com inc.)" },
+          "url": "https://donnees.montreal.ca/dataset/contrats-octroyes-par-les-fonctionnaires-ville-centrale",
+          "note": null
+        },
         {
           "type": "citation",
           "date": "2026-08-09",
