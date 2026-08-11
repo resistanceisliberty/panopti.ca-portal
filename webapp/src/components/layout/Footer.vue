@@ -36,15 +36,21 @@
               :key="link.titleKey"
               link
               slim
+              :lines="link.titleParams ? 'two' : undefined"
               :href="link.href"
               :to="link.to && localePath(link.to)"
               :target="link.href ? '_blank' : undefined"
+              :rel="link.href ? 'noopener noreferrer' : undefined"
+              :aria-label="link.altKey ? t(link.altKey) : undefined"
               role="listitem"
             >
-              <v-list-item-title class="d-flex align-center justify-start">
+              <v-list-item-title class="d-flex align-center justify-start" :class="{ 'wrap-desc': link.titleParams }">
                 <v-icon start v-if="link.icon" class="custom-icon" :icon="link.icon"></v-icon>
                 <img v-else-if="link.customIcon" class="mr-2 custom-icon" width="24" height="24" :src="isDark ? link.customIconDark : link.customIcon" :alt="t(link.altKey ?? '')" />
-                {{ t(link.titleKey) }}
+                <svg v-else-if="link.svgPath" class="mr-2 custom-icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                  <path :d="link.svgPath" fill="currentColor" />
+                </svg>
+                {{ t(link.titleKey, link.titleParams ?? {}) }}
               </v-list-item-title>
             </v-list-item>
           </v-list>
@@ -80,12 +86,14 @@ const { localePath } = useLocalePath();
 
 interface FooterLink {
   titleKey: string
-  icon: string
+  icon?: string
   altKey?: string
   href?: string
   to?: string
   customIcon?: string
   customIconDark?: string
+  svgPath?: string
+  titleParams?: Record<string, string>
 }
 
 const internalLinks: FooterLink[] = [
@@ -95,15 +103,26 @@ const internalLinks: FooterLink[] = [
   { titleKey: 'footer.terms', to: '/terms', icon: 'mdi-file-document', altKey: 'footer.terms' },
 ];
 
+// mdi's only X/Twitter glyph (mdi-twitter) is the outdated bird; the official
+// X logo path below (currentColor fill) matches how deflock.org's own footer
+// renders its social icons — see origin/master's OfficialSocials.vue.
+const X_ICON_PATH = 'M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z';
+
 const externalLinks: FooterLink[] = [
   { titleKey: 'nav.github', href: 'https://github.com/resistanceisliberty/panopti.ca', icon: 'mdi-github' },
   { titleKey: 'nav.contact', to: '/contact', icon: 'mdi-email', altKey: 'nav.contact' },
+  { titleKey: 'footer.x_desc', href: 'https://x.com/panopticanada', svgPath: X_ICON_PATH, altKey: 'footer.x_label', titleParams: { handle: '@panopticanada' } },
 ]
 </script>
 
 <style scoped>
 .custom-icon {
   opacity: var(--v-medium-emphasis-opacity);
+  flex-shrink: 0;
+}
+.wrap-desc {
+  white-space: normal;
+  text-overflow: clip;
 }
 .copyright p {
   font-size: 0.85rem;
