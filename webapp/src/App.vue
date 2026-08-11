@@ -102,6 +102,13 @@ const metaItems: NavItem[] = [
 ];
 const drawer = ref(false)
 
+// mdi has no current X-logo glyph (only the outdated mdi-twitter bird); reuse
+// the same inline SVG path as the footer's X link (Footer.vue) — duplicated
+// per-component, matching this codebase's existing convention for small
+// shared constants (see project()/MAP_VIEWBOX in candidates.ts).
+const X_ICON_PATH = 'M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z';
+const X_URL = 'https://x.com/panopticanada';
+
 // ponytail: localStorage 'lang' is stored for forward-compat/parity with the map app;
 // the portal's source of truth is the URL, so it is not read back for redirects.
 function persistLangPreference() {
@@ -244,6 +251,12 @@ watch(() => theme.global.name.value, (newTheme) => {
           {{ locale === 'en' ? t('lang.fr') : t('lang.en') }}
         </v-btn>
 
+        <v-btn icon :href="X_URL" target="_blank" rel="noopener noreferrer" :aria-label="t('footer.x_label')">
+          <svg class="appbar-x-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <path :d="X_ICON_PATH" fill="currentColor" />
+          </svg>
+        </v-btn>
+
         <v-btn icon @click="toggleTheme" :aria-label="t('a11y.toggle_theme')">
           <v-icon>mdi-theme-light-dark</v-icon>
         </v-btn>
@@ -263,6 +276,17 @@ watch(() => theme.global.name.value, (newTheme) => {
             {{ locale === 'en' ? t('lang.fr') : t('lang.en') }}
           </v-btn>
         </div>
+
+        <v-list-item :href="X_URL" target="_blank" rel="noopener noreferrer" link :aria-label="t('footer.x_label')" role="option">
+          <template v-slot:prepend>
+            <svg class="appbar-x-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+              <path :d="X_ICON_PATH" fill="currentColor" />
+            </svg>
+          </template>
+          <v-list-item-title>{{ t('footer.x_label') }}</v-list-item-title>
+        </v-list-item>
+
+        <v-divider class="my-2" aria-hidden="true" role="presentation" />
 
         <v-list nav :aria-label="t('a11y.main_nav')">
           <v-list-item
@@ -340,6 +364,10 @@ watch(() => theme.global.name.value, (newTheme) => {
 .custom-icon {
   display: inline-block;
   margin-right: 5px;
+}
+
+.appbar-x-icon {
+  flex-shrink: 0;
 }
 
 .credit-bar {
