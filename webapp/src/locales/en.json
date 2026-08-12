@@ -541,7 +541,7 @@
     "intro_body": "Ahead of municipal elections, panopti.ca is tracking what candidates and municipal leaders say about ALPR surveillance — in their own words, backed by citations, questionnaire responses, and direct outreach. Select a municipality below to see the full record.",
     "last_updated": "Last updated: {date}",
     "map_aria": "Map of Canada showing municipalities tracked for ALPR candidate positions",
-    "status": { "installed": "Fixed ALPRs installed", "considering": "Fixed ALPRs under consideration", "mobile_only": "Mobile ALPRs deployed", "none": "No ALPRs deployed" },
+    "status": { "installed": "Fixed ALPRs installed", "considering": "Fixed ALPRs under consideration", "mobile_only": "Mobile ALPRs deployed", "none": "No ALPRs deployed", "deployed": "Fixed ALPRs deployed" },
     "election_on": "Election: {date}",
     "no_election": "No upcoming general election",
     "tally": "{o} oppose · {s} support · {n} no stated position",

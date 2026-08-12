@@ -23,6 +23,7 @@ const STATUS_COLORS: Record<string, string> = {
   considering: '#1297C3',
   mobile_only: '#ef6c00',
   none: '#2e7d32',
+  deployed: '#d84315',
 }
 </script>
 

@@ -34,14 +34,28 @@
       "id": "montreal-qc",
       "name": { "en": "Montreal", "fr": "Montréal" },
       "province": "QC",
-      "alprStatus": "considering",
+      "alprStatus": "deployed",
       "statusNote": {
-        "en": "The SPVM purchased four Genetec Cloudrunner fixed-ALPR camera units with a one-year subscription in October 2025 ($17,134, dossier 1742638) — a below-threshold purchase with no public tender or council process; deployment locations are unconfirmed. Separately, the SPVM has operated a mobile ALPR system (SRPI) on roughly 30 patrol vehicles for over a decade. Montreal city council's public security commission began formally studying the SPVM's use of licence-plate-reading technology in 2020, and the city's Youth Council raised data-collection concerns in a 2021 advisory.",
-        "fr": "Le SPVM a acheté quatre caméras ALPR fixes Genetec Cloudrunner avec un abonnement d'un an en octobre 2025 (17 134 $, dossier 1742638) — un achat sous les seuils d'appel d'offres, sans processus public; les emplacements de déploiement ne sont pas confirmés. Par ailleurs, le SPVM exploite un système ALPR mobile (SRPI) sur une trentaine de véhicules de patrouille depuis plus d'une décennie. La commission de la sécurité publique du conseil municipal de Montréal a commencé à étudier formellement l'utilisation de cette technologie par le SPVM en 2020, et le Conseil jeunesse de Montréal a soulevé des préoccupations sur la collecte de données dans un avis de 2021."
+        "en": "The SPVM briefly deployed a fixed ALPR camera in Montreal, then withdrew it under public scrutiny — but the contract and stated intent remain. In early August 2026 a Genetec Cloudrunner CR-H2 stationary plate-reader — the first fixed ALPR on a public road in the city — was found on a lamppost on Boulevard Henri-Bourassa in Rivière-des-Prairies (Radio-Canada, 2026-08-12). The same day, after the report, the SPVM confirmed the camera was its own and removed it, saying it had been installed temporarily to 'support targeted investigation work' and was pulled 'to preserve ongoing investigation strategies.' It ran under an October 2025 rental contract for four Genetec Cloudrunner units ($17,134, dossier 1742638) — a below-threshold purchase with no public tender or council process; the SPVM said further cameras 'could be added' as investigations require, and access to captured images is 'reserved exclusively' to investigators. The City administration and the Agence de mobilité durable said they had not been informed of the deployment. Separately, the SPVM has operated a mobile ALPR system (SRPI) on roughly 30 patrol vehicles for over a decade.",
+        "fr": "Le SPVM a brièvement déployé une caméra ALPR fixe à Montréal, puis l'a retirée sous la pression publique — mais le contrat et l'intention déclarée demeurent. Au début d'août 2026, une caméra fixe de lecture de plaques Genetec Cloudrunner CR-H2 — la première caméra ALPR fixe sur la voie publique dans la métropole — a été repérée sur un lampadaire du boulevard Henri-Bourassa, dans Rivière-des-Prairies (Radio-Canada, 2026-08-12). Le jour même, après le reportage, le SPVM a confirmé que la caméra était la sienne et l'a retirée, indiquant qu'elle avait été installée temporairement pour « soutenir le travail d'enquête ciblé » et retirée « afin de préserver les stratégies d'enquête en cours ». Elle fonctionnait dans le cadre d'un contrat de location d'octobre 2025 pour quatre unités Genetec Cloudrunner (17 134 $, dossier 1742638) — un achat sous les seuils d'appel d'offres, sans processus public; le SPVM a indiqué que d'autres caméras « pourraient être ajoutées » selon les besoins des enquêtes, et que l'accès aux images captées est « réservé exclusivement » aux enquêteurs. L'administration de la Ville et l'Agence de mobilité durable affirment ne pas avoir été informées du déploiement. Par ailleurs, le SPVM exploite un système ALPR mobile (SRPI) sur une trentaine de véhicules de patrouille depuis plus d'une décennie."
       },
       "coords": [-73.5674, 45.5019],
       "election": null,
       "statusEvidence": [
+        {
+          "type": "citation",
+          "date": "2026-08-12",
+          "title": { "en": "La Presse — 'Une caméra controversée retirée à Montréal' (Henri Ouellette-Vézina & Karim Benessaieh, 2026-08-12): the SPVM confirmed the fixed Genetec Cloudrunner ALPR on Boulevard Henri-Bourassa was its own and removed it the same day it was exposed, calling it a temporary targeted-investigation tool pulled 'to preserve ongoing investigation strategies'; said further cameras 'could be added' as investigations require; the City administration and the Agence de mobilité durable said they were not informed; references the October 2025 four-unit Cloudrunner rental contract.", "fr": "La Presse — « Une caméra controversée retirée à Montréal » (Henri Ouellette-Vézina et Karim Benessaieh, 2026-08-12) : le SPVM a confirmé que la caméra ALPR fixe Genetec Cloudrunner du boulevard Henri-Bourassa était la sienne et l'a retirée le jour même de sa révélation, la décrivant comme un outil d'enquête ciblé temporaire retiré « afin de préserver les stratégies d'enquête en cours »; a indiqué que d'autres caméras « pourraient être ajoutées » selon les besoins des enquêtes; l'administration de la Ville et l'Agence de mobilité durable affirment ne pas avoir été informées; renvoie au contrat de location d'octobre 2025 pour quatre unités Cloudrunner." },
+          "url": "https://www.lapresse.ca/actualites/grand-montreal/2026-08-12/lecture-automatique-de-plaques/une-camera-controversee-retiree-a-montreal.php",
+          "note": null
+        },
+        {
+          "type": "citation",
+          "date": "2026-08-12",
+          "title": { "en": "Radio-Canada — 'Une caméra de type Flock repérée à Montréal': a Genetec Cloudrunner CR-H2 fixed ALPR camera, apparently active, found installed on Boulevard Henri-Bourassa in Rivière-des-Prairies (the report that prompted the SPVM to remove it the same day). Access date 2026-08-12.", "fr": "Radio-Canada — « Une caméra de type Flock repérée à Montréal » : une caméra ALPR fixe Genetec Cloudrunner CR-H2, apparemment en fonction, trouvée installée sur le boulevard Henri-Bourassa dans Rivière-des-Prairies (le reportage qui a mené le SPVM à la retirer le jour même). Date de consultation 2026-08-12." },
+          "url": "https://ici.radio-canada.ca/nouvelle/2274846/camera-montreal-flock-genetec-lecture-plaque",
+          "note": null
+        },
         {
           "type": "citation",
           "date": "2025-10-15",
@@ -156,8 +170,8 @@
       "province": "ON",
       "alprStatus": "installed",
       "statusNote": {
-        "en": "Waterloo Regional Police Service — which polices Kitchener along with Cambridge, Waterloo and area townships — launched fixed CCTV cameras equipped with ALPR technology, going live in Waterloo on June 23, 2026, with Kitchener intersections (including Fairway Road at Wilson Avenue and at Highway 8) following.",
-        "fr": "Le Service de police régional de Waterloo — qui dessert Kitchener ainsi que Cambridge, Waterloo et les cantons environnants — a lancé des caméras de vidéosurveillance fixes dotées de la technologie ALPR, entrées en service à Waterloo le 23 juin 2026, avec des intersections de Kitchener (dont Fairway Road à Wilson Avenue et à la route 8) à suivre."
+        "en": "Waterloo Regional Police Service — which polices Kitchener along with Cambridge, Waterloo and area townships — launched fixed CCTV cameras equipped with ALPR technology, going live in Waterloo on June 23, 2026, with Kitchener intersections (including Fairway Road at Wilson Avenue and at Highway 8) following. Kitchener Mayor Berry Vrbanovic voted against the program at both the city and regional level, citing privacy concerns.",
+        "fr": "Le Service de police régional de Waterloo — qui dessert Kitchener ainsi que Cambridge, Waterloo et les cantons environnants — a lancé des caméras de vidéosurveillance fixes dotées de la technologie ALPR, entrées en service à Waterloo le 23 juin 2026, avec des intersections de Kitchener (dont Fairway Road à Wilson Avenue et à la route 8) à suivre. Le maire de Kitchener, Berry Vrbanovic, a voté contre le programme tant au niveau municipal que régional, invoquant des préoccupations liées à la vie privée."
       },
       "coords": [-80.4925, 43.4516],
       "election": {
@@ -176,9 +190,318 @@
           "date": "2026-06-23",
           "title": { "en": "Waterloo Regional Police Service — Proud to Launch the Expanded Use of CCTV and ALPR Technology", "fr": "Service de police régional de Waterloo — Fier de lancer l'utilisation élargie de la vidéosurveillance et de la technologie ALPR" },
           "url": "https://wrps.ca/news/waterloo-regional-police-service-proud-launch-expanded-use-cctv-and-alpr-technology"
+        },
+        {
+          "type": "citation",
+          "date": "2026-05-06",
+          "title": { "en": "CBC News — Region of Waterloo will allow police to access infrastructure needed to install CCTV cameras", "fr": "CBC News — La Région de Waterloo autorisera la police à accéder aux infrastructures nécessaires à l'installation de caméras de vidéosurveillance" },
+          "url": "https://www.cbc.ca/news/canada/kitchener-waterloo/region-of-waterloo-police-cctv-camera-program-9.7189364"
         }
       ]
     }
   ],
-  "people": []
+  "people": [
+    {
+      "id": "josh-morgan",
+      "name": "Josh Morgan",
+      "municipality": "london-on",
+      "roles": [
+        { "type": "incumbent", "office": { "en": "Mayor", "fr": "Maire" } },
+        { "type": "candidate", "office": { "en": "Mayor", "fr": "Maire" }, "election": "2026-10-26" }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Josh Morgan is Mayor of London, first elected in 2022, and is a registered candidate for re-election in October 2026. panopti.ca has not found a documented public statement or vote from him specifically about ALPR surveillance.",
+        "fr": "Josh Morgan est maire de London, élu pour la première fois en 2022, et est candidat inscrit pour sa réélection en octobre 2026. panopti.ca n'a trouvé aucune déclaration publique ni aucun vote documenté de sa part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "hadleigh-mcalister",
+      "name": "Hadleigh McAlister",
+      "municipality": "london-on",
+      "roles": [
+        { "type": "incumbent", "office": { "en": "Ward 1 Councillor", "fr": "Conseiller municipal, quartier 1" } },
+        { "type": "candidate", "office": { "en": "Ward 1 Councillor", "fr": "Conseiller municipal, quartier 1" }, "election": "2026-10-26" }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Hadleigh McAlister represents Ward 1 on London City Council and is a registered candidate for re-election in October 2026. panopti.ca has not found a documented public statement or vote from him specifically about ALPR surveillance.",
+        "fr": "Hadleigh McAlister représente le quartier 1 au conseil municipal de London et est candidat inscrit pour sa réélection en octobre 2026. panopti.ca n'a trouvé aucune déclaration publique ni aucun vote documenté de sa part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "shawn-lewis",
+      "name": "Shawn Lewis",
+      "municipality": "london-on",
+      "roles": [
+        { "type": "incumbent", "office": { "en": "Ward 2 Councillor", "fr": "Conseiller municipal, quartier 2" } },
+        { "type": "candidate", "office": { "en": "Ward 2 Councillor", "fr": "Conseiller municipal, quartier 2" }, "election": "2026-10-26" }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Shawn Lewis represents Ward 2 on London City Council and is a registered candidate for re-election in October 2026. panopti.ca has not found a documented public statement or vote from him specifically about ALPR surveillance.",
+        "fr": "Shawn Lewis représente le quartier 2 au conseil municipal de London et est candidat inscrit pour sa réélection en octobre 2026. panopti.ca n'a trouvé aucune déclaration publique ni aucun vote documenté de sa part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "peter-cuddy",
+      "name": "Peter Cuddy",
+      "municipality": "london-on",
+      "roles": [
+        { "type": "incumbent", "office": { "en": "Ward 3 Councillor", "fr": "Conseiller municipal, quartier 3" } },
+        { "type": "candidate", "office": { "en": "Ward 3 Councillor", "fr": "Conseiller municipal, quartier 3" }, "election": "2026-10-26" }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Peter Cuddy represents Ward 3 on London City Council and is a registered candidate for re-election in October 2026. panopti.ca has not found a documented public statement or vote from him specifically about ALPR surveillance.",
+        "fr": "Peter Cuddy représente le quartier 3 au conseil municipal de London et est candidat inscrit pour sa réélection en octobre 2026. panopti.ca n'a trouvé aucune déclaration publique ni aucun vote documenté de sa part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "susan-stevenson",
+      "name": "Susan Stevenson",
+      "municipality": "london-on",
+      "roles": [
+        { "type": "incumbent", "office": { "en": "Ward 4 Councillor", "fr": "Conseillère municipale, quartier 4" } },
+        { "type": "candidate", "office": { "en": "Mayor", "fr": "Mairesse" }, "election": "2026-10-26" }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Susan Stevenson represents Ward 4 on London City Council and is a registered candidate for Mayor in the October 2026 election. panopti.ca has not found a documented public statement or vote from her specifically about ALPR surveillance.",
+        "fr": "Susan Stevenson représente le quartier 4 au conseil municipal de London et est candidate inscrite à la mairie pour l'élection d'octobre 2026. panopti.ca n'a trouvé aucune déclaration publique ni aucun vote documenté de sa part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "jerry-pribil",
+      "name": "Jerry Pribil",
+      "municipality": "london-on",
+      "roles": [
+        { "type": "incumbent", "office": { "en": "Ward 5 Councillor", "fr": "Conseiller municipal, quartier 5" } }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Jerry Pribil represents Ward 5 on London City Council. panopti.ca has not found a documented public statement or vote from him specifically about ALPR surveillance.",
+        "fr": "Jerry Pribil représente le quartier 5 au conseil municipal de London. panopti.ca n'a trouvé aucune déclaration publique ni aucun vote documenté de sa part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "sam-trosow",
+      "name": "Sam Trosow",
+      "municipality": "london-on",
+      "roles": [
+        { "type": "incumbent", "office": { "en": "Ward 6 Councillor", "fr": "Conseiller municipal, quartier 6" } },
+        { "type": "candidate", "office": { "en": "Ward 6 Councillor", "fr": "Conseiller municipal, quartier 6" }, "election": "2026-10-26" }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Sam Trosow represents Ward 6 on London City Council and is a registered candidate for re-election in October 2026. panopti.ca has not found a documented public statement or vote from him specifically about ALPR surveillance.",
+        "fr": "Sam Trosow représente le quartier 6 au conseil municipal de London et est candidat inscrit pour sa réélection en octobre 2026. panopti.ca n'a trouvé aucune déclaration publique ni aucun vote documenté de sa part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "corrine-rahman",
+      "name": "Corrine Rahman",
+      "municipality": "london-on",
+      "roles": [
+        { "type": "incumbent", "office": { "en": "Ward 7 Councillor", "fr": "Conseillère municipale, quartier 7" } },
+        { "type": "candidate", "office": { "en": "Ward 5 Councillor", "fr": "Conseillère municipale, quartier 5" }, "election": "2026-10-26" }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Corrine Rahman represents Ward 7 on London City Council and is a registered candidate for the Ward 5 seat (not her current Ward 7 seat) in the October 2026 election. panopti.ca has not found a documented public statement or vote from her specifically about ALPR surveillance.",
+        "fr": "Corrine Rahman représente le quartier 7 au conseil municipal de London et est candidate inscrite pour le quartier 5 (et non son quartier actuel, le quartier 7) lors de l'élection d'octobre 2026. panopti.ca n'a trouvé aucune déclaration publique ni aucun vote documenté de sa part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "steve-lehman",
+      "name": "Steve Lehman",
+      "municipality": "london-on",
+      "roles": [
+        { "type": "incumbent", "office": { "en": "Ward 8 Councillor", "fr": "Conseiller municipal, quartier 8" } },
+        { "type": "candidate", "office": { "en": "Ward 8 Councillor", "fr": "Conseiller municipal, quartier 8" }, "election": "2026-10-26" }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Steve Lehman represents Ward 8 on London City Council and is a registered candidate for re-election in October 2026. panopti.ca has not found a documented public statement or vote from him specifically about ALPR surveillance.",
+        "fr": "Steve Lehman représente le quartier 8 au conseil municipal de London et est candidat inscrit pour sa réélection en octobre 2026. panopti.ca n'a trouvé aucune déclaration publique ni aucun vote documenté de sa part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "anna-hopkins",
+      "name": "Anna Hopkins",
+      "municipality": "london-on",
+      "roles": [
+        { "type": "incumbent", "office": { "en": "Ward 9 Councillor", "fr": "Conseillère municipale, quartier 9" } },
+        { "type": "candidate", "office": { "en": "Ward 9 Councillor", "fr": "Conseillère municipale, quartier 9" }, "election": "2026-10-26" }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Anna Hopkins represents Ward 9 on London City Council and is a registered candidate for re-election in October 2026. panopti.ca has not found a documented public statement or vote from her specifically about ALPR surveillance.",
+        "fr": "Anna Hopkins représente le quartier 9 au conseil municipal de London et est candidate inscrite pour sa réélection en octobre 2026. panopti.ca n'a trouvé aucune déclaration publique ni aucun vote documenté de sa part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "paul-van-meerbergen",
+      "name": "Paul Van Meerbergen",
+      "municipality": "london-on",
+      "roles": [
+        { "type": "incumbent", "office": { "en": "Ward 10 Councillor", "fr": "Conseiller municipal, quartier 10" } }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Paul Van Meerbergen represents Ward 10 on London City Council. panopti.ca has not found a documented public statement or vote from him specifically about ALPR surveillance.",
+        "fr": "Paul Van Meerbergen représente le quartier 10 au conseil municipal de London. panopti.ca n'a trouvé aucune déclaration publique ni aucun vote documenté de sa part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "skylar-franke",
+      "name": "Skylar Franke",
+      "municipality": "london-on",
+      "roles": [
+        { "type": "incumbent", "office": { "en": "Ward 11 Councillor", "fr": "Conseillère municipale, quartier 11" } },
+        { "type": "candidate", "office": { "en": "Ward 11 Councillor", "fr": "Conseillère municipale, quartier 11" }, "election": "2026-10-26" }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Skylar Franke represents Ward 11 on London City Council and is a registered candidate for re-election in October 2026. panopti.ca has not found a documented public statement or vote from her specifically about ALPR surveillance.",
+        "fr": "Skylar Franke représente le quartier 11 au conseil municipal de London et est candidate inscrite pour sa réélection en octobre 2026. panopti.ca n'a trouvé aucune déclaration publique ni aucun vote documenté de sa part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "elizabeth-peloza",
+      "name": "Elizabeth Peloza",
+      "municipality": "london-on",
+      "roles": [
+        { "type": "incumbent", "office": { "en": "Ward 12 Councillor", "fr": "Conseillère municipale, quartier 12" } },
+        { "type": "candidate", "office": { "en": "Ward 12 Councillor", "fr": "Conseillère municipale, quartier 12" }, "election": "2026-10-26" }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Elizabeth Peloza represents Ward 12 on London City Council and is a registered candidate for re-election in October 2026. panopti.ca has not found a documented public statement or vote from her specifically about ALPR surveillance.",
+        "fr": "Elizabeth Peloza représente le quartier 12 au conseil municipal de London et est candidate inscrite pour sa réélection en octobre 2026. panopti.ca n'a trouvé aucune déclaration publique ni aucun vote documenté de sa part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "david-ferreira",
+      "name": "David Ferreira",
+      "municipality": "london-on",
+      "roles": [
+        { "type": "incumbent", "office": { "en": "Ward 13 Councillor", "fr": "Conseiller municipal, quartier 13" } },
+        { "type": "candidate", "office": { "en": "Ward 13 Councillor", "fr": "Conseiller municipal, quartier 13" }, "election": "2026-10-26" }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "David Ferreira represents Ward 13 on London City Council and is a registered candidate for re-election in October 2026. panopti.ca has not found a documented public statement or vote from him specifically about ALPR surveillance.",
+        "fr": "David Ferreira représente le quartier 13 au conseil municipal de London et est candidat inscrit pour sa réélection en octobre 2026. panopti.ca n'a trouvé aucune déclaration publique ni aucun vote documenté de sa part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "steven-hillier",
+      "name": "Steven Hillier",
+      "municipality": "london-on",
+      "roles": [
+        { "type": "incumbent", "office": { "en": "Ward 14 Councillor", "fr": "Conseiller municipal, quartier 14" } }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Steven Hillier represents Ward 14 on London City Council. panopti.ca has not found a documented public statement or vote from him specifically about ALPR surveillance.",
+        "fr": "Steven Hillier représente le quartier 14 au conseil municipal de London. panopti.ca n'a trouvé aucune déclaration publique ni aucun vote documenté de sa part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "soraya-martinez-ferrada",
+      "name": "Soraya Martinez Ferrada",
+      "municipality": "montreal-qc",
+      "roles": [
+        { "type": "incumbent", "office": { "en": "Mayor", "fr": "Mairesse" } }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Soraya Martinez Ferrada has served as Mayor of Montreal, leading Ensemble Montréal, since November 2025. panopti.ca has not found a documented public statement from her specifically about the SPVM's licence-plate-reading program.",
+        "fr": "Soraya Martinez Ferrada est mairesse de Montréal, à la tête d'Ensemble Montréal, depuis novembre 2025. panopti.ca n'a trouvé aucune déclaration publique documentée de sa part au sujet du programme de lecture des plaques d'immatriculation du SPVM."
+      },
+      "evidence": []
+    },
+    {
+      "id": "matthew-shoemaker",
+      "name": "Matthew Shoemaker",
+      "municipality": "sault-ste-marie-on",
+      "roles": [
+        { "type": "incumbent", "office": { "en": "Mayor", "fr": "Maire" } },
+        { "type": "candidate", "office": { "en": "Mayor", "fr": "Maire" }, "election": "2026-10-26" }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Matthew Shoemaker has been Mayor of Sault Ste. Marie since 2022, during which the city's stationary ALPR camera system was activated, and is a registered candidate for re-election in October 2026. panopti.ca has not found a documented public statement from him specifically endorsing or opposing the ALPR system.",
+        "fr": "Matthew Shoemaker est maire de Sault Ste. Marie depuis 2022, période durant laquelle le système de caméras ALPR fixes de la ville a été activé, et est candidat inscrit pour sa réélection en octobre 2026. panopti.ca n'a trouvé aucune déclaration publique documentée de sa part appuyant ou s'opposant au système ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "paul-lefebvre",
+      "name": "Paul Lefebvre",
+      "municipality": "sudbury-on",
+      "roles": [
+        { "type": "incumbent", "office": { "en": "Mayor", "fr": "Maire" } },
+        { "type": "candidate", "office": { "en": "Mayor", "fr": "Maire" }, "election": "2026-10-26" }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Paul Lefebvre has been Mayor of Greater Sudbury since 2022 and is running for a second term in the October 2026 election. panopti.ca has not found a documented public statement from him specifically about the city's stationary ALPR cameras.",
+        "fr": "Paul Lefebvre est maire du Grand Sudbury depuis 2022 et brigue un second mandat lors de l'élection d'octobre 2026. panopti.ca n'a trouvé aucune déclaration publique documentée de sa part au sujet des caméras ALPR fixes de la ville."
+      },
+      "evidence": []
+    },
+    {
+      "id": "brenda-locke",
+      "name": "Brenda Locke",
+      "municipality": "surrey-bc",
+      "roles": [
+        { "type": "incumbent", "office": { "en": "Mayor", "fr": "Mairesse" } },
+        { "type": "candidate", "office": { "en": "Mayor", "fr": "Mairesse" }, "election": "2026-10-17" }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Brenda Locke has been Mayor of Surrey since 2022 and is seeking re-election with her Surrey Connect slate in October 2026. panopti.ca has not found a documented public statement from her specifically about ALPR-equipped public safety cameras.",
+        "fr": "Brenda Locke est mairesse de Surrey depuis 2022 et brigue sa réélection avec son équipe Surrey Connect en octobre 2026. panopti.ca n'a trouvé aucune déclaration publique documentée de sa part au sujet des caméras de sécurité publique dotées de la technologie ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "berry-vrbanovic",
+      "name": "Berry Vrbanovic",
+      "municipality": "kitchener-on",
+      "roles": [
+        { "type": "incumbent", "office": { "en": "Mayor", "fr": "Maire" } }
+      ],
+      "stance": "opposes",
+      "summary": {
+        "en": "Berry Vrbanovic, Mayor of Kitchener since 2014, voted against Waterloo Regional Police's regional camera-surveillance program — which WRPS's own materials describe as ALPR-equipped — at both the city and regional committee level, citing privacy concerns and a preference for more police patrols over camera surveillance.",
+        "fr": "Berry Vrbanovic, maire de Kitchener depuis 2014, a voté contre le programme régional de surveillance par caméra du Service de police régional de Waterloo — que le service décrit lui-même comme doté de la technologie ALPR — tant au niveau municipal qu'au comité régional, invoquant des préoccupations liées à la vie privée et une préférence pour davantage de patrouilles policières plutôt que la surveillance par caméra."
+      },
+      "evidence": [
+        {
+          "type": "citation",
+          "date": "2026-05-06",
+          "title": { "en": "CBC News — Region of Waterloo will allow police to access infrastructure needed to install CCTV cameras", "fr": "CBC News — La Région de Waterloo autorisera la police à accéder aux infrastructures nécessaires à l'installation de caméras de vidéosurveillance" },
+          "url": "https://www.cbc.ca/news/canada/kitchener-waterloo/region-of-waterloo-police-cctv-camera-program-9.7189364"
+        }
+      ]
+    }
+  ]
 }

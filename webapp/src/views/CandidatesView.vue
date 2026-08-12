@@ -181,12 +181,13 @@ import { getMunicipalities, stanceTally, lz, lastUpdated } from '@/data/candidat
 const { t, locale } = useI18n();
 const { localePath } = useLocalePath();
 const municipalities = getMunicipalities();
-const ALPR_STATUSES = ['installed', 'considering', 'mobile_only', 'none'] as const;
+const ALPR_STATUSES = ['installed', 'considering', 'mobile_only', 'none', 'deployed'] as const;
 const STATUS_COLORS: Record<string, string> = {
   installed: '#c62828',
   considering: '#1297C3',
   mobile_only: '#ef6c00',
   none: '#2e7d32',
+  deployed: '#d84315',
 };
 </script>
 
