@@ -262,8 +262,10 @@ watch(() => theme.global.name.value, (newTheme) => {
 
         <v-menu offset-y>
           <template v-slot:activator="{ props }">
-            <v-btn icon v-bind="props" :aria-label="t('nav.community')">
-              <v-icon>mdi-account-group</v-icon>
+            <v-btn variant="text" v-bind="props" class="mx-1" :aria-label="t('nav.community')">
+              <v-icon start>mdi-account-group</v-icon>
+              <span class="d-none d-sm-inline">{{ t('nav.community') }}</span>
+              <v-icon end size="small">mdi-chevron-down</v-icon>
             </v-btn>
           </template>
           <v-list>
