@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-13",
+  "lastUpdated": "2026-08-14",
   "municipalities": [
     {
       "id": "london-on",
@@ -620,6 +620,127 @@
           "note": {
             "en": "I will always champion and safeguard the constitutional rights and protections of privacy from unreasonable government overreach and exploitation. We must resist the pressure of becoming a mass surveillance state like China.",
             "fr": "I will always champion and safeguard the constitutional rights and protections of privacy from unreasonable government overreach and exploitation. We must resist the pressure of becoming a mass surveillance state like China."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sam-hajar",
+      "name": "Sam Hajar",
+      "municipality": "london-on",
+      "roles": [
+        {
+          "type": "candidate",
+          "office": {
+            "en": "Ward 7 Councillor",
+            "fr": "Conseiller municipal, quartier 7"
+          },
+          "election": "2026-10-26"
+        }
+      ],
+      "stance": "supports",
+      "summary": {
+        "en": "Sam Hajar, a candidate for Ward 7 Councillor in London's October 2026 election, supports fixed ALPR cameras — conditionally. In his response to panopti.ca's questionnaire, Hajar said he would \"most likely vote yes for a pilot program,\" but only alongside strong privacy safeguards: oversight across all three levels of government, data-sharing limited to warrant- or court-ordered active investigations, a 90-day retention cap on non-investigative data, mandatory public consultation, and published privacy impact assessments before any rollout. His answers appear below in his own words.",
+        "fr": "Sam Hajar, candidat au poste de conseiller municipal du quartier 7 à l'élection d'octobre 2026 à London, appuie les caméras ALPR fixes — sous conditions. Dans sa réponse au questionnaire de panopti.ca, M. Hajar a indiqué qu'il voterait « fort probablement oui pour un programme pilote », mais seulement avec de solides mesures de protection de la vie privée : une surveillance aux trois ordres de gouvernement, un partage des données limité aux enquêtes actives visées par un mandat ou une ordonnance judiciaire, une conservation maximale de 90 jours pour les données non liées à une enquête, une consultation publique obligatoire et des évaluations des facteurs relatifs à la vie privée rendues publiques avant tout déploiement. Ses réponses, dans ses propres mots, apparaissent ci-dessous. (Réponses fournies en anglais.)"
+      },
+      "links": {
+        "website": "https://londonward7.ca/"
+      },
+      "evidence": [
+        {
+          "type": "questionnaire",
+          "date": "2026-08-14",
+          "title": {
+            "en": "Q1 — Support or oppose fixed ALPRs",
+            "fr": "Q1 — Pour ou contre les ALPR fixes"
+          },
+          "note": {
+            "en": "I support the use and deployment of fixed Automated Licence Plate Recognition (ALPR) cameras, but must be accompanied with strong privacy safeguards, oversight on all tiers of government (municipal, provincial and federal), and strict limits on how the information collected can be used. This technology if used correctly may make our community safer.",
+            "fr": "I support the use and deployment of fixed Automated Licence Plate Recognition (ALPR) cameras, but must be accompanied with strong privacy safeguards, oversight on all tiers of government (municipal, provincial and federal), and strict limits on how the information collected can be used. This technology if used correctly may make our community safer."
+          }
+        },
+        {
+          "type": "questionnaire",
+          "date": "2026-08-14",
+          "title": {
+            "en": "Q2 — How would you vote on procurement?",
+            "fr": "Q2 — Comment voteriez-vous sur l'acquisition?"
+          },
+          "note": {
+            "en": "I would have to look at the full proposal and would most likely vote yes for a pilot program.",
+            "fr": "I would have to look at the full proposal and would most likely vote yes for a pilot program."
+          }
+        },
+        {
+          "type": "questionnaire",
+          "date": "2026-08-14",
+          "title": {
+            "en": "Q3 — Limits on ALPR data",
+            "fr": "Q3 — Limites sur les données ALPR"
+          },
+          "note": {
+            "en": "I would require clear limits on ALPR data with privacy protections. If the data is not part of an active investigation I would request the data be retained only for a minimum of 90 days. If there is an active investigation I would require the data be retained until the investigation has gone through the court process and the investigation has been closed and no appeals have been filed.",
+            "fr": "I would require clear limits on ALPR data with privacy protections. If the data is not part of an active investigation I would request the data be retained only for a minimum of 90 days. If there is an active investigation I would require the data be retained until the investigation has gone through the court process and the investigation has been closed and no appeals have been filed."
+          }
+        },
+        {
+          "type": "questionnaire",
+          "date": "2026-08-14",
+          "title": {
+            "en": "Q4 — Data-sharing with other agencies",
+            "fr": "Q4 — Partage des données avec d'autres organismes"
+          },
+          "note": {
+            "en": "I would permit ALPR data collected in the municipality to be shared with other police services or federal agencies only when there is a clear and legitimate and connected an active investigation, such as court order, warrant, rather than allowing unrestricted access to the database.",
+            "fr": "I would permit ALPR data collected in the municipality to be shared with other police services or federal agencies only when there is a clear and legitimate and connected an active investigation, such as court order, warrant, rather than allowing unrestricted access to the database."
+          }
+        },
+        {
+          "type": "questionnaire",
+          "date": "2026-08-14",
+          "title": {
+            "en": "Q5 — Public consultation & privacy assessment",
+            "fr": "Q5 — Consultation publique et évaluation vie privée"
+          },
+          "note": {
+            "en": "Public consultation must happen before the City commits to the technology. Yes, I would commit to making Privacy Impact Assessments public for significant surveillance technologies before implementation.",
+            "fr": "Public consultation must happen before the City commits to the technology. Yes, I would commit to making Privacy Impact Assessments public for significant surveillance technologies before implementation."
+          }
+        },
+        {
+          "type": "questionnaire",
+          "date": "2026-08-14",
+          "title": {
+            "en": "Q6 — Where the money should go",
+            "fr": "Q6 — Réaffectation des fonds"
+          },
+          "note": {
+            "en": "First I would approach the provincial and federal government for funding and fund the project either through the police budget and or the tax roll.",
+            "fr": "First I would approach the provincial and federal government for funding and fund the project either through the police budget and or the tax roll."
+          }
+        },
+        {
+          "type": "questionnaire",
+          "date": "2026-08-14",
+          "title": {
+            "en": "Q7 — FOI responsiveness",
+            "fr": "Q7 — Réponse aux demandes d'accès à l'information"
+          },
+          "note": {
+            "en": "Yes. I would commit to providing timely, complete, and transparent responses to freedom-of-information requests concerning surveillance technology, and respecting any legitimate privacy, security, or legal exemptions and concerns.",
+            "fr": "Yes. I would commit to providing timely, complete, and transparent responses to freedom-of-information requests concerning surveillance technology, and respecting any legitimate privacy, security, or legal exemptions and concerns."
+          }
+        },
+        {
+          "type": "questionnaire",
+          "date": "2026-08-14",
+          "title": {
+            "en": "Q8 — Message to voters",
+            "fr": "Q8 — Message aux électeurs"
+          },
+          "note": {
+            "en": "Public safety is important. Exploring this technology may make the community a safer place.",
+            "fr": "Public safety is important. Exploring this technology may make the community a safer place."
           }
         }
       ]
