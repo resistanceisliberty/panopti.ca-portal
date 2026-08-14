@@ -93,7 +93,6 @@ const contributeItems: NavItem[] = [
   { titleKey: 'nav.submit', icon: 'mdi-map-marker-plus', to: '/report' },
   { titleKey: 'nav.records', icon: 'mdi-file-document', to: '/foi' },
   { titleKey: 'nav.council', icon: 'mdi-account-voice', to: '/council' },
-  { titleKey: 'nav.candidates', icon: 'mdi-vote', to: '/candidates' },
 ]
 
 const metaItems: NavItem[] = [
@@ -180,6 +179,9 @@ watch(() => theme.global.name.value, (newTheme) => {
               :prepend-icon="item.icon"
             >
               {{ t(item.titleKey) }}
+            </v-btn>
+            <v-btn :to="localePath('/candidates')" color="primary" variant="flat" class="mx-2" prepend-icon="mdi-vote" rounded>
+              {{ t('nav.candidates') }}
             </v-btn>
           </div>
 
@@ -305,6 +307,10 @@ watch(() => theme.global.name.value, (newTheme) => {
                  @click="persistLangPreference">
             {{ locale === 'en' ? t('lang.fr') : t('lang.en') }}
           </v-btn>
+        </div>
+
+        <div class="px-4 pb-2">
+          <v-btn :to="localePath('/candidates')" color="primary" variant="flat" block prepend-icon="mdi-vote">{{ t('nav.candidates') }}</v-btn>
         </div>
 
         <v-list-subheader class="px-4">{{ t('nav.community') }}</v-list-subheader>

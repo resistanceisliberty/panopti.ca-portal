@@ -9,7 +9,7 @@
         <template v-else>{{ lz(ev.title, locale) }}</template>
         <span class="text-medium-emphasis"> — {{ t(`candidates.evidence.${ev.type}`) }}, {{ ev.date }}</span>
       </v-list-item-title>
-      <v-list-item-subtitle v-if="ev.note" class="text-wrap">{{ lz(ev.note, locale) }}</v-list-item-subtitle>
+      <v-list-item-subtitle v-if="ev.note" class="note-full">{{ lz(ev.note, locale) }}</v-list-item-subtitle>
     </v-list-item>
   </v-list>
 </template>
@@ -21,3 +21,17 @@ defineProps<{ evidence: Evidence[] }>()
 const { t, locale } = useI18n()
 const ICONS = { citation: 'mdi-newspaper-variant-outline', questionnaire: 'mdi-clipboard-text-outline', outreach: 'mdi-phone-outline' }
 </script>
+
+<style scoped>
+/* Full quote text — Vuetify clamps v-list-item-subtitle to one line by default. */
+:deep(.note-full) {
+  display: block;
+  -webkit-line-clamp: unset;
+  white-space: normal;
+  overflow: visible;
+  opacity: 0.9;
+  margin-top: 4px;
+  padding-left: 10px;
+  border-left: 2px solid rgba(var(--v-theme-primary), 0.4);
+}
+</style>

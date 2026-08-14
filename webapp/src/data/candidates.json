@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-09",
+  "lastUpdated": "2026-08-13",
   "municipalities": [
     {
       "id": "london-on",
@@ -500,6 +500,127 @@
           "date": "2026-05-06",
           "title": { "en": "CBC News — Region of Waterloo will allow police to access infrastructure needed to install CCTV cameras", "fr": "CBC News — La Région de Waterloo autorisera la police à accéder aux infrastructures nécessaires à l'installation de caméras de vidéosurveillance" },
           "url": "https://www.cbc.ca/news/canada/kitchener-waterloo/region-of-waterloo-police-cctv-camera-program-9.7189364"
+        }
+      ]
+    },
+    {
+      "id": "jason-king",
+      "name": "Jason King",
+      "municipality": "london-on",
+      "roles": [
+        {
+          "type": "candidate",
+          "office": {
+            "en": "Ward 14 Councillor",
+            "fr": "Conseiller municipal, quartier 14"
+          },
+          "election": "2026-10-26"
+        }
+      ],
+      "stance": "opposes",
+      "summary": {
+        "en": "Jason King, a candidate for Ward 14 Councillor in London's October 2026 election, opposes fixed ALPR cameras. Responding to panopti.ca's questionnaire, King — who describes himself as an intelligence and surveillance specialist — said he would vote against any ALPR procurement or expansion regardless of cost, arguing the cameras and their AI data-collection infringe basic protections against state overreach. His answers appear below in his own words.",
+        "fr": "Jason King, candidat au poste de conseiller municipal du quartier 14 à l'élection d'octobre 2026 à London, s'oppose aux caméras ALPR fixes. En réponse au questionnaire de panopti.ca, M. King — qui se décrit comme un spécialiste du renseignement et de la surveillance — a affirmé qu'il voterait contre toute acquisition ou expansion des ALPR, peu importe le coût, estimant que ces caméras et la collecte de données par IA qu'elles permettent portent atteinte aux protections fondamentales contre les abus de l'État. Ses réponses, dans ses propres mots, apparaissent ci-dessous. (Réponses fournies en anglais.)"
+      },
+      "links": {
+        "website": "https://www.jasonwking.ca/"
+      },
+      "evidence": [
+        {
+          "type": "questionnaire",
+          "date": "2026-08-13",
+          "title": {
+            "en": "Q1 — Support or oppose fixed ALPRs",
+            "fr": "Q1 — Pour ou contre les ALPR fixes"
+          },
+          "note": {
+            "en": "I don't support fixed ALPR cameras for the City of London. As an intelligence and surveillance specialist myself, I understand the invasiveness and risks of security of the person these bring to a free society. I believe in strict limitations on government intrusion into the lives of citizens and that the freedom to move freely MUST be inclusive of government's inability to track and capture your movement as well. The AI tools and data collection that these cameras interface with infringe our very basic rights and protections from state overreach.",
+            "fr": "I don't support fixed ALPR cameras for the City of London. As an intelligence and surveillance specialist myself, I understand the invasiveness and risks of security of the person these bring to a free society. I believe in strict limitations on government intrusion into the lives of citizens and that the freedom to move freely MUST be inclusive of government's inability to track and capture your movement as well. The AI tools and data collection that these cameras interface with infringe our very basic rights and protections from state overreach."
+          }
+        },
+        {
+          "type": "questionnaire",
+          "date": "2026-08-13",
+          "title": {
+            "en": "Q2 — How would you vote on procurement?",
+            "fr": "Q2 — Comment voteriez-vous sur l'acquisition?"
+          },
+          "note": {
+            "en": "I would vote against any procurement or usage of these devices in the City of London regardless of if it costs Londoners through municipal tax dollars or any other level of taxation.",
+            "fr": "I would vote against any procurement or usage of these devices in the City of London regardless of if it costs Londoners through municipal tax dollars or any other level of taxation."
+          }
+        },
+        {
+          "type": "questionnaire",
+          "date": "2026-08-13",
+          "title": {
+            "en": "Q3 — Limits on ALPR data",
+            "fr": "Q3 — Limites sur les données ALPR"
+          },
+          "note": {
+            "en": "Should ALPR cameras be approved in London despite my opposition, I would insist that any access or use of the data collected was subject to judicial warrant just as any other search and seizure proceedings would be by the police. These cameras are also subject to PIPEDA and must adhere to the strict rules governing when collection of electronic data of someone is collected or used.",
+            "fr": "Should ALPR cameras be approved in London despite my opposition, I would insist that any access or use of the data collected was subject to judicial warrant just as any other search and seizure proceedings would be by the police. These cameras are also subject to PIPEDA and must adhere to the strict rules governing when collection of electronic data of someone is collected or used."
+          }
+        },
+        {
+          "type": "questionnaire",
+          "date": "2026-08-13",
+          "title": {
+            "en": "Q4 — Data-sharing with other agencies",
+            "fr": "Q4 — Partage des données avec d'autres organismes"
+          },
+          "note": {
+            "en": "Every separate policing entity that would want to utilize City of London ALPR data would have to be required to acquire a judicial warrant on a case by case basis. Access should be based on a case by case basis providing the strict adherence to the rule of law when seeking evidence in the investigation of criminal activity and data cannot be shared beyond the scope of that particular warrant without further warrant by inquiring agencies.",
+            "fr": "Every separate policing entity that would want to utilize City of London ALPR data would have to be required to acquire a judicial warrant on a case by case basis. Access should be based on a case by case basis providing the strict adherence to the rule of law when seeking evidence in the investigation of criminal activity and data cannot be shared beyond the scope of that particular warrant without further warrant by inquiring agencies."
+          }
+        },
+        {
+          "type": "questionnaire",
+          "date": "2026-08-13",
+          "title": {
+            "en": "Q5 — Public consultation & privacy assessment",
+            "fr": "Q5 — Consultation publique et évaluation vie privée"
+          },
+          "note": {
+            "en": "Yes. Regardless of my stance or that of anyone else, open and free discussion about everything is necessary for education and making informed decision. However, it is clear already that this is already an infringement of constitutional rights of the individual and public consultation must not sway the requirement of lawmakers to deny this use.",
+            "fr": "Yes. Regardless of my stance or that of anyone else, open and free discussion about everything is necessary for education and making informed decision. However, it is clear already that this is already an infringement of constitutional rights of the individual and public consultation must not sway the requirement of lawmakers to deny this use."
+          }
+        },
+        {
+          "type": "questionnaire",
+          "date": "2026-08-13",
+          "title": {
+            "en": "Q6 — Where the money should go",
+            "fr": "Q6 — Réaffectation des fonds"
+          },
+          "note": {
+            "en": "The City of London does not have any extra money. It continues to constantly raise the property tax on an already stretched thin citizenry. We need to stop spending on non-essentials anyway regardless of what level of government is picking the funds from your pocket.",
+            "fr": "The City of London does not have any extra money. It continues to constantly raise the property tax on an already stretched thin citizenry. We need to stop spending on non-essentials anyway regardless of what level of government is picking the funds from your pocket."
+          }
+        },
+        {
+          "type": "questionnaire",
+          "date": "2026-08-13",
+          "title": {
+            "en": "Q7 — FOI responsiveness",
+            "fr": "Q7 — Réponse aux demandes d'accès à l'information"
+          },
+          "note": {
+            "en": "Absolutely.",
+            "fr": "Absolutely."
+          }
+        },
+        {
+          "type": "questionnaire",
+          "date": "2026-08-13",
+          "title": {
+            "en": "Q8 — Message to voters",
+            "fr": "Q8 — Message aux électeurs"
+          },
+          "note": {
+            "en": "I will always champion and safeguard the constitutional rights and protections of privacy from unreasonable government overreach and exploitation. We must resist the pressure of becoming a mass surveillance state like China.",
+            "fr": "I will always champion and safeguard the constitutional rights and protections of privacy from unreasonable government overreach and exploitation. We must resist the pressure of becoming a mass surveillance state like China."
+          }
         }
       ]
     }

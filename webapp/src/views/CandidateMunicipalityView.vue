@@ -17,6 +17,21 @@
           <EvidenceList v-if="muni.statusEvidence.length" :evidence="muni.statusEvidence" />
         </v-card>
 
+        <v-card v-if="opposers.length" class="pa-5 mb-8" rounded="lg" variant="tonal" color="success" border>
+          <div class="d-flex align-center mb-2">
+            <v-icon class="mr-2">mdi-shield-account</v-icon>
+            <h3 class="text-h6 font-weight-bold">{{ t('candidates.muni_opposes_heading') }}</h3>
+          </div>
+          <v-list class="bg-transparent">
+            <v-list-item v-for="p in opposers" :key="p.id"
+                         :to="localePath(`/candidates/${muni.id}/${p.id}`)" class="px-2" rounded="lg">
+              <v-list-item-title class="font-weight-bold">{{ p.name }}</v-list-item-title>
+              <v-list-item-subtitle>{{ allOffices(p) }}</v-list-item-subtitle>
+              <template #append><StanceChip :stance="p.stance" small /></template>
+            </v-list-item>
+          </v-list>
+        </v-card>
+
         <template v-for="group in groups" :key="group.key">
           <h3 class="text-h5 font-weight-bold mb-4">{{ group.title }}</h3>
           <p v-if="!group.people.length" class="text-medium-emphasis mb-8">{{ t('candidates.muni_empty') }}</p>
@@ -59,6 +74,8 @@ const { t, locale } = useI18n()
 const { localePath } = useLocalePath()
 const muni = getMunicipality(String(route.params.municipality))
 const people = muni ? peopleFor(muni.id) : []
+const opposers = computed(() => people.filter((p) => p.stance === 'opposes'))
+const allOffices = (p: Person) => p.roles.map((r) => lz(r.office, locale.value)).join(' · ')
 const statusLine = computed(() => (muni ? t(`candidates.status.${muni.alprStatus}`) : ''))
 const groups = computed(() => {
   if (!muni) return []
