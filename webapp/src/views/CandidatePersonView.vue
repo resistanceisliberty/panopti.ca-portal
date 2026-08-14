@@ -9,7 +9,12 @@
 
         <div class="text-center mb-8">
           <h2 class="text-h4 font-weight-bold mb-1">{{ person.name }}</h2>
-          <p class="text-subtitle-1 text-medium-emphasis mb-4">{{ officesLine }}</p>
+          <p class="text-subtitle-1 text-medium-emphasis mb-2">{{ officesLine }}</p>
+          <p v-if="person.links?.website" class="mb-3">
+            <a :href="person.links.website" target="_blank" rel="noopener noreferrer" class="text-primary font-weight-medium" style="text-decoration: none;">
+              <v-icon size="16" class="mr-1">mdi-open-in-new</v-icon>{{ t('candidates.person_website') }}
+            </a>
+          </p>
           <StanceChip :stance="person.stance" />
         </div>
 
@@ -21,9 +26,8 @@
           <p v-else class="text-body-1">{{ t('candidates.person_no_evidence') }}</p>
         </v-card>
 
-        <div v-if="person.links?.website || person.links?.contact" class="text-center mb-8">
-          <v-btn v-if="person.links?.website" :href="person.links.website" target="_blank" rel="noopener noreferrer" variant="outlined" class="mr-2">{{ t('candidates.person_website') }}</v-btn>
-          <v-btn v-if="person.links?.contact" :href="person.links.contact" target="_blank" rel="noopener noreferrer" variant="outlined">{{ t('candidates.person_contact') }}</v-btn>
+        <div v-if="person.links?.contact" class="text-center mb-8">
+          <v-btn :href="person.links.contact" target="_blank" rel="noopener noreferrer" variant="outlined">{{ t('candidates.person_contact') }}</v-btn>
         </div>
 
         <v-card class="pa-6 mb-8" elevation="3" rounded="lg" color="primary" variant="tonal">
