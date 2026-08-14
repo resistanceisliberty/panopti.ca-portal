@@ -10,18 +10,16 @@
         <div class="text-center mb-8">
           <h2 class="text-h4 font-weight-bold mb-1">{{ person.name }}</h2>
           <p class="text-subtitle-1 text-medium-emphasis mb-2">{{ officesLine }}</p>
-          <p v-if="person.links?.website" class="mb-3">
-            <a :href="person.links.website" target="_blank" rel="noopener noreferrer" class="text-primary font-weight-medium" style="text-decoration: none;">
-              <v-icon size="16" class="mr-1">mdi-open-in-new</v-icon>{{ t('candidates.person_website') }}
-            </a>
-          </p>
+          <div v-if="person.links?.website" class="mb-3">
+            <v-btn :href="person.links.website" target="_blank" rel="noopener noreferrer" color="primary" variant="tonal" size="small" rounded prepend-icon="mdi-open-in-new">{{ t('candidates.person_website') }}</v-btn>
+          </div>
           <StanceChip :stance="person.stance" />
         </div>
 
         <p class="serif text-body-1 mb-8">{{ lz(person.summary, locale) }}</p>
 
         <v-card class="pa-6 mb-8" elevation="3" rounded="lg">
-          <h3 class="text-h5 font-weight-bold mb-2">{{ t('candidates.person_evidence_heading') }}</h3>
+          <h3 class="text-h5 font-weight-bold mb-2">{{ t(evidenceHeadingKey) }}</h3>
           <EvidenceList v-if="person.evidence.length" :evidence="person.evidence" />
           <p v-else class="text-body-1">{{ t('candidates.person_no_evidence') }}</p>
         </v-card>
@@ -65,5 +63,9 @@ const muni = getMunicipality(String(route.params.municipality))
 const person = muni ? peopleFor(muni.id).find((p) => p.id === route.params.person) : undefined
 const statusLine = computed(() => (muni ? t(`candidates.status.${muni.alprStatus}`) : ''))
 const officesLine = computed(() => (person ? person.roles.map((r) => lz(r.office, locale.value)).join(' · ') : ''))
+const evidenceHeadingKey = computed(() =>
+  person && person.evidence.length && person.evidence.every((e) => e.type === 'questionnaire')
+    ? 'candidates.person_questionnaire_heading'
+    : 'candidates.person_evidence_heading')
 if (muni && person) useHead({ title: () => `${person.name} — ${t('candidates.person_title_suffix')}` })
 </script>
