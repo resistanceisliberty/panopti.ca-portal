@@ -562,7 +562,7 @@
     "muni_election_banner": "Election {date} — {body}",
     "muni_no_election": "No municipal election is currently scheduled.",
     "muni_status_heading": "ALPR status",
-    "muni_opposes_heading": "Candidates opposing ALPRs",
+    "muni_opposes_heading": "Candidates opposing fixed ALPRs",
     "muni_empty": "Research in progress — people will be listed here as the documented record is compiled.",
     "muni_sitting": "Sitting council",
     "muni_candidates": "Candidates — election {date}",

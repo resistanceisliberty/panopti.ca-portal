@@ -562,7 +562,7 @@
     "muni_election_banner": "Élection {date} — {body}",
     "muni_no_election": "Aucune élection municipale n'est prévue pour le moment.",
     "muni_status_heading": "État des ALPR",
-    "muni_opposes_heading": "Candidats qui s'opposent aux ALPR",
+    "muni_opposes_heading": "Candidats qui s'opposent aux ALPR fixes",
     "muni_empty": "Recherche en cours — les personnes seront répertoriées ici à mesure que le dossier documenté sera constitué.",
     "muni_sitting": "Conseil en poste",
     "muni_candidates": "Candidats — élection {date}",
