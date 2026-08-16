@@ -2,7 +2,7 @@
 <DefaultLayout>
   <template #header>
     <Hero
-      imageUrl="/city-council.jpg"
+      imageUrl="/council-chamber.jpg"
       :title="t('candidates.hero_title')"
       :description="t('candidates.hero_desc')"
     />
