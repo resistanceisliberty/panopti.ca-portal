@@ -2,7 +2,7 @@
   <NotFound v-if="!muni || !person" />
   <DefaultLayout v-else>
     <template #header>
-      <Hero imageUrl="/city-council.jpg" :title="lz(muni.name, locale)" :description="statusLine" />
+      <Hero imageUrl="/council-chamber.jpg" :title="lz(muni.name, locale)" :description="statusLine" />
     </template>
     <v-container>
       <v-row><v-col cols="12" md="10" lg="8" class="mx-auto">
