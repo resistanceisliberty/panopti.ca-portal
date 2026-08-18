@@ -215,6 +215,25 @@ watch(() => theme.global.name.value, (newTheme) => {
               </v-list>
             </v-menu>
 
+            <!-- Community: Signal + X, unnested from the old dropdown into individual top-bar icons -->
+            <v-btn
+              v-for="item in communityItems"
+              :key="item.titleKey"
+              :href="item.href"
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="text"
+              icon
+              size="small"
+              class="mx-1"
+              :aria-label="t(item.titleKey)"
+              :title="t(item.titleKey)"
+            >
+              <svg class="appbar-x-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                <path :d="item.svgPath" fill="currentColor" />
+              </svg>
+            </v-btn>
+
             <!-- Get Involved section -->
             <v-menu offset-y>
               <template v-slot:activator="{ props }">
@@ -261,33 +280,6 @@ watch(() => theme.global.name.value, (newTheme) => {
                @click="persistLangPreference">
           {{ locale === 'en' ? t('lang.fr') : t('lang.en') }}
         </v-btn>
-
-        <v-menu offset-y>
-          <template v-slot:activator="{ props }">
-            <v-btn variant="text" v-bind="props" class="mx-1" :aria-label="t('nav.community')">
-              <v-icon start>mdi-account-group</v-icon>
-              <span class="d-none d-sm-inline">{{ t('nav.community') }}</span>
-              <v-icon end size="small">mdi-chevron-down</v-icon>
-            </v-btn>
-          </template>
-          <v-list>
-            <v-list-item
-              v-for="item in communityItems"
-              :key="item.titleKey"
-              :href="item.href"
-              target="_blank"
-              rel="noopener noreferrer"
-              link
-            >
-              <template v-slot:prepend>
-                <svg class="appbar-x-icon mr-2" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-                  <path :d="item.svgPath" fill="currentColor" />
-                </svg>
-              </template>
-              <v-list-item-title>{{ t(item.titleKey) }}</v-list-item-title>
-            </v-list-item>
-          </v-list>
-        </v-menu>
 
         <v-btn icon @click="toggleTheme" :aria-label="t('a11y.toggle_theme')">
           <v-icon>mdi-theme-light-dark</v-icon>
