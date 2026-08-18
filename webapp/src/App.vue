@@ -189,6 +189,25 @@ watch(() => theme.global.name.value, (newTheme) => {
 
           <!-- Contribute section -->
           <div class="d-flex align-center">
+            <!-- Community: Signal + X, unnested from the old dropdown into individual top-bar icons -->
+            <v-btn
+              v-for="item in communityItems"
+              :key="item.titleKey"
+              :href="item.href"
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="text"
+              icon
+              size="small"
+              class="mx-1"
+              :aria-label="t(item.titleKey)"
+              :title="t(item.titleKey)"
+            >
+              <svg class="appbar-x-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                <path :d="item.svgPath" fill="currentColor" />
+              </svg>
+            </v-btn>
+
             <v-menu offset-y>
               <template v-slot:activator="{ props }">
                 <v-btn
@@ -214,25 +233,6 @@ watch(() => theme.global.name.value, (newTheme) => {
                 </v-list-item>
               </v-list>
             </v-menu>
-
-            <!-- Community: Signal + X, unnested from the old dropdown into individual top-bar icons -->
-            <v-btn
-              v-for="item in communityItems"
-              :key="item.titleKey"
-              :href="item.href"
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="text"
-              icon
-              size="small"
-              class="mx-1"
-              :aria-label="t(item.titleKey)"
-              :title="t(item.titleKey)"
-            >
-              <svg class="appbar-x-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-                <path :d="item.svgPath" fill="currentColor" />
-              </svg>
-            </v-btn>
 
             <!-- Get Involved section -->
             <v-menu offset-y>
