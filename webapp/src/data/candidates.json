@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-14",
+  "lastUpdated": "2026-08-18",
   "municipalities": [
     {
       "id": "london-on",
@@ -744,6 +744,30 @@
           }
         }
       ]
+    },
+    {
+      "id": "roger-caranci",
+      "name": "Roger Caranci",
+      "municipality": "london-on",
+      "roles": [
+        {
+          "type": "candidate",
+          "office": {
+            "en": "Ward 1 Councillor",
+            "fr": "Conseiller municipal, quartier 1"
+          },
+          "election": "2026-10-26"
+        }
+      ],
+      "stance": "opposes",
+      "summary": {
+        "en": "Roger Caranci, a candidate for Ward 1 Councillor in London's October 2026 election, opposes fixed ALPR cameras. Speaking with panopti.ca directly, Caranci confirmed his opposition and authorized us to note it here. His full responses to panopti.ca's questionnaire are pending and will be published in his own words once received.",
+        "fr": "Roger Caranci, candidat au poste de conseiller municipal du quartier 1 à l'élection d'octobre 2026 à London, s'oppose aux caméras ALPR fixes. Lors d'un échange direct avec panopti.ca, M. Caranci a confirmé son opposition et nous a autorisés à l'indiquer ici. Ses réponses complètes au questionnaire de panopti.ca sont à venir et seront publiées dans ses propres mots dès leur réception."
+      },
+      "links": {
+        "website": "https://www.rogercaranci.ca/"
+      },
+      "evidence": []
     }
   ]
 }
