@@ -511,8 +511,8 @@
         {
           "type": "candidate",
           "office": {
-            "en": "Ward 14 Councillor",
-            "fr": "Conseiller municipal, quartier 14"
+            "en": "Ward 14 Councillor Candidate",
+            "fr": "Candidat au poste de conseiller municipal, quartier 14"
           },
           "election": "2026-10-26"
         }
@@ -632,8 +632,8 @@
         {
           "type": "candidate",
           "office": {
-            "en": "Ward 7 Councillor",
-            "fr": "Conseiller municipal, quartier 7"
+            "en": "Ward 7 Councillor Candidate",
+            "fr": "Candidat au poste de conseiller municipal, quartier 7"
           },
           "election": "2026-10-26"
         }
@@ -753,8 +753,8 @@
         {
           "type": "candidate",
           "office": {
-            "en": "Ward 1 Councillor",
-            "fr": "Conseiller municipal, quartier 1"
+            "en": "Ward 1 Councillor Candidate",
+            "fr": "Candidat au poste de conseiller municipal, quartier 1"
           },
           "election": "2026-10-26"
         }
@@ -777,8 +777,8 @@
         {
           "type": "candidate",
           "office": {
-            "en": "Ward 3 Councillor",
-            "fr": "Conseiller municipal, quartier 3"
+            "en": "Ward 3 Councillor Candidate",
+            "fr": "Candidat au poste de conseiller municipal, quartier 3"
           },
           "election": "2026-10-26"
         }
@@ -801,8 +801,8 @@
         {
           "type": "candidate",
           "office": {
-            "en": "Ward 10 Councillor",
-            "fr": "Conseillère municipale, quartier 10"
+            "en": "Ward 10 Councillor Candidate",
+            "fr": "Candidate au poste de conseillère municipale, quartier 10"
           },
           "election": "2026-10-26"
         }
