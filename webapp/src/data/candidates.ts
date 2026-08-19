@@ -18,6 +18,10 @@ export const lastUpdated = data.lastUpdated
 export const lz = (o: Lz, locale: string) => (locale.startsWith('fr') ? o.fr : o.en)
 export const getMunicipalities = () => data.municipalities
 export const getMunicipality = (id: string) => data.municipalities.find((m) => m.id === id)
+// "Ward 7 Councillor" -> 7. Mayor carries no number and sorts first. Read off the
+// English office string so ordering is identical in both locales.
+// ponytail: add a numeric `ward` field to the dataset if offices stop carrying the number.
+export const wardOf = (r: Role) => Number(/\d+/.exec(r.office.en)?.[0] ?? -1)
 export const peopleFor = (municipalityId: string) => data.people.filter((p) => p.municipality === municipalityId)
 export function stanceTally(municipalityId: string) {
   const t = { opposes: 0, supports: 0, no_position: 0 }

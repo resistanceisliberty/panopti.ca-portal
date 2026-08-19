@@ -67,21 +67,30 @@ import NotFound from './404.vue'
 import StanceChip from '@/components/candidates/StanceChip.vue'
 import EvidenceList from '@/components/candidates/EvidenceList.vue'
 import { useLocalePath } from '@/composables/useLocalePath'
-import { getMunicipality, peopleFor, lz, type Person } from '@/data/candidates'
+import { getMunicipality, peopleFor, wardOf, lz, type Person } from '@/data/candidates'
 
 const route = useRoute()
 const { t, locale } = useI18n()
 const { localePath } = useLocalePath()
 const muni = getMunicipality(String(route.params.municipality))
 const people = muni ? peopleFor(muni.id) : []
-const opposers = computed(() => people.filter((p) => p.stance === 'opposes'))
+// Ward order. Sort on the role actually shown in each section: someone can be a Ward 4
+// incumbent running for Mayor, so a person-wide ward would misplace them in one list.
+const byWard = (ward: (p: Person) => number) => (a: Person, b: Person) =>
+  ward(a) - ward(b) || a.name.localeCompare(b.name)
+const wardIn = (p: Person, type: 'incumbent' | 'candidate') => {
+  const r = p.roles.find((x) => x.type === type)
+  return r ? wardOf(r) : -1
+}
+const opposers = computed(() =>
+  people.filter((p) => p.stance === 'opposes').sort(byWard((p) => Math.min(...p.roles.map(wardOf)))))
 const allOffices = (p: Person) => p.roles.map((r) => lz(r.office, locale.value)).join(' · ')
 const statusLine = computed(() => (muni ? t(`candidates.status.${muni.alprStatus}`) : ''))
 const groups = computed(() => {
   if (!muni) return []
   const g: { key: 'incumbent' | 'candidate'; title: string; people: Person[] }[] =
-    [{ key: 'incumbent', title: t('candidates.muni_sitting'), people: people.filter((p) => p.roles.some((r) => r.type === 'incumbent')) }]
-  if (muni.election) g.push({ key: 'candidate' as const, title: t('candidates.muni_candidates', { date: muni.election.date }), people: people.filter((p) => p.roles.some((r) => r.type === 'candidate')) })
+    [{ key: 'incumbent', title: t('candidates.muni_sitting'), people: people.filter((p) => p.roles.some((r) => r.type === 'incumbent')).sort(byWard((p) => wardIn(p, 'incumbent'))) }]
+  if (muni.election) g.push({ key: 'candidate' as const, title: t('candidates.muni_candidates', { date: muni.election.date }), people: people.filter((p) => p.roles.some((r) => r.type === 'candidate')).sort(byWard((p) => wardIn(p, 'candidate'))) })
   return g
 })
 function officeFor(p: Person, roleType: 'incumbent' | 'candidate') {
