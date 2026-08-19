@@ -864,6 +864,30 @@
         "website": "https://andrewcrook.ca/"
       },
       "evidence": []
+    },
+    {
+      "id": "alex-moore",
+      "name": "Alex Moore",
+      "municipality": "london-on",
+      "roles": [
+        {
+          "type": "candidate",
+          "office": {
+            "en": "Ward 10 Councillor Candidate",
+            "fr": "Candidat au poste de conseiller municipal, quartier 10"
+          },
+          "election": "2026-10-26"
+        }
+      ],
+      "stance": "opposes",
+      "summary": {
+        "en": "Alex Moore, a candidate for Ward 10 Councillor in London's October 2026 election, opposes fixed ALPR cameras. Speaking with panopti.ca directly, Moore confirmed his opposition and authorized us to note it here. His full responses to panopti.ca's questionnaire are pending and will be published in his own words once received.",
+        "fr": "Alex Moore, candidat au poste de conseiller municipal du quartier 10 à l'élection d'octobre 2026 à London, s'oppose aux caméras ALPR fixes. Lors d'un échange direct avec panopti.ca, M. Moore a confirmé son opposition et nous a autorisés à l'indiquer ici. Ses réponses complètes au questionnaire de panopti.ca sont à venir et seront publiées dans ses propres mots dès leur réception."
+      },
+      "links": {
+        "website": "https://www.alexmooreward10.ca/"
+      },
+      "evidence": []
     }
   ]
 }
