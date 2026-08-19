@@ -111,10 +111,18 @@ const X_URL = 'https://x.com/panopticanada';
 // convention as X above. SIGNAL_URL is the public group invite link.
 const SIGNAL_ICON_PATH = 'M12 0q-.934 0-1.83.139l.17 1.111a11 11 0 0 1 3.32 0l.172-1.111A12 12 0 0 0 12 0M9.152.34A12 12 0 0 0 5.77 1.742l.584.961a10.8 10.8 0 0 1 3.066-1.27zm5.696 0-.268 1.094a10.8 10.8 0 0 1 3.066 1.27l.584-.962A12 12 0 0 0 14.848.34M12 2.25a9.75 9.75 0 0 0-8.539 14.459c.074.134.1.292.064.441l-1.013 4.338 4.338-1.013a.62.62 0 0 1 .441.064A9.7 9.7 0 0 0 12 21.75c5.385 0 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25m-7.092.068a12 12 0 0 0-2.59 2.59l.909.664a11 11 0 0 1 2.345-2.345zm14.184 0-.664.909a11 11 0 0 1 2.345 2.345l.909-.664a12 12 0 0 0-2.59-2.59M1.742 5.77A12 12 0 0 0 .34 9.152l1.094.268a10.8 10.8 0 0 1 1.269-3.066zm20.516 0-.961.584a10.8 10.8 0 0 1 1.27 3.066l1.093-.268a12 12 0 0 0-1.402-3.383M.138 10.168A12 12 0 0 0 0 12q0 .934.139 1.83l1.111-.17A11 11 0 0 1 1.125 12q0-.848.125-1.66zm23.723.002-1.111.17q.125.812.125 1.66c0 .848-.042 1.12-.125 1.66l1.111.172a12.1 12.1 0 0 0 0-3.662M1.434 14.58l-1.094.268a12 12 0 0 0 .96 2.591l-.265 1.14 1.096.255.36-1.539-.188-.365a10.8 10.8 0 0 1-.87-2.35m21.133 0a10.8 10.8 0 0 1-1.27 3.067l.962.584a12 12 0 0 0 1.402-3.383zm-1.793 3.848a11 11 0 0 1-2.345 2.345l.664.909a12 12 0 0 0 2.59-2.59zm-19.959 1.1L.357 21.48a1.8 1.8 0 0 0 2.162 2.161l1.954-.455-.256-1.095-1.953.455a.675.675 0 0 1-.81-.81l.454-1.954zm16.832 1.769a10.8 10.8 0 0 1-3.066 1.27l.268 1.093a12 12 0 0 0 3.382-1.402zm-10.94.213-1.54.36.256 1.095 1.139-.266c.814.415 1.683.74 2.591.961l.268-1.094a10.8 10.8 0 0 1-2.35-.869zm3.634 1.24-.172 1.111a12.1 12.1 0 0 0 3.662 0l-.17-1.111q-.812.125-1.66.125a11 11 0 0 1-1.66-.125';
 const SIGNAL_URL = 'https://signal.group/#CjQKINKEjCutoejwUZB6Te4WuyFI1pfC8TxSjN1l7-lJ2clnEhDpDs8kXV0KHF4syMhl3R19';
-// "Community" dropdown (top bar) + drawer section — folds the social links together.
+// Bluesky butterfly (simple-icons), currentColor fill — same inline-SVG convention as above.
+const BLUESKY_ICON_PATH = 'M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.479 0-.688-.139-1.86-.902-2.203-.659-.299-1.664-.621-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z';
+const BLUESKY_URL = 'https://bsky.app/profile/panopti.bsky.social';
+// Signal stays a separate labelled top-bar button; X + Bluesky nest under a "Socials" menu.
+// communityItems (all three, flat) drives the mobile drawer.
+const socialItems = [
+  { titleKey: 'footer.x_label', href: X_URL, svgPath: X_ICON_PATH },
+  { titleKey: 'footer.bluesky_label', href: BLUESKY_URL, svgPath: BLUESKY_ICON_PATH },
+];
 const communityItems = [
   { titleKey: 'footer.signal_label', href: SIGNAL_URL, svgPath: SIGNAL_ICON_PATH },
-  { titleKey: 'footer.x_label', href: X_URL, svgPath: X_ICON_PATH },
+  ...socialItems,
 ];
 
 // ponytail: localStorage 'lang' is stored for forward-compat/parity with the map app;
@@ -189,24 +197,53 @@ watch(() => theme.global.name.value, (newTheme) => {
 
           <!-- Contribute section -->
           <div class="d-flex align-center">
-            <!-- Community: Signal + X, unnested from the old dropdown into individual top-bar icons -->
+            <!-- Signal: kept separate as its own labelled button -->
             <v-btn
-              v-for="item in communityItems"
-              :key="item.titleKey"
-              :href="item.href"
+              :href="SIGNAL_URL"
               target="_blank"
               rel="noopener noreferrer"
               variant="text"
-              icon
-              size="small"
               class="mx-1"
-              :aria-label="t(item.titleKey)"
-              :title="t(item.titleKey)"
+              :aria-label="t('footer.signal_label')"
+              :title="t('footer.signal_label')"
             >
-              <svg class="appbar-x-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-                <path :d="item.svgPath" fill="currentColor" />
+              <svg class="appbar-x-icon mr-2" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                <path :d="SIGNAL_ICON_PATH" fill="currentColor" />
               </svg>
+              {{ t('nav.signal') }}
             </v-btn>
+
+            <!-- Socials nest: X + Bluesky -->
+            <v-menu offset-y>
+              <template v-slot:activator="{ props }">
+                <v-btn
+                  variant="text"
+                  v-bind="props"
+                  prepend-icon="mdi-share-variant"
+                  append-icon="mdi-chevron-down"
+                  class="mx-1"
+                >
+                  {{ t('nav.socials') }}
+                </v-btn>
+              </template>
+              <v-list>
+                <v-list-item
+                  v-for="item in socialItems"
+                  :key="item.titleKey"
+                  :href="item.href"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  link
+                >
+                  <template v-slot:prepend>
+                    <svg class="appbar-x-icon mr-2" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                      <path :d="item.svgPath" fill="currentColor" />
+                    </svg>
+                  </template>
+                  <v-list-item-title>{{ t(item.titleKey) }}</v-list-item-title>
+                </v-list-item>
+              </v-list>
+            </v-menu>
 
             <v-menu offset-y>
               <template v-slot:activator="{ props }">
