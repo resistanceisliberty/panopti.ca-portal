@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-18",
+  "lastUpdated": "2026-08-20",
   "municipalities": [
     {
       "id": "london-on",
@@ -857,13 +857,110 @@
       ],
       "stance": "opposes",
       "summary": {
-        "en": "Andrew Crook, a candidate for Ward 13 Councillor in London's October 2026 election, opposes fixed ALPR cameras. Speaking with panopti.ca directly, Crook confirmed his opposition and authorized us to note it here. His full responses to panopti.ca's questionnaire are pending and will be published in his own words once received.",
-        "fr": "Andrew Crook, candidat au poste de conseiller municipal du quartier 13 à l'élection d'octobre 2026 à London, s'oppose aux caméras ALPR fixes. Lors d'un échange direct avec panopti.ca, M. Crook a confirmé son opposition et nous a autorisés à l'indiquer ici. Ses réponses complètes au questionnaire de panopti.ca sont à venir et seront publiées dans ses propres mots dès leur réception."
+        "en": "Andrew Crook, a candidate for Ward 13 Councillor in London's October 2026 election, opposes fixed ALPR cameras. In his response to panopti.ca's questionnaire, Crook said his default position is \"no to general expansion\" and that he opposes routine tracking of citizens \"simply because the technology exists\" — while leaving the door open to a narrowly defined use at specific high-risk sites only where there is a strong public-safety case and less intrusive alternatives are inadequate. He calls for strong data limits, independent audits, mandatory public consultation and a public privacy impact assessment before any deployment, and caution about location data leaving Canada. His answers appear below in his own words.",
+        "fr": "Andrew Crook, candidat au poste de conseiller municipal du quartier 13 à l'élection d'octobre 2026 à London, s'oppose aux caméras ALPR fixes. En réponse au questionnaire de panopti.ca, M. Crook a indiqué que sa position par défaut est « non à toute expansion générale » et qu'il s'oppose au suivi routinier des citoyens « simplement parce que la technologie existe » — tout en laissant la porte ouverte à un usage étroitement défini, uniquement à des sites précis à haut risque, lorsqu'il existe de solides motifs de sécurité publique et que les solutions moins intrusives sont insuffisantes. Il réclame des limites strictes sur les données, des audits indépendants, une consultation publique obligatoire et une évaluation des facteurs relatifs à la vie privée avant tout déploiement, ainsi que la prudence quant aux données de localisation quittant le Canada. Ses réponses, dans ses propres mots, apparaissent ci-dessous. (Réponses fournies en anglais.)"
       },
       "links": {
         "website": "https://andrewcrook.ca/"
       },
-      "evidence": []
+      "evidence": [
+        {
+          "type": "questionnaire",
+          "date": "2026-08-20",
+          "title": {
+            "en": "Q1 — Support or oppose fixed ALPRs",
+            "fr": "Q1 — Pour ou contre les ALPR fixes"
+          },
+          "note": {
+            "en": "Generally, I oppose broad deployment of fixed ALPR cameras. I could support limited use in specific high-risk locations, such as critical infrastructure or other clearly vulnerable sites, if there is a strong public-safety case. I do not support routine tracking of citizens' movements simply because the technology exists. Privacy is a right, and the burden should be on government to demonstrate why surveillance is necessary, proportionate, and effective.",
+            "fr": "Generally, I oppose broad deployment of fixed ALPR cameras. I could support limited use in specific high-risk locations, such as critical infrastructure or other clearly vulnerable sites, if there is a strong public-safety case. I do not support routine tracking of citizens' movements simply because the technology exists. Privacy is a right, and the burden should be on government to demonstrate why surveillance is necessary, proportionate, and effective."
+          }
+        },
+        {
+          "type": "questionnaire",
+          "date": "2026-08-20",
+          "title": {
+            "en": "Q2 — How would you vote on procurement?",
+            "fr": "Q2 — Comment voteriez-vous sur l'acquisition?"
+          },
+          "note": {
+            "en": "I would need to see the specific proposal, evidence of effectiveness, cost, privacy safeguards, and intended use. My default position would be no to general expansion. I could reconsider for a narrowly defined public-safety purpose where the benefits are clear and less intrusive alternatives are inadequate. I would not support a blank cheque for broader surveillance.",
+            "fr": "I would need to see the specific proposal, evidence of effectiveness, cost, privacy safeguards, and intended use. My default position would be no to general expansion. I could reconsider for a narrowly defined public-safety purpose where the benefits are clear and less intrusive alternatives are inadequate. I would not support a blank cheque for broader surveillance."
+          }
+        },
+        {
+          "type": "questionnaire",
+          "date": "2026-08-20",
+          "title": {
+            "en": "Q3 — Limits on ALPR data",
+            "fr": "Q3 — Limites sur les données ALPR"
+          },
+          "note": {
+            "en": "Strong limits. Data should be retained only as long as genuinely necessary, access should be restricted and logged, and misuse should carry consequences. I would want independent audits and regular public reporting showing how the system is being used, how often data is accessed, and whether it is actually producing measurable public-safety benefits.",
+            "fr": "Strong limits. Data should be retained only as long as genuinely necessary, access should be restricted and logged, and misuse should carry consequences. I would want independent audits and regular public reporting showing how the system is being used, how often data is accessed, and whether it is actually producing measurable public-safety benefits."
+          }
+        },
+        {
+          "type": "questionnaire",
+          "date": "2026-08-20",
+          "title": {
+            "en": "Q4 — Data-sharing with other agencies",
+            "fr": "Q4 — Partage des données avec d'autres organismes"
+          },
+          "note": {
+            "en": "Only under clearly defined legal circumstances and for a legitimate investigative purpose. I would oppose routine or bulk sharing of location data. I would be particularly cautious about data leaving Canada. Any sharing framework should be transparent, auditable, and limited to what is necessary for a specific lawful purpose.",
+            "fr": "Only under clearly defined legal circumstances and for a legitimate investigative purpose. I would oppose routine or bulk sharing of location data. I would be particularly cautious about data leaving Canada. Any sharing framework should be transparent, auditable, and limited to what is necessary for a specific lawful purpose."
+          }
+        },
+        {
+          "type": "questionnaire",
+          "date": "2026-08-20",
+          "title": {
+            "en": "Q5 — Public consultation & privacy assessment",
+            "fr": "Q5 — Consultation publique et évaluation vie privée"
+          },
+          "note": {
+            "en": "A significant one. Surveillance changes the relationship between citizens and government, so people should know what is being proposed before it is purchased. I would support public consultation and a public privacy impact assessment before any major deployment or expansion. Citizens should be able to understand the purpose, risks, safeguards, costs, and expected benefits before council makes a decision.",
+            "fr": "A significant one. Surveillance changes the relationship between citizens and government, so people should know what is being proposed before it is purchased. I would support public consultation and a public privacy impact assessment before any major deployment or expansion. Citizens should be able to understand the purpose, risks, safeguards, costs, and expected benefits before council makes a decision."
+          }
+        },
+        {
+          "type": "questionnaire",
+          "date": "2026-08-20",
+          "title": {
+            "en": "Q6 — Where the money should go",
+            "fr": "Q6 — Réaffectation des fonds"
+          },
+          "note": {
+            "en": "That would depend on the demonstrated need. My preference would be to invest in measures that directly improve public safety: visible policing where required, community-based prevention, better response capacity, and practical supports for recurring problem areas. I would rather fund measurable outcomes than technology simply because it is available.",
+            "fr": "That would depend on the demonstrated need. My preference would be to invest in measures that directly improve public safety: visible policing where required, community-based prevention, better response capacity, and practical supports for recurring problem areas. I would rather fund measurable outcomes than technology simply because it is available."
+          }
+        },
+        {
+          "type": "questionnaire",
+          "date": "2026-08-20",
+          "title": {
+            "en": "Q7 — FOI responsiveness",
+            "fr": "Q7 — Réponse aux demandes d'accès à l'information"
+          },
+          "note": {
+            "en": "Yes, subject to legitimate legal exemptions involving active investigations, personal information, or public safety. Citizens should be able to understand what surveillance technology their government is using, how it is being used, what it costs, and what safeguards exist. Transparency is essential to maintaining public trust.",
+            "fr": "Yes, subject to legitimate legal exemptions involving active investigations, personal information, or public safety. Citizens should be able to understand what surveillance technology their government is using, how it is being used, what it costs, and what safeguards exist. Transparency is essential to maintaining public trust."
+          }
+        },
+        {
+          "type": "questionnaire",
+          "date": "2026-08-20",
+          "title": {
+            "en": "Q8 — Message to voters",
+            "fr": "Q8 — Message aux électeurs"
+          },
+          "note": {
+            "en": "Technology should serve citizens, not quietly redefine the relationship between citizens and government. I am not opposed to technology or legitimate police tools. I am opposed to normalizing broad surveillance without a compelling reason. If government wants to track people's movements, the question should never be \"Can we?\" It should be \"Why is this necessary, and is there a less intrusive way?\"",
+            "fr": "Technology should serve citizens, not quietly redefine the relationship between citizens and government. I am not opposed to technology or legitimate police tools. I am opposed to normalizing broad surveillance without a compelling reason. If government wants to track people's movements, the question should never be \"Can we?\" It should be \"Why is this necessary, and is there a less intrusive way?\""
+          }
+        }
+      ]
     },
     {
       "id": "alex-moore",
