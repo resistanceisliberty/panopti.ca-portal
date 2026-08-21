@@ -23,3 +23,15 @@
 
   # Restrict browser features the portal never uses
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+
+# =============================================================================
+# MATRIX FEDERATION — delegation for @user:panopti.ca
+# =============================================================================
+# Two static JSON docs under /.well-known/matrix/ point Matrix clients and
+# other homeservers at matrix.panopti.ca (the Continuwuity node). CORS is
+# required so browser clients (Element Web) can read the client doc; the JSON
+# content-type keeps strict parsers happy — Pages would otherwise serve these
+# extensionless files as text/plain.
+/.well-known/matrix/*
+  Access-Control-Allow-Origin: *
+  Content-Type: application/json
