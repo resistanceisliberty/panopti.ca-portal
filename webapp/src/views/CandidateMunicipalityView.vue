@@ -23,7 +23,8 @@
           <v-row>
             <v-col v-for="(ph, i) in muni.statusPhotos" :key="i" cols="12" sm="6">
               <a :href="ph.src" target="_blank" rel="noopener noreferrer">
-                <v-img :src="ph.src" :alt="ph.caption ? lz(ph.caption, locale) : ''" rounded="lg" class="mb-2" style="max-height: 440px;" />
+                <img :src="ph.src" :alt="ph.caption ? lz(ph.caption, locale) : ''"
+                     class="mb-2" style="max-width: 100%; max-height: 440px; display: block; margin: 0 auto; border-radius: 12px;" />
               </a>
               <p v-if="ph.caption" class="text-caption text-medium-emphasis mb-0">{{ lz(ph.caption, locale) }}</p>
             </v-col>
