@@ -243,6 +243,29 @@
           }
         }
       ]
+    },
+    {
+      "id": "niagara-falls-on",
+      "name": { "en": "Niagara Falls", "fr": "Niagara Falls" },
+      "province": "ON",
+      "alprStatus": "mobile_only",
+      "statusNote": {
+        "en": "Niagara Falls is policed by the Niagara Regional Police Service, which operates Automatic Licence Plate Recognition (ALPR) through Axon In-Car Camera systems mounted on the windshields of patrol vehicles — a mobile program. panopti.ca found no evidence of a fixed or stationary ALPR camera network installed in Niagara Falls, nor of Niagara Falls City Council or the regional police board actively pursuing one.",
+        "fr": "Niagara Falls est desservie par le Service de police régional de Niagara, qui exploite la reconnaissance automatique des plaques d'immatriculation (ALPR) au moyen de systèmes de caméras embarquées Axon montés sur le pare-brise des véhicules de patrouille — un programme mobile. panopti.ca n'a trouvé aucune preuve d'un réseau de caméras ALPR fixes installé à Niagara Falls, ni d'une démarche active du conseil municipal de Niagara Falls ou de la commission de police régionale à ce sujet."
+      },
+      "coords": [-79.0747, 43.0955],
+      "election": {
+        "date": "2026-10-26",
+        "body": { "en": "City Council & Mayor", "fr": "Conseil municipal et mairie" }
+      },
+      "statusEvidence": [
+        {
+          "type": "citation",
+          "date": "2026-08-20",
+          "title": { "en": "Niagara Regional Police Service — In-Car Camera and Automatic Licence Plate Recognition", "fr": "Service de police régional de Niagara — Caméra embarquée et reconnaissance automatique des plaques d'immatriculation" },
+          "url": "https://www.niagarapolice.ca/what-we-do/road-safety/in-car-camera-and-automatic-licence-plate-recognition/"
+        }
+      ]
     }
   ],
   "people": [
@@ -1072,6 +1095,67 @@
       "summary": {
         "en": "Chris Alexander, a former federal cabinet minister and Member of Parliament, is a registered candidate for Mayor of Toronto in the October 2026 election. panopti.ca has not found a documented public statement from him specifically about ALPR surveillance.",
         "fr": "Chris Alexander, ancien ministre fédéral et député, est candidat inscrit à la mairie de Toronto pour l'élection d'octobre 2026. panopti.ca n'a trouvé aucune déclaration publique documentée de sa part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "jim-diodati",
+      "name": "Jim Diodati",
+      "municipality": "niagara-falls-on",
+      "roles": [
+        { "type": "incumbent", "office": { "en": "Mayor", "fr": "Maire" } },
+        { "type": "candidate", "office": { "en": "Mayor", "fr": "Maire" }, "election": "2026-10-26" }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Jim Diodati has been Mayor of Niagara Falls since 2010 and is a registered candidate for re-election in the October 2026 election. panopti.ca has not found a documented public statement or vote from him specifically about ALPR surveillance.",
+        "fr": "Jim Diodati est maire de Niagara Falls depuis 2010 et est candidat inscrit pour sa réélection lors de l'élection d'octobre 2026. panopti.ca n'a trouvé aucune déclaration publique ni aucun vote documenté de sa part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "paul-manning",
+      "name": "Paul Manning",
+      "municipality": "niagara-falls-on",
+      "roles": [
+        { "type": "candidate", "office": { "en": "Mayor", "fr": "Maire" }, "election": "2026-10-26" }
+      ],
+      "stance": "opposes",
+      "summary": {
+        "en": "Paul Manning, a candidate for Mayor of Niagara Falls in the October 2026 election, opposes fixed ALPR cameras. Speaking with panopti.ca directly, Manning confirmed his opposition and authorized us to note it here. His full responses to panopti.ca's questionnaire are pending and will be published in his own words once received.",
+        "fr": "Paul Manning, candidat à la mairie de Niagara Falls à l'élection d'octobre 2026, s'oppose aux caméras ALPR fixes. Lors d'un échange direct avec panopti.ca, M. Manning a confirmé son opposition et nous a autorisés à l'indiquer ici. Ses réponses complètes au questionnaire de panopti.ca sont à venir et seront publiées dans ses propres mots dès leur réception."
+      },
+      "links": {
+        "website": "https://paulmanning.online/"
+      },
+      "evidence": []
+    },
+    {
+      "id": "lori-lococo",
+      "name": "Lori Lococo",
+      "municipality": "niagara-falls-on",
+      "roles": [
+        { "type": "incumbent", "office": { "en": "City Councillor", "fr": "Conseillère municipale" } },
+        { "type": "candidate", "office": { "en": "Mayor", "fr": "Mairesse" }, "election": "2026-10-26" }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Lori Lococo has served on Niagara Falls City Council for eight years and is a registered candidate for Mayor in the October 2026 election. panopti.ca has not found a documented public statement or vote from her specifically about ALPR surveillance.",
+        "fr": "Lori Lococo siège au conseil municipal de Niagara Falls depuis huit ans et est candidate inscrite à la mairie pour l'élection d'octobre 2026. panopti.ca n'a trouvé aucune déclaration publique ni aucun vote documenté de sa part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "kevin-martineau",
+      "name": "Kevin Martineau",
+      "municipality": "niagara-falls-on",
+      "roles": [
+        { "type": "candidate", "office": { "en": "Mayor", "fr": "Maire" }, "election": "2026-10-26" }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Kevin Martineau, a Niagara Falls barber, is a registered candidate for Mayor in the October 2026 election. panopti.ca has not found a documented public statement from him specifically about ALPR surveillance.",
+        "fr": "Kevin Martineau, barbier de Niagara Falls, est candidat inscrit à la mairie pour l'élection d'octobre 2026. panopti.ca n'a trouvé aucune déclaration publique documentée de sa part au sujet de la surveillance par ALPR."
       },
       "evidence": []
     }
