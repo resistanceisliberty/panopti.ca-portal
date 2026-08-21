@@ -198,6 +198,35 @@
           "url": "https://www.cbc.ca/news/canada/kitchener-waterloo/region-of-waterloo-police-cctv-camera-program-9.7189364"
         }
       ]
+    },
+    {
+      "id": "toronto-on",
+      "name": { "en": "Toronto", "fr": "Toronto" },
+      "province": "ON",
+      "alprStatus": "mobile_only",
+      "statusNote": {
+        "en": "Toronto Police Service operates automated licence plate readers on roughly 600 vehicles — Genetec AutoVu on parking-enforcement units and an Axon in-car system on patrol vehicles — a mobile program approved by the Toronto Police Services Board in July 2023. panopti.ca found no public procurement, Police Services Board authorization, or privacy impact assessment for any fixed or stationary ALPR. A pole-mounted, solar-powered Genetec AutoVu Cloudrunner (a fixed ALPR) has been photographed at the northwest corner of Bloor Street West and Spadina Avenue; it appears in none of the City's or the Service's public records and is under investigation, with freedom-of-information requests pending. Treat the fixed-camera report as unverified pending confirmation.",
+        "fr": "Le Service de police de Toronto exploite des lecteurs automatisés de plaques d'immatriculation sur environ 600 véhicules — des unités Genetec AutoVu affectées au contrôle du stationnement et un système Axon embarqué sur les véhicules de patrouille —, un programme mobile approuvé par la Commission des services policiers de Toronto en juillet 2023. panopti.ca n'a trouvé aucune preuve d'acquisition publique, d'autorisation de la Commission des services policiers ni d'évaluation des facteurs relatifs à la vie privée pour un ALPR fixe. Une caméra Genetec AutoVu Cloudrunner fixe, alimentée à l'énergie solaire et montée sur un poteau, a été photographiée à l'angle nord-ouest des rues Bloor Ouest et Spadina; elle ne figure dans aucun registre public de la Ville ou du Service et fait l'objet d'une enquête, des demandes d'accès à l'information étant en cours. Ce signalement de caméra fixe demeure non vérifié en attendant confirmation."
+      },
+      "coords": [-79.3832, 43.6532],
+      "election": {
+        "date": "2026-10-26",
+        "body": { "en": "City Council & Mayor", "fr": "Conseil municipal et mairie" }
+      },
+      "statusEvidence": [
+        {
+          "type": "citation",
+          "date": "2026-08-20",
+          "title": { "en": "Toronto Police Service — Automatic Licence Plate Reader", "fr": "Service de police de Toronto — Reconnaissance automatique des plaques d'immatriculation" },
+          "url": "https://www.tps.ca/use-technology/automatic-licence-plate-reader/"
+        },
+        {
+          "type": "citation",
+          "date": "2026-08-20",
+          "title": { "en": "Toronto Police Service — Artificial Intelligence technology register (AutoVu by Genetec, mounted on a parking enforcement vehicle)", "fr": "Service de police de Toronto — Registre des technologies d'intelligence artificielle (AutoVu de Genetec, monté sur un véhicule du contrôle du stationnement)" },
+          "url": "https://www.tps.ca/police-reform/artificial-intelligence/"
+        }
+      ]
     }
   ],
   "people": [
@@ -983,6 +1012,50 @@
       },
       "links": {
         "website": "https://www.alexmooreward10.ca/"
+      },
+      "evidence": []
+    },
+    {
+      "id": "olivia-chow",
+      "name": "Olivia Chow",
+      "municipality": "toronto-on",
+      "roles": [
+        { "type": "incumbent", "office": { "en": "Mayor", "fr": "Mairesse" } },
+        { "type": "candidate", "office": { "en": "Mayor", "fr": "Mairesse" }, "election": "2026-10-26" }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Olivia Chow has been Mayor of Toronto since 2023 and is a registered candidate for re-election in the October 2026 election. panopti.ca has not found a documented public statement or vote from her specifically about ALPR surveillance.",
+        "fr": "Olivia Chow est mairesse de Toronto depuis 2023 et est candidate inscrite pour sa réélection lors de l'élection d'octobre 2026. panopti.ca n'a trouvé aucune déclaration publique ni aucun vote documenté de sa part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "brad-bradford",
+      "name": "Brad Bradford",
+      "municipality": "toronto-on",
+      "roles": [
+        { "type": "incumbent", "office": { "en": "Ward 19 Councillor (Beaches–East York)", "fr": "Conseiller municipal, quartier 19 (Beaches–East York)" } },
+        { "type": "candidate", "office": { "en": "Mayor", "fr": "Maire" }, "election": "2026-10-26" }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Brad Bradford represents Ward 19 (Beaches–East York) on Toronto City Council and is a registered candidate for Mayor in the October 2026 election. panopti.ca has not found a documented public statement or vote from him specifically about ALPR surveillance.",
+        "fr": "Brad Bradford représente le quartier 19 (Beaches–East York) au conseil municipal de Toronto et est candidat inscrit à la mairie pour l'élection d'octobre 2026. panopti.ca n'a trouvé aucune déclaration publique ni aucun vote documenté de sa part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "chris-alexander",
+      "name": "Chris Alexander",
+      "municipality": "toronto-on",
+      "roles": [
+        { "type": "candidate", "office": { "en": "Mayor", "fr": "Maire" }, "election": "2026-10-26" }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Chris Alexander, a former federal cabinet minister and Member of Parliament, is a registered candidate for Mayor of Toronto in the October 2026 election. panopti.ca has not found a documented public statement from him specifically about ALPR surveillance.",
+        "fr": "Chris Alexander, ancien ministre fédéral et député, est candidat inscrit à la mairie de Toronto pour l'élection d'octobre 2026. panopti.ca n'a trouvé aucune déclaration publique documentée de sa part au sujet de la surveillance par ALPR."
       },
       "evidence": []
     }
