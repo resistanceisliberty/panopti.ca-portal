@@ -7,32 +7,12 @@
           <v-img height="30" contain :src="isDark ? '/panoptica-dark.svg' : '/panoptica-light.svg'" />
         </v-col>
         
-        <!-- Internal Links -->
-        <v-col cols="7" sm="3">
-          <v-list-subheader class="mx-4 font-weight-black text-subtitle-1" :class="isDark ? 'text-grey-lighten-5' : 'text-black'" id="footer-info-heading">{{ t('footer.info') }}</v-list-subheader>
-          <v-list density="compact" aria-labelledby="footer-info-heading" role="list">
-            <v-list-item role="listitem"
-              v-for="link in internalLinks"
-              :key="link.titleKey"
-              link
-              :to="link.to && localePath(link.to)"
-              slim
-              :aria-label="t(link.altKey ?? '')"
-            >
-                <v-list-item-title class="d-flex align-center">
-                <v-icon class="custom-icon" start :icon="link.icon" :alt="t(link.altKey ?? '')" />
-                {{ t(link.titleKey) }}
-                </v-list-item-title>
-            </v-list-item>
-          </v-list>
-        </v-col>
-
-        <!-- External Links -->
-        <v-col cols="5" sm="3">
-          <v-list-subheader class="mx-4 font-weight-black text-subtitle-1" :class="isDark ? 'text-grey-lighten-5' : 'text-black'" id="footer-involved-heading">{{ t('footer.involved') }}</v-list-subheader>
-          <v-list density="compact" aria-labelledby="footer-involved-heading" role="list">
+        <!-- Link groups: Info · Get Involved · Community · Social Media -->
+        <v-col v-for="group in groups" :key="group.id" cols="6" sm="3">
+          <v-list-subheader class="mx-4 font-weight-black text-subtitle-1" :class="isDark ? 'text-grey-lighten-5' : 'text-black'" :id="`footer-${group.id}-heading`">{{ t(group.headingKey) }}</v-list-subheader>
+          <v-list density="compact" :aria-labelledby="`footer-${group.id}-heading`" role="list">
             <v-list-item
-              v-for="link in externalLinks"
+              v-for="link in group.links"
               :key="link.titleKey"
               link
               slim
@@ -58,9 +38,8 @@
 
         <!-- Copyright -->
         <v-col
-          class="text-center d-flex align-center justify-center text-grey-darken-1"
+          class="text-center d-flex align-center justify-center text-grey-darken-1 mt-4"
           cols="12"
-          sm="6"
         >
           <div class="copyright" :class="isDark ? 'text-grey-lighten-5' : 'text-black'">
             <p>&copy; {{ currentYear }} panopti.ca &middot; {{ t('footer.open_source') }} <a href="https://deflock.org" target="_blank" rel="noopener noreferrer" style="color: unset; font-weight: normal;">DeFlock</a></p>
@@ -113,12 +92,29 @@ const SIGNAL_ICON_PATH = 'M12 0q-.934 0-1.83.139l.17 1.111a11 11 0 0 1 3.32 0l.1
 // Discord logo (simple-icons), currentColor fill — same inline-SVG convention as above.
 const DISCORD_ICON_PATH = 'M20.317 4.3698a19.7913 19.7913 0 0 0-4.8851-1.5152.0741.0741 0 0 0-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 0 0-.0785-.037 19.7363 19.7363 0 0 0-4.8852 1.515.0699.0699 0 0 0-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 0 0 .0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 0 0 .0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 0 0-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 0 1-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 0 1 .0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 0 1 .0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 0 1-.0066.1276 12.2986 12.2986 0 0 1-1.873.8914.0766.0766 0 0 0-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 0 0 .0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 0 0 .0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 0 0-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z';
 
-const externalLinks: FooterLink[] = [
+// Bluesky butterfly (simple-icons), currentColor fill.
+const BLUESKY_ICON_PATH = 'M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.479 0-.688-.139-1.86-.902-2.203-.659-.299-1.664-.621-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z';
+
+const involvedLinks: FooterLink[] = [
   { titleKey: 'nav.github', href: 'https://github.com/resistanceisliberty/panopti.ca', icon: 'mdi-github' },
   { titleKey: 'nav.contact', to: '/contact', icon: 'mdi-email', altKey: 'nav.contact' },
-  { titleKey: 'footer.signal_desc', href: 'https://signal.group/#CjQKINKEjCutoejwUZB6Te4WuyFI1pfC8TxSjN1l7-lJ2clnEhDpDs8kXV0KHF4syMhl3R19', svgPath: SIGNAL_ICON_PATH, altKey: 'footer.signal_label' },
+];
+const communityLinks: FooterLink[] = [
   { titleKey: 'footer.discord_desc', href: 'https://discord.gg/MR6uEmSe77', svgPath: DISCORD_ICON_PATH, altKey: 'footer.discord_label' },
+  { titleKey: 'footer.signal_desc', href: 'https://signal.group/#CjQKINKEjCutoejwUZB6Te4WuyFI1pfC8TxSjN1l7-lJ2clnEhDpDs8kXV0KHF4syMhl3R19', svgPath: SIGNAL_ICON_PATH, altKey: 'footer.signal_label' },
+];
+const socialLinks: FooterLink[] = [
   { titleKey: 'footer.x_desc', href: 'https://x.com/panopticanada', svgPath: X_ICON_PATH, altKey: 'footer.x_label', titleParams: { handle: '@panopticanada' } },
+  { titleKey: 'footer.bluesky_desc', href: 'https://bsky.app/profile/panopti.bsky.social', svgPath: BLUESKY_ICON_PATH, altKey: 'footer.bluesky_label' },
+];
+
+// Footer link columns, in order. Community (chat) and Socials (follow) are
+// deliberately separate groups. Headings reuse the nav keys for consistency.
+const groups = [
+  { id: 'info', headingKey: 'footer.info', links: internalLinks },
+  { id: 'involved', headingKey: 'footer.involved', links: involvedLinks },
+  { id: 'community', headingKey: 'nav.community', links: communityLinks },
+  { id: 'socials', headingKey: 'nav.socials', links: socialLinks },
 ]
 </script>
 
