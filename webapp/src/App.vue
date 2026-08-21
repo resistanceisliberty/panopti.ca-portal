@@ -114,16 +114,20 @@ const SIGNAL_URL = 'https://signal.group/#CjQKINKEjCutoejwUZB6Te4WuyFI1pfC8TxSjN
 // Bluesky butterfly (simple-icons), currentColor fill — same inline-SVG convention as above.
 const BLUESKY_ICON_PATH = 'M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.479 0-.688-.139-1.86-.902-2.203-.659-.299-1.664-.621-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z';
 const BLUESKY_URL = 'https://bsky.app/profile/panopti.bsky.social';
-// Signal stays a separate labelled top-bar button; X + Bluesky nest under a "Socials" menu.
-// communityItems (all three, flat) drives the mobile drawer.
+// Discord logo (simple-icons), currentColor fill — same inline-SVG convention as above.
+const DISCORD_ICON_PATH = 'M20.317 4.3698a19.7913 19.7913 0 0 0-4.8851-1.5152.0741.0741 0 0 0-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 0 0-.0785-.037 19.7363 19.7363 0 0 0-4.8852 1.515.0699.0699 0 0 0-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 0 0 .0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 0 0 .0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 0 0-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 0 1-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 0 1 .0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 0 1 .0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 0 1-.0066.1276 12.2986 12.2986 0 0 1-1.873.8914.0766.0766 0 0 0-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 0 0 .0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 0 0 .0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 0 0-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z';
+const DISCORD_URL = 'https://discord.gg/MR6uEmSe77';
+// Community (chat) nest: Discord + Signal. Socials nest: X + Bluesky.
+// communityItems (all four, flat) drives the mobile drawer's Community section.
+const chatItems = [
+  { titleKey: 'footer.discord_label', href: DISCORD_URL, svgPath: DISCORD_ICON_PATH },
+  { titleKey: 'footer.signal_label', href: SIGNAL_URL, svgPath: SIGNAL_ICON_PATH },
+];
 const socialItems = [
   { titleKey: 'footer.x_label', href: X_URL, svgPath: X_ICON_PATH },
   { titleKey: 'footer.bluesky_label', href: BLUESKY_URL, svgPath: BLUESKY_ICON_PATH },
 ];
-const communityItems = [
-  { titleKey: 'footer.signal_label', href: SIGNAL_URL, svgPath: SIGNAL_ICON_PATH },
-  ...socialItems,
-];
+const communityItems = [...chatItems, ...socialItems];
 
 // ponytail: localStorage 'lang' is stored for forward-compat/parity with the map app;
 // the portal's source of truth is the URL, so it is not read back for redirects.
@@ -197,21 +201,37 @@ watch(() => theme.global.name.value, (newTheme) => {
 
           <!-- Contribute section -->
           <div class="d-flex align-center">
-            <!-- Signal: kept separate as its own labelled button -->
-            <v-btn
-              :href="SIGNAL_URL"
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="text"
-              class="mx-1"
-              :aria-label="t('footer.signal_label')"
-              :title="t('footer.signal_label')"
-            >
-              <svg class="appbar-x-icon mr-2" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                <path :d="SIGNAL_ICON_PATH" fill="currentColor" />
-              </svg>
-              {{ t('nav.signal') }}
-            </v-btn>
+            <!-- Community nest: Discord + Signal -->
+            <v-menu offset-y>
+              <template v-slot:activator="{ props }">
+                <v-btn
+                  variant="text"
+                  v-bind="props"
+                  prepend-icon="mdi-account-group"
+                  append-icon="mdi-chevron-down"
+                  class="mx-1"
+                >
+                  {{ t('nav.community') }}
+                </v-btn>
+              </template>
+              <v-list>
+                <v-list-item
+                  v-for="item in chatItems"
+                  :key="item.titleKey"
+                  :href="item.href"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  link
+                >
+                  <template v-slot:prepend>
+                    <svg class="appbar-x-icon mr-2" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                      <path :d="item.svgPath" fill="currentColor" />
+                    </svg>
+                  </template>
+                  <v-list-item-title>{{ t(item.titleKey) }}</v-list-item-title>
+                </v-list-item>
+              </v-list>
+            </v-menu>
 
             <!-- Socials nest: X + Bluesky -->
             <v-menu offset-y>
