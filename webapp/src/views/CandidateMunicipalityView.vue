@@ -17,6 +17,19 @@
           <EvidenceList v-if="muni.statusEvidence.length" :evidence="muni.statusEvidence" />
         </v-card>
 
+        <v-card v-if="muni.statusPhotos?.length" class="pa-6 mb-8" elevation="3" rounded="lg">
+          <h3 class="text-h6 font-weight-bold mb-1">{{ t('candidates.muni_photos_heading') }}</h3>
+          <p class="text-caption text-medium-emphasis mb-4">{{ t('candidates.muni_photos_sub') }}</p>
+          <v-row>
+            <v-col v-for="(ph, i) in muni.statusPhotos" :key="i" cols="12" sm="6">
+              <a :href="ph.src" target="_blank" rel="noopener noreferrer">
+                <v-img :src="ph.src" :alt="ph.caption ? lz(ph.caption, locale) : ''" rounded="lg" class="mb-2" style="max-height: 440px;" />
+              </a>
+              <p v-if="ph.caption" class="text-caption text-medium-emphasis mb-0">{{ lz(ph.caption, locale) }}</p>
+            </v-col>
+          </v-row>
+        </v-card>
+
         <v-card v-if="opposers.length" class="pa-5 mb-8" rounded="lg" variant="tonal" color="success" border>
           <div class="d-flex align-center mb-2">
             <v-icon class="mr-2">mdi-shield-account</v-icon>
