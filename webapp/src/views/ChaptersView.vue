@@ -1,7 +1,7 @@
 <template>
   <DefaultLayout>
     <template #header>
-      <Hero imageUrl="/door-knock.jpg" :title="t('chapters.title')" :description="t('chapters.subtitle')" />
+      <Hero imageUrl="/grassroots.jpg" :title="t('chapters.title')" :description="t('chapters.subtitle')" />
     </template>
     <v-container>
       <v-row><v-col cols="12" md="10" lg="8" class="mx-auto">
