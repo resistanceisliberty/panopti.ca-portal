@@ -21,6 +21,7 @@ const base: BaseRoute[] = [
   { path: '/candidates', name: 'candidates', component: () => import('../views/CandidatesView.vue'), metaKey: 'candidates' },
   { path: '/candidates/:municipality', name: 'candidates-municipality', component: () => import('../views/CandidateMunicipalityView.vue'), metaKey: 'candidatesMunicipality' },
   { path: '/candidates/:municipality/:person', name: 'candidates-person', component: () => import('../views/CandidatePersonView.vue'), metaKey: 'candidatesPerson' },
+  { path: '/chapters', name: 'chapters', component: () => import('../views/ChaptersView.vue'), metaKey: 'chapters' },
   { path: '/foi', name: 'foi', component: () => import('../views/FOIA.vue'), metaKey: 'foi' },
   { path: '/identify', name: 'identify', component: () => import('../views/Identify.vue'), metaKey: 'identify' },
   { path: '/contact', name: 'contact', component: () => import('../views/ContactView.vue'), metaKey: 'contact' },

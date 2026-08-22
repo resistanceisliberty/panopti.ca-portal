@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs'
 
 // Base English paths that get prerendered. French mirrors each under /fr.
 export const BASE_PATHS = [
-  '/', '/about', '/what-is-an-alpr', '/report/id', '/council', '/candidates',
+  '/', '/about', '/what-is-an-alpr', '/report/id', '/council', '/candidates', '/chapters',
   '/foi', '/identify', '/contact', '/privacy', '/terms', '/qr',
 ]
 

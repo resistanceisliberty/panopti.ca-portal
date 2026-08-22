@@ -7,6 +7,19 @@
     <v-container>
       <v-row><v-col cols="12" md="10" lg="8" class="mx-auto">
 
+        <v-card v-if="chapter" class="pa-6 mb-6" rounded="lg" color="primary" variant="tonal" border>
+          <div class="d-flex align-center mb-2">
+            <v-icon size="30" class="mr-3">mdi-account-group</v-icon>
+            <div>
+              <div class="text-overline">{{ t('chapters.local_chapter_label') }}</div>
+              <h3 class="text-h5 font-weight-bold mb-0">{{ lz(chapter.name, locale) }}</h3>
+            </div>
+          </div>
+          <p v-if="chapter.blurb" class="text-body-1 mb-4">{{ lz(chapter.blurb, locale) }}</p>
+          <v-btn :href="chapter.url" target="_blank" rel="noopener noreferrer" color="primary" variant="flat" prepend-icon="mdi-open-in-new" class="mr-2 mb-2">{{ t('chapters.visit_site') }}</v-btn>
+          <v-btn :to="localePath('/chapters')" variant="text" class="mb-2">{{ t('chapters.all_chapters') }}</v-btn>
+        </v-card>
+
         <v-alert v-if="muni.election" type="info" variant="tonal" class="mb-6"
                  :text="t('candidates.muni_election_banner', { date: muni.election.date, body: lz(muni.election.body, locale) })" />
         <v-alert v-else type="info" variant="tonal" class="mb-6" :text="t('candidates.muni_no_election')" />
@@ -82,12 +95,14 @@ import StanceChip from '@/components/candidates/StanceChip.vue'
 import EvidenceList from '@/components/candidates/EvidenceList.vue'
 import { useLocalePath } from '@/composables/useLocalePath'
 import { getMunicipality, peopleFor, wardOf, lz, type Person } from '@/data/candidates'
+import { chapterFor } from '@/data/chapters'
 
 const route = useRoute()
 const { t, locale } = useI18n()
 const { localePath } = useLocalePath()
 const muni = getMunicipality(String(route.params.municipality))
 const people = muni ? peopleFor(muni.id) : []
+const chapter = computed(() => (muni ? chapterFor(muni.id) : undefined))
 // Ward order. Sort on the role actually shown in each section: someone can be a Ward 4
 // incumbent running for Mayor, so a person-wide ward would misplace them in one list.
 const byWard = (ward: (p: Person) => number) => (a: Person, b: Person) =>

@@ -266,6 +266,35 @@
           "url": "https://www.niagarapolice.ca/what-we-do/road-safety/in-car-camera-and-automatic-licence-plate-recognition/"
         }
       ]
+    },
+    {
+      "id": "ottawa-on",
+      "name": { "en": "Ottawa", "fr": "Ottawa" },
+      "province": "ON",
+      "alprStatus": "mobile_only",
+      "statusNote": {
+        "en": "Ottawa is policed by the Ottawa Police Service (OPS), which has operated Automatic Licence Plate Recognition (ALPR) since 2016 and is rapidly expanding it — from 5 equipped patrol cars toward roughly 65, via a purchase of 37 Axon Fleet 3 in-car camera systems with integrated ALPR. The program is mobile: cameras mounted on patrol vehicles scan passing plates against Ministry of Transportation and OPS hotlists. panopti.ca found no evidence of a fixed or stationary ALPR camera network in Ottawa, but the mobile program's aggressive growth warrants close monitoring.",
+        "fr": "Ottawa est desservie par le Service de police d'Ottawa (SPO), qui exploite la reconnaissance automatique des plaques d'immatriculation (ALPR) depuis 2016 et l'étend rapidement — de 5 véhicules de patrouille équipés vers environ 65, au moyen de l'achat de 37 systèmes de caméras embarquées Axon Fleet 3 à ALPR intégrée. Le programme est mobile : des caméras montées sur les véhicules de patrouille lisent les plaques et les comparent aux listes de surveillance du ministère des Transports et du SPO. panopti.ca n'a trouvé aucune preuve d'un réseau de caméras ALPR fixes à Ottawa, mais la croissance rapide de ce programme mobile mérite une surveillance étroite."
+      },
+      "coords": [-75.6972, 45.4215],
+      "election": {
+        "date": "2026-10-26",
+        "body": { "en": "City Council & Mayor", "fr": "Conseil municipal et mairie" }
+      },
+      "statusEvidence": [
+        {
+          "type": "citation",
+          "date": "2026-08-22",
+          "title": { "en": "Ottawa police looking to buy 37 new Automated Licence Plate Readers this year (CTV News)", "fr": "La police d'Ottawa veut acheter 37 nouveaux lecteurs automatiques de plaques cette année (CTV News)" },
+          "url": "https://www.ctvnews.ca/ottawa/article/ottawa-police-looking-to-buy-37-new-automated-licence-plate-readers-this-year/"
+        },
+        {
+          "type": "citation",
+          "date": "2026-08-22",
+          "title": { "en": "Ottawa Police Service — In-Car Cameras", "fr": "Service de police d'Ottawa — Caméras embarquées" },
+          "url": "https://www.ottawapolice.ca/en/news-and-updates/in-car-cameras.aspx"
+        }
+      ]
     }
   ],
   "people": [
