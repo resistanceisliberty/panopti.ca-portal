@@ -13,7 +13,7 @@ export interface Chapter {
 export const chapters: Chapter[] = [
   {
     id: 'ottawa',
-    name: { en: 'Ottawa Chapter', fr: "Section d'Ottawa" },
+    name: { en: 'Panopti.ca Ottawa', fr: 'Panopti.ca Ottawa' },
     municipality: 'ottawa-on',
     url: 'https://sarcio.tech/',
     blurb: {
