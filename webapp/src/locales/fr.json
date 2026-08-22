@@ -507,10 +507,10 @@
     "home_link": "Accueil"
   },
   "discord": {
-    "heading": "Vous êtes sur le point de rejoindre Discord",
-    "alert": "{enforcement} et {employees} surveillent activement le serveur Discord. Veuillez agir en conséquence.",
+    "heading": "Vous êtes sur le point d'ouvrir une messagerie externe",
+    "alert": "{enforcement} et {employees} peuvent surveiller cette messagerie. Veuillez agir en conséquence.",
     "alert_enforcement": "Les forces de l'ordre",
-    "alert_employees": "les employés de Flock",
+    "alert_employees": "les entreprises d'ALPR",
     "notice": "Si vous comprenez les risques et souhaitez continuer, cliquez sur {proceed} ci-dessous.",
     "notice_proceed": "Continuer",
     "proceed_button": "Continuer",

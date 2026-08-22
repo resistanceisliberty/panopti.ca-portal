@@ -19,7 +19,8 @@ export function useDiscordIntercept() {
       // object (no .includes) on SVG <a> elements like the candidates map
       // dots — closest('a') can return either. Normalize before reading it.
       const href = typeof link.href === 'string' ? link.href : link.getAttribute('href') ?? '';
-      if (href && (href.includes('discord.gg') || href.includes('discord.com'))) {
+      const chatHosts = ['discord.gg', 'discord.com', 'matrix.to', 'signal.group', 'signal.me'];
+      if (href && chatHosts.some((h) => href.includes(h))) {
         e.preventDefault();
         discordUrl.value = href;
         showDialog.value = true;

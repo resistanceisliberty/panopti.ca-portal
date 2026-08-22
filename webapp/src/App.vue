@@ -97,7 +97,7 @@ const contributeItems: NavItem[] = [
 
 const metaItems: NavItem[] = [
   { titleKey: 'nav.contact', icon: 'mdi-email-outline', to: '/contact' },
-  { titleKey: 'nav.github', icon: 'mdi-github', href: 'https://github.com/resistanceisliberty/panopti.ca'},
+  { titleKey: 'chapters.title', icon: 'mdi-map-marker-multiple', to: '/chapters' },
 ];
 const drawer = ref(false)
 
@@ -211,7 +211,7 @@ watch(() => theme.global.name.value, (newTheme) => {
                 <v-btn
                   variant="text"
                   v-bind="props"
-                  prepend-icon="mdi-account-group"
+                  prepend-icon="mdi-chat"
                   append-icon="mdi-chevron-down"
                   class="mx-1"
                 >
@@ -301,6 +301,7 @@ watch(() => theme.global.name.value, (newTheme) => {
                 <v-btn
                   variant="text"
                   v-bind="props"
+                  prepend-icon="mdi-account-group"
                   append-icon="mdi-chevron-down"
                   class="mx-1"
                 >
@@ -335,6 +336,11 @@ watch(() => theme.global.name.value, (newTheme) => {
         </div>
 
         <v-spacer class="d-md-none" />
+
+        <v-btn icon href="https://github.com/resistanceisliberty/panopti.ca" target="_blank" rel="noopener noreferrer"
+               :aria-label="t('nav.github')" :title="t('nav.github')">
+          <v-icon>mdi-github</v-icon>
+        </v-btn>
 
         <v-btn variant="text" class="lang-toggle" :to="switchLocalePath()"
                :aria-label="locale === 'en' ? t('lang.switch_to_fr') : t('lang.switch_to_en')"

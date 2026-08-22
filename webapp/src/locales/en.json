@@ -507,10 +507,10 @@
     "home_link": "Home"
   },
   "discord": {
-    "heading": "You're about to join Discord",
-    "alert": "{enforcement} and {employees} actively monitor the Discord server. Please act accordingly.",
+    "heading": "You're about to open an external chat",
+    "alert": "{enforcement} and {employees} may monitor this chat. Please act accordingly.",
     "alert_enforcement": "Law enforcement",
-    "alert_employees": "Flock employees",
+    "alert_employees": "ALPR companies",
     "notice": "If you understand the risks and wish to continue, click {proceed} below.",
     "notice_proceed": "Proceed",
     "proceed_button": "Proceed",
