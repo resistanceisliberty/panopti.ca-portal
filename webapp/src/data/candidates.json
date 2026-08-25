@@ -1211,6 +1211,30 @@
         "website": "https://bensymathew.com/"
       },
       "evidence": []
+    },
+    {
+      "id": "dan-meinen",
+      "name": "Dan Meinen",
+      "municipality": "london-on",
+      "roles": [
+        {
+          "type": "candidate",
+          "office": {
+            "en": "Ward 7 Councillor Candidate",
+            "fr": "Candidat au poste de conseiller municipal, quartier 7"
+          },
+          "election": "2026-10-26"
+        }
+      ],
+      "stance": "opposes",
+      "summary": {
+        "en": "Dan Meinen, a candidate for Ward 7 Councillor in London's October 2026 election, opposes fixed ALPR cameras. Speaking with panopti.ca directly, Meinen confirmed his opposition and authorized us to note it here. His full responses to panopti.ca's questionnaire are pending and will be published in his own words once received.",
+        "fr": "Dan Meinen, candidat au poste de conseiller municipal du quartier 7 à l'élection d'octobre 2026 à London, s'oppose aux caméras ALPR fixes. Lors d'un échange direct avec panopti.ca, M. Meinen a confirmé son opposition et nous a autorisés à l'indiquer ici. Ses réponses complètes au questionnaire de panopti.ca sont à venir et seront publiées dans ses propres mots dès leur réception."
+      },
+      "links": {
+        "website": "https://danmeinen.ca/"
+      },
+      "evidence": []
     }
   ]
 }
