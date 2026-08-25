@@ -536,7 +536,7 @@
     "candidatesPerson": { "title": "Position d'un candidat sur les ALPR — panopti.ca", "description": "Où se situe ce candidat ou conseiller municipal au sujet de la surveillance par lecteurs automatiques de plaques d'immatriculation (ALPR), avec citations et preuves documentées." }
   },
   "candidates": {
-    "stance": { "opposes": "S'oppose aux ALPR", "supports": "Favorable aux ALPR", "no_position": "Aucune position déclarée" },
+    "stance": { "opposes": "S'oppose aux ALPR", "supports": "Favorable aux ALPR", "concerns": "A des préoccupations au sujet des ALPR", "no_position": "Aucune position déclarée" },
     "evidence": { "citation": "source citée", "questionnaire": "réponse au questionnaire", "outreach": "contact direct" },
     "hero_title": "Où se situent les candidats",
     "hero_desc": "Un suivi documenté de ce que les candidats et les élus municipaux du Canada ont déclaré au sujet des lecteurs automatiques de plaques d'immatriculation (ALPR).",
@@ -546,11 +546,12 @@
     "status": { "installed": "ALPR fixes installés", "considering": "ALPR fixes à l'étude", "mobile_only": "ALPR mobiles déployés", "none": "Aucun ALPR déployé", "deployed": "ALPR fixes déployés" },
     "election_on": "Élection : {date}",
     "no_election": "Aucune élection générale à venir",
-    "tally": "{o} s'opposent · {s} favorables · {n} sans position déclarée",
+    "tally": "{o} s'opposent · {s} favorables · {c} avec préoccupations · {n} sans position déclarée",
     "method_heading": "Méthodologie",
     "method_body": "Chaque page de municipalité présente les positions individuelles et déclarées publiquement des candidats et conseillers — tirées uniquement de sources documentées. panopti.ca ne déduit aucune position à partir de l'affiliation partisane ou de suppositions.",
     "method_opposes": "Le candidat ou le dirigeant municipal a déclaré ou voté publiquement pour s'opposer à l'installation ou à l'expansion de la surveillance par ALPR dans sa municipalité.",
     "method_supports": "Le candidat ou le dirigeant municipal a déclaré ou voté publiquement en faveur de l'installation ou de l'expansion de la surveillance par ALPR dans sa municipalité.",
+    "method_concerns": "Le candidat ou le dirigeant municipal a exprimé publiquement des préoccupations au sujet de la surveillance par ALPR, mais a délibérément choisi de ne pas se prononcer clairement pour ou contre — une position plus nuancée ou indécise.",
     "method_no_position": "panopti.ca n'a trouvé ni reçu aucune déclaration publique documentée de ce candidat ou dirigeant municipal, dans un sens ou dans l'autre.",
     "method_evidence_intro": "Chaque position s'appuie sur au moins un des trois types de preuves suivants :",
     "method_dispute": "Vous avez repéré une erreur ou une source qui nous manque? Écrivez-nous à {email} avec une correction et panopti.ca mettra le dossier à jour.",

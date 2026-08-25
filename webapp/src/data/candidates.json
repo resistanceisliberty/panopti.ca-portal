@@ -1187,6 +1187,30 @@
         "fr": "Kevin Martineau, barbier de Niagara Falls, est candidat inscrit à la mairie pour l'élection d'octobre 2026. panopti.ca n'a trouvé aucune déclaration publique documentée de sa part au sujet de la surveillance par ALPR."
       },
       "evidence": []
+    },
+    {
+      "id": "bensy-mathew",
+      "name": "Bensy Mathew",
+      "municipality": "london-on",
+      "roles": [
+        {
+          "type": "candidate",
+          "office": {
+            "en": "Ward 7 Councillor Candidate",
+            "fr": "Candidat au poste de conseiller municipal, quartier 7"
+          },
+          "election": "2026-10-26"
+        }
+      ],
+      "stance": "concerns",
+      "summary": {
+        "en": "Bensy Mathew, a candidate for Ward 7 Councillor in London's October 2026 election, has raised concerns about ALPR surveillance but asked panopti.ca not to characterize him as either supporting or opposing it. He indicated this is an interim position and said a more detailed response will follow; his record will be updated when it is received.",
+        "fr": "Bensy Mathew, candidat au poste de conseiller municipal du quartier 7 à l'élection d'octobre 2026 à London, a exprimé des préoccupations au sujet de la surveillance par ALPR, mais a demandé à panopti.ca de ne pas le présenter comme y étant favorable ni comme s'y opposant. Il a précisé qu'il s'agit d'une position provisoire et qu'une réponse plus détaillée suivra; son dossier sera mis à jour dès sa réception."
+      },
+      "links": {
+        "website": "https://bensymathew.com/"
+      },
+      "evidence": []
     }
   ]
 }

@@ -10,7 +10,7 @@ export interface Lz { en: string; fr: string }
 export interface Evidence { type: 'citation' | 'questionnaire' | 'outreach'; date: string; title: Lz; url?: string | null; note?: Lz | null }
 export interface Municipality { id: string; name: Lz; province: string; alprStatus: 'installed' | 'considering' | 'mobile_only' | 'none' | 'deployed'; statusNote: Lz; coords: [number, number]; election: { date: string; body: Lz } | null; statusEvidence: Evidence[]; statusPhotos?: { src: string; caption?: Lz }[] }
 export interface Role { type: 'incumbent' | 'candidate'; office: Lz; election?: string }
-export interface Person { id: string; name: string; municipality: string; roles: Role[]; stance: 'opposes' | 'supports' | 'no_position'; summary: Lz; evidence: Evidence[]; links?: { website?: string; contact?: string } }
+export interface Person { id: string; name: string; municipality: string; roles: Role[]; stance: 'opposes' | 'supports' | 'concerns' | 'no_position'; summary: Lz; evidence: Evidence[]; links?: { website?: string; contact?: string } }
 
 const data = raw as unknown as { lastUpdated: string; municipalities: Municipality[]; people: Person[] }
 
@@ -24,7 +24,7 @@ export const getMunicipality = (id: string) => data.municipalities.find((m) => m
 export const wardOf = (r: Role) => Number(/\d+/.exec(r.office.en)?.[0] ?? -1)
 export const peopleFor = (municipalityId: string) => data.people.filter((p) => p.municipality === municipalityId)
 export function stanceTally(municipalityId: string) {
-  const t = { opposes: 0, supports: 0, no_position: 0 }
+  const t = { opposes: 0, supports: 0, concerns: 0, no_position: 0 }
   for (const p of peopleFor(municipalityId)) t[p.stance]++
   return t
 }

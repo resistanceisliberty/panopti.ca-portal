@@ -8,8 +8,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-const props = withDefaults(defineProps<{ stance: 'opposes' | 'supports' | 'no_position'; small?: boolean }>(), { small: false })
+const props = withDefaults(defineProps<{ stance: 'opposes' | 'supports' | 'concerns' | 'no_position'; small?: boolean }>(), { small: false })
 const { t } = useI18n()
-const color = computed(() => ({ opposes: 'green', supports: 'red', no_position: 'grey' })[props.stance])
-const icon = computed(() => ({ opposes: 'mdi-shield-check', supports: 'mdi-cctv', no_position: 'mdi-help-circle-outline' })[props.stance])
+const color = computed(() => ({ opposes: 'green', supports: 'red', concerns: 'orange', no_position: 'grey' })[props.stance])
+const icon = computed(() => ({ opposes: 'mdi-shield-check', supports: 'mdi-cctv', concerns: 'mdi-alert-outline', no_position: 'mdi-help-circle-outline' })[props.stance])
 </script>

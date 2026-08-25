@@ -536,7 +536,7 @@
     "candidatesPerson": { "title": "Candidate ALPR Position — panopti.ca", "description": "Where this municipal candidate or councillor stands on automated licence plate reader (ALPR) surveillance, backed by citations and documented evidence." }
   },
   "candidates": {
-    "stance": { "opposes": "Opposes ALPRs", "supports": "Supports ALPRs", "no_position": "No stated position" },
+    "stance": { "opposes": "Opposes ALPRs", "supports": "Supports ALPRs", "concerns": "Has concerns about ALPRs", "no_position": "No stated position" },
     "evidence": { "citation": "citation", "questionnaire": "questionnaire response", "outreach": "direct outreach" },
     "hero_title": "Where Candidates Stand",
     "hero_desc": "An evidence-backed tracker of what municipal candidates and elected officials across Canada have said about automated licence plate readers (ALPRs).",
@@ -546,11 +546,12 @@
     "status": { "installed": "Fixed ALPRs installed", "considering": "Fixed ALPRs under consideration", "mobile_only": "Mobile ALPRs deployed", "none": "No ALPRs deployed", "deployed": "Fixed ALPRs deployed" },
     "election_on": "Election: {date}",
     "no_election": "No upcoming general election",
-    "tally": "{o} oppose · {s} support · {n} no stated position",
+    "tally": "{o} oppose · {s} support · {c} with concerns · {n} no stated position",
     "method_heading": "Methodology",
     "method_body": "Every municipality page lists the individual, on-the-record stances of candidates and councillors — drawn only from documented sources. panopti.ca does not infer a position from party affiliation or guesswork.",
     "method_opposes": "The candidate or municipal leader has said or voted, on the record, that they oppose installing or expanding ALPR surveillance in their municipality.",
     "method_supports": "The candidate or municipal leader has said or voted, on the record, that they support installing or expanding ALPR surveillance in their municipality.",
+    "method_concerns": "The candidate or municipal leader has raised concerns about ALPR surveillance on the record, but has deliberately not taken a clear position for or against it — a more nuanced or undecided stance.",
     "method_no_position": "panopti.ca has not found or received a documented, on-the-record statement from this candidate or municipal leader either way.",
     "method_evidence_intro": "Every stance is backed by at least one of three evidence types:",
     "method_dispute": "Spotted an error, or have a source we're missing? Email {email} with a correction and panopti.ca will update the record.",

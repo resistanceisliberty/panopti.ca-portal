@@ -54,7 +54,7 @@
                 {{ m.election ? t('candidates.election_on', { date: m.election.date }) : t('candidates.no_election') }}
               </p>
               <p class="text-body-2 text-medium-emphasis mb-0">
-                {{ t('candidates.tally', { o: stanceTally(m.id).opposes, s: stanceTally(m.id).supports, n: stanceTally(m.id).no_position }) }}
+                {{ t('candidates.tally', { o: stanceTally(m.id).opposes, s: stanceTally(m.id).supports, c: stanceTally(m.id).concerns, n: stanceTally(m.id).no_position }) }}
               </p>
             </v-card>
           </v-col>
@@ -76,15 +76,19 @@
           <p class="text-body-1 mb-4">{{ t('candidates.method_body') }}</p>
 
           <v-row class="mb-2">
-            <v-col cols="12" md="4">
+            <v-col cols="12" md="3">
               <StanceChip stance="opposes" class="mb-2" />
               <p class="text-body-2 mb-0">{{ t('candidates.method_opposes') }}</p>
             </v-col>
-            <v-col cols="12" md="4">
+            <v-col cols="12" md="3">
               <StanceChip stance="supports" class="mb-2" />
               <p class="text-body-2 mb-0">{{ t('candidates.method_supports') }}</p>
             </v-col>
-            <v-col cols="12" md="4">
+            <v-col cols="12" md="3">
+              <StanceChip stance="concerns" class="mb-2" />
+              <p class="text-body-2 mb-0">{{ t('candidates.method_concerns') }}</p>
+            </v-col>
+            <v-col cols="12" md="3">
               <StanceChip stance="no_position" class="mb-2" />
               <p class="text-body-2 mb-0">{{ t('candidates.method_no_position') }}</p>
             </v-col>
