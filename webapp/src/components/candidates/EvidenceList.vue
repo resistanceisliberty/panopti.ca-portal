@@ -29,7 +29,7 @@ const ICONS = { citation: 'mdi-newspaper-variant-outline', questionnaire: 'mdi-c
 :deep(.note-full) {
   display: block;
   -webkit-line-clamp: unset;
-  white-space: normal;
+  white-space: pre-line;
   overflow: visible;
   opacity: 0.9;
   margin-top: 4px;
