@@ -1228,13 +1228,110 @@
       ],
       "stance": "opposes",
       "summary": {
-        "en": "Dan Meinen, a candidate for Ward 7 Councillor in London's October 2026 election, opposes fixed ALPR cameras. Speaking with panopti.ca directly, Meinen confirmed his opposition and authorized us to note it here. His full responses to panopti.ca's questionnaire are pending and will be published in his own words once received.",
-        "fr": "Dan Meinen, candidat au poste de conseiller municipal du quartier 7 à l'élection d'octobre 2026 à London, s'oppose aux caméras ALPR fixes. Lors d'un échange direct avec panopti.ca, M. Meinen a confirmé son opposition et nous a autorisés à l'indiquer ici. Ses réponses complètes au questionnaire de panopti.ca sont à venir et seront publiées dans ses propres mots dès leur réception."
+        "en": "Dan Meinen, a candidate for Ward 7 Councillor in London's October 2026 election, opposes fixed ALPR cameras. In his response to panopti.ca's questionnaire, Meinen said he would vote no on any fixed ALPR procurement, renewal, or expansion — regardless of the retention limits proposed — because logging every passing plate, not just plates tied to an investigation, builds a detailed, permanent record of where ordinary people travel. Failing an outright refusal, he would demand the strictest limits: immediate deletion of non-matching data, retention of matches only as long as an active investigation requires under judicial oversight, access limited to named officers with every query logged, no sharing with third parties or other agencies, and annual independent audits. He would permit no data-sharing with other police services, federal agencies, or entities outside Canada — \"that is how local cameras become part of a national surveillance system\" — and would make a public privacy impact assessment a mandatory bylaw requirement. Meinen would redirect the money to investigative capacity, crisis-response and diversion teams, and crime prevention through environmental design. His answers appear below in his own words.",
+        "fr": "Dan Meinen, candidat au poste de conseiller municipal du quartier 7 à l'élection d'octobre 2026 à London, s'oppose aux caméras ALPR fixes. Dans sa réponse au questionnaire de panopti.ca, M. Meinen affirme qu'il voterait contre toute acquisition, tout renouvellement ou toute expansion d'un système d'ALPR fixe — peu importe les limites de conservation proposées — car enregistrer chaque plaque qui passe, et non seulement celles liées à une enquête, crée un dossier détaillé et permanent des déplacements des citoyens ordinaires. À défaut d'un refus pur et simple, il exigerait les limites les plus strictes : la suppression immédiate des données sans concordance, la conservation des concordances uniquement le temps qu'une enquête active l'exige sous supervision judiciaire, un accès réservé à des agents nommés avec journalisation de chaque requête, aucun partage avec des tiers ou d'autres organismes, et des audits indépendants annuels. Il n'autoriserait aucun partage de données avec d'autres services de police, des organismes fédéraux ou des entités hors du Canada — « c'est ainsi que des caméras locales deviennent une partie d'un système de surveillance national » — et ferait d'une évaluation des facteurs relatifs à la vie privée rendue publique une exigence obligatoire par règlement. M. Meinen réaffecterait les fonds à la capacité d'enquête, aux équipes d'intervention de crise et de déjudiciarisation, et à la prévention du crime par l'aménagement du milieu. Ses réponses apparaissent ci-dessous, dans ses propres mots. (Réponses fournies en anglais.)"
       },
       "links": {
         "website": "https://danmeinen.ca/"
       },
-      "evidence": []
+      "evidence": [
+        {
+          "type": "questionnaire",
+          "date": "2026-08-25",
+          "title": {
+            "en": "Q1 — Support or oppose fixed ALPRs",
+            "fr": "Q1 — Pour ou contre les ALPR fixes"
+          },
+          "note": {
+            "en": "No. The potential for the storage of this data is a massive privacy concern, and logging every plate that passes, not just license plates tied to an investigation is a concern. The data of where ordinary people travel, and the detailed records built up over time is a massive concern about how it's being used, and who is using it.",
+            "fr": "No. The potential for the storage of this data is a massive privacy concern, and logging every plate that passes, not just license plates tied to an investigation is a concern. The data of where ordinary people travel, and the detailed records built up over time is a massive concern about how it's being used, and who is using it."
+          }
+        },
+        {
+          "type": "questionnaire",
+          "date": "2026-08-25",
+          "title": {
+            "en": "Q2 — How would you vote on procurement?",
+            "fr": "Q2 — Comment voteriez-vous sur l'acquisition?"
+          },
+          "note": {
+            "en": "I would vote no regardless of the proposed retention limits.",
+            "fr": "I would vote no regardless of the proposed retention limits."
+          }
+        },
+        {
+          "type": "questionnaire",
+          "date": "2026-08-25",
+          "title": {
+            "en": "Q3 — Limits on ALPR data",
+            "fr": "Q3 — Limites sur les données ALPR"
+          },
+          "note": {
+            "en": "My starting position is that the best limit of ALPR data is not collecting it at all. But, if a system exists or the board proceeds over my objection, I would fight for;\n\n1. Retention - Data that doesn't match any records deleted immediately. Data that has a match tied to an active investigation can be only retained as long as the investigation requires with judicial oversight but not any longer.\n2. Access - Heavily restricted, only named officers and every single query logged. No bulk reporting, and absolutely no sharing with third parties, and no sharing with data with other agencies.\n3. Annual Independent audits.",
+            "fr": "My starting position is that the best limit of ALPR data is not collecting it at all. But, if a system exists or the board proceeds over my objection, I would fight for;\n\n1. Retention - Data that doesn't match any records deleted immediately. Data that has a match tied to an active investigation can be only retained as long as the investigation requires with judicial oversight but not any longer.\n2. Access - Heavily restricted, only named officers and every single query logged. No bulk reporting, and absolutely no sharing with third parties, and no sharing with data with other agencies.\n3. Annual Independent audits."
+          }
+        },
+        {
+          "type": "questionnaire",
+          "date": "2026-08-25",
+          "title": {
+            "en": "Q4 — Data-sharing with other agencies",
+            "fr": "Q4 — Partage des données avec d'autres organismes"
+          },
+          "note": {
+            "en": "No. That is how local cameras become part of a national surveillance system.",
+            "fr": "No. That is how local cameras become part of a national surveillance system."
+          }
+        },
+        {
+          "type": "questionnaire",
+          "date": "2026-08-25",
+          "title": {
+            "en": "Q5 — Public consultation & privacy assessment",
+            "fr": "Q5 — Consultation publique et évaluation vie privée"
+          },
+          "note": {
+            "en": "Public privacy impact assessment should be a mandatory bylaw requirement. Genuine consultation, public meetings, and enough time for residents to actually respond need to take place before a system like this ever deploys.",
+            "fr": "Public privacy impact assessment should be a mandatory bylaw requirement. Genuine consultation, public meetings, and enough time for residents to actually respond need to take place before a system like this ever deploys."
+          }
+        },
+        {
+          "type": "questionnaire",
+          "date": "2026-08-25",
+          "title": {
+            "en": "Q6 — Where the money should go",
+            "fr": "Q6 — Réaffectation des fonds"
+          },
+          "note": {
+            "en": "Solving the crimes ALPR is sold on. ALPR is marketed as a stolen-vehicle tool, but the honest fix for auto theft is investigative capacity and prevention: funding the officers and analysts who work theft rings.\n\nCrisis response and diversion. A meaningful share of police calls involve mental health, addiction, and homelessness. Every dollar into properly resourced crisis teams and diversion programs frees up sworn officers for the work only they can do. That's a better public-safety return than a ALPR camera subscription.\n\nEnvironmental design. Street lighting, sightline improvements, and maintained public spaces are unglamorous, but crime prevention through environmental design has decades of evidence behind it. It protects everyone equally and surveils no one.",
+            "fr": "Solving the crimes ALPR is sold on. ALPR is marketed as a stolen-vehicle tool, but the honest fix for auto theft is investigative capacity and prevention: funding the officers and analysts who work theft rings.\n\nCrisis response and diversion. A meaningful share of police calls involve mental health, addiction, and homelessness. Every dollar into properly resourced crisis teams and diversion programs frees up sworn officers for the work only they can do. That's a better public-safety return than a ALPR camera subscription.\n\nEnvironmental design. Street lighting, sightline improvements, and maintained public spaces are unglamorous, but crime prevention through environmental design has decades of evidence behind it. It protects everyone equally and surveils no one."
+          }
+        },
+        {
+          "type": "questionnaire",
+          "date": "2026-08-25",
+          "title": {
+            "en": "Q7 — FOI responsiveness",
+            "fr": "Q7 — Réponse aux demandes d'accès à l'information"
+          },
+          "note": {
+            "en": "Yes, without hesitation. Freedom of information is not a favour a city grants residents. It's the law and it's the mechanism that lets the public verify how the tools are being used.\n\nThe test I'd apply is simple. If a program can only survive because the public can't see how it works, the problem is the program, not the requester.",
+            "fr": "Yes, without hesitation. Freedom of information is not a favour a city grants residents. It's the law and it's the mechanism that lets the public verify how the tools are being used.\n\nThe test I'd apply is simple. If a program can only survive because the public can't see how it works, the problem is the program, not the requester."
+          }
+        },
+        {
+          "type": "questionnaire",
+          "date": "2026-08-25",
+          "title": {
+            "en": "Q8 — Message to voters",
+            "fr": "Q8 — Message aux électeurs"
+          },
+          "note": {
+            "en": "This issue is not about being against police or against technology. It's about a line that matters in a free society: the government should investigate people suspected of something, not track everyone suspected of nothing.",
+            "fr": "This issue is not about being against police or against technology. It's about a line that matters in a free society: the government should investigate people suspected of something, not track everyone suspected of nothing."
+          }
+        }
+      ]
     },
     {
       "id": "matt-millar",
