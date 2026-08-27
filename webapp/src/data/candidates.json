@@ -295,6 +295,35 @@
           "url": "https://www.ottawapolice.ca/en/news-and-updates/in-car-cameras.aspx"
         }
       ]
+    },
+    {
+      "id": "hamilton-on",
+      "name": { "en": "Hamilton", "fr": "Hamilton" },
+      "province": "ON",
+      "alprStatus": "mobile_only",
+      "statusNote": {
+        "en": "Hamilton is policed by the Hamilton Police Service (HPS), which operates a mobile Automatic Licence Plate Recognition (ALPR) program. In 2023, funded by a provincial grant, HPS equipped 78 patrol vehicles with integrated windshield-mounted ALPR and in-car camera systems — a rollout that began May 1, 2023 and was completed that fall. The vehicle-mounted cameras scan passing plates against Ontario Ministry of Transportation and CPIC hotlists (suspended drivers, stolen vehicles, expired tags, outstanding warrants, missing persons); HPS states that non-hit scans are deleted without the officer being notified, while hit data is retained under MFIPPA. panopti.ca found no evidence of a fixed or stationary ALPR network in Hamilton, Ontario. (Widely reported fixed Flock Safety cameras and DeFlock protests concern Hamilton, Ohio — a different city.)",
+        "fr": "Hamilton est desservie par le Service de police de Hamilton (HPS), qui exploite un programme mobile de reconnaissance automatique des plaques d'immatriculation (ALPR). En 2023, grâce à une subvention provinciale, le HPS a équipé 78 véhicules de patrouille de systèmes intégrés de caméras embarquées et d'ALPR montés sur le pare-brise — un déploiement amorcé le 1er mai 2023 et achevé à l'automne suivant. Les caméras montées sur les véhicules lisent les plaques et les comparent aux listes de surveillance du ministère des Transports de l'Ontario et du CIPC (permis suspendus, véhicules volés, vignettes expirées, mandats en cours, personnes disparues); le HPS indique que les lectures sans concordance sont supprimées sans que l'agent en soit informé, tandis que les données avec concordance sont conservées en vertu de la LAMRVP. panopti.ca n'a trouvé aucune preuve d'un réseau d'ALPR fixes à Hamilton, en Ontario. (Les caméras Flock Safety fixes et les manifestations DeFlock largement médiatisées concernent Hamilton, en Ohio — une autre ville.)"
+      },
+      "coords": [-79.8711, 43.2557],
+      "election": {
+        "date": "2026-10-26",
+        "body": { "en": "City Council & Mayor", "fr": "Conseil municipal et mairie" }
+      },
+      "statusEvidence": [
+        {
+          "type": "citation",
+          "date": "2026-08-27",
+          "title": { "en": "Automated License Plate Recognition — Hamilton Police Service", "fr": "Reconnaissance automatique des plaques — Service de police de Hamilton" },
+          "url": "https://hamiltonpolice.on.ca/about/automated-license-plate-recognition"
+        },
+        {
+          "type": "citation",
+          "date": "2026-08-27",
+          "title": { "en": "Hamilton Police Install Automated Licence Plate Readers and In-Car Cameras", "fr": "La police de Hamilton installe des lecteurs de plaques et des caméras embarquées" },
+          "url": "https://hamiltonpolice.on.ca/news/hamilton-police-install-automated-licence-plate-readers-and-in-car-cameras/"
+        }
+      ]
     }
   ],
   "people": [
