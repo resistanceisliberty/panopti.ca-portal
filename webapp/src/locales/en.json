@@ -516,7 +516,7 @@
     "proceed_button": "Proceed",
     "cancel_button": "Cancel"
   },
-  "chapters": { "title": "Local Chapters", "subtitle": "Community groups organizing against ALPR surveillance across Canada", "intro": "panopti.ca works with local, independently-operated chapters — community groups organizing against automated licence plate reader surveillance in their own cities. Find a chapter near you, or start one.", "local_chapter_label": "Local Chapter", "visit_site": "Visit chapter site", "all_chapters": "All chapters", "view_municipality": "Local ALPR status", "start_one": "Want to start a chapter in your city?", "contact_us": "Get in touch" },
+  "chapters": { "title": "Local Chapters", "subtitle": "Community groups organizing against ALPR surveillance across Canada", "intro": "panopti.ca works with local, independently-operated chapters — community groups organizing against automated licence plate reader surveillance in their own cities. Find a chapter near you, or start one.", "local_chapter_label": "Local Chapter", "visit_site": "Visit chapter site", "visit_chat": "Join the chapter chat", "all_chapters": "All chapters", "view_municipality": "Local ALPR status", "start_one": "Want to start a chapter in your city?", "contact_us": "Get in touch" },
   "meta": {
     "chapters": { "title": "Local Chapters — panopti.ca", "description": "Community chapters organizing against automated licence plate reader (ALPR) surveillance across Canada." },
     "home": { "title": "panopti.ca — Map ALPR & Licence Plate Reader Cameras in Canada", "description": "See where automatic licence plate readers (ALPRs) and Flock-style surveillance cameras are deployed across Canada. An open-source, crowdsourced map built on OpenStreetMap." },

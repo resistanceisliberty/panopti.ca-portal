@@ -13,7 +13,7 @@
             <h3 class="text-h5 font-weight-bold mb-0">{{ lz(c.name, locale) }}</h3>
           </div>
           <p v-if="c.blurb" class="text-body-1 mb-4">{{ lz(c.blurb, locale) }}</p>
-          <v-btn :href="c.url" target="_blank" rel="noopener noreferrer" color="primary" variant="flat" prepend-icon="mdi-open-in-new" class="mr-2 mb-2">{{ t('chapters.visit_site') }}</v-btn>
+          <v-btn :href="c.url" target="_blank" rel="noopener noreferrer" color="primary" variant="flat" :prepend-icon="c.kind === 'chat' ? 'mdi-chat' : 'mdi-open-in-new'" class="mr-2 mb-2">{{ t(c.kind === 'chat' ? 'chapters.visit_chat' : 'chapters.visit_site') }}</v-btn>
           <v-btn :to="localePath(`/candidates/${c.municipality}`)" variant="outlined" prepend-icon="mdi-map-marker" class="mb-2">{{ t('chapters.view_municipality') }}</v-btn>
         </v-card>
 

@@ -16,7 +16,7 @@
             </div>
           </div>
           <p v-if="chapter.blurb" class="text-body-1 mb-4">{{ lz(chapter.blurb, locale) }}</p>
-          <v-btn :href="chapter.url" target="_blank" rel="noopener noreferrer" color="primary" variant="flat" prepend-icon="mdi-open-in-new" class="mr-2 mb-2">{{ t('chapters.visit_site') }}</v-btn>
+          <v-btn :href="chapter.url" target="_blank" rel="noopener noreferrer" color="primary" variant="flat" :prepend-icon="chapter.kind === 'chat' ? 'mdi-chat' : 'mdi-open-in-new'" class="mr-2 mb-2">{{ t(chapter.kind === 'chat' ? 'chapters.visit_chat' : 'chapters.visit_site') }}</v-btn>
           <v-btn :to="localePath('/chapters')" variant="text" class="mb-2">{{ t('chapters.all_chapters') }}</v-btn>
         </v-card>
 

@@ -7,6 +7,7 @@ export interface Chapter {
   name: Lz
   municipality: string
   url: string
+  kind?: 'site' | 'chat' // how `url` links out; defaults to 'site'. 'chat' hosts (signal.group…) route through the chat-warning dialog.
   blurb?: Lz
 }
 
@@ -19,6 +20,17 @@ export const chapters: Chapter[] = [
     blurb: {
       en: 'A local chapter organizing against ALPR surveillance in Ottawa. Visit their site to connect and get involved.',
       fr: "Une section locale qui s'organise contre la surveillance par ALPR à Ottawa. Visitez leur site pour vous impliquer.",
+    },
+  },
+  {
+    id: 'hamilton',
+    name: { en: 'Panopti.ca Hamilton', fr: 'Panopti.ca Hamilton' },
+    municipality: 'hamilton-on',
+    url: 'https://signal.group/#CjQKIAvioBPinJBX9fGKuR11gH2dTmeg3PTyeww1iEOIBubfEhDliS6ileuZRYTbFct-NdxM',
+    kind: 'chat',
+    blurb: {
+      en: 'A recently started local chapter organizing against ALPR surveillance in Hamilton. Join the Signal group chat to connect and get involved.',
+      fr: "Une section locale récemment lancée qui s'organise contre la surveillance par ALPR à Hamilton. Rejoignez le groupe Signal pour vous impliquer.",
     },
   },
 ]
