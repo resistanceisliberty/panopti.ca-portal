@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-20",
+  "lastUpdated": "2026-09-01",
   "municipalities": [
     {
       "id": "london-on",
@@ -1482,6 +1482,132 @@
           }
         }
       ]
+    },
+    {
+      "id": "david-alton",
+      "name": "David Alton",
+      "municipality": "kitchener-on",
+      "roles": [
+        {
+          "type": "candidate",
+          "office": {
+            "en": "Mayor",
+            "fr": "Maire"
+          },
+          "election": "2026-10-26"
+        }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "David Alton is a registered candidate for Mayor in Kitchener's October 2026 election. panopti.ca has not found a documented public statement from them specifically about ALPR surveillance.",
+        "fr": "David Alton est candidat inscrit à la mairie pour l'élection d'octobre 2026 à Kitchener. panopti.ca n'a trouvé aucune déclaration publique documentée de sa part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "wazhma-frogh",
+      "name": "Wazhma Frogh",
+      "municipality": "kitchener-on",
+      "roles": [
+        {
+          "type": "candidate",
+          "office": {
+            "en": "Mayor",
+            "fr": "Maire"
+          },
+          "election": "2026-10-26"
+        }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Wazhma Frogh is a registered candidate for Mayor in Kitchener's October 2026 election. panopti.ca has not found a documented public statement from them specifically about ALPR surveillance.",
+        "fr": "Wazhma Frogh est candidat inscrit à la mairie pour l'élection d'octobre 2026 à Kitchener. panopti.ca n'a trouvé aucune déclaration publique documentée de sa part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "wali-khan",
+      "name": "Wali Khan",
+      "municipality": "kitchener-on",
+      "roles": [
+        {
+          "type": "candidate",
+          "office": {
+            "en": "Mayor",
+            "fr": "Maire"
+          },
+          "election": "2026-10-26"
+        }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Wali Khan is a registered candidate for Mayor in Kitchener's October 2026 election. panopti.ca has not found a documented public statement from them specifically about ALPR surveillance.",
+        "fr": "Wali Khan est candidat inscrit à la mairie pour l'élection d'octobre 2026 à Kitchener. panopti.ca n'a trouvé aucune déclaration publique documentée de sa part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "manikantan-nair",
+      "name": "Manikantan Nair",
+      "municipality": "kitchener-on",
+      "roles": [
+        {
+          "type": "candidate",
+          "office": {
+            "en": "Mayor",
+            "fr": "Maire"
+          },
+          "election": "2026-10-26"
+        }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Manikantan Nair is a registered candidate for Mayor in Kitchener's October 2026 election. panopti.ca has not found a documented public statement from them specifically about ALPR surveillance.",
+        "fr": "Manikantan Nair est candidat inscrit à la mairie pour l'élection d'octobre 2026 à Kitchener. panopti.ca n'a trouvé aucune déclaration publique documentée de sa part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "george-trihenea",
+      "name": "George Trihenea",
+      "municipality": "kitchener-on",
+      "roles": [
+        {
+          "type": "candidate",
+          "office": {
+            "en": "Mayor",
+            "fr": "Maire"
+          },
+          "election": "2026-10-26"
+        }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "George Trihenea is a registered candidate for Mayor in Kitchener's October 2026 election. panopti.ca has not found a documented public statement from them specifically about ALPR surveillance.",
+        "fr": "George Trihenea est candidat inscrit à la mairie pour l'élection d'octobre 2026 à Kitchener. panopti.ca n'a trouvé aucune déclaration publique documentée de sa part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "cindy-ward",
+      "name": "Cindy Ward",
+      "municipality": "kitchener-on",
+      "roles": [
+        {
+          "type": "candidate",
+          "office": {
+            "en": "Mayor",
+            "fr": "Maire"
+          },
+          "election": "2026-10-26"
+        }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Cindy Ward is a registered candidate for Mayor in Kitchener's October 2026 election. panopti.ca has not found a documented public statement from them specifically about ALPR surveillance.",
+        "fr": "Cindy Ward est candidat inscrit à la mairie pour l'élection d'octobre 2026 à Kitchener. panopti.ca n'a trouvé aucune déclaration publique documentée de sa part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
     }
   ]
 }
