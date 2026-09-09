@@ -7,15 +7,24 @@
       <v-row><v-col cols="12" md="10" lg="8" class="mx-auto">
         <p class="text-body-1 mb-6">{{ t('chapters.intro') }}</p>
 
-        <v-card v-for="c in chapters" :key="c.id" class="pa-6 mb-4" rounded="lg" elevation="2" border>
-          <div class="d-flex align-center mb-2">
-            <v-icon color="primary" size="30" class="mr-3">mdi-account-group</v-icon>
-            <h3 class="text-h5 font-weight-bold mb-0">{{ lz(c.name, locale) }}</h3>
-          </div>
-          <p v-if="c.blurb" class="text-body-1 mb-4">{{ lz(c.blurb, locale) }}</p>
-          <v-btn :href="c.url" target="_blank" rel="noopener noreferrer" color="primary" variant="flat" :prepend-icon="c.kind === 'chat' ? 'mdi-chat' : 'mdi-open-in-new'" class="mr-2 mb-2">{{ t(c.kind === 'chat' ? 'chapters.visit_chat' : 'chapters.visit_site') }}</v-btn>
-          <v-btn :to="localePath(`/candidates/${c.municipality}`)" variant="outlined" prepend-icon="mdi-map-marker" class="mb-2">{{ t('chapters.view_municipality') }}</v-btn>
-        </v-card>
+        <template v-for="s in sections" :key="s.id">
+          <template v-if="s.items.length">
+            <template v-if="s.headingKey">
+              <h2 class="text-h5 font-weight-bold mt-10 mb-2">{{ t(s.headingKey) }}</h2>
+              <p class="text-body-2 text-medium-emphasis mb-4">{{ t(s.introKey!) }}</p>
+            </template>
+
+            <v-card v-for="c in s.items" :key="c.id" class="pa-6 mb-4" rounded="lg" elevation="2" border>
+              <div class="d-flex align-center mb-2">
+                <v-icon color="primary" size="30" class="mr-3">{{ c.type === 'affiliate' ? 'mdi-handshake-outline' : 'mdi-account-group' }}</v-icon>
+                <h3 class="text-h5 font-weight-bold mb-0">{{ lz(c.name, locale) }}</h3>
+              </div>
+              <p v-if="c.blurb" class="text-body-1 mb-4">{{ lz(c.blurb, locale) }}</p>
+              <v-btn :href="c.url" target="_blank" rel="noopener noreferrer" color="primary" variant="flat" :prepend-icon="c.kind === 'chat' ? 'mdi-chat' : 'mdi-open-in-new'" class="mr-2 mb-2">{{ t(c.kind === 'chat' ? 'chapters.visit_chat' : 'chapters.visit_site') }}</v-btn>
+              <v-btn :to="localePath(`/candidates/${c.municipality}`)" variant="outlined" prepend-icon="mdi-map-marker" class="mb-2">{{ t('chapters.view_municipality') }}</v-btn>
+            </v-card>
+          </template>
+        </template>
 
         <p class="text-body-2 text-medium-emphasis mt-8">
           {{ t('chapters.start_one') }}
@@ -33,7 +42,14 @@ import DefaultLayout from '@/layouts/DefaultLayout.vue'
 import Hero from '@/components/layout/Hero.vue'
 import { useLocalePath } from '@/composables/useLocalePath'
 import { lz } from '@/data/candidates'
-import { chapters } from '@/data/chapters'
+import { localChapters, affiliates, type Chapter } from '@/data/chapters'
 const { t, locale } = useI18n()
 const { localePath } = useLocalePath()
+
+// Affiliates are independent groups, so they get their own headed section rather than
+// sitting in the chapter list unlabelled.
+const sections: { id: string; headingKey?: string; introKey?: string; items: Chapter[] }[] = [
+  { id: 'chapters', items: localChapters },
+  { id: 'affiliates', headingKey: 'chapters.affiliates_heading', introKey: 'chapters.affiliates_intro', items: affiliates },
+]
 </script>

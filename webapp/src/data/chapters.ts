@@ -1,13 +1,14 @@
 import type { Lz } from './candidates'
 
-// Local organizing chapters. `municipality` links a chapter to its
-// /candidates/<id> page so that page can surface the chapter prominently.
+// Local organizing chapters and affiliated groups. `municipality` links an entry to its
+// /candidates/<id> page so that page can surface it prominently.
 export interface Chapter {
   id: string
   name: Lz
   municipality: string
   url: string
   kind?: 'site' | 'chat' // how `url` links out; defaults to 'site'. 'chat' hosts (signal.group…) route through the chat-warning dialog.
+  type?: 'chapter' | 'affiliate' // defaults to 'chapter'. 'affiliate' = an independent group, not a panopti.ca chapter.
   blurb?: Lz
 }
 
@@ -33,7 +34,21 @@ export const chapters: Chapter[] = [
       fr: "Une section locale récemment lancée qui s'organise contre la surveillance par ALPR à Hamilton. Rejoignez le groupe Signal pour vous impliquer.",
     },
   },
+  {
+    id: 'toronto-rss',
+    name: { en: 'Toronto Resisting Surveillance Systems', fr: 'Toronto Resisting Surveillance Systems' },
+    municipality: 'toronto-on',
+    url: 'https://www.torontorss.org/',
+    type: 'affiliate',
+    blurb: {
+      en: 'An independent Toronto community group opposing police surveillance — automated licence plate readers, facial recognition and camera-mounted drones. Visit their site to connect and get involved.',
+      fr: "Un groupe communautaire indépendant de Toronto qui s'oppose à la surveillance policière — lecteurs automatiques de plaques d'immatriculation, reconnaissance faciale et drones équipés de caméras. Visitez leur site pour vous impliquer.",
+    },
+  },
 ]
+
+export const localChapters = chapters.filter((c) => c.type !== 'affiliate')
+export const affiliates = chapters.filter((c) => c.type === 'affiliate')
 
 export const chapterFor = (municipality: string): Chapter | undefined =>
   chapters.find((c) => c.municipality === municipality)

@@ -11,7 +11,7 @@
           <div class="d-flex align-center mb-2">
             <v-icon size="30" class="mr-3">mdi-account-group</v-icon>
             <div>
-              <div class="text-overline">{{ t('chapters.local_chapter_label') }}</div>
+              <div class="text-overline">{{ t(chapter.type === 'affiliate' ? 'chapters.affiliate_label' : 'chapters.local_chapter_label') }}</div>
               <h3 class="text-h5 font-weight-bold mb-0">{{ lz(chapter.name, locale) }}</h3>
             </div>
           </div>
