@@ -1,0 +1,5 @@
+
+# bun regenerates this locally; the repo lockfile is package-lock.json.
+# A tracked bun.lock makes Cloudflare Pages use `bun install --frozen-lockfile` and fail.
+bun.lock
+bun.lockb
