@@ -25,13 +25,14 @@ export const chapters: Chapter[] = [
   },
   {
     id: 'hamilton',
-    name: { en: 'Panopti.ca Hamilton', fr: 'Panopti.ca Hamilton' },
+    name: { en: 'Hamilton Privacy Alliance', fr: 'Hamilton Privacy Alliance' },
     municipality: 'hamilton-on',
     url: 'https://signal.group/#CjQKIAvioBPinJBX9fGKuR11gH2dTmeg3PTyeww1iEOIBubfEhDliS6ileuZRYTbFct-NdxM',
     kind: 'chat',
+    type: 'affiliate',
     blurb: {
-      en: 'A recently started local chapter organizing against ALPR surveillance in Hamilton. Join the Signal group chat to connect and get involved.',
-      fr: "Une section locale récemment lancée qui s'organise contre la surveillance par ALPR à Hamilton. Rejoignez le groupe Signal pour vous impliquer.",
+      en: 'An independent Hamilton community group organizing against ALPR surveillance. Join their Signal group chat to connect and get involved.',
+      fr: "Un groupe communautaire indépendant de Hamilton qui s'organise contre la surveillance par ALPR. Rejoignez leur groupe Signal pour vous impliquer.",
     },
   },
   {
