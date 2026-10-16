@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-30",
+  "lastUpdated": "2026-10-16",
   "municipalities": [
     {
       "id": "london-on",
@@ -166,36 +166,66 @@
     },
     {
       "id": "kitchener-on",
-      "name": { "en": "Kitchener", "fr": "Kitchener" },
+      "name": {
+        "en": "Kitchener",
+        "fr": "Kitchener"
+      },
       "province": "ON",
       "alprStatus": "installed",
       "statusNote": {
-        "en": "Waterloo Regional Police Service — which polices Kitchener along with Cambridge, Waterloo and area townships — launched fixed CCTV cameras equipped with ALPR technology, going live in Waterloo on June 23, 2026, with Kitchener intersections (including Fairway Road at Wilson Avenue and at Highway 8) following. Kitchener Mayor Berry Vrbanovic voted against the program at both the city and regional level, citing privacy concerns.",
-        "fr": "Le Service de police régional de Waterloo — qui dessert Kitchener ainsi que Cambridge, Waterloo et les cantons environnants — a lancé des caméras de vidéosurveillance fixes dotées de la technologie ALPR, entrées en service à Waterloo le 23 juin 2026, avec des intersections de Kitchener (dont Fairway Road à Wilson Avenue et à la route 8) à suivre. Le maire de Kitchener, Berry Vrbanovic, a voté contre le programme tant au niveau municipal que régional, invoquant des préoccupations liées à la vie privée."
+        "en": "Waterloo Regional Police Service — which polices Kitchener along with Cambridge, Waterloo and area townships — launched fixed CCTV cameras equipped with ALPR technology, going live in Waterloo on June 23, 2026, with Kitchener intersections (including Fairway Road at Wilson Avenue and at Highway 8) following. Kitchener Mayor Berry Vrbanovic voted against the program at both the city and regional level, citing privacy concerns. In October 2026, in a written reply to a public inquiry, the WRPS Innovation and Modernization Unit confirmed that while CCTV data is stored in Canada, “certain processing activities that support specific video analytics capabilities may occur outside of Canada, including in the United States.”",
+        "fr": "Le Service de police régional de Waterloo — qui dessert Kitchener ainsi que Cambridge, Waterloo et les cantons environnants — a lancé des caméras de vidéosurveillance fixes dotées de la technologie ALPR, entrées en service à Waterloo le 23 juin 2026, avec des intersections de Kitchener (dont Fairway Road à Wilson Avenue et à la route 8) à suivre. Le maire de Kitchener, Berry Vrbanovic, a voté contre le programme tant au niveau municipal que régional, invoquant des préoccupations liées à la vie privée. En octobre 2026, dans une réponse écrite à une demande du public, l'Unité d'innovation et de modernisation du SPRW a confirmé que, bien que les données de vidéosurveillance soient stockées au Canada, « certaines activités de traitement qui soutiennent des capacités d'analyse vidéo précises peuvent avoir lieu à l'extérieur du Canada, y compris aux États-Unis »."
       },
-      "coords": [-80.4925, 43.4516],
+      "coords": [
+        -80.4925,
+        43.4516
+      ],
       "election": {
         "date": "2026-10-26",
-        "body": { "en": "City Council & Mayor", "fr": "Conseil municipal et mairie" }
+        "body": {
+          "en": "City Council & Mayor",
+          "fr": "Conseil municipal et mairie"
+        }
       },
       "statusEvidence": [
         {
           "type": "citation",
           "date": "2026-08-09",
-          "title": { "en": "Waterloo Regional Police Service — Closed Circuit TV Equipped with Automated Licence Plate Reader Technology", "fr": "Service de police régional de Waterloo — Vidéosurveillance dotée de la technologie de reconnaissance automatique des plaques d'immatriculation" },
+          "title": {
+            "en": "Waterloo Regional Police Service — Closed Circuit TV Equipped with Automated Licence Plate Reader Technology",
+            "fr": "Service de police régional de Waterloo — Vidéosurveillance dotée de la technologie de reconnaissance automatique des plaques d'immatriculation"
+          },
           "url": "https://wrps.ca/programs-and-initiatives/closed-circuit-tv-equipped-automated-licence-plate-reader-technology"
         },
         {
           "type": "citation",
           "date": "2026-06-23",
-          "title": { "en": "Waterloo Regional Police Service — Proud to Launch the Expanded Use of CCTV and ALPR Technology", "fr": "Service de police régional de Waterloo — Fier de lancer l'utilisation élargie de la vidéosurveillance et de la technologie ALPR" },
+          "title": {
+            "en": "Waterloo Regional Police Service — Proud to Launch the Expanded Use of CCTV and ALPR Technology",
+            "fr": "Service de police régional de Waterloo — Fier de lancer l'utilisation élargie de la vidéosurveillance et de la technologie ALPR"
+          },
           "url": "https://wrps.ca/news/waterloo-regional-police-service-proud-launch-expanded-use-cctv-and-alpr-technology"
         },
         {
           "type": "citation",
           "date": "2026-05-06",
-          "title": { "en": "CBC News — Region of Waterloo will allow police to access infrastructure needed to install CCTV cameras", "fr": "CBC News — La Région de Waterloo autorisera la police à accéder aux infrastructures nécessaires à l'installation de caméras de vidéosurveillance" },
+          "title": {
+            "en": "CBC News — Region of Waterloo will allow police to access infrastructure needed to install CCTV cameras",
+            "fr": "CBC News — La Région de Waterloo autorisera la police à accéder aux infrastructures nécessaires à l'installation de caméras de vidéosurveillance"
+          },
           "url": "https://www.cbc.ca/news/canada/kitchener-waterloo/region-of-waterloo-police-cctv-camera-program-9.7189364"
+        },
+        {
+          "type": "outreach",
+          "date": "2026-10-09",
+          "title": {
+            "en": "WRPS confirms ALPR camera data may be processed outside Canada",
+            "fr": "Le SPRW confirme que les données des caméras ALPR peuvent être traitées hors du Canada"
+          },
+          "note": {
+            "en": "Written reply from the Waterloo Regional Police Service Innovation and Modernization Unit to a public inquiry: CCTV data is stored in Canada, but “certain processing activities that support specific video analytics capabilities may occur outside of Canada, including in the United States.” The Service said a Privacy Impact Assessment and legal review were completed and safeguards identified.",
+            "fr": "Réponse écrite de l'Unité d'innovation et de modernisation du Service de police régional de Waterloo à une demande du public : les données de vidéosurveillance sont stockées au Canada, mais « certaines activités de traitement qui soutiennent des capacités d'analyse vidéo précises peuvent avoir lieu à l'extérieur du Canada, y compris aux États-Unis ». Le Service indique qu'une évaluation des facteurs relatifs à la vie privée et un examen juridique ont été réalisés."
+          }
         }
       ]
     },
@@ -613,19 +643,40 @@
       "name": "Berry Vrbanovic",
       "municipality": "kitchener-on",
       "roles": [
-        { "type": "incumbent", "office": { "en": "Mayor", "fr": "Maire" } }
+        {
+          "type": "incumbent",
+          "office": {
+            "en": "Mayor",
+            "fr": "Maire"
+          }
+        }
       ],
       "stance": "opposes",
       "summary": {
-        "en": "Berry Vrbanovic, Mayor of Kitchener since 2014, voted against Waterloo Regional Police's regional camera-surveillance program — which WRPS's own materials describe as ALPR-equipped — at both the city and regional committee level, citing privacy concerns and a preference for more police patrols over camera surveillance.",
-        "fr": "Berry Vrbanovic, maire de Kitchener depuis 2014, a voté contre le programme régional de surveillance par caméra du Service de police régional de Waterloo — que le service décrit lui-même comme doté de la technologie ALPR — tant au niveau municipal qu'au comité régional, invoquant des préoccupations liées à la vie privée et une préférence pour davantage de patrouilles policières plutôt que la surveillance par caméra."
+        "en": "Berry Vrbanovic, Mayor of Kitchener since 2014, voted against Waterloo Regional Police's regional camera-surveillance program — which WRPS's own materials describe as ALPR-equipped — at both the city and regional committee level, citing privacy concerns and a preference for more police patrols over camera surveillance. In response to panopti.ca's outreach they confirmed their opposition; they have yet to submit the full questionnaire.",
+        "fr": "Berry Vrbanovic, maire de Kitchener depuis 2014, a voté contre le programme régional de surveillance par caméra du Service de police régional de Waterloo — que le service décrit lui-même comme doté de la technologie ALPR — tant au niveau municipal qu'au comité régional, invoquant des préoccupations liées à la vie privée et une préférence pour davantage de patrouilles policières plutôt que la surveillance par caméra. En réponse à la sollicitation de panopti.ca, a confirmé son opposition; n'a pas encore soumis le questionnaire complet."
       },
       "evidence": [
         {
           "type": "citation",
           "date": "2026-05-06",
-          "title": { "en": "CBC News — Region of Waterloo will allow police to access infrastructure needed to install CCTV cameras", "fr": "CBC News — La Région de Waterloo autorisera la police à accéder aux infrastructures nécessaires à l'installation de caméras de vidéosurveillance" },
+          "title": {
+            "en": "CBC News — Region of Waterloo will allow police to access infrastructure needed to install CCTV cameras",
+            "fr": "CBC News — La Région de Waterloo autorisera la police à accéder aux infrastructures nécessaires à l'installation de caméras de vidéosurveillance"
+          },
           "url": "https://www.cbc.ca/news/canada/kitchener-waterloo/region-of-waterloo-police-cctv-camera-program-9.7189364"
+        },
+        {
+          "type": "outreach",
+          "date": "2026-10-16",
+          "title": {
+            "en": "Position stated to panopti.ca",
+            "fr": "Position communiquée à panopti.ca"
+          },
+          "note": {
+            "en": "Confirmed to panopti.ca that they are opposed, consistent with their votes against the Waterloo Regional Police camera program at both the city and regional level. They have yet to submit the full questionnaire.",
+            "fr": "A confirmé à panopti.ca son opposition, ce qui concorde avec ses votes contre le programme de caméras du Service de police régional de Waterloo aux niveaux municipal et régional. N'a pas encore soumis le questionnaire complet."
+          }
         }
       ]
     },
@@ -1499,8 +1550,8 @@
       ],
       "stance": "no_position",
       "summary": {
-        "en": "David Alton is a registered candidate for Mayor in Kitchener's October 2026 election. panopti.ca has not found a documented public statement from them specifically about ALPR surveillance.",
-        "fr": "David Alton est candidat inscrit à la mairie pour l'élection d'octobre 2026 à Kitchener. panopti.ca n'a trouvé aucune déclaration publique documentée de sa part au sujet de la surveillance par ALPR."
+        "en": "David Alton is a registered candidate for Mayor in Kitchener's October 2026 election. panopti.ca has not found a documented public statement from them specifically about ALPR surveillance. panopti.ca contacted every Kitchener mayoral candidate on 2026-09-01; they did not respond.",
+        "fr": "David Alton est candidat inscrit à la mairie pour l'élection d'octobre 2026 à Kitchener. panopti.ca n'a trouvé aucune déclaration publique documentée de sa part au sujet de la surveillance par ALPR. panopti.ca a contacté tous les candidats à la mairie de Kitchener le 1er septembre 2026; aucune réponse reçue."
       },
       "evidence": []
     },
@@ -1518,12 +1569,25 @@
           "election": "2026-10-26"
         }
       ],
-      "stance": "no_position",
+      "stance": "supports",
       "summary": {
-        "en": "Wazhma Frogh is a registered candidate for Mayor in Kitchener's October 2026 election. panopti.ca has not found a documented public statement from them specifically about ALPR surveillance.",
-        "fr": "Wazhma Frogh est candidat inscrit à la mairie pour l'élection d'octobre 2026 à Kitchener. panopti.ca n'a trouvé aucune déclaration publique documentée de sa part au sujet de la surveillance par ALPR."
+        "en": "Wazhma Frogh is a registered candidate for Mayor in Kitchener's October 2026 election. In response to panopti.ca's outreach they stated they are in favour of the ALPR-equipped camera program. They have yet to submit the full questionnaire.",
+        "fr": "Wazhma Frogh est candidat inscrit à la mairie pour l'élection d'octobre 2026 à Kitchener. En réponse à la sollicitation de panopti.ca, s'est dit favorable au programme de caméras dotées d'ALPR. N'a pas encore soumis le questionnaire complet."
       },
-      "evidence": []
+      "evidence": [
+        {
+          "type": "outreach",
+          "date": "2026-10-16",
+          "title": {
+            "en": "Position stated to panopti.ca",
+            "fr": "Position communiquée à panopti.ca"
+          },
+          "note": {
+            "en": "Responded to panopti.ca's outreach to Kitchener mayoral candidates and stated they are in favour of the ALPR-equipped camera program. They have yet to submit the full questionnaire.",
+            "fr": "A répondu à la sollicitation de panopti.ca auprès des candidats à la mairie de Kitchener et s'est dit favorable au programme de caméras dotées d'ALPR. N'a pas encore soumis le questionnaire complet."
+          }
+        }
+      ]
     },
     {
       "id": "wali-khan",
@@ -1541,8 +1605,8 @@
       ],
       "stance": "no_position",
       "summary": {
-        "en": "Wali Khan is a registered candidate for Mayor in Kitchener's October 2026 election. panopti.ca has not found a documented public statement from them specifically about ALPR surveillance.",
-        "fr": "Wali Khan est candidat inscrit à la mairie pour l'élection d'octobre 2026 à Kitchener. panopti.ca n'a trouvé aucune déclaration publique documentée de sa part au sujet de la surveillance par ALPR."
+        "en": "Wali Khan is a registered candidate for Mayor in Kitchener's October 2026 election. panopti.ca has not found a documented public statement from them specifically about ALPR surveillance. panopti.ca contacted every Kitchener mayoral candidate on 2026-09-01; they did not respond.",
+        "fr": "Wali Khan est candidat inscrit à la mairie pour l'élection d'octobre 2026 à Kitchener. panopti.ca n'a trouvé aucune déclaration publique documentée de sa part au sujet de la surveillance par ALPR. panopti.ca a contacté tous les candidats à la mairie de Kitchener le 1er septembre 2026; aucune réponse reçue."
       },
       "evidence": []
     },
@@ -1560,12 +1624,25 @@
           "election": "2026-10-26"
         }
       ],
-      "stance": "no_position",
+      "stance": "supports",
       "summary": {
-        "en": "Manikantan Nair is a registered candidate for Mayor in Kitchener's October 2026 election. panopti.ca has not found a documented public statement from them specifically about ALPR surveillance.",
-        "fr": "Manikantan Nair est candidat inscrit à la mairie pour l'élection d'octobre 2026 à Kitchener. panopti.ca n'a trouvé aucune déclaration publique documentée de sa part au sujet de la surveillance par ALPR."
+        "en": "Manikantan Nair is a registered candidate for Mayor in Kitchener's October 2026 election. In response to panopti.ca's outreach they stated they are in favour of the ALPR-equipped camera program. They have yet to submit the full questionnaire.",
+        "fr": "Manikantan Nair est candidat inscrit à la mairie pour l'élection d'octobre 2026 à Kitchener. En réponse à la sollicitation de panopti.ca, s'est dit favorable au programme de caméras dotées d'ALPR. N'a pas encore soumis le questionnaire complet."
       },
-      "evidence": []
+      "evidence": [
+        {
+          "type": "outreach",
+          "date": "2026-10-16",
+          "title": {
+            "en": "Position stated to panopti.ca",
+            "fr": "Position communiquée à panopti.ca"
+          },
+          "note": {
+            "en": "Responded to panopti.ca's outreach to Kitchener mayoral candidates and stated they are in favour of the ALPR-equipped camera program. They have yet to submit the full questionnaire.",
+            "fr": "A répondu à la sollicitation de panopti.ca auprès des candidats à la mairie de Kitchener et s'est dit favorable au programme de caméras dotées d'ALPR. N'a pas encore soumis le questionnaire complet."
+          }
+        }
+      ]
     },
     {
       "id": "george-trihenea",
@@ -1583,8 +1660,8 @@
       ],
       "stance": "no_position",
       "summary": {
-        "en": "George Trihenea is a registered candidate for Mayor in Kitchener's October 2026 election. panopti.ca has not found a documented public statement from them specifically about ALPR surveillance.",
-        "fr": "George Trihenea est candidat inscrit à la mairie pour l'élection d'octobre 2026 à Kitchener. panopti.ca n'a trouvé aucune déclaration publique documentée de sa part au sujet de la surveillance par ALPR."
+        "en": "George Trihenea is a registered candidate for Mayor in Kitchener's October 2026 election. panopti.ca has not found a documented public statement from them specifically about ALPR surveillance. panopti.ca contacted every Kitchener mayoral candidate on 2026-09-01; they did not respond.",
+        "fr": "George Trihenea est candidat inscrit à la mairie pour l'élection d'octobre 2026 à Kitchener. panopti.ca n'a trouvé aucune déclaration publique documentée de sa part au sujet de la surveillance par ALPR. panopti.ca a contacté tous les candidats à la mairie de Kitchener le 1er septembre 2026; aucune réponse reçue."
       },
       "evidence": []
     },
@@ -1604,8 +1681,8 @@
       ],
       "stance": "no_position",
       "summary": {
-        "en": "Cindy Ward is a registered candidate for Mayor in Kitchener's October 2026 election. panopti.ca has not found a documented public statement from them specifically about ALPR surveillance.",
-        "fr": "Cindy Ward est candidat inscrit à la mairie pour l'élection d'octobre 2026 à Kitchener. panopti.ca n'a trouvé aucune déclaration publique documentée de sa part au sujet de la surveillance par ALPR."
+        "en": "Cindy Ward is a registered candidate for Mayor in Kitchener's October 2026 election. panopti.ca has not found a documented public statement from them specifically about ALPR surveillance. panopti.ca contacted every Kitchener mayoral candidate on 2026-09-01; they did not respond.",
+        "fr": "Cindy Ward est candidat inscrit à la mairie pour l'élection d'octobre 2026 à Kitchener. panopti.ca n'a trouvé aucune déclaration publique documentée de sa part au sujet de la surveillance par ALPR. panopti.ca a contacté tous les candidats à la mairie de Kitchener le 1er septembre 2026; aucune réponse reçue."
       },
       "evidence": []
     },
@@ -1654,6 +1731,337 @@
       },
       "links": {
         "website": "https://www.zakrahim.ca/"
+      },
+      "evidence": []
+    },
+    {
+      "id": "simon-guthrie",
+      "name": "Simon Guthrie",
+      "municipality": "kitchener-on",
+      "roles": [
+        {
+          "type": "candidate",
+          "office": {
+            "en": "Regional Councillor Candidate",
+            "fr": "Candidat au poste de conseiller régional"
+          },
+          "election": "2026-10-26"
+        }
+      ],
+      "stance": "opposes",
+      "summary": {
+        "en": "Simon Guthrie is a registered candidate for Regional Councillor in Waterloo Region's October 2026 election. In response to panopti.ca's outreach to Waterloo Region regional councillor candidates they stated they are opposed to the ALPR-equipped camera program. They have yet to submit the full questionnaire.",
+        "fr": "Simon Guthrie est candidat inscrit au conseil régional de Waterloo pour l'élection d'octobre 2026. En réponse à la sollicitation de panopti.ca auprès des candidats au conseil régional de Waterloo, s'est dit opposé au programme de caméras dotées d'ALPR. N'a pas encore soumis le questionnaire complet."
+      },
+      "evidence": [
+        {
+          "type": "outreach",
+          "date": "2026-10-16",
+          "title": {
+            "en": "Position stated to panopti.ca",
+            "fr": "Position communiquée à panopti.ca"
+          },
+          "note": {
+            "en": "Responded to panopti.ca's outreach and stated they are opposed to the ALPR-equipped camera program. They have yet to submit the full questionnaire.",
+            "fr": "A répondu à la sollicitation de panopti.ca et s'est dit opposé au programme de caméras dotées d'ALPR. N'a pas encore soumis le questionnaire complet."
+          }
+        }
+      ]
+    },
+    {
+      "id": "matt-rodrigues",
+      "name": "Matt Rodrigues",
+      "municipality": "kitchener-on",
+      "roles": [
+        {
+          "type": "candidate",
+          "office": {
+            "en": "Regional Councillor Candidate",
+            "fr": "Candidat au poste de conseiller régional"
+          },
+          "election": "2026-10-26"
+        }
+      ],
+      "stance": "opposes",
+      "summary": {
+        "en": "Matt Rodrigues is a registered candidate for Regional Councillor in Waterloo Region's October 2026 election. In response to panopti.ca's outreach to Waterloo Region regional councillor candidates they stated they are opposed to the ALPR-equipped camera program. They have yet to submit the full questionnaire.",
+        "fr": "Matt Rodrigues est candidat inscrit au conseil régional de Waterloo pour l'élection d'octobre 2026. En réponse à la sollicitation de panopti.ca auprès des candidats au conseil régional de Waterloo, s'est dit opposé au programme de caméras dotées d'ALPR. N'a pas encore soumis le questionnaire complet."
+      },
+      "evidence": [
+        {
+          "type": "outreach",
+          "date": "2026-10-16",
+          "title": {
+            "en": "Position stated to panopti.ca",
+            "fr": "Position communiquée à panopti.ca"
+          },
+          "note": {
+            "en": "Responded to panopti.ca's outreach and stated they are opposed to the ALPR-equipped camera program. They have yet to submit the full questionnaire.",
+            "fr": "A répondu à la sollicitation de panopti.ca et s'est dit opposé au programme de caméras dotées d'ALPR. N'a pas encore soumis le questionnaire complet."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kevin-white",
+      "name": "Kevin White",
+      "municipality": "kitchener-on",
+      "roles": [
+        {
+          "type": "candidate",
+          "office": {
+            "en": "Regional Councillor Candidate",
+            "fr": "Candidat au poste de conseiller régional"
+          },
+          "election": "2026-10-26"
+        }
+      ],
+      "stance": "opposes",
+      "summary": {
+        "en": "Kevin White is a registered candidate for Regional Councillor in Waterloo Region's October 2026 election. In response to panopti.ca's outreach to Waterloo Region regional councillor candidates they stated they are opposed to the ALPR-equipped camera program. They have yet to submit the full questionnaire.",
+        "fr": "Kevin White est candidat inscrit au conseil régional de Waterloo pour l'élection d'octobre 2026. En réponse à la sollicitation de panopti.ca auprès des candidats au conseil régional de Waterloo, s'est dit opposé au programme de caméras dotées d'ALPR. N'a pas encore soumis le questionnaire complet."
+      },
+      "evidence": [
+        {
+          "type": "outreach",
+          "date": "2026-10-16",
+          "title": {
+            "en": "Position stated to panopti.ca",
+            "fr": "Position communiquée à panopti.ca"
+          },
+          "note": {
+            "en": "Responded to panopti.ca's outreach and stated they are opposed to the ALPR-equipped camera program. They have yet to submit the full questionnaire.",
+            "fr": "A répondu à la sollicitation de panopti.ca et s'est dit opposé au programme de caméras dotées d'ALPR. N'a pas encore soumis le questionnaire complet."
+          }
+        }
+      ]
+    },
+    {
+      "id": "michael-harris",
+      "name": "Michael Harris",
+      "municipality": "kitchener-on",
+      "roles": [
+        {
+          "type": "candidate",
+          "office": {
+            "en": "Regional Councillor Candidate",
+            "fr": "Candidat au poste de conseiller régional"
+          },
+          "election": "2026-10-26"
+        }
+      ],
+      "stance": "supports",
+      "summary": {
+        "en": "Michael Harris is a registered candidate for Regional Councillor in Waterloo Region's October 2026 election. In response to panopti.ca's outreach to Waterloo Region regional councillor candidates they stated they are in favour of the ALPR-equipped camera program. They have yet to submit the full questionnaire.",
+        "fr": "Michael Harris est candidat inscrit au conseil régional de Waterloo pour l'élection d'octobre 2026. En réponse à la sollicitation de panopti.ca auprès des candidats au conseil régional de Waterloo, s'est dit favorable au programme de caméras dotées d'ALPR. N'a pas encore soumis le questionnaire complet."
+      },
+      "evidence": [
+        {
+          "type": "outreach",
+          "date": "2026-10-16",
+          "title": {
+            "en": "Position stated to panopti.ca",
+            "fr": "Position communiquée à panopti.ca"
+          },
+          "note": {
+            "en": "Responded to panopti.ca's outreach and stated they are in favour of the ALPR-equipped camera program. They have yet to submit the full questionnaire.",
+            "fr": "A répondu à la sollicitation de panopti.ca et s'est dit favorable au programme de caméras dotées d'ALPR. N'a pas encore soumis le questionnaire complet."
+          }
+        }
+      ]
+    },
+    {
+      "id": "anna-meksavanh",
+      "name": "Anna Meksavanh",
+      "municipality": "kitchener-on",
+      "roles": [
+        {
+          "type": "candidate",
+          "office": {
+            "en": "Regional Councillor Candidate",
+            "fr": "Candidat au poste de conseiller régional"
+          },
+          "election": "2026-10-26"
+        }
+      ],
+      "stance": "supports",
+      "summary": {
+        "en": "Anna Meksavanh is a registered candidate for Regional Councillor in Waterloo Region's October 2026 election. In response to panopti.ca's outreach to Waterloo Region regional councillor candidates they stated they are in favour of the ALPR-equipped camera program. They have yet to submit the full questionnaire.",
+        "fr": "Anna Meksavanh est candidat inscrit au conseil régional de Waterloo pour l'élection d'octobre 2026. En réponse à la sollicitation de panopti.ca auprès des candidats au conseil régional de Waterloo, s'est dit favorable au programme de caméras dotées d'ALPR. N'a pas encore soumis le questionnaire complet."
+      },
+      "evidence": [
+        {
+          "type": "outreach",
+          "date": "2026-10-16",
+          "title": {
+            "en": "Position stated to panopti.ca",
+            "fr": "Position communiquée à panopti.ca"
+          },
+          "note": {
+            "en": "Responded to panopti.ca's outreach and stated they are in favour of the ALPR-equipped camera program. They have yet to submit the full questionnaire.",
+            "fr": "A répondu à la sollicitation de panopti.ca et s'est dit favorable au programme de caméras dotées d'ALPR. N'a pas encore soumis le questionnaire complet."
+          }
+        }
+      ]
+    },
+    {
+      "id": "joe-gowing",
+      "name": "Joe Gowing",
+      "municipality": "kitchener-on",
+      "roles": [
+        {
+          "type": "candidate",
+          "office": {
+            "en": "Regional Councillor Candidate",
+            "fr": "Candidat au poste de conseiller régional"
+          },
+          "election": "2026-10-26"
+        }
+      ],
+      "stance": "supports",
+      "summary": {
+        "en": "Joe Gowing is a registered candidate for Regional Councillor in Waterloo Region's October 2026 election. They did not respond to panopti.ca's outreach, but the Regional Council record shows they previously voted in favour of the camera program. They have yet to submit the full questionnaire.",
+        "fr": "Joe Gowing est candidat inscrit au conseil régional de Waterloo pour l'élection d'octobre 2026. N'a pas répondu à la sollicitation de panopti.ca, mais le procès-verbal du conseil régional montre un vote antérieur en faveur du programme de caméras. N'a pas encore soumis le questionnaire complet."
+      },
+      "evidence": [
+        {
+          "type": "citation",
+          "date": "2026-10-16",
+          "title": {
+            "en": "Regional Council record of a vote in favour of the camera program",
+            "fr": "Procès-verbal du conseil régional : vote en faveur du programme de caméras"
+          },
+          "url": "https://pub-regionofwaterloo.escribemeetings.com/FileStream.ashx?DocumentId=17570",
+          "note": {
+            "en": "Did not respond to panopti.ca's outreach. The Region of Waterloo meeting record shows a previous vote in favour.",
+            "fr": "N'a pas répondu à la sollicitation de panopti.ca. Le procès-verbal de la Région de Waterloo indique un vote antérieur en faveur."
+          }
+        }
+      ]
+    },
+    {
+      "id": "michael-wisniewski",
+      "name": "Michael Wisniewski",
+      "municipality": "kitchener-on",
+      "roles": [
+        {
+          "type": "candidate",
+          "office": {
+            "en": "Regional Councillor Candidate",
+            "fr": "Candidat au poste de conseiller régional"
+          },
+          "election": "2026-10-26"
+        }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Michael Wisniewski is a registered candidate for Regional Councillor in Waterloo Region's October 2026 election. They responded to panopti.ca's outreach but declined to state a position, and have yet to submit the full questionnaire.",
+        "fr": "Michael Wisniewski est candidat inscrit au conseil régional de Waterloo pour l'élection d'octobre 2026. A répondu à la sollicitation de panopti.ca sans indiquer de position, et n'a pas encore soumis le questionnaire complet."
+      },
+      "evidence": []
+    },
+    {
+      "id": "ed-edwards",
+      "name": "Ed Edwards",
+      "municipality": "kitchener-on",
+      "roles": [
+        {
+          "type": "candidate",
+          "office": {
+            "en": "Regional Councillor Candidate",
+            "fr": "Candidat au poste de conseiller régional"
+          },
+          "election": "2026-10-26"
+        }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Ed Edwards is a registered candidate for Regional Councillor in Waterloo Region's October 2026 election. panopti.ca contacted every Waterloo Region regional councillor candidate; they did not respond, and panopti.ca has found no documented public statement from them about ALPR surveillance.",
+        "fr": "Ed Edwards est candidat inscrit au conseil régional de Waterloo pour l'élection d'octobre 2026. panopti.ca a contacté tous les candidats au conseil régional de Waterloo; aucune réponse reçue, et panopti.ca n'a trouvé aucune déclaration publique documentée de leur part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "mac-graham",
+      "name": "Mac Graham",
+      "municipality": "kitchener-on",
+      "roles": [
+        {
+          "type": "candidate",
+          "office": {
+            "en": "Regional Councillor Candidate",
+            "fr": "Candidat au poste de conseiller régional"
+          },
+          "election": "2026-10-26"
+        }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Mac Graham is a registered candidate for Regional Councillor in Waterloo Region's October 2026 election. panopti.ca contacted every Waterloo Region regional councillor candidate; they did not respond, and panopti.ca has found no documented public statement from them about ALPR surveillance.",
+        "fr": "Mac Graham est candidat inscrit au conseil régional de Waterloo pour l'élection d'octobre 2026. panopti.ca a contacté tous les candidats au conseil régional de Waterloo; aucune réponse reçue, et panopti.ca n'a trouvé aucune déclaration publique documentée de leur part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "kim-huxted",
+      "name": "Kim Huxted",
+      "municipality": "kitchener-on",
+      "roles": [
+        {
+          "type": "candidate",
+          "office": {
+            "en": "Regional Councillor Candidate",
+            "fr": "Candidat au poste de conseiller régional"
+          },
+          "election": "2026-10-26"
+        }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Kim Huxted is a registered candidate for Regional Councillor in Waterloo Region's October 2026 election. panopti.ca contacted every Waterloo Region regional councillor candidate; they did not respond, and panopti.ca has found no documented public statement from them about ALPR surveillance.",
+        "fr": "Kim Huxted est candidat inscrit au conseil régional de Waterloo pour l'élection d'octobre 2026. panopti.ca a contacté tous les candidats au conseil régional de Waterloo; aucune réponse reçue, et panopti.ca n'a trouvé aucune déclaration publique documentée de leur part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "colleen-james",
+      "name": "Colleen James",
+      "municipality": "kitchener-on",
+      "roles": [
+        {
+          "type": "candidate",
+          "office": {
+            "en": "Regional Councillor Candidate",
+            "fr": "Candidat au poste de conseiller régional"
+          },
+          "election": "2026-10-26"
+        }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Colleen James is a registered candidate for Regional Councillor in Waterloo Region's October 2026 election. panopti.ca contacted every Waterloo Region regional councillor candidate; they did not respond, and panopti.ca has found no documented public statement from them about ALPR surveillance.",
+        "fr": "Colleen James est candidat inscrit au conseil régional de Waterloo pour l'élection d'octobre 2026. panopti.ca a contacté tous les candidats au conseil régional de Waterloo; aucune réponse reçue, et panopti.ca n'a trouvé aucune déclaration publique documentée de leur part au sujet de la surveillance par ALPR."
+      },
+      "evidence": []
+    },
+    {
+      "id": "eve-simson",
+      "name": "Eve Simson",
+      "municipality": "kitchener-on",
+      "roles": [
+        {
+          "type": "candidate",
+          "office": {
+            "en": "Regional Councillor Candidate",
+            "fr": "Candidat au poste de conseiller régional"
+          },
+          "election": "2026-10-26"
+        }
+      ],
+      "stance": "no_position",
+      "summary": {
+        "en": "Eve Simson is a registered candidate for Regional Councillor in Waterloo Region's October 2026 election. panopti.ca contacted every Waterloo Region regional councillor candidate; they did not respond, and panopti.ca has found no documented public statement from them about ALPR surveillance.",
+        "fr": "Eve Simson est candidat inscrit au conseil régional de Waterloo pour l'élection d'octobre 2026. panopti.ca a contacté tous les candidats au conseil régional de Waterloo; aucune réponse reçue, et panopti.ca n'a trouvé aucune déclaration publique documentée de leur part au sujet de la surveillance par ALPR."
       },
       "evidence": []
     }
